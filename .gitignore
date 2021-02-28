@@ -1,0 +1,90 @@
+# Directories #
+build/
+bin/
+target/
+
+# OS Files #
+.DS_Store
+ 
+*.class
+ 
+# Package Files #
+*.jar
+*.war
+*.ear
+*.db
+ 
+######################
+# Windows
+######################
+ 
+# Windows image file caches
+Thumbs.db 
+ 
+# Folder config file
+Desktop.ini
+ 
+######################
+# OSX
+######################
+ 
+.DS_Store
+.svn
+ 
+# Thumbnails
+._*
+ 
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+ 
+ 
+######################
+# Eclipse
+######################
+ 
+*.pydevproject
+.project
+.metadata
+bin/**
+tmp/**
+tmp/**/*
+*.tmp
+*.bak
+*.swp
+*~.nib
+**/.sts4-cache/*
+local.properties
+lsettings.properties
+.classpath
+.springBeans
+.settings/
+.loadpath
+/src/main/resources/rebel.xml
+# External tool builders
+.externalToolBuilders/
+Servers/
+ 
+# Locally stored "Eclipse launch configurations"
+*.launch
+ 
+# CDT-specific
+.cproject
+ 
+# PDT-specific
+.buildpath
+
+tnexus-messagehub-generated-logic/src/main/java/**
+Tnexus-api-ctx/src/main/webapp/WEB-INF/web.xml
+Tnexus-api-ctx/src/main/webapp/WEB-INF/web.xml
+tnexus.dtpe.parent/tnexus.dtpe/build.properties
+Tnexus-url-fetcher-ctx/.factorypath
+tnexus.dtpe.web/.settings/org.eclipse.wst.common.component
+tnexus.dtpe.web/.settings/org.eclipse.wst.common.project.facet.core.xml
+tnexus.dtpe.web/.settings/org.eclipse.wst.common.project.facet.core.xml
+tnexus.dtpe.web/.settings/org.eclipse.wst.common.component
+/tmpg
+
+# vscode
+.factorypath
+.vscode/
