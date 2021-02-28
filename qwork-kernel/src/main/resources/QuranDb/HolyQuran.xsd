@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	
+	<xsd:element name = "HolyQuran" type = "HolyQuran" />
+	
 	<xsd:complexType name = "HolyQuran">
 		<xsd:sequence>
 			<xsd:element name="Surah" type="Surah" maxOccurs="unbounded"/>

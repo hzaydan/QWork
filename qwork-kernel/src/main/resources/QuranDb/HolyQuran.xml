@@ -1,4 +1,4 @@
-<HolyQuran>
+<HolyQuran xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="HolyQuran.xsd">
 <Surah id="1" name="الفاتحة">
 	<Ayah nb="1"><![CDATA[بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ]]></Ayah>
 	<Ayah nb="2"><![CDATA[الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ]]></Ayah>

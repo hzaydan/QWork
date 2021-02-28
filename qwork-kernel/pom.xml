@@ -51,6 +51,11 @@
 			<artifactId>jackson-datatype-jsr310</artifactId>
 			<version>2.11.1</version>
 		</dependency>
+		<dependency>
+			<groupId>org.glassfish.jaxb</groupId>
+			<artifactId>jaxb-runtime</artifactId>
+			<version>2.3.2</version>
+		</dependency>
 			
 	</dependencies>
 </project>
