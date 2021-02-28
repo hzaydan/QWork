@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:complexType name = "HolyQuran">
+		<xsd:sequence>
+			<xsd:element name="Surah" type="Surah" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:complexType name="Surah">
+		<xsd:sequence>
+			<xsd:element name="Ayah" type="Ayah" maxOccurs="unbounded"/>
+		</xsd:sequence>
+		<xsd:attribute name="id" type="xsd:int"/>
+		<xsd:attribute name="name" type="xsd:string"/>
+	</xsd:complexType>
+	
+	<xsd:complexType name="Ayah">
+		<xsd:simpleContent>
+			<xsd:extension  base="xsd:string">
+				<xsd:attribute name="nb" type="xsd:int"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	
+</xsd:schema>
