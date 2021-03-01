@@ -1,9 +1,19 @@
 package org.qwork.kernel.db;
 
 public class QAyah {
+	
+	private Integer nb;
 	private String textWithPunctuation;
 	private String text;
 
+	public Integer getNb() {
+		return nb;
+	}
+	
+	public void setNb(Integer nb) {
+		this.nb = nb;
+	}
+	
 	public String getTextWithPunctuation() {
 		return textWithPunctuation;
 	}
