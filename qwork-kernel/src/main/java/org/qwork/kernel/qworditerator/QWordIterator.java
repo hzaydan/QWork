@@ -1,13 +1,13 @@
 package org.qwork.kernel.qworditerator;
 
+import org.qwork.kernel.db.Q;
 import org.qwork.kernel.db.QAyah;
 import org.qwork.kernel.db.QSurah;
-import org.qwork.kernel.db.Qdb;
 import org.qwork.kernel.db.RemovePunctuation;
 
 public class QWordIterator {
 	
-	private Qdb db;
+	private Q db;
 	private boolean withPunctuation;
 	
 	private QSurah surah;
@@ -24,7 +24,7 @@ public class QWordIterator {
 	}
 	
 	public QWordIterator(boolean withPunctuation) {
-		db = Qdb.db();
+		db = Q.db();
 		this.withPunctuation = withPunctuation;
 		doIndexOn(0,0);
 	}

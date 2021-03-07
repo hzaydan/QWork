@@ -3,7 +3,7 @@ package org.qwork.kernel.search;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.qwork.kernel.db.Qdb;
+import org.qwork.kernel.db.Q;
 
 public class QSearchService {
 	
@@ -11,7 +11,7 @@ public class QSearchService {
 		
 		List<QSearchResult> res = new ArrayList<>();
 		
-		Qdb.db().getSurahs().stream().takeWhile(ch -> res.size() < maxResults).forEach(
+		Q.db().getSurahs().stream().takeWhile(ch -> res.size() < maxResults).forEach(
 			chapter -> {
 				chapter.getAyat().stream().takeWhile(a -> res.size() < maxResults).forEach(
 					ayah -> {

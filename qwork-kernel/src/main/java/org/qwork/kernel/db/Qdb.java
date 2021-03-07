@@ -12,18 +12,12 @@ import org.qwork.kernel.db.jaxb.Ayah;
 import org.qwork.kernel.db.jaxb.HolyQuran;
 import org.qwork.kernel.db.jaxb.Surah;
 
-public class Qdb {
+class Qdb {
 	
 	private static HolyQuran CannotBeLoaded = null;
 	
 	private Qdb() {
 		
-	}
-	
-	private static Qdb db = load();
-	
-	public final static Qdb db() {
-		return db;
 	}
 	
 	private List<QSurah> surahs = new ArrayList<>();
