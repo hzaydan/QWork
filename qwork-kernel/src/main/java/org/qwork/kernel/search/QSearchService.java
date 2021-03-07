@@ -11,7 +11,7 @@ public class QSearchService {
 		
 		List<QSearchResult> res = new ArrayList<>();
 		
-		Qdb.db().getChapters().stream().takeWhile(ch -> res.size() < maxResults).forEach(
+		Qdb.db().getSurahs().stream().takeWhile(ch -> res.size() < maxResults).forEach(
 			chapter -> {
 				chapter.getAyat().stream().takeWhile(a -> res.size() < maxResults).forEach(
 					ayah -> {

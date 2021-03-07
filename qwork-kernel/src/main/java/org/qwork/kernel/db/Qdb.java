@@ -26,14 +26,14 @@ public class Qdb {
 		return db;
 	}
 	
-	private List<QChapter> chapters = new ArrayList<>();
+	private List<QSurah> surahs = new ArrayList<>();
 
-	public List<QChapter> getChapters() {
-		return chapters;
+	public List<QSurah> getSurahs() {
+		return surahs;
 	}
 	
-	public void setChapters(List<QChapter> chapters) {
-		this.chapters = chapters;
+	public void setSurahs(List<QSurah> surahs) {
+		this.surahs = surahs;
 	}
 	
 	public static HolyQuran loadFromXml() {
@@ -52,12 +52,12 @@ public class Qdb {
 	public static Qdb load() {
 		Qdb res = new Qdb();
 		HolyQuran Q = loadFromXml();
-		res.setChapters(Q.getSurah().stream().map(Qdb::map).collect(Collectors.toList()));
+		res.setSurahs(Q.getSurah().stream().map(Qdb::map).collect(Collectors.toList()));
 		return res;
 	}
 	
-	public static QChapter map(Surah surah) {
-		QChapter res = new QChapter();
+	public static QSurah map(Surah surah) {
+		QSurah res = new QSurah();
 		res.setName(surah.getName());
 		res.setOrder(surah.getId());
 		res.setAyat(surah.getAyah().stream().map(Qdb::map).collect(Collectors.toList()));

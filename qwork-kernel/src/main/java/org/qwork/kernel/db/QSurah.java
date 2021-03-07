@@ -3,7 +3,7 @@ package org.qwork.kernel.db;
 import java.util.ArrayList;
 import java.util.List;
 
-public class QChapter {
+public class QSurah {
 
 	private String name;
 	private Integer order;
