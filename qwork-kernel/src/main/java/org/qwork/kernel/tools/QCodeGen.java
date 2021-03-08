@@ -1,4 +1,6 @@
-package org.qwork.kernel.db;
+package org.qwork.kernel.tools;
+
+import org.qwork.kernel.db.QSurah;
 
 public class QCodeGen {
 	

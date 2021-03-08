@@ -1,4 +1,4 @@
-package org.qwork.kernel.db;
+package org.qwork.kernel.tools;
 
 import java.io.InputStream;
 import java.util.ArrayList;
@@ -8,6 +8,9 @@ import java.util.stream.Collectors;
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.Unmarshaller;
 
+import org.qwork.kernel.db.QAyah;
+import org.qwork.kernel.db.QSurah;
+import org.qwork.kernel.db.RemovePunctuation;
 import org.qwork.kernel.db.jaxb.Ayah;
 import org.qwork.kernel.db.jaxb.HolyQuran;
 import org.qwork.kernel.db.jaxb.Surah;
