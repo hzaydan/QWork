@@ -1,4 +1,4 @@
-package org.qwork.kernel.tools;
+package org.qwork.kernel.tools.fromxml;
 
 import org.qwork.kernel.db.QSurah;
 

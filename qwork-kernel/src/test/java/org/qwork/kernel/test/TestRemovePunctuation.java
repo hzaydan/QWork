@@ -1,6 +1,6 @@
 package org.qwork.kernel.test;
 
-import org.qwork.kernel.db.RemovePunctuation;
+import org.qwork.kernel.utils.RemovePunctuation;
 
 public class TestRemovePunctuation {
 	public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package org.qwork.kernel.db;
+package org.qwork.kernel.utils;
 
 public class RemovePunctuation {
 

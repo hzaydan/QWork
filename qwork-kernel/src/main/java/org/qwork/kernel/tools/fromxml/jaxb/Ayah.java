@@ -6,7 +6,7 @@
 //
 
 
-package org.qwork.kernel.db.jaxb;
+package org.qwork.kernel.tools.fromxml.jaxb;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;

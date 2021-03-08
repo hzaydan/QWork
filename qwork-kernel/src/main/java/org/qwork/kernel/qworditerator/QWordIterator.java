@@ -3,7 +3,7 @@ package org.qwork.kernel.qworditerator;
 import org.qwork.kernel.db.Q;
 import org.qwork.kernel.db.QAyah;
 import org.qwork.kernel.db.QSurah;
-import org.qwork.kernel.db.RemovePunctuation;
+import org.qwork.kernel.utils.RemovePunctuation;
 
 public class QWordIterator {
 	

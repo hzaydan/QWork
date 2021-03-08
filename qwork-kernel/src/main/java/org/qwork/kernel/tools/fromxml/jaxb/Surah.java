@@ -6,7 +6,7 @@
 //
 
 
-package org.qwork.kernel.db.jaxb;
+package org.qwork.kernel.tools.fromxml.jaxb;
 
 import java.util.ArrayList;
 import java.util.List;

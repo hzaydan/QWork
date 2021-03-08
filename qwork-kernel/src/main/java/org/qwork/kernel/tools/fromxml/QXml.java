@@ -1,4 +1,4 @@
-package org.qwork.kernel.tools;
+package org.qwork.kernel.tools.fromxml;
 
 import java.io.InputStream;
 import java.util.ArrayList;
@@ -10,10 +10,10 @@ import javax.xml.bind.Unmarshaller;
 
 import org.qwork.kernel.db.QAyah;
 import org.qwork.kernel.db.QSurah;
-import org.qwork.kernel.db.RemovePunctuation;
-import org.qwork.kernel.db.jaxb.Ayah;
-import org.qwork.kernel.db.jaxb.HolyQuran;
-import org.qwork.kernel.db.jaxb.Surah;
+import org.qwork.kernel.tools.fromxml.jaxb.Ayah;
+import org.qwork.kernel.tools.fromxml.jaxb.HolyQuran;
+import org.qwork.kernel.tools.fromxml.jaxb.Surah;
+import org.qwork.kernel.utils.RemovePunctuation;
 
 class QXml {
 	
@@ -36,7 +36,7 @@ class QXml {
 	public static HolyQuran loadFromXml() {
 		try {
 			Unmarshaller un = JAXBContext.newInstance(HolyQuran.class).createUnmarshaller();
-			InputStream in = Thread.currentThread().getContextClassLoader().getResourceAsStream("QuranDb/HolyQuran.xml");
+			InputStream in = Thread.currentThread().getContextClassLoader().getResourceAsStream("QuranXml/HolyQuran.xml");
 			HolyQuran qdb = (HolyQuran) un.unmarshal(in);
 			return qdb;
 		}
