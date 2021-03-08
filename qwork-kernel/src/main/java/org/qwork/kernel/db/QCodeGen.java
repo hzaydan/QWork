@@ -34,7 +34,7 @@ public class QCodeGen {
 			p("\t\tdb.surah%d();", i);
 		}
 		p("\t}");
-		Qdb.load().getSurahs().forEach(surah -> {
+		QXml.load().getSurahs().forEach(surah -> {
 			printSurahCode(surah);
 		});
 	}

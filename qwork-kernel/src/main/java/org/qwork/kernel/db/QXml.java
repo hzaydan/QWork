@@ -12,11 +12,11 @@ import org.qwork.kernel.db.jaxb.Ayah;
 import org.qwork.kernel.db.jaxb.HolyQuran;
 import org.qwork.kernel.db.jaxb.Surah;
 
-class Qdb {
+class QXml {
 	
 	private static HolyQuran CannotBeLoaded = null;
 	
-	private Qdb() {
+	private QXml() {
 		
 	}
 	
@@ -43,10 +43,10 @@ class Qdb {
 		}
 	}
 	
-	public static Qdb load() {
-		Qdb res = new Qdb();
+	public static QXml load() {
+		QXml res = new QXml();
 		HolyQuran Q = loadFromXml();
-		res.setSurahs(Q.getSurah().stream().map(Qdb::map).collect(Collectors.toList()));
+		res.setSurahs(Q.getSurah().stream().map(QXml::map).collect(Collectors.toList()));
 		return res;
 	}
 	
@@ -54,7 +54,7 @@ class Qdb {
 		QSurah res = new QSurah();
 		res.setName(surah.getName());
 		res.setOrder(surah.getId());
-		res.setAyat(surah.getAyah().stream().map(Qdb::map).collect(Collectors.toList()));
+		res.setAyat(surah.getAyah().stream().map(QXml::map).collect(Collectors.toList()));
 		return res;
 	}
 	
