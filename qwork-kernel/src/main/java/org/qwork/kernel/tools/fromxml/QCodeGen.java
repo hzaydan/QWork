@@ -1,35 +1,36 @@
 package org.qwork.kernel.tools.fromxml;
 
+import static org.qwork.kernel.utils.FormatPrint.p;
+import static org.qwork.kernel.utils.Utf.u;
+
 import org.qwork.kernel.data.QSurah;
+import org.qwork.kernel.utils.TextLoop;
 
 public class QCodeGen {
 	
-	public static String u(char ch) {
-		return "\\u" + Integer.toHexString(ch | 0x10000).substring(1);
-	}
-	
-	public static String u(String str) {
-		StringBuffer res = new StringBuffer();
-		for(int i = 0; i < str.length(); i++) {
-			res.append(u(str.charAt(i)));
-		}
-		return res.toString();
-	}
-	
-	private static void p(String str, Object ... params) {
-		String toprint = String.format(str, params);
-		System.out.println(toprint);
-	}
 	
 	private static void printSurahCode(QSurah surah) {
 		p("\tprivate void surah%d() {",surah.getOrder());
 		p("\t\tsurah(%d,\"%s\");", surah.getOrder(), u(surah.getName()));
 		surah.getAyat().forEach(ayah -> {
-			p("\t\tayah(%d,\"%s\");", ayah.getNb(), u(ayah.getTextWithPunctuation()));
+			p("\t\tayah(%d,\"%s\");", ayah.getNb(), t(ayah.getTextWithPunctuation()));
 		});
 		p("\t}");
 	}
 	
+	private static String t(String textWithPunctuation) {
+		StringBuffer res = new StringBuffer();
+		TextLoop.loop(textWithPunctuation, ch -> {
+			if(ch == '\u0622') {
+				res.append("\\u0621\\u0627");
+			}
+			else {
+				res.append(u(ch));
+			}
+		});
+		return res.toString();
+	}
+
 	public static void main(String[] args) {
 		p("\tstatic {");
 		for(int i = 1; i <= 114; i++) {
