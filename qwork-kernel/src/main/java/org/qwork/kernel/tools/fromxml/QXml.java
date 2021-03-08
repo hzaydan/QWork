@@ -8,8 +8,8 @@ import java.util.stream.Collectors;
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.Unmarshaller;
 
-import org.qwork.kernel.db.QAyah;
-import org.qwork.kernel.db.QSurah;
+import org.qwork.kernel.data.QAyah;
+import org.qwork.kernel.data.QSurah;
 import org.qwork.kernel.tools.fromxml.jaxb.Ayah;
 import org.qwork.kernel.tools.fromxml.jaxb.HolyQuran;
 import org.qwork.kernel.tools.fromxml.jaxb.Surah;

@@ -1,6 +1,6 @@
 package org.qwork.kernel.tools.fromxml;
 
-import org.qwork.kernel.db.QSurah;
+import org.qwork.kernel.data.QSurah;
 
 public class QCodeGen {
 	
@@ -32,8 +32,8 @@ public class QCodeGen {
 	
 	public static void main(String[] args) {
 		p("\tstatic {");
-		for(int i = 0; i <= 114; i++) {
-			p("\t\tdb.surah%d();", i);
+		for(int i = 1; i <= 114; i++) {
+			p("\t\tdata.surah%d();", i);
 		}
 		p("\t}");
 		QXml.load().getSurahs().forEach(surah -> {

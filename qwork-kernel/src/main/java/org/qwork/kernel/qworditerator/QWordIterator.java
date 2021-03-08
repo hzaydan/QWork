@@ -1,13 +1,13 @@
 package org.qwork.kernel.qworditerator;
 
-import org.qwork.kernel.db.Q;
-import org.qwork.kernel.db.QAyah;
-import org.qwork.kernel.db.QSurah;
+import org.qwork.kernel.data.Q;
+import org.qwork.kernel.data.QAyah;
+import org.qwork.kernel.data.QSurah;
 import org.qwork.kernel.utils.RemovePunctuation;
 
 public class QWordIterator {
 	
-	private Q db;
+	private Q data;
 	private boolean withPunctuation;
 	
 	private QSurah surah;
@@ -24,7 +24,7 @@ public class QWordIterator {
 	}
 	
 	public QWordIterator(boolean withPunctuation) {
-		db = Q.db();
+		data = Q.data();
 		this.withPunctuation = withPunctuation;
 		doIndexOn(0,0);
 	}
@@ -32,7 +32,7 @@ public class QWordIterator {
 	private void doIndexOn(int surahIndex, int ayahIndex) {
 		this.surahIndex = surahIndex;
 		this.ayahIndex = ayahIndex;
-		surah = db.getSurahs().get(surahIndex);
+		surah = data.getSurahs().get(surahIndex);
 		ayah = surah.getAyat().get(ayahIndex);
 		this.wordIndex = 0;
 		ayahWords = ayah.getTextWithPunctuation().split(" ");
@@ -47,7 +47,7 @@ public class QWordIterator {
 	}
 	
 	private boolean isLastSurah() {
-		return surahIndex == db.getSurahs().size() - 1;
+		return surahIndex == data.getSurahs().size() - 1;
 	}
 	
 	public boolean hasNext() {
@@ -70,7 +70,7 @@ public class QWordIterator {
 			else {
 				if(!isLastSurah()) {
 					surahIndex++;
-					surah = db.getSurahs().get(surahIndex);
+					surah = data.getSurahs().get(surahIndex);
 					ayahIndex = 0;
 					ayah = surah.getAyat().get(ayahIndex);
 					ayahWords = ayah.getTextWithPunctuation().split(" ");
