@@ -14,6 +14,7 @@ import org.qwork.kernel.tools.fromxml.jaxb.Ayah;
 import org.qwork.kernel.tools.fromxml.jaxb.HolyQuran;
 import org.qwork.kernel.tools.fromxml.jaxb.Surah;
 import org.qwork.kernel.utils.RemovePunctuation;
+import org.qwork.kernel.utils.Resource;
 
 class QXml {
 	
@@ -36,7 +37,7 @@ class QXml {
 	public static HolyQuran loadFromXml() {
 		try {
 			Unmarshaller un = JAXBContext.newInstance(HolyQuran.class).createUnmarshaller();
-			InputStream in = Thread.currentThread().getContextClassLoader().getResourceAsStream("QuranXml/HolyQuran.xml");
+			InputStream in = Resource.asStream("QuranXml/HolyQuran.xml");
 			HolyQuran qdb = (HolyQuran) un.unmarshal(in);
 			return qdb;
 		}
