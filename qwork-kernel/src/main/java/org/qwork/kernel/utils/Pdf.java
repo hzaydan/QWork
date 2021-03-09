@@ -1,68 +1,82 @@
 package org.qwork.kernel.utils;
 
-import java.io.BufferedWriter;
+import java.awt.geom.Rectangle2D;
 import java.io.File;
-import java.io.FileOutputStream;
 import java.io.InputStream;
-import java.io.OutputStreamWriter;
 
 import org.apache.pdfbox.pdmodel.PDDocument;
-import org.apache.pdfbox.text.PDFTextStripper;
+import org.apache.pdfbox.pdmodel.PDPage;
+import org.apache.pdfbox.text.PDFTextStripperByArea;
 
 public class Pdf {
 
-	private static void extractTextAndClose(PDDocument pd, String textFilePath) {
-		try {
-			System.out.println("pages: " + pd.getNumberOfPages());
-			System.out.println("encrypted: " + pd.isEncrypted());
-			
-			PDFTextStripper stripper = new PDFTextStripper();
-			File output = new File(textFilePath);
-			BufferedWriter wr = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(output), "UTF-8"));
-			stripper.writeText(pd, wr);
-
-			pd.close();
-
-			wr.flush();
-			wr.close();
-
-		}
-		catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
-	
-	public static void extractTextFromInputStream(InputStream input , String textFilePath) {
+	public static PDDocument loadPdf(InputStream input) {
 		try {
 			PDDocument pd = PDDocument.load(input);
-			extractTextAndClose(pd, textFilePath);
+			return pd;
 		}
 		catch (Exception e) {
 			e.printStackTrace();
+			return null;
 		}
+		
 	}
 	
-	public static void extractTextFromFile(String pdfFilePath, String textFilePath) {
-		try {
-			File input = new File(pdfFilePath);
-			PDDocument pd = PDDocument.load(input);
-			extractTextAndClose(pd, textFilePath);
-
-		}
-		catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
-	
-	public static void extractTextFromResource(String pdfResourcePath, String textFilePath) {
+	public static PDDocument loadPdf(String pdfResourcePath) {
 		try {
 			InputStream input = Resource.asStream(pdfResourcePath);
 			PDDocument pd = PDDocument.load(input);
-			extractTextAndClose(pd, textFilePath);
+			return pd;
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+			return null;
+		}
+		
+	}
+	
+	public static PDDocument loadPdf(File pdfFile) {
+		try {
+			PDDocument pd = PDDocument.load(pdfFile);
+			return pd;
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+			return null;
+		}
+		
+	}
+	
+	public static void closePdf(PDDocument pd) {
+		try {
+			pd.close();
 		}
 		catch (Exception e) {
 			e.printStackTrace();
 		}
+		
 	}
 	
+	public static String extractTextByArea(PDDocument pd, int page, int x, int y, int width, int height) {
+		try {
+			PDFTextStripperByArea textStripper = new PDFTextStripperByArea();
+	        Rectangle2D rect = new java.awt.geom.Rectangle2D.Float(x, y, width, height);
+	        textStripper.addRegion("region", rect);
+
+
+	        PDPage docPage = pd.getPage(page);
+
+	        textStripper.extractRegions(docPage);
+
+	        String textForRegion = textStripper.getTextForRegion("region");
+	        
+	        return textForRegion;
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+			return null;
+		}
+	}
+	
+		
 }
