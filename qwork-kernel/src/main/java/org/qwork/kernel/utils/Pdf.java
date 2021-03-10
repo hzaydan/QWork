@@ -1,11 +1,15 @@
 package org.qwork.kernel.utils;
 
 import java.awt.geom.Rectangle2D;
+import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.InputStream;
 
+import javax.imageio.ImageIO;
+
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.pdmodel.PDPage;
+import org.apache.pdfbox.rendering.PDFRenderer;
 import org.apache.pdfbox.text.PDFTextStripperByArea;
 
 public class Pdf {
@@ -78,5 +82,26 @@ public class Pdf {
 		}
 	}
 	
-		
+	public static BufferedImage getPageAsImage(PDDocument pd, int page, int dpi)	{
+	    try {
+			PDFRenderer pr = new PDFRenderer (pd);
+		    BufferedImage bi = pr.renderImageWithDPI (page, dpi);
+		    return bi;
+	    }
+		catch (Exception e) {
+			e.printStackTrace();
+			return null;
+		}
+	}
+	
+	public static void writeToJpg (PDDocument pd, int page, int dpi, String out)	{
+	    try {
+			BufferedImage bi = getPageAsImage(pd, page, dpi);
+		    ImageIO.write (bi, "JPEG", new File (out));
+	    }
+		catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
 }

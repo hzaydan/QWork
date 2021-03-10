@@ -11,7 +11,7 @@ import org.qwork.kernel.utils.RemovePunctuation;
 
 public class TestPdf {
 	
-	public static void main(String[] args) {
+	public static void testExtractText() {
 		var pdfHandle = Pdf.loadPdf("QuranPdf/04_v5.pdf");
 		if(pdfHandle != null) {
 			Scanner scan = new Scanner(System.in);
@@ -25,7 +25,7 @@ public class TestPdf {
 				_p("width:");int width = scan.nextInt();
 				_p("height:");int height = scan.nextInt();
 				_p("remove punctuations:");boolean removePunctuations = scan.nextBoolean();
-				String text = Pdf.extractTextByArea(pdfHandle, page, x, y, width, height);
+				String text = Pdf.extractTextByArea(pdfHandle, page-1, x, y, width, height);
 				if(removePunctuations)
 					text = RemovePunctuation.appliedOn(text);
 				o(text);
@@ -36,6 +36,30 @@ public class TestPdf {
 			scan.close();
 			Pdf.closePdf(pdfHandle);
 		}
+	}
+	
+	public static void testExtractImage() {
+		var pdfHandle = Pdf.loadPdf("QuranPdf/01.pdf");
+		if(pdfHandle != null) {
+			Scanner scan = new Scanner(System.in);
+			boolean exit = false;
+			do {
+				p("You have a pdf of %d pages", pdfHandle.getNumberOfPages());
+				_p("page:");int page = scan.nextInt();
+				String outFileName = "extracted_" + page + ".jpg";
+				Pdf.writeToJpg(pdfHandle, page-1, 300, outFileName);
+				p("output to: %s", outFileName);
+				_p("exit:");exit = scan.nextBoolean();
+			}
+			while(exit != true);
+			scan.close();
+			Pdf.closePdf(pdfHandle);
+		}
+		
+	}
+	
+	public static void main(String[] args) {
+		testExtractImage();
 	}
 	
 }
