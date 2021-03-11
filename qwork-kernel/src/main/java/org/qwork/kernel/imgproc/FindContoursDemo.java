@@ -95,7 +95,10 @@ class FindContours {
         Mat drawing = Mat.zeros(cannyOutput.size(), CvType.CV_8UC3);
         for (int i = 0; i < contours.size(); i++) {
             Scalar color = new Scalar(rng.nextInt(256), rng.nextInt(256), rng.nextInt(256));
+            Scalar rectColor = new Scalar(0, 0, 255);
             Imgproc.drawContours(drawing, contours, i, color, 2, Imgproc.LINE_8, hierarchy, 0, new Point());
+            var rect = Imgproc.boundingRect(contours.get(i));
+            Imgproc.rectangle(drawing, rect, rectColor,1);
         }
         imgContoursLabel.setIcon(new ImageIcon(HighGui.toBufferedImage(drawing)));
         frame.repaint();
