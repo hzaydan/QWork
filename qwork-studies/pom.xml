@@ -2,9 +2,9 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<artifactId>kernel</artifactId>
-	<name>qwork-kernel</name>
-	<description>qwork-kernel</description>
+	<artifactId>studies</artifactId>
+	<name>qwork-studies</name>
+	<description>qwork-studies</description>
 	
 	<parent>
 		<groupId>org.qwork</groupId>
@@ -33,34 +33,9 @@
 	</build>
 	<dependencies>
 		<dependency>
-			<groupId>jakarta.xml.bind</groupId>
-			<artifactId>jakarta.xml.bind-api</artifactId>
-			<version>2.3.2</version>
-		</dependency>
-		<dependency>
-			<groupId>com.fasterxml.jackson.core</groupId>
-			<artifactId>jackson-annotations</artifactId>
-			<version>2.11.1</version>
-		</dependency>
-		<dependency>
-			<groupId>com.fasterxml.jackson.core</groupId>
-			<artifactId>jackson-core</artifactId>
-			<version>2.11.1</version>
-		</dependency>
-		<dependency>
-			<groupId>com.fasterxml.jackson.core</groupId>
-			<artifactId>jackson-databind</artifactId>
-			<version>2.11.1</version>
-		</dependency>
-		<dependency>
-			<groupId>com.fasterxml.jackson.datatype</groupId>
-			<artifactId>jackson-datatype-jsr310</artifactId>
-			<version>2.11.1</version>
-		</dependency>
-		<dependency>
-			<groupId>org.glassfish.jaxb</groupId>
-			<artifactId>jaxb-runtime</artifactId>
-			<version>2.3.2</version>
+			<groupId>org.qwork</groupId>
+			<artifactId>kernel</artifactId>
+			<version>0.0.0.0</version>
 		</dependency>
 		<dependency>
 		    <groupId>org.apache.pdfbox</groupId>
@@ -74,4 +49,5 @@
 		</dependency>
 			
 	</dependencies>
+	
 </project>
