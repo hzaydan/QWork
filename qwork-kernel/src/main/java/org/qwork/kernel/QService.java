@@ -7,7 +7,7 @@ import org.qwork.kernel.search.QSearchService;
 
 public class QService {
 	
-	public List<QSearchResult> search(String part, int maxResults) {
+	public static List<QSearchResult> search(String part, int maxResults) {
 		return QSearchService.search(part, maxResults);
 	}
 
