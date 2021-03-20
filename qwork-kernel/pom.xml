@@ -61,6 +61,10 @@
 		    <artifactId>pdfbox</artifactId>
 		</dependency>
 		<dependency>
+		    <groupId>org.apache.pdfbox</groupId>
+		    <artifactId>jbig2-imageio</artifactId>
+		</dependency>
+		<dependency>
 		    <groupId>org.openpnp</groupId>
 		    <artifactId>opencv</artifactId>
 		</dependency>

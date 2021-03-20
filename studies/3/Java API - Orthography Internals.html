@@ -1,0 +1,223 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0054)https://corpus.quran.com/java/orthographyinternals.jsp -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Java API - Orthography Internals</title>
+<link href="./Java API - Orthography Internals_files/main.css" type="text/css" rel="stylesheet">
+<script type="text/javascript">function search() { var e = document.getElementById("searchTextBox");var url = "/search.jsp?q=" + encodeURIComponent(e.value);document.location.href = url;}</script>
+<script type="text/javascript" src="./Java API - Orthography Internals_files/main.js.download"></script>
+
+	<style type="text/css">
+table.g {
+	margin: auto;
+	margin-top: 1.5em;
+	margin-bottom: 0.5em;
+}
+
+table.g td {
+	padding-top: 0.3em;
+	padding-bottom: 0.3em;
+	padding-left: 2em;
+	padding-right: 2em;
+	border-bottom: 1px solid rgb(150, 150, 150);
+	font: 0.833em Arial;
+}
+
+table.g td.h1,table.g td.h2,table.g td.h3,table.g td.h4 {
+	border-bottom: 1px solid rgb(150, 150, 150);
+	font-weight: bold;
+	border-bottom: none;
+}
+
+table.g td.h1 {
+	background: rgb(149, 179, 215);
+}
+
+table.g td.h2 {
+	background: rgb(217, 151, 149);
+}
+
+table.g td.h3 {
+	background: rgb(197, 217, 241);
+}
+
+table.g td.h4 {
+	background: rgb(242, 221, 220);
+}
+
+table.g td.m1 {
+	font-style: italic;
+}
+
+table.g td.m1,table.g td.h1,table.g td.h3 {
+	border-right: 1px solid rgb(127, 127, 127);
+}
+</style>
+	
+	
+</head>
+<body>
+<table border="0" cellpadding="0" cellspacing="0" class="toolbar">
+	<tbody><tr>
+		<td class="toolbarLeft">&nbsp;</td>
+		<td class="toolbarRight"><a href="http://www.quran.com/">Qur'an</a>
+		| <span>Word by Word</span> | <a href="http://www.quranicaudio.com/">Audio</a>
+		| <a href="http://www.waqt.org/">Prayer Times</a></td>
+	</tr>
+</tbody></table>
+<table border="0" cellpadding="0" cellspacing="0" class="pageTemplate">
+	<tbody><tr>
+		<td class="logo1" rowspan="2"><a href="https://corpus.quran.com/"><img src="./Java API - Orthography Internals_files/logo.png"></a></td>
+		<td class="pad" rowspan="2">__</td>
+		<td class="userBox"><img src="./Java API - Orthography Internals_files/person2.gif"> <a href="https://corpus.quran.com/login.jsp">Sign In</a></td>
+		<td class="searchBox"><a href="https://corpus.quran.com/searchhelp.jsp">Search</a> <input type="text" size="20" id="searchTextBox" onkeypress="if(event.keyCode == 13) { search(); return false; }">
+		<input type="button" value="Go" onclick="search();"></td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td class="leedsLogo"><!--  <a
+			href="http://www.comp.leeds.ac.uk/arabic"><img
+			src="/images/leeds.png" /></a>--></td>
+	</tr>
+	<tr>
+		<td class="logoPad"><a href="https://corpus.quran.com/"><img src="./Java API - Orthography Internals_files/quran.jpeg"></a></td>
+		<td class="pad">__</td>
+		<td class="title" colspan="2">
+		<h2>Java API - Orthography Internals</h2>
+		</td>
+	</tr>
+	<tr>
+		<td class="menuContainer">
+		<table cellpadding="0" cellspacing="0" border="0" class="menu"><tbody><tr><td class="level1"><a href="https://corpus.quran.com/wordbyword.jsp">Word by Word</a></td></tr><tr><td class="level1"><a href="https://corpus.quran.com/qurandictionary.jsp">Quran Dictionary</a></td></tr><tr><td class="level1"><a href="https://corpus.quran.com/translation.jsp">English Translation</a></td></tr><tr><td class="level1"><a href="https://corpus.quran.com/treebank.jsp">Syntactic Treebank</a></td></tr><tr><td class="level1"><a href="https://corpus.quran.com/ontology.jsp">Ontology of Concepts</a></td></tr><tr><td class="level1"><a href="https://corpus.quran.com/documentation">Documentation</a></td></tr><tr><td class="level1"><a href="https://corpus.quran.com/documentation/grammar.jsp">Quranic Grammar</a></td></tr><tr><td class="level1"><a href="https://corpus.quran.com/messageboard.jsp">Message Board</a></td></tr><tr><td class="level1"><a href="https://corpus.quran.com/publications.jsp">Resources</a></td></tr><tr><td class="level1"><a href="https://corpus.quran.com/feedback.jsp">Feedback</a></td></tr><tr><td class="level1 selected hideBorder"><a href="https://corpus.quran.com/java">Java API</a></td></tr><tr><td class="level2 firstSubItem">Developer's Guide</td></tr><tr><td class="level3"><a href="https://corpus.quran.com/java/overview.jsp">Overview</a></td></tr><tr><td class="level3"><a href="https://corpus.quran.com/java/uthmaniscript.jsp">Uthmani script</a></td></tr><tr><td class="level3"><a href="https://corpus.quran.com/java/orthographymodel.jsp">Orthography model</a></td></tr><tr><td class="level3"><a href="https://corpus.quran.com/java/simpleencoding.jsp">Simple encoding</a></td></tr><tr><td class="level3"><a href="https://corpus.quran.com/java/unicode.jsp">Unicode serialization</a></td></tr><tr><td class="level3"><a href="https://corpus.quran.com/java/buckwalter.jsp">Transliteration</a></td></tr><tr><td class="level3"><a href="https://corpus.quran.com/java/analysistable.jsp">Analysis table</a></td></tr><tr><td class="level3"><a href="https://corpus.quran.com/java/tokensearch.jsp">Search API</a></td></tr><tr><td class="level3"><a href="https://corpus.quran.com/java/examples.jsp">Examples</a></td></tr><tr><td class="level2">Project</td></tr><tr><td class="level3"><a href="https://corpus.quran.com/java/download.jsp">Download</a></td></tr><tr><td class="level3"><a href="https://corpus.quran.com/java/api/index.html">API documentation</a></td></tr><tr><td class="level2">Advanced</td></tr><tr><td class="level3"><a href="https://corpus.quran.com/java/orthographyinternals.jsp">Orthography internals</a></td></tr><tr><td class="level3"><a href="https://corpus.quran.com/java/build.jsp">Build instructions</a></td></tr><tr><td class="level3 lastMenuItem"><a href="https://corpus.quran.com/java/cobertura/index.html">Test coverage</a></td></tr></tbody></table>
+		</td>
+		<td class="pad">__</td>
+		<td class="contentCell" colspan="2">
+		<div class="content">
+	<p class="first">Given a block of Unicode text containing
+	diacritics, locating a letter by offset would require scanning every
+	character, since sequences of diacritics are of variable length. The <a href="https://corpus.quran.com/java/orthographymodel.jsp">orthography object model</a> allows access
+	to individual letters within the Arabic text of the Quran. Representing
+	each letter with its own Java object would consume an unreasonable
+	amount of memory for the entire Quran.</p>
+	<p>Both of these concerns are addressed by using a byte buffer,
+	with a fixed width for each letter, including its diacritics. <a href="https://corpus.quran.com/java/api/org/jqurantree/arabic/ArabicCharacter.html">ArabicCharacter</a>
+	objects are a view on the buffer. They are created on demand and are
+	garbage collected. Each <a href="https://corpus.quran.com/java/api/org/jqurantree/arabic/ArabicCharacter.html">ArabicCharacter</a>
+	is represented by 3 bytes. The first byte encodes the character type.
+	The second and third bytes form a vector of bits. Each diacritic type
+	has a fixed position in the bit vector, and if the bit is set then the
+	diacritic is present.</p>
+	<p>The maximum range of values possible in this encoding scheme
+	would be 256 character types, and combinations of 16 diacritic types.
+	In practice, only 44 character types and 13 diacritic types are used.</p>
+	<h4>Byte Format Example</h4>
+	<p class="first">Consider the 3rd whitespace delimited token of
+	verse (<a href="https://corpus.quran.com/wordbyword.jsp?chapter=70&amp;verse=8#(70:8:3)">70:8</a>). The 6
+	characters of this token would be represented as shown in Fig 2. below:</p>
+	<p style="text-align: center; margin-bottom: 0px"><img src="./Java API - Orthography Internals_files/arabic-model.png" alt="Arabic Model"></p>
+	<p style="font-size: 0.833em; font-style: italic; text-align: center; margin-top: 0.2em;">
+	Fig 1. Orthography of the 3rd token of verse (<a href="https://corpus.quran.com/wordbyword.jsp?chapter=70&amp;verse=8#(70:8:3)">70:8</a>).</p>
+	<br>
+	<table class="g" cellpadding="0" cellspacing="0">
+		<tbody><tr>
+			<td class="h1">Arabic</td>
+			<td class="h2">Byte 1</td>
+			<td class="h2">Byte 2</td>
+			<td class="h2">Byte 3</td>
+		</tr>
+		<tr>
+			<td class="h3">Character + Diacritics</td>
+			<td class="h4">Character</td>
+			<td class="h4">Diacritics</td>
+			<td class="h4">Diacritics</td>
+		</tr>
+		<tr>
+			<td class="m1">Alif + HamzatWasl</td>
+			<td>0</td>
+			<td>0</td>
+			<td>2<sup>3</sup></td>
+		</tr>
+		<tr>
+			<td class="m1">Lam</td>
+			<td>22</td>
+			<td>0</td>
+			<td>0</td>
+		</tr>
+		<tr>
+			<td class="m1">Seen + Fatha + Shadda</td>
+			<td>11</td>
+			<td>2<sup>0</sup> + 2<sup>6</sup></td>
+			<td>0</td>
+		</tr>
+		<tr>
+			<td class="m1">Meem + Fatha</td>
+			<td>23</td>
+			<td>2<sup>0</sup></td>
+			<td>0</td>
+		</tr>
+		<tr>
+			<td class="m1">Alif + Maddah</td>
+			<td>0</td>
+			<td>0</td>
+			<td>2<sup>0</sup></td>
+		</tr>
+		<tr>
+			<td class="m1">Hamza + Dammah</td>
+			<td>28</td>
+			<td>2<sup>1</sup></td>
+			<td>0</td>
+		</tr>
+	</tbody></table>
+	<p style="font-size: 0.833em; font-style: italic; text-align: center; margin-top: 0.2em;">
+	Fig 2. Byte representation for the 3rd token of verse (<a href="https://corpus.quran.com/wordbyword.jsp?chapter=70&amp;verse=8#(70:8:3)">70:8</a>).</p>
+	<br>
+	<p>The 6 characters of this token are represented by the following
+	24 bytes:</p>
+	<p style="text-align: center">0, 0, 8, 22, 0, 0, 11, 65, 0, 23, 1,
+	0, 0, 0, 1, 28, 2, 0</p>
+	<h4>Memory Consumption</h4>
+	<p class="first">The Quranic text contains 6236 verses.
+	Representing all verse character data from <a href="https://corpus.quran.com/java/uthmaniscript.jsp">Tanzil
+	XML</a> in Unicode would require 1389662 bytes (1.33 megabytes). The
+	bit-packed <a href="https://corpus.quran.com/java/api/org/jqurantree/arabic/ArabicText.html">ArabicText</a>
+	used by the orthography model uses 1242006 bytes (1.18 megabytes).
+	Dividing this by 3, we get 414002 characters for all verse text,
+	including whitespace.</p>
+	<h4>See Also</h4>
+	<ul class="also">
+		<li><a href="https://corpus.quran.com/java/orthographymodel.jsp">Orthography Object Model</a></li>
+	</ul>
+	</div>
+		</td>
+	</tr>
+	<tr>
+		<td class="leftfooter">
+			<a href="http://www.comp.leeds.ac.uk/arabic">Language Research Group</a><br>
+			<a href="http://www.leeds.ac.uk/">University of Leeds</a>
+		</td>
+		<td class="pad">__</td>
+		<td class="footer" colspan="2">
+         <p>Copyright © Kais Dukes, 2009-2017. Maintained by the <a href="https://quran.com/">quran.com</a> team. This is an open source project.</p>
+		<p>The Quranic Arabic Corpus is available under the <a href="https://corpus.quran.com/license.jsp">GNU public license</a> with <a href="https://corpus.quran.com/download">terms of use</a>.</p>
+		</td>
+	</tr>
+</tbody></table>
+<script type="text/javascript">
+	var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl."
+			: "http://www.");
+	document
+			.write(unescape("%3Cscript src='"
+					+ gaJsHost
+					+ "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script src="./Java API - Orthography Internals_files/ga.js.download" type="text/javascript"></script>
+<script type="text/javascript">
+	try {
+		var pageTracker = _gat._getTracker("UA-84585717-1");
+		pageTracker._trackPageview();
+	} catch (err) {
+	}
+</script>
+
+
+
+</body></html>

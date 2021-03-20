@@ -1,0 +1,582 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0050)https://corpus.quran.com/java/orthographymodel.jsp -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Java API - Orthography Object Model</title>
+<link href="./Java API - Orthography Object Model_files/main.css" type="text/css" rel="stylesheet">
+<script type="text/javascript">function search() { var e = document.getElementById("searchTextBox");var url = "/search.jsp?q=" + encodeURIComponent(e.value);document.location.href = url;}</script>
+<script type="text/javascript" src="./Java API - Orthography Object Model_files/main.js.download"></script>
+
+	<style type="text/css">
+table.u1 {
+	margin: auto;
+	margin-top: 2em;
+}
+
+table.u1 td {
+	font: 0.833em Arial;
+	border-bottom: 1px solid rgb(150, 150, 150);
+	text-align: center;
+	padding-left: 2em;
+	padding-right: 2em;
+}
+
+table.u1 td.h1,table.u1 td.h2,table.u1 td.h3 {
+	height: 2em;
+	background: rgb(210, 225, 185);
+	font-weight: bold;
+	border-top: 1px solid rgb(150, 150, 150);
+}
+
+table.w td {
+	vertical-align: top;
+	padding: 0.7em;
+}
+
+table.w td.w1 {
+	font-weight: bold;
+}
+</style>
+	
+	
+</head>
+<body>
+<table border="0" cellpadding="0" cellspacing="0" class="toolbar">
+	<tbody><tr>
+		<td class="toolbarLeft">&nbsp;</td>
+		<td class="toolbarRight"><a href="http://www.quran.com/">Qur'an</a>
+		| <span>Word by Word</span> | <a href="http://www.quranicaudio.com/">Audio</a>
+		| <a href="http://www.waqt.org/">Prayer Times</a></td>
+	</tr>
+</tbody></table>
+<table border="0" cellpadding="0" cellspacing="0" class="pageTemplate">
+	<tbody><tr>
+		<td class="logo1" rowspan="2"><a href="https://corpus.quran.com/"><img src="./Java API - Orthography Object Model_files/logo.png"></a></td>
+		<td class="pad" rowspan="2">__</td>
+		<td class="userBox"><img src="./Java API - Orthography Object Model_files/person2.gif"> <a href="https://corpus.quran.com/login.jsp">Sign In</a></td>
+		<td class="searchBox"><a href="https://corpus.quran.com/searchhelp.jsp">Search</a> <input type="text" size="20" id="searchTextBox" onkeypress="if(event.keyCode == 13) { search(); return false; }">
+		<input type="button" value="Go" onclick="search();"></td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td class="leedsLogo"><!--  <a
+			href="http://www.comp.leeds.ac.uk/arabic"><img
+			src="/images/leeds.png" /></a>--></td>
+	</tr>
+	<tr>
+		<td class="logoPad"><a href="https://corpus.quran.com/"><img src="./Java API - Orthography Object Model_files/quran.jpeg"></a></td>
+		<td class="pad">__</td>
+		<td class="title" colspan="2">
+		<h2>Java API - Orthography Object Model</h2>
+		</td>
+	</tr>
+	<tr>
+		<td class="menuContainer">
+		<table cellpadding="0" cellspacing="0" border="0" class="menu"><tbody><tr><td class="level1"><a href="https://corpus.quran.com/wordbyword.jsp">Word by Word</a></td></tr><tr><td class="level1"><a href="https://corpus.quran.com/qurandictionary.jsp">Quran Dictionary</a></td></tr><tr><td class="level1"><a href="https://corpus.quran.com/translation.jsp">English Translation</a></td></tr><tr><td class="level1"><a href="https://corpus.quran.com/treebank.jsp">Syntactic Treebank</a></td></tr><tr><td class="level1"><a href="https://corpus.quran.com/ontology.jsp">Ontology of Concepts</a></td></tr><tr><td class="level1"><a href="https://corpus.quran.com/documentation">Documentation</a></td></tr><tr><td class="level1"><a href="https://corpus.quran.com/documentation/grammar.jsp">Quranic Grammar</a></td></tr><tr><td class="level1"><a href="https://corpus.quran.com/messageboard.jsp">Message Board</a></td></tr><tr><td class="level1"><a href="https://corpus.quran.com/publications.jsp">Resources</a></td></tr><tr><td class="level1"><a href="https://corpus.quran.com/feedback.jsp">Feedback</a></td></tr><tr><td class="level1 selected hideBorder"><a href="https://corpus.quran.com/java">Java API</a></td></tr><tr><td class="level2 firstSubItem">Developer's Guide</td></tr><tr><td class="level3"><a href="https://corpus.quran.com/java/overview.jsp">Overview</a></td></tr><tr><td class="level3"><a href="https://corpus.quran.com/java/uthmaniscript.jsp">Uthmani script</a></td></tr><tr><td class="level3"><a href="https://corpus.quran.com/java/orthographymodel.jsp">Orthography model</a></td></tr><tr><td class="level3"><a href="https://corpus.quran.com/java/simpleencoding.jsp">Simple encoding</a></td></tr><tr><td class="level3"><a href="https://corpus.quran.com/java/unicode.jsp">Unicode serialization</a></td></tr><tr><td class="level3"><a href="https://corpus.quran.com/java/buckwalter.jsp">Transliteration</a></td></tr><tr><td class="level3"><a href="https://corpus.quran.com/java/analysistable.jsp">Analysis table</a></td></tr><tr><td class="level3"><a href="https://corpus.quran.com/java/tokensearch.jsp">Search API</a></td></tr><tr><td class="level3"><a href="https://corpus.quran.com/java/examples.jsp">Examples</a></td></tr><tr><td class="level2">Project</td></tr><tr><td class="level3"><a href="https://corpus.quran.com/java/download.jsp">Download</a></td></tr><tr><td class="level3"><a href="https://corpus.quran.com/java/api/index.html">API documentation</a></td></tr><tr><td class="level2">Advanced</td></tr><tr><td class="level3"><a href="https://corpus.quran.com/java/orthographyinternals.jsp">Orthography internals</a></td></tr><tr><td class="level3"><a href="https://corpus.quran.com/java/build.jsp">Build instructions</a></td></tr><tr><td class="level3 lastMenuItem"><a href="https://corpus.quran.com/java/cobertura/index.html">Test coverage</a></td></tr></tbody></table>
+		</td>
+		<td class="pad">__</td>
+		<td class="contentCell" colspan="2">
+		<div class="content">
+	<p class="first">The <a href="https://corpus.quran.com/java/api/org/jqurantree/orthography/package-summary.html">org.jqurantree.orthography</a>
+	package contains Java classes that model the Arabic orthography of the
+	Quran. This model is organized as a hierarchy of objects:</p>
+	<p style="text-align: center; margin-bottom: 0"><img src="./Java API - Orthography Object Model_files/object-model.png" alt="Object Model"></p>
+	<p style="font-size: 0.833em; font-style: italic; text-align: center; margin-top: 0.2em;">
+	Fig 1. Orthographic object model.</p>
+	<p>The orthographic model of the Quran is <b>immutable</b>. That
+	is, the model can be read and searched, but cannot be changed. From top
+	to bottom, the orthography model is composed of the following elements:
+	<a href="https://corpus.quran.com/java/api/org/jqurantree/orthography/Document.html">Document</a>, <a href="https://corpus.quran.com/java/api/org/jqurantree/orthography/Chapter.html">Chapter</a>, <a href="https://corpus.quran.com/java/api/org/jqurantree/orthography/Verse.html">Verse</a> and <a href="https://corpus.quran.com/java/api/org/jqurantree/orthography/Token.html">Token</a>. The
+	following definitions are used:</p>
+	<table border="0" cellpadding="0" cellspacing="0" class="w">
+		<tbody><tr>
+			<td class="w1">Document</td>
+			<td>A structured representation of the entire text of the Holy
+			Quran. Includes all verse text, chapter names, <i class="ab">bismillah</i>
+			phrases and any other document-level information.</td>
+		</tr>
+		<tr>
+			<td class="w1">Chapter</td>
+			<td>The Holy Quran is organized into 114 chapters. Each chapter
+			(<i class="ab">sura</i> in Arabic) has a unique name and number.</td>
+		</tr>
+		<tr>
+			<td class="w1">Verse</td>
+			<td>Each chapter is divided into a sequence of verses (<i class="ab">ayāt</i> in Arabic). Within the <a href="https://corpus.quran.com/java/uthmaniscript.jsp">Uthmani script</a>, there are a total of
+			6236 verses. These verses contain the actual words used in the Quran.
+			Nearly all chapters in the Quran precede their verses with the phrase
+			<i class="ab">bismillah</i>.</td>
+		</tr>
+		<tr>
+			<td class="w1">Token</td>
+			<td>An orthographic token is whitespace-delimited Arabic text
+			within a verse. This is typically a word with its affixes. In Arabic,
+			a word and multiple particles may be fused together into a single
+			orthographic token.</td>
+		</tr>
+	</tbody></table>
+	<p>The <a href="https://corpus.quran.com/java/api/org/jqurantree/orthography/Document.html">Document</a>
+	class sits at the top of the object model. This class is a singleton,
+	and provides static methods to access other elements. All other
+	orthography elements are instances and provide instance methods. The <a href="https://corpus.quran.com/java/api/org/jqurantree/orthography/Verse.html">Verse</a> and <a href="https://corpus.quran.com/java/api/org/jqurantree/orthography/Token.html">Token</a> classes
+	both derive from the <a href="https://corpus.quran.com/java/api/org/jqurantree/arabic/ArabicText.html">ArabicText</a> class.
+	The use of inheritance is logically appropriate since a verse and token
+	are both Arabic text. It is also practical so that <a href="https://corpus.quran.com/java/api/org/jqurantree/arabic/ArabicText.html">ArabicText</a>
+	methods are easily available when working with verses or tokens, e.g. <a href="https://corpus.quran.com/java/api/org/jqurantree/arabic/ArabicText.html#toUnicode()">toUnicode()</a>
+	or <a href="https://corpus.quran.com/java/api/org/jqurantree/arabic/ArabicText.html#getCharacter(int)">getCharacter()</a>.
+	</p>
+	<h4>Modelling Arabic Text</h4>
+	<p class="first">At the lowest level, the orthography of Arabic
+	text in the Quran is modelled as a sequence of <a href="https://corpus.quran.com/java/api/org/jqurantree/arabic/ArabicCharacter.html">ArabicCharacters</a>.
+	Each Arabic character has a <i>character type</i> and a zero or more <i>diacritics</i>.
+	As an example, consider the 3rd whitespace delimited token of verse (<a href="https://corpus.quran.com/wordbyword.jsp?chapter=70&amp;verse=8#(70:8:3)">70:8</a>).
+	This is pronounced <i class="ab">l-samāu</i> ("the
+	sky"). Within the <a href="https://corpus.quran.com/java/uthmaniscript.jsp">Uthmani script</a> of the
+	Medinah Mushaf, this token is represented orthographically by 6
+	letters, with diacritics attached to 5 of these (see Fig. 2 below).</p>
+	<p style="text-align: center; margin-bottom: 0px"><a href="https://corpus.quran.com/java/orthographyinternals.jsp"><img src="./Java API - Orthography Object Model_files/arabic-model.png" alt="Arabic Model"></a></p>
+	<p style="font-size: 0.833em; font-style: italic; text-align: center; margin-top: 0.2em;">
+	Fig 2. Orthography of the 3rd token of verse (<a href="https://corpus.quran.com/wordbyword.jsp?chapter=70&amp;verse=8#(70:8:3)">70:8</a>).</p>
+	<br>
+	<p>Reading from right to left, the second letter has no diacritics,
+	whereas the third letter has 2 diacritics, <i class="ab">fathah</i> and
+	<i class="ab">shadda</i>. 12 Unicode characters, each of 2-bytes, are
+	required to represent this token using Unicode encoding (6 characters +
+	6 diacritics).</p>
+	<p>JQuranTree does not use Unicode to model Quranic orthography,
+	since two different sequences of Unicode may have the same orthographic
+	interpretation. The <a href="https://corpus.quran.com/java/api/org/jqurantree/arabic/ArabicText.html">ArabicText</a>
+	class is used to model the text of the Quran. This class may be found
+	in the <a href="https://corpus.quran.com/java/api/org/jqurantree/arabic/package-summary.html">org.jqurantree.arabic</a>
+	package.</p>
+	<p>Instances of <a href="https://corpus.quran.com/java/api/org/jqurantree/arabic/ArabicText.html">ArabicText</a>
+	are <b>immutable</b>, not unlike Strings in Java. Whereas a String is a
+	logical sequence of 2-byte Unicode characters, an <a href="https://corpus.quran.com/java/api/org/jqurantree/arabic/ArabicText.html">ArabicText</a>
+	instance is a logical sequence of <a href="https://corpus.quran.com/java/api/org/jqurantree/arabic/ArabicCharacter.html">ArabicCharacters</a>.
+	The possible character types and diacritic types for each character -
+	as represented by JQuranTree - are listed in the following tables:</p>
+	<div style="text-align: center">
+	<table class="u1" border="0" cellpadding="0" cellspacing="0">
+		<tbody><tr>
+			<td class="h1">Character</td>
+			<td class="h2">Glyph</td>
+			<td class="h3">Description</td>
+		</tr>
+		<tr>
+			<td class="g1"><a href="https://corpus.quran.com/java/api/org/jqurantree/arabic/CharacterType.html#Alif">Alif</a></td>
+			<td class="g2"><img src="./Java API - Orthography Object Model_files/0627.png"></td>
+			<td class="g3">Arabic letter</td>
+		</tr>
+		<tr>
+			<td class="g1"><a href="https://corpus.quran.com/java/api/org/jqurantree/arabic/CharacterType.html#Ba">Ba</a></td>
+			<td class="g2"><img src="./Java API - Orthography Object Model_files/0628.png"></td>
+			<td class="g3">Arabic letter</td>
+		</tr>
+		<tr>
+			<td class="g1"><a href="https://corpus.quran.com/java/api/org/jqurantree/arabic/CharacterType.html#Ta">Ta</a></td>
+			<td class="g2"><img src="./Java API - Orthography Object Model_files/062A.png"></td>
+			<td class="g3">Arabic letter</td>
+		</tr>
+		<tr>
+			<td class="g1"><a href="https://corpus.quran.com/java/api/org/jqurantree/arabic/CharacterType.html#Tha">Tha</a></td>
+			<td class="g2"><img src="./Java API - Orthography Object Model_files/062B.png"></td>
+			<td class="g3">Arabic letter</td>
+		</tr>
+		<tr>
+			<td class="g1"><a href="https://corpus.quran.com/java/api/org/jqurantree/arabic/CharacterType.html#Jeem">Jeem</a></td>
+			<td class="g2"><img src="./Java API - Orthography Object Model_files/062C.png"></td>
+			<td class="g3">Arabic letter</td>
+		</tr>
+		<tr>
+			<td class="g1"><a href="https://corpus.quran.com/java/api/org/jqurantree/arabic/CharacterType.html#HHa">HHa</a></td>
+			<td class="g2"><img src="./Java API - Orthography Object Model_files/062D.png"></td>
+			<td class="g3">Arabic letter</td>
+		</tr>
+		<tr>
+			<td class="g1"><a href="https://corpus.quran.com/java/api/org/jqurantree/arabic/CharacterType.html#Kha">Kha</a></td>
+			<td class="g2"><img src="./Java API - Orthography Object Model_files/062E.png"></td>
+			<td class="g3">Arabic letter</td>
+		</tr>
+		<tr>
+			<td class="g1"><a href="https://corpus.quran.com/java/api/org/jqurantree/arabic/CharacterType.html#Dal">Dal</a></td>
+			<td class="g2"><img src="./Java API - Orthography Object Model_files/062F.png"></td>
+			<td class="g3">Arabic letter</td>
+		</tr>
+		<tr>
+			<td class="g1"><a href="https://corpus.quran.com/java/api/org/jqurantree/arabic/CharacterType.html#Thal">Thal</a></td>
+			<td class="g2"><img src="./Java API - Orthography Object Model_files/0630.png"></td>
+			<td class="g3">Arabic letter</td>
+		</tr>
+		<tr>
+			<td class="g1"><a href="https://corpus.quran.com/java/api/org/jqurantree/arabic/CharacterType.html#Ra">Ra</a></td>
+			<td class="g2"><img src="./Java API - Orthography Object Model_files/0631.png"></td>
+			<td class="g3">Arabic letter</td>
+		</tr>
+		<tr>
+			<td class="g1"><a href="https://corpus.quran.com/java/api/org/jqurantree/arabic/CharacterType.html#Zain">Zain</a></td>
+			<td class="g2"><img src="./Java API - Orthography Object Model_files/0632.png"></td>
+			<td class="g3">Arabic letter</td>
+		</tr>
+		<tr>
+			<td class="g1"><a href="https://corpus.quran.com/java/api/org/jqurantree/arabic/CharacterType.html#Seen">Seen</a></td>
+			<td class="g2"><img src="./Java API - Orthography Object Model_files/0633.png"></td>
+			<td class="g3">Arabic letter</td>
+		</tr>
+		<tr>
+			<td class="g1"><a href="https://corpus.quran.com/java/api/org/jqurantree/arabic/CharacterType.html#Sheen">Sheen</a></td>
+			<td class="g2"><img src="./Java API - Orthography Object Model_files/0634.png"></td>
+			<td class="g3">Arabic letter</td>
+		</tr>
+		<tr>
+			<td class="g1"><a href="https://corpus.quran.com/java/api/org/jqurantree/arabic/CharacterType.html#Sad">Sad</a></td>
+			<td class="g2"><img src="./Java API - Orthography Object Model_files/0635.png"></td>
+			<td class="g3">Arabic letter</td>
+		</tr>
+		<tr>
+			<td class="g1"><a href="https://corpus.quran.com/java/api/org/jqurantree/arabic/CharacterType.html#DDad">DDad</a></td>
+			<td class="g2"><img src="./Java API - Orthography Object Model_files/0636.png"></td>
+			<td class="g3">Arabic letter</td>
+		</tr>
+		<tr>
+			<td class="g1"><a href="https://corpus.quran.com/java/api/org/jqurantree/arabic/CharacterType.html#TTa">TTa</a></td>
+			<td class="g2"><img src="./Java API - Orthography Object Model_files/0637.png"></td>
+			<td class="g3">Arabic letter</td>
+		</tr>
+		<tr>
+			<td class="g1"><a href="https://corpus.quran.com/java/api/org/jqurantree/arabic/CharacterType.html#DTha">DTha</a></td>
+			<td class="g2"><img src="./Java API - Orthography Object Model_files/0638.png"></td>
+			<td class="g3">Arabic letter</td>
+		</tr>
+		<tr>
+			<td class="g1"><a href="https://corpus.quran.com/java/api/org/jqurantree/arabic/CharacterType.html#Ain">Ain</a></td>
+			<td class="g2"><img src="./Java API - Orthography Object Model_files/0639.png"></td>
+			<td class="g3">Arabic letter</td>
+		</tr>
+		<tr>
+			<td class="g1"><a href="https://corpus.quran.com/java/api/org/jqurantree/arabic/CharacterType.html#Ghain">Ghain</a></td>
+			<td class="g2"><img src="./Java API - Orthography Object Model_files/063A.png"></td>
+			<td class="g3">Arabic letter</td>
+		</tr>
+		<tr>
+			<td class="g1"><a href="https://corpus.quran.com/java/api/org/jqurantree/arabic/CharacterType.html#Fa">Fa</a></td>
+			<td class="g2"><img src="./Java API - Orthography Object Model_files/0641.png"></td>
+			<td class="g3">Arabic letter</td>
+		</tr>
+		<tr>
+			<td class="g1"><a href="https://corpus.quran.com/java/api/org/jqurantree/arabic/CharacterType.html#Qaf">Qaf</a></td>
+			<td class="g2"><img src="./Java API - Orthography Object Model_files/0642.png"></td>
+			<td class="g3">Arabic letter</td>
+		</tr>
+		<tr>
+			<td class="g1"><a href="https://corpus.quran.com/java/api/org/jqurantree/arabic/CharacterType.html#Kaf">Kaf</a></td>
+			<td class="g2"><img src="./Java API - Orthography Object Model_files/0643.png"></td>
+			<td class="g3">Arabic letter</td>
+		</tr>
+		<tr>
+			<td class="g1"><a href="https://corpus.quran.com/java/api/org/jqurantree/arabic/CharacterType.html#Lam">Lam</a></td>
+			<td class="g2"><img src="./Java API - Orthography Object Model_files/0644.png"></td>
+			<td class="g3">Arabic letter</td>
+		</tr>
+		<tr>
+			<td class="g1"><a href="https://corpus.quran.com/java/api/org/jqurantree/arabic/CharacterType.html#Meem">Meem</a></td>
+			<td class="g2"><img src="./Java API - Orthography Object Model_files/0645.png"></td>
+			<td class="g3">Arabic letter</td>
+		</tr>
+		<tr>
+			<td class="g1"><a href="https://corpus.quran.com/java/api/org/jqurantree/arabic/CharacterType.html#Noon">Noon</a></td>
+			<td class="g2"><img src="./Java API - Orthography Object Model_files/0646.png"></td>
+			<td class="g3">Arabic letter</td>
+		</tr>
+		<tr>
+			<td class="g1"><a href="https://corpus.quran.com/java/api/org/jqurantree/arabic/CharacterType.html#Ha">Ha</a></td>
+			<td class="g2"><img src="./Java API - Orthography Object Model_files/0647.png"></td>
+			<td class="g3">Arabic letter</td>
+		</tr>
+		<tr>
+			<td class="g1"><a href="https://corpus.quran.com/java/api/org/jqurantree/arabic/CharacterType.html#Waw">Waw</a></td>
+			<td class="g2"><img src="./Java API - Orthography Object Model_files/0648.png"></td>
+			<td class="g3">Arabic letter</td>
+		</tr>
+		<tr>
+			<td class="g1"><a href="https://corpus.quran.com/java/api/org/jqurantree/arabic/CharacterType.html#Ya">Ya</a></td>
+			<td class="g2"><img src="./Java API - Orthography Object Model_files/0649.png"></td>
+			<td class="g3">Arabic letter</td>
+		</tr>
+		<tr>
+			<td class="g1"><a href="https://corpus.quran.com/java/api/org/jqurantree/arabic/CharacterType.html#Hamza">Hamza</a></td>
+			<td class="g2"><img src="./Java API - Orthography Object Model_files/0621.png"></td>
+			<td class="g3">Arabic letter</td>
+		</tr>
+		<tr>
+			<td class="g1"><a href="https://corpus.quran.com/java/api/org/jqurantree/arabic/CharacterType.html#AlifMaksura">AlifMaksura</a></td>
+			<td class="g2"><img src="./Java API - Orthography Object Model_files/0649.png"></td>
+			<td class="g3">Arabic letter</td>
+		</tr>
+		<tr>
+			<td class="g1"><a href="https://corpus.quran.com/java/api/org/jqurantree/arabic/CharacterType.html#TaMarbuta">TaMarbuta</a></td>
+			<td class="g2"><img src="./Java API - Orthography Object Model_files/0629.png"></td>
+			<td class="g3">Arabic letter</td>
+		</tr>
+		<tr>
+			<td class="g1"><a href="https://corpus.quran.com/java/api/org/jqurantree/arabic/CharacterType.html#Tatweel">Tatweel</a></td>
+			<td class="g2"><img src="./Java API - Orthography Object Model_files/0640.png"></td>
+			<td class="g3" style="padding-top: 5px; padding-bottom: 5px;">Orthographic
+			symbol used to lengthen<br>
+			the previous letter. In <a href="https://corpus.quran.com/java/uthmaniscript.jsp">Tanzil XML</a>, a<br>
+			diacritic <i class="ab">hamza</i> may sit on a <i class="ab">tatwīl</i>.</td>
+		</tr>
+		<tr>
+			<td class="g1"><a href="https://corpus.quran.com/java/api/org/jqurantree/arabic/CharacterType.html#SmallHighSeen">SmallHighSeen</a></td>
+			<td class="g2"><img src="./Java API - Orthography Object Model_files/06DC.png"></td>
+			<td class="g3">Quranic symbol</td>
+		</tr>
+		<tr>
+			<td class="g1"><a href="https://corpus.quran.com/java/api/org/jqurantree/arabic/CharacterType.html#SmallHighRoundedZero">SmallHighRoundedZero</a></td>
+			<td class="g2"><img src="./Java API - Orthography Object Model_files/06DF.png"></td>
+			<td class="g3">Quranic symbol</td>
+		</tr>
+		<tr>
+			<td class="g1"><a href="https://corpus.quran.com/java/api/org/jqurantree/arabic/CharacterType.html#SmallHighUprightRectangularZero">SmallHighUprightRectangularZero</a></td>
+			<td class="g2"><img src="./Java API - Orthography Object Model_files/06E0.png"></td>
+			<td class="g3">Quranic symbol</td>
+		</tr>
+		<tr>
+			<td class="g1"><a href="https://corpus.quran.com/java/api/org/jqurantree/arabic/CharacterType.html#SmallHighMeemIsolatedForm">SmallHighMeemIsolatedForm</a></td>
+			<td class="g2"><img src="./Java API - Orthography Object Model_files/06E2.png"></td>
+			<td class="g3">Quranic symbol</td>
+		</tr>
+		<tr>
+			<td class="g1"><a href="https://corpus.quran.com/java/api/org/jqurantree/arabic/CharacterType.html#SmallLowSeen">SmallLowSeen</a></td>
+			<td class="g2"><img src="./Java API - Orthography Object Model_files/06E3.png"></td>
+			<td class="g3">Quranic symbol</td>
+		</tr>
+		<tr>
+			<td class="g1"><a href="https://corpus.quran.com/java/api/org/jqurantree/arabic/CharacterType.html#SmallWaw">SmallWaw</a></td>
+			<td class="g2"><img src="./Java API - Orthography Object Model_files/06E5.png"></td>
+			<td class="g3">Quranic symbol</td>
+		</tr>
+		<tr>
+			<td class="g1"><a href="https://corpus.quran.com/java/api/org/jqurantree/arabic/CharacterType.html#SmallYa">SmallYa</a></td>
+			<td class="g2"><img src="./Java API - Orthography Object Model_files/06E6.png"></td>
+			<td class="g3">Quranic symbol</td>
+		</tr>
+		<tr>
+			<td class="g1"><a href="https://corpus.quran.com/java/api/org/jqurantree/arabic/CharacterType.html#SmallHighNoon">SmallHighNoon</a></td>
+			<td class="g2"><img src="./Java API - Orthography Object Model_files/06E8.png"></td>
+			<td class="g3">Quranic symbol</td>
+		</tr>
+		<tr>
+			<td class="g1"><a href="https://corpus.quran.com/java/api/org/jqurantree/arabic/CharacterType.html#EmptyCentreLowStop">EmptyCentreLowStop</a></td>
+			<td class="g2"><img src="./Java API - Orthography Object Model_files/06EA.png"></td>
+			<td class="g3">Quranic symbol</td>
+		</tr>
+		<tr>
+			<td class="g1"><a href="https://corpus.quran.com/java/api/org/jqurantree/arabic/CharacterType.html#EmptyCentreHighStop">EmptyCentreHighStop</a></td>
+			<td class="g2"><img src="./Java API - Orthography Object Model_files/06EB.png"></td>
+			<td class="g3">Quranic symbol</td>
+		</tr>
+		<tr>
+			<td class="g1"><a href="https://corpus.quran.com/java/api/org/jqurantree/arabic/CharacterType.html#RoundedHighStopWithFilledCentre">RoundedHighStopWithFilledCentre</a></td>
+			<td class="g2"><img src="./Java API - Orthography Object Model_files/06EC.png"></td>
+			<td class="g3">Quranic symbol</td>
+		</tr>
+		<tr>
+			<td class="g1"><a href="https://corpus.quran.com/java/api/org/jqurantree/arabic/CharacterType.html#SmallLowMeem">SmallLowMeem</a></td>
+			<td class="g2"><img src="./Java API - Orthography Object Model_files/06ED.png"></td>
+			<td class="g3">Quranic symbol</td>
+		</tr>
+	</tbody></table>
+	</div>
+	<p style="font-size: 0.833em; font-style: italic; text-align: center; margin-top: 0.2em;">
+	Fig 3. Character types.</p>
+	<div style="text-align: center">
+	<table class="u1" border="0" cellpadding="0" cellspacing="0">
+		<tbody><tr>
+			<td class="h1">Diacritic</td>
+			<td class="h2">Glyph</td>
+			<td class="h3">Description</td>
+		</tr>
+		<tr>
+			<td class="g1"><a href="https://corpus.quran.com/java/api/org/jqurantree/arabic/DiacriticType.html#Fatha">Fatha</a></td>
+			<td class="g2"><img src="./Java API - Orthography Object Model_files/064E.png"></td>
+			<td class="g3">Above</td>
+		</tr>
+		<tr>
+			<td class="g1"><a href="https://corpus.quran.com/java/api/org/jqurantree/arabic/DiacriticType.html#Damma">Damma</a></td>
+			<td class="g2"><img src="./Java API - Orthography Object Model_files/064F.png"></td>
+			<td class="g3">Above</td>
+		</tr>
+		<tr>
+			<td class="g1"><a href="https://corpus.quran.com/java/api/org/jqurantree/arabic/DiacriticType.html#Kasra">Kasra</a></td>
+			<td class="g2"><img src="./Java API - Orthography Object Model_files/0650.png"></td>
+			<td class="g3">Below</td>
+		</tr>
+		<tr>
+			<td class="g1"><a href="https://corpus.quran.com/java/api/org/jqurantree/arabic/DiacriticType.html#Fathatan">Fathatan</a></td>
+			<td class="g2"><img src="./Java API - Orthography Object Model_files/064B.png"></td>
+			<td class="g3">Double <i class="ab">fatha</i></td>
+		</tr>
+		<tr>
+			<td class="g1"><a href="https://corpus.quran.com/java/api/org/jqurantree/arabic/DiacriticType.html#Dammatan">Dammatan</a></td>
+			<td class="g2"><img src="./Java API - Orthography Object Model_files/064C.png"></td>
+			<td class="g3">Double <i class="ab">damma</i></td>
+		</tr>
+		<tr>
+			<td class="g1"><a href="https://corpus.quran.com/java/api/org/jqurantree/arabic/DiacriticType.html#Kasratan">Kasratan</a></td>
+			<td class="g2"><img src="./Java API - Orthography Object Model_files/064D.png"></td>
+			<td class="g3">Double <i class="ab">kasra</i></td>
+		</tr>
+		<tr>
+			<td class="g1"><a href="https://corpus.quran.com/java/api/org/jqurantree/arabic/DiacriticType.html#Shadda">Shadda</a></td>
+			<td class="g2"><img src="./Java API - Orthography Object Model_files/0651.png"></td>
+			<td class="g3">Above</td>
+		</tr>
+		<tr>
+			<td class="g1"><a href="https://corpus.quran.com/java/api/org/jqurantree/arabic/DiacriticType.html#Sukun">Sukun</a></td>
+			<td class="g2"><img src="./Java API - Orthography Object Model_files/06DF.png"></td>
+			<td class="g3">Above</td>
+		</tr>
+		<tr>
+			<td class="g1"><a href="https://corpus.quran.com/java/api/org/jqurantree/arabic/DiacriticType.html#Maddah">Maddah</a></td>
+			<td class="g2"><img src="./Java API - Orthography Object Model_files/0653.png"></td>
+			<td class="g3">Above</td>
+		</tr>
+		<tr>
+			<td class="g1"><a href="https://corpus.quran.com/java/api/org/jqurantree/arabic/DiacriticType.html#HamzaAbove">HamzaAbove</a></td>
+			<td class="g2"><img src="./Java API - Orthography Object Model_files/0623.png"></td>
+			<td class="g3">Above</td>
+		</tr>
+		<tr>
+			<td class="g1"><a href="https://corpus.quran.com/java/api/org/jqurantree/arabic/DiacriticType.html#HamzaBelow">HamzaBelow</a></td>
+			<td class="g2"><img src="./Java API - Orthography Object Model_files/0625.png"></td>
+			<td class="g3">Below</td>
+		</tr>
+		<tr>
+			<td class="g1"><a href="https://corpus.quran.com/java/api/org/jqurantree/arabic/DiacriticType.html#HamzatWasl">HamzatWasl</a></td>
+			<td class="g2"><img src="./Java API - Orthography Object Model_files/0671.png"></td>
+			<td class="g3">Above <i class="ab">alif</i></td>
+		</tr>
+		<tr>
+			<td class="g1"><a href="https://corpus.quran.com/java/api/org/jqurantree/arabic/DiacriticType.html#AlifKhanjareeya">AlifKhanjareeya</a></td>
+			<td class="g2"><img src="./Java API - Orthography Object Model_files/0670.png"></td>
+			<td class="g3">Superscript <i class="ab">alif</i></td>
+		</tr>
+	</tbody></table>
+	</div>
+	<p style="font-size: 0.833em; font-style: italic; text-align: center; margin-top: 0.2em;">
+	Fig 4. Diacritic types.</p>
+	<br>
+	<h4>Locating Orthography Elements</h4>
+	<p class="first">Each element in the orthography model may be
+	assigned a chapter number, verse number or token number. A 1-based
+	numbering scheme is used, so that the first chapter, first verse or
+	first token will have number 1 of the sequence. Sequence numbers may be
+	used to access an element via the <a href="https://corpus.quran.com/java/api/org/jqurantree/orthography/Document.html">Document</a>
+	class:</p>
+	<pre>// Get chapter 3.
+Chapter chapter = Document.getChapter(3);
+
+// Get verse (21:7).
+Verse verse = Document.getVerse(21, 7);
+
+// Get verse (2:14), token #2.
+Token token = Document.getToken(2, 14, 2);
+</pre>
+	<p>Each element in the model has a <a href="https://corpus.quran.com/java/api/org/jqurantree/orthography/Verse.html#getLocation()">getLocation()</a>
+	accessor which returns a <a href="https://corpus.quran.com/java/api/org/jqurantree/orthography/Location.html">Location</a>
+	object that specifies the current location. If a location is known,
+	then static <a href="https://corpus.quran.com/java/api/org/jqurantree/orthography/Document.html">Document</a>
+	methods can be used to access an element by reference:</p>
+	<pre>// Get verse (21:7) by location.
+Location location = new Location(21, 7);
+Verse verse = Document.getVerse(location);
+</pre>
+	<h4>Enumerating Orthography Elements</h4>
+	<p class="first">The orthography model can be considered as a flat
+	list of verses and tokens, or can be navigated as a hierarchy of
+	orthography elements. To treat the model as a flat list, use the
+	following <a href="https://corpus.quran.com/java/api/org/jqurantree/orthography/Document.html">Document</a>
+	methods:</p>
+	<pre>// Enumerate all chapters in the document.
+for (Chapter chapter : Document.getChapters()) {
+}
+
+// Enumerate all verses in the document.
+for (Verse verse : Document.getVerses()) {
+}
+
+// Enumerate all tokens in all verses.
+for (Token token : Document.getTokens()) {
+}
+</pre>
+	<p>Alternatively, each element provides iterator methods which may
+	be used to access those elements below. These methods include <a href="https://corpus.quran.com/java/api/org/jqurantree/orthography/Chapter.html#iterator()">Chapter.iterator()</a>
+	and <a href="https://corpus.quran.com/java/api/org/jqurantree/orthography/Verse.html#getTokens()">Verse.getTokens()</a>.
+	</p>
+	<h4>Working with Arabic Text</h4>
+	<p class="first">Instances of Arabic text are <b>immutable</b>
+	since the orthography model can not be changed. Convenience methods are
+	provided to create modified copies of the text. These include:</p>
+	<p>- <a href="https://corpus.quran.com/java/api/org/jqurantree/arabic/ArabicText.html#removeDiacritics()">removeDiacritics()</a>
+	- Returns a copy of the text with diacritics removed.<br>
+	- <a href="https://corpus.quran.com/java/api/org/jqurantree/arabic/ArabicText.html#removeNonLetters()">removeNonLetters()</a>
+	- Returns a copy without Quranic symbols.</p>
+	<p>As with the rest of the orthography model, it is possible to
+	enumerate over <a href="https://corpus.quran.com/java/api/org/jqurantree/arabic/ArabicText.html">ArabicText</a>.
+	In this case, each individual character within the text may be
+	accessed:</p>
+	<pre>// Enumerate each character.
+for (ArabicCharacter ch : text) {
+}
+</pre>
+	<p>The <a href="https://corpus.quran.com/java/api/org/jqurantree/arabic/ArabicCharacter.html#getType()">getType()</a>
+	method will return the type of each character, and accessors including
+	<a href="https://corpus.quran.com/java/api/org/jqurantree/arabic/ArabicCharacter.html#isFatha()">isFatha()</a>
+	and <a href="https://corpus.quran.com/java/api/org/jqurantree/arabic/ArabicCharacter.html#isKasra()">isKasra()</a>
+	indicate which diacritics are attached to a letter. A character can
+	also be accessed by its zero-based index, for example:</p>
+	<pre>// Access the 3rd character.
+text.getCharacter(2);
+</pre>
+	<p>This is analogous to the Java <code>String.charAt()</code>
+	method. In order to construct a new <a href="https://corpus.quran.com/java/api/org/jqurantree/arabic/ArabicText.html">ArabicText</a>
+	instance, the <a href="https://corpus.quran.com/java/api/org/jqurantree/arabic/ArabicTextBuilder.html">ArabicTextBuilder</a>
+	class may be used.</p>
+	<h4>See Also</h4>
+	<ul class="also">
+		<li><a href="https://corpus.quran.com/java/orthographyinternals.jsp">Orthography Internals</a></li>
+	</ul>
+	</div>
+		</td>
+	</tr>
+	<tr>
+		<td class="leftfooter">
+			<a href="http://www.comp.leeds.ac.uk/arabic">Language Research Group</a><br>
+			<a href="http://www.leeds.ac.uk/">University of Leeds</a>
+		</td>
+		<td class="pad">__</td>
+		<td class="footer" colspan="2">
+         <p>Copyright © Kais Dukes, 2009-2017. Maintained by the <a href="https://quran.com/">quran.com</a> team. This is an open source project.</p>
+		<p>The Quranic Arabic Corpus is available under the <a href="https://corpus.quran.com/license.jsp">GNU public license</a> with <a href="https://corpus.quran.com/download">terms of use</a>.</p>
+		</td>
+	</tr>
+</tbody></table>
+<script type="text/javascript">
+	var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl."
+			: "http://www.");
+	document
+			.write(unescape("%3Cscript src='"
+					+ gaJsHost
+					+ "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script src="./Java API - Orthography Object Model_files/ga.js.download" type="text/javascript"></script>
+<script type="text/javascript">
+	try {
+		var pageTracker = _gat._getTracker("UA-84585717-1");
+		pageTracker._trackPageview();
+	} catch (err) {
+	}
+</script>
+
+
+
+</body></html>

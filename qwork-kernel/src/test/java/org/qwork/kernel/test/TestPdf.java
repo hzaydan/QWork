@@ -38,17 +38,20 @@ public class TestPdf {
 		}
 	}
 	
-	public static void testExtractImage() {
-		var pdfHandle = Pdf.loadPdf("QuranPdf/01.pdf");
+	public static void testExtractImages() {
+		var pdfHandle = Pdf.loadPdf("tafsir/moyassar.pdf");
 		if(pdfHandle != null) {
 			Scanner scan = new Scanner(System.in);
 			boolean exit = false;
 			do {
 				p("You have a pdf of %d pages", pdfHandle.getNumberOfPages());
-				_p("page:");int page = scan.nextInt();
-				String outFileName = "extracted_" + page + ".jpg";
-				Pdf.writeToJpg(pdfHandle, page-1, 300, outFileName);
-				p("output to: %s", outFileName);
+				_p("from page:");int frompage = scan.nextInt();
+				_p("to page:");int topage = scan.nextInt();
+					for(int page = frompage; page <= topage; page++) {
+					String outFileName = page + ".jpg";
+					Pdf.writeToJpg(pdfHandle, page-1, 300, outFileName);
+					p("extracted: %s", outFileName);
+				}
 				_p("exit:");exit = scan.nextBoolean();
 			}
 			while(exit != true);
@@ -59,7 +62,7 @@ public class TestPdf {
 	}
 	
 	public static void main(String[] args) {
-		testExtractImage();
+		testExtractImages();
 	}
 	
 }
