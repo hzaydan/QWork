@@ -72,3 +72,24 @@ Servers/
 # vscode
 .factorypath
 .vscode/
+/.settings/.jsdtscope
+/.settings/org.eclipse.wst.common.component
+/.settings/org.eclipse.wst.common.project.facet.core.xml
+/.settings/org.eclipse.wst.jsdt.ui.superType.container
+/.settings/org.eclipse.wst.jsdt.ui.superType.name
+/jqurantree/.classpath
+/jqurantree/.project
+/jqurantree/.settings/org.eclipse.jdt.core.prefs
+/jqurantree/.settings/org.eclipse.m2e.core.prefs
+/qwork-kernel/.classpath
+/qwork-kernel/.project
+/qwork-kernel/.settings/org.eclipse.core.resources.prefs
+/qwork-kernel/.settings/org.eclipse.jdt.core.prefs
+/qwork-kernel/.settings/org.eclipse.m2e.core.prefs
+/qwork-parent/.project
+/qwork-parent/.settings/org.eclipse.m2e.core.prefs
+/qwork-studies/.classpath
+/qwork-studies/.project
+/qwork-studies/.settings/org.eclipse.jdt.core.prefs
+/qwork-studies/.settings/org.eclipse.m2e.core.prefs
+/studies/3/jqurantree-1.0.0-bin/jqurantree-1.0.0.jar
