@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Automatic-Module-Name: org.qwork.arabic.ide
+Bundle-ManifestVersion: 2
+Bundle-Name: org.qwork.arabic.ide
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: org.qwork.arabic.ide; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: org.qwork.arabic,
+ org.eclipse.xtext.ide,
+ org.eclipse.xtext.xbase.ide,
+ org.antlr.runtime;bundle-version="[3.2.0,3.2.1)"
+Bundle-RequiredExecutionEnvironment: JavaSE-11
+Export-Package: org.qwork.ide.contentassist.antlr,
+ org.qwork.ide.contentassist.antlr.internal

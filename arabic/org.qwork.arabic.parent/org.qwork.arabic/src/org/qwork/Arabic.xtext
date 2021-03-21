@@ -1,0 +1,13 @@
+grammar org.qwork.Arabic with org.eclipse.xtext.common.Terminals
+
+generate arabic "http://www.qwork.org/Arabic"
+
+Model:
+	phrases+=Phrase+;
+	
+Phrase:
+	words+=ATEXT (WS words+=ATEXT)*;
+
+terminal ATEXT:
+	('\u0600' ..'\u06ff')+
+;
