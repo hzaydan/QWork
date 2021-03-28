@@ -22,16 +22,23 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalArabicParser extends AbstractInternalContentAssistParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_WS", "RULE_ATEXT", "RULE_ID", "RULE_INT", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_ANY_OTHER"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_WS", "RULE_AWORD", "RULE_ALETTER", "RULE_ADIGIT", "RULE_AHARAKAH", "RULE_ASHADDAH", "RULE_ANONLETTER", "RULE_ADIGITS", "RULE_KALEMAH", "RULE_ID", "RULE_INT", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_ANY_OTHER"
     };
-    public static final int RULE_ID=6;
+    public static final int RULE_ID=13;
     public static final int RULE_WS=4;
-    public static final int RULE_STRING=8;
-    public static final int RULE_ANY_OTHER=11;
-    public static final int RULE_SL_COMMENT=10;
-    public static final int RULE_ATEXT=5;
-    public static final int RULE_INT=7;
-    public static final int RULE_ML_COMMENT=9;
+    public static final int RULE_AHARAKAH=8;
+    public static final int RULE_STRING=15;
+    public static final int RULE_ANY_OTHER=18;
+    public static final int RULE_ANONLETTER=10;
+    public static final int RULE_ADIGIT=7;
+    public static final int RULE_ADIGITS=11;
+    public static final int RULE_SL_COMMENT=17;
+    public static final int RULE_KALEMAH=12;
+    public static final int RULE_INT=14;
+    public static final int RULE_AWORD=5;
+    public static final int RULE_ML_COMMENT=16;
+    public static final int RULE_ASHADDAH=9;
+    public static final int RULE_ALETTER=6;
     public static final int EOF=-1;
 
     // delegates
@@ -141,7 +148,7 @@ public class InternalArabicParser extends AbstractInternalContentAssistParser {
                 int alt1=2;
                 int LA1_0 = input.LA(1);
 
-                if ( (LA1_0==RULE_ATEXT) ) {
+                if ( (LA1_0==RULE_AWORD) ) {
                     alt1=1;
                 }
 
@@ -646,21 +653,21 @@ public class InternalArabicParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Phrase__WordsAssignment_0"
-    // InternalArabic.g:232:1: rule__Phrase__WordsAssignment_0 : ( RULE_ATEXT ) ;
+    // InternalArabic.g:232:1: rule__Phrase__WordsAssignment_0 : ( RULE_AWORD ) ;
     public final void rule__Phrase__WordsAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalArabic.g:236:1: ( ( RULE_ATEXT ) )
-            // InternalArabic.g:237:2: ( RULE_ATEXT )
+            // InternalArabic.g:236:1: ( ( RULE_AWORD ) )
+            // InternalArabic.g:237:2: ( RULE_AWORD )
             {
-            // InternalArabic.g:237:2: ( RULE_ATEXT )
-            // InternalArabic.g:238:3: RULE_ATEXT
+            // InternalArabic.g:237:2: ( RULE_AWORD )
+            // InternalArabic.g:238:3: RULE_AWORD
             {
-             before(grammarAccess.getPhraseAccess().getWordsATEXTTerminalRuleCall_0_0()); 
-            match(input,RULE_ATEXT,FOLLOW_2); 
-             after(grammarAccess.getPhraseAccess().getWordsATEXTTerminalRuleCall_0_0()); 
+             before(grammarAccess.getPhraseAccess().getWordsAWORDTerminalRuleCall_0_0()); 
+            match(input,RULE_AWORD,FOLLOW_2); 
+             after(grammarAccess.getPhraseAccess().getWordsAWORDTerminalRuleCall_0_0()); 
 
             }
 
@@ -683,21 +690,21 @@ public class InternalArabicParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Phrase__WordsAssignment_1_1"
-    // InternalArabic.g:247:1: rule__Phrase__WordsAssignment_1_1 : ( RULE_ATEXT ) ;
+    // InternalArabic.g:247:1: rule__Phrase__WordsAssignment_1_1 : ( RULE_AWORD ) ;
     public final void rule__Phrase__WordsAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalArabic.g:251:1: ( ( RULE_ATEXT ) )
-            // InternalArabic.g:252:2: ( RULE_ATEXT )
+            // InternalArabic.g:251:1: ( ( RULE_AWORD ) )
+            // InternalArabic.g:252:2: ( RULE_AWORD )
             {
-            // InternalArabic.g:252:2: ( RULE_ATEXT )
-            // InternalArabic.g:253:3: RULE_ATEXT
+            // InternalArabic.g:252:2: ( RULE_AWORD )
+            // InternalArabic.g:253:3: RULE_AWORD
             {
-             before(grammarAccess.getPhraseAccess().getWordsATEXTTerminalRuleCall_1_1_0()); 
-            match(input,RULE_ATEXT,FOLLOW_2); 
-             after(grammarAccess.getPhraseAccess().getWordsATEXTTerminalRuleCall_1_1_0()); 
+             before(grammarAccess.getPhraseAccess().getWordsAWORDTerminalRuleCall_1_1_0()); 
+            match(input,RULE_AWORD,FOLLOW_2); 
+             after(grammarAccess.getPhraseAccess().getWordsAWORDTerminalRuleCall_1_1_0()); 
 
             }
 

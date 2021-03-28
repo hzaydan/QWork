@@ -7,4 +7,10 @@
 			class = "org.qwork.arabic.ArabicPackage"
 			genModel = "model/generated/Arabic.genmodel" />
 	</extension>
+	<extension point="org.eclipse.emf.ecore.generated_package">
+		<package
+			uri = "http://www.qwork.org/Qiraa"
+			class = "org.qwork.qiraa.QiraaPackage"
+			genModel = "model/generated/Qiraa.genmodel" />
+	</extension>
 </plugin>

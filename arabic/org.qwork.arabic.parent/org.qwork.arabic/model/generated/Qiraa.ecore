@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="qiraa" nsURI="http://www.qwork.org/Qiraa" nsPrefix="qiraa">
+  <eClassifiers xsi:type="ecore:EClass" name="QiraaModel">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hourouf" upperBound="-1"
+        eType="#//Harf" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="qoraa" upperBound="-1"
+        eType="#//Qaree" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="torok" upperBound="-1"
+        eType="#//Tareek" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="harakat" upperBound="-1"
+        eType="#//Harakah" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rowat" upperBound="-1"
+        eType="#//Rawee" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Harf">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="values" unique="false"
+        upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ref" eType="#//Harf"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Harakah">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Qaree" eSuperTypes="#//Person"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Rawee" eSuperTypes="#//Person">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="qaree" eType="#//Qaree"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Person">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="esm" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="lakab" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="towofia" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Tareek">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ref" eType="#//Tareek"/>
+  </eClassifiers>
+</ecore:EPackage>

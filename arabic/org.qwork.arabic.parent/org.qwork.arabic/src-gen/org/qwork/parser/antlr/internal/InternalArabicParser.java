@@ -21,16 +21,23 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalArabicParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ATEXT", "RULE_WS", "RULE_ID", "RULE_INT", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_ANY_OTHER"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_AWORD", "RULE_WS", "RULE_ALETTER", "RULE_ADIGIT", "RULE_AHARAKAH", "RULE_ASHADDAH", "RULE_ANONLETTER", "RULE_ADIGITS", "RULE_KALEMAH", "RULE_ID", "RULE_INT", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_ANY_OTHER"
     };
-    public static final int RULE_ID=6;
+    public static final int RULE_ID=13;
     public static final int RULE_WS=5;
-    public static final int RULE_STRING=8;
-    public static final int RULE_ANY_OTHER=11;
-    public static final int RULE_SL_COMMENT=10;
-    public static final int RULE_ATEXT=4;
-    public static final int RULE_INT=7;
-    public static final int RULE_ML_COMMENT=9;
+    public static final int RULE_AHARAKAH=8;
+    public static final int RULE_STRING=15;
+    public static final int RULE_ANY_OTHER=18;
+    public static final int RULE_ANONLETTER=10;
+    public static final int RULE_ADIGIT=7;
+    public static final int RULE_ADIGITS=11;
+    public static final int RULE_SL_COMMENT=17;
+    public static final int RULE_KALEMAH=12;
+    public static final int RULE_INT=14;
+    public static final int RULE_AWORD=4;
+    public static final int RULE_ML_COMMENT=16;
+    public static final int RULE_ASHADDAH=9;
+    public static final int RULE_ALETTER=6;
     public static final int EOF=-1;
 
     // delegates
@@ -130,7 +137,7 @@ public class InternalArabicParser extends AbstractInternalAntlrParser {
                 int alt1=2;
                 int LA1_0 = input.LA(1);
 
-                if ( (LA1_0==RULE_ATEXT) ) {
+                if ( (LA1_0==RULE_AWORD) ) {
                     alt1=1;
                 }
 
@@ -233,7 +240,7 @@ public class InternalArabicParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulePhrase"
-    // InternalArabic.g:107:1: rulePhrase returns [EObject current=null] : ( ( (lv_words_0_0= RULE_ATEXT ) ) (this_WS_1= RULE_WS ( (lv_words_2_0= RULE_ATEXT ) ) )* ) ;
+    // InternalArabic.g:107:1: rulePhrase returns [EObject current=null] : ( ( (lv_words_0_0= RULE_AWORD ) ) (this_WS_1= RULE_WS ( (lv_words_2_0= RULE_AWORD ) ) )* ) ;
     public final EObject rulePhrase() throws RecognitionException {
         EObject current = null;
 
@@ -245,21 +252,21 @@ public class InternalArabicParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalArabic.g:113:2: ( ( ( (lv_words_0_0= RULE_ATEXT ) ) (this_WS_1= RULE_WS ( (lv_words_2_0= RULE_ATEXT ) ) )* ) )
-            // InternalArabic.g:114:2: ( ( (lv_words_0_0= RULE_ATEXT ) ) (this_WS_1= RULE_WS ( (lv_words_2_0= RULE_ATEXT ) ) )* )
+            // InternalArabic.g:113:2: ( ( ( (lv_words_0_0= RULE_AWORD ) ) (this_WS_1= RULE_WS ( (lv_words_2_0= RULE_AWORD ) ) )* ) )
+            // InternalArabic.g:114:2: ( ( (lv_words_0_0= RULE_AWORD ) ) (this_WS_1= RULE_WS ( (lv_words_2_0= RULE_AWORD ) ) )* )
             {
-            // InternalArabic.g:114:2: ( ( (lv_words_0_0= RULE_ATEXT ) ) (this_WS_1= RULE_WS ( (lv_words_2_0= RULE_ATEXT ) ) )* )
-            // InternalArabic.g:115:3: ( (lv_words_0_0= RULE_ATEXT ) ) (this_WS_1= RULE_WS ( (lv_words_2_0= RULE_ATEXT ) ) )*
+            // InternalArabic.g:114:2: ( ( (lv_words_0_0= RULE_AWORD ) ) (this_WS_1= RULE_WS ( (lv_words_2_0= RULE_AWORD ) ) )* )
+            // InternalArabic.g:115:3: ( (lv_words_0_0= RULE_AWORD ) ) (this_WS_1= RULE_WS ( (lv_words_2_0= RULE_AWORD ) ) )*
             {
-            // InternalArabic.g:115:3: ( (lv_words_0_0= RULE_ATEXT ) )
-            // InternalArabic.g:116:4: (lv_words_0_0= RULE_ATEXT )
+            // InternalArabic.g:115:3: ( (lv_words_0_0= RULE_AWORD ) )
+            // InternalArabic.g:116:4: (lv_words_0_0= RULE_AWORD )
             {
-            // InternalArabic.g:116:4: (lv_words_0_0= RULE_ATEXT )
-            // InternalArabic.g:117:5: lv_words_0_0= RULE_ATEXT
+            // InternalArabic.g:116:4: (lv_words_0_0= RULE_AWORD )
+            // InternalArabic.g:117:5: lv_words_0_0= RULE_AWORD
             {
-            lv_words_0_0=(Token)match(input,RULE_ATEXT,FOLLOW_4); 
+            lv_words_0_0=(Token)match(input,RULE_AWORD,FOLLOW_4); 
 
-            					newLeafNode(lv_words_0_0, grammarAccess.getPhraseAccess().getWordsATEXTTerminalRuleCall_0_0());
+            					newLeafNode(lv_words_0_0, grammarAccess.getPhraseAccess().getWordsAWORDTerminalRuleCall_0_0());
             				
 
             					if (current==null) {
@@ -269,7 +276,7 @@ public class InternalArabicParser extends AbstractInternalAntlrParser {
             						current,
             						"words",
             						lv_words_0_0,
-            						"org.qwork.Arabic.ATEXT");
+            						"org.qwork.Arabic.AWORD");
             				
 
             }
@@ -277,7 +284,7 @@ public class InternalArabicParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalArabic.g:133:3: (this_WS_1= RULE_WS ( (lv_words_2_0= RULE_ATEXT ) ) )*
+            // InternalArabic.g:133:3: (this_WS_1= RULE_WS ( (lv_words_2_0= RULE_AWORD ) ) )*
             loop2:
             do {
                 int alt2=2;
@@ -290,21 +297,21 @@ public class InternalArabicParser extends AbstractInternalAntlrParser {
 
                 switch (alt2) {
             	case 1 :
-            	    // InternalArabic.g:134:4: this_WS_1= RULE_WS ( (lv_words_2_0= RULE_ATEXT ) )
+            	    // InternalArabic.g:134:4: this_WS_1= RULE_WS ( (lv_words_2_0= RULE_AWORD ) )
             	    {
             	    this_WS_1=(Token)match(input,RULE_WS,FOLLOW_5); 
 
             	    				newLeafNode(this_WS_1, grammarAccess.getPhraseAccess().getWSTerminalRuleCall_1_0());
             	    			
-            	    // InternalArabic.g:138:4: ( (lv_words_2_0= RULE_ATEXT ) )
-            	    // InternalArabic.g:139:5: (lv_words_2_0= RULE_ATEXT )
+            	    // InternalArabic.g:138:4: ( (lv_words_2_0= RULE_AWORD ) )
+            	    // InternalArabic.g:139:5: (lv_words_2_0= RULE_AWORD )
             	    {
-            	    // InternalArabic.g:139:5: (lv_words_2_0= RULE_ATEXT )
-            	    // InternalArabic.g:140:6: lv_words_2_0= RULE_ATEXT
+            	    // InternalArabic.g:139:5: (lv_words_2_0= RULE_AWORD )
+            	    // InternalArabic.g:140:6: lv_words_2_0= RULE_AWORD
             	    {
-            	    lv_words_2_0=(Token)match(input,RULE_ATEXT,FOLLOW_4); 
+            	    lv_words_2_0=(Token)match(input,RULE_AWORD,FOLLOW_4); 
 
-            	    						newLeafNode(lv_words_2_0, grammarAccess.getPhraseAccess().getWordsATEXTTerminalRuleCall_1_1_0());
+            	    						newLeafNode(lv_words_2_0, grammarAccess.getPhraseAccess().getWordsAWORDTerminalRuleCall_1_1_0());
             	    					
 
             	    						if (current==null) {
@@ -314,7 +321,7 @@ public class InternalArabicParser extends AbstractInternalAntlrParser {
             	    							current,
             	    							"words",
             	    							lv_words_2_0,
-            	    							"org.qwork.Arabic.ATEXT");
+            	    							"org.qwork.Arabic.AWORD");
             	    					
 
             	    }

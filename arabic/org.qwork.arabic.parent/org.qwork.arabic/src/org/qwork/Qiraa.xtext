@@ -1,0 +1,41 @@
+grammar org.qwork.Qiraa with org.qwork.Arabic
+
+generate qiraa "http://www.qwork.org/Qiraa"
+
+QiraaModel:
+	(hourouf+=Harf | qoraa+=Qaree | torok+=Tareek | harakat+=Harakah | rowat+=Rawee)*
+;
+
+
+Harf:
+	'حرف' name=AWORD 
+		(('هو' values+=ALETTER ('أو' values+=ALETTER)*) |
+		('ذاته' ref=[Harf|AWORD]))
+;
+
+Harakah:
+	'حركة' name=KALEMAH 'هي' value=AHARAKAH
+;
+
+Qaree:
+	'قارئ'
+	Person 
+;
+
+Rawee:
+	'راو'
+	Person
+	'عن' qaree=[Qaree|KALEMAH]
+;
+
+fragment Person:
+	name=KALEMAH
+	('اسمه' esm=KALEMAH)?
+	('لقبه' lakab=KALEMAH)?
+	('توفي' towofia=ADIGITS)? 	
+;
+
+Tareek:
+	'طريق' name=KALEMAH
+	('من' ref=[Tareek|KALEMAH])?
+;

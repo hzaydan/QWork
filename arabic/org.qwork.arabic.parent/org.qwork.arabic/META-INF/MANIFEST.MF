@@ -15,15 +15,18 @@ Require-Bundle: org.eclipse.xtext,
  org.eclipse.emf.common,
  org.antlr.runtime;bundle-version="[3.2.0,3.2.1)"
 Bundle-RequiredExecutionEnvironment: JavaSE-11
-Export-Package: org.qwork.arabic.impl,
+Export-Package: org.qwork.validation,
+ org.qwork.qiraa.util,
+ org.qwork.arabic.util,
+ org.qwork.parser.antlr.internal,
+ org.qwork.parser.antlr,
+ org.qwork.arabic.impl,
+ org.qwork.qiraa,
  org.qwork.serializer,
+ org.qwork.qiraa.impl,
  org.qwork.services,
- org.qwork.validation,
  org.qwork.scoping,
  org.qwork,
  org.qwork.generator,
- org.qwork.arabic,
- org.qwork.arabic.util,
- org.qwork.parser.antlr.internal,
- org.qwork.parser.antlr
+ org.qwork.arabic
 Import-Package: org.apache.log4j
