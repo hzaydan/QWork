@@ -66,12 +66,21 @@ public class QiraaFactoryImpl extends EFactoryImpl implements QiraaFactory
     switch (eClass.getClassifierID())
     {
       case QiraaPackage.QIRAA_MODEL: return createQiraaModel();
-      case QiraaPackage.HARF: return createHarf();
-      case QiraaPackage.HARAKAH: return createHarakah();
       case QiraaPackage.QAREE: return createQaree();
       case QiraaPackage.RAWEE: return createRawee();
+      case QiraaPackage.YOKRAA_LAH: return createYokraaLah();
       case QiraaPackage.PERSON: return createPerson();
+      case QiraaPackage.DOUAA: return createDouaa();
       case QiraaPackage.TAREEK: return createTareek();
+      case QiraaPackage.IMAM: return createIMAM();
+      case QiraaPackage.MARJEH: return createMarjeh();
+      case QiraaPackage.MAKTAH: return createMaktah();
+      case QiraaPackage.KAYD: return createKayd();
+      case QiraaPackage.ISTELAH: return createIstelah();
+      case QiraaPackage.RAMZ: return createRamz();
+      case QiraaPackage.YOKRAA_LAH_WA_RAMZ: return createYokraaLahWaRamz();
+      case QiraaPackage.KAAEDAH: return createKaaedah();
+      case QiraaPackage.HARF_QURAN: return createHarfQuran();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -87,30 +96,6 @@ public class QiraaFactoryImpl extends EFactoryImpl implements QiraaFactory
   {
     QiraaModelImpl qiraaModel = new QiraaModelImpl();
     return qiraaModel;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public Harf createHarf()
-  {
-    HarfImpl harf = new HarfImpl();
-    return harf;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public Harakah createHarakah()
-  {
-    HarakahImpl harakah = new HarakahImpl();
-    return harakah;
   }
 
   /**
@@ -143,6 +128,18 @@ public class QiraaFactoryImpl extends EFactoryImpl implements QiraaFactory
    * @generated
    */
   @Override
+  public YokraaLah createYokraaLah()
+  {
+    YokraaLahImpl yokraaLah = new YokraaLahImpl();
+    return yokraaLah;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
   public Person createPerson()
   {
     PersonImpl person = new PersonImpl();
@@ -155,10 +152,130 @@ public class QiraaFactoryImpl extends EFactoryImpl implements QiraaFactory
    * @generated
    */
   @Override
+  public Douaa createDouaa()
+  {
+    DouaaImpl douaa = new DouaaImpl();
+    return douaa;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
   public Tareek createTareek()
   {
     TareekImpl tareek = new TareekImpl();
     return tareek;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public IMAM createIMAM()
+  {
+    IMAMImpl imam = new IMAMImpl();
+    return imam;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Marjeh createMarjeh()
+  {
+    MarjehImpl marjeh = new MarjehImpl();
+    return marjeh;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Maktah createMaktah()
+  {
+    MaktahImpl maktah = new MaktahImpl();
+    return maktah;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Kayd createKayd()
+  {
+    KaydImpl kayd = new KaydImpl();
+    return kayd;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Istelah createIstelah()
+  {
+    IstelahImpl istelah = new IstelahImpl();
+    return istelah;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Ramz createRamz()
+  {
+    RamzImpl ramz = new RamzImpl();
+    return ramz;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public YokraaLahWaRamz createYokraaLahWaRamz()
+  {
+    YokraaLahWaRamzImpl yokraaLahWaRamz = new YokraaLahWaRamzImpl();
+    return yokraaLahWaRamz;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Kaaedah createKaaedah()
+  {
+    KaaedahImpl kaaedah = new KaaedahImpl();
+    return kaaedah;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public HarfQuran createHarfQuran()
+  {
+    HarfQuranImpl harfQuran = new HarfQuranImpl();
+    return harfQuran;
   }
 
   /**

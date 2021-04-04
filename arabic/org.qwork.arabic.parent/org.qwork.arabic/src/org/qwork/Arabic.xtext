@@ -28,12 +28,8 @@ terminal ANONLETTER:
 	('\u0600' .. '\u0620') | ('\u064b' .. '\u06ff')
 ;
 
-terminal ADIGITS:
-	ADIGIT+
-;
-
 terminal AWORD:
-	ALETTER+
+	(ALETTER|AHARAKAH|ASHADDAH)+
 ;
 
 terminal KALEMAH:

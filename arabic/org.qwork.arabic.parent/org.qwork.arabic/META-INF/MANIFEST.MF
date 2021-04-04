@@ -28,5 +28,11 @@ Export-Package: org.qwork.validation,
  org.qwork.scoping,
  org.qwork,
  org.qwork.generator,
- org.qwork.arabic
+ org.qwork.arabic,
+ org.qwork.qayahstart,
+ org.qwork.qayahstart.util,
+ org.qwork.qayahstart.impl,
+ org.qwork.abjad.impl,
+ org.qwork.abjad,
+ org.qwork.abjad.util
 Import-Package: org.apache.log4j

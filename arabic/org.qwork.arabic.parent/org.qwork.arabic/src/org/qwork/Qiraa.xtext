@@ -1,20 +1,14 @@
-grammar org.qwork.Qiraa with org.qwork.Arabic
+grammar org.qwork.Qiraa with org.qwork.Abjad
 
 generate qiraa "http://www.qwork.org/Qiraa"
 
+import "http://www.qwork.org/QAyahStart"
+
 QiraaModel:
-	(hourouf+=Harf | qoraa+=Qaree | torok+=Tareek | harakat+=Harakah | rowat+=Rawee)*
-;
-
-
-Harf:
-	'حرف' name=AWORD 
-		(('هو' values+=ALETTER ('أو' values+=ALETTER)*) |
-		('ذاته' ref=[Harf|AWORD]))
-;
-
-Harakah:
-	'حركة' name=KALEMAH 'هي' value=AHARAKAH
+	(
+		qoraa+=Qaree | torok+=Tareek | rowat+=Rawee |
+		imams+=IMAM | marjee+=Marjeh | istelahat+=Istelah | koyod+=Kayd
+	)*
 ;
 
 Qaree:
@@ -28,14 +22,77 @@ Rawee:
 	'عن' qaree=[Qaree|KALEMAH]
 ;
 
+YokraaLah:
+	Qaree | Rawee | Istelah
+;
+
 fragment Person:
 	name=KALEMAH
 	('اسمه' esm=KALEMAH)?
 	('لقبه' lakab=KALEMAH)?
-	('توفي' towofia=ADIGITS)? 	
+	('توفي' towofia=INT)? 	
+;
+
+fragment Douaa:
+	d=('رحمه' | 'أكرمه') 'الله'
 ;
 
 Tareek:
-	'طريق' name=KALEMAH
-	('من' ref=[Tareek|KALEMAH])?
+	'طريق' 'تلاوة' name=KALEMAH
+	(
+		(simple?='خالص' 'ل' ref=[YokraaLah|KALEMAH]) | 
+		((complex?='مركب' 'من')
+			(refs+=[Tareek|KALEMAH])+
+		)
+	)
+;
+
+IMAM:
+	'الإمام' Person Douaa
+;
+
+Marjeh:
+	'مرجع' name=KALEMAH 'للإمام' ref=[IMAM|KALEMAH] Douaa
+	'تفصيله'
+		(romoz+=Ramz)*
+		(makateh+=Maktah)+
+	'انتهى'
+;
+
+Maktah:
+	'قوله'
+	nass=KALEMAH
+	'معناه'
+	kedah+=Kaaedah
+;
+
+Kayd:
+	'قيد' name=KALEMAH
+;
+
+Istelah:
+	'اصطلاح' name=KALEMAH 'يعني' refs+=[YokraaLah|KALEMAH] ('و' refs+=[YokraaLah|KALEMAH])*
+;
+
+Ramz:
+	'رمز' name=AWORD 'يعني' refs+=[YokraaLah|KALEMAH] ('و' refs+=[YokraaLah|KALEMAH])*
+;
+
+YokraaLahWaRamz:
+	YokraaLah | Ramz
+;
+
+Kaaedah:
+	'قرأ' refs+=[YokraaLahWaRamz|KALEMAH] 'ب' kayd=[Kayd|KALEMAH] 'في' harf=HarfQuran
+;
+
+HarfQuran:
+	word=AWORD 'من' 'قوله' 'تعالى' ayah=[AyahStart|KALEMAH] ('الموضع' mawdee=Mawdee)?
+;
+
+Mawdee:
+	'الأول'|
+	'الثاني'|
+	'الثالث'|
+	'الأخير'
 ;

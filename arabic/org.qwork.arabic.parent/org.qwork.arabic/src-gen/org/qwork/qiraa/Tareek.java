@@ -3,6 +3,8 @@
  */
 package org.qwork.qiraa;
 
+import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -15,7 +17,10 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link org.qwork.qiraa.Tareek#getName <em>Name</em>}</li>
+ *   <li>{@link org.qwork.qiraa.Tareek#isSimple <em>Simple</em>}</li>
  *   <li>{@link org.qwork.qiraa.Tareek#getRef <em>Ref</em>}</li>
+ *   <li>{@link org.qwork.qiraa.Tareek#isComplex <em>Complex</em>}</li>
+ *   <li>{@link org.qwork.qiraa.Tareek#getRefs <em>Refs</em>}</li>
  * </ul>
  *
  * @see org.qwork.qiraa.QiraaPackage#getTareek()
@@ -47,16 +52,38 @@ public interface Tareek extends EObject
   void setName(String value);
 
   /**
+   * Returns the value of the '<em><b>Simple</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Simple</em>' attribute.
+   * @see #setSimple(boolean)
+   * @see org.qwork.qiraa.QiraaPackage#getTareek_Simple()
+   * @model
+   * @generated
+   */
+  boolean isSimple();
+
+  /**
+   * Sets the value of the '{@link org.qwork.qiraa.Tareek#isSimple <em>Simple</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Simple</em>' attribute.
+   * @see #isSimple()
+   * @generated
+   */
+  void setSimple(boolean value);
+
+  /**
    * Returns the value of the '<em><b>Ref</b></em>' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the value of the '<em>Ref</em>' reference.
-   * @see #setRef(Tareek)
+   * @see #setRef(YokraaLah)
    * @see org.qwork.qiraa.QiraaPackage#getTareek_Ref()
    * @model
    * @generated
    */
-  Tareek getRef();
+  YokraaLah getRef();
 
   /**
    * Sets the value of the '{@link org.qwork.qiraa.Tareek#getRef <em>Ref</em>}' reference.
@@ -66,6 +93,40 @@ public interface Tareek extends EObject
    * @see #getRef()
    * @generated
    */
-  void setRef(Tareek value);
+  void setRef(YokraaLah value);
+
+  /**
+   * Returns the value of the '<em><b>Complex</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Complex</em>' attribute.
+   * @see #setComplex(boolean)
+   * @see org.qwork.qiraa.QiraaPackage#getTareek_Complex()
+   * @model
+   * @generated
+   */
+  boolean isComplex();
+
+  /**
+   * Sets the value of the '{@link org.qwork.qiraa.Tareek#isComplex <em>Complex</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Complex</em>' attribute.
+   * @see #isComplex()
+   * @generated
+   */
+  void setComplex(boolean value);
+
+  /**
+   * Returns the value of the '<em><b>Refs</b></em>' reference list.
+   * The list contents are of type {@link org.qwork.qiraa.Tareek}.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Refs</em>' reference list.
+   * @see org.qwork.qiraa.QiraaPackage#getTareek_Refs()
+   * @model
+   * @generated
+   */
+  EList<Tareek> getRefs();
 
 } // Tareek

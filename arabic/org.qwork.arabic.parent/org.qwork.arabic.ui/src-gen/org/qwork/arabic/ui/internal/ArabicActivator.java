@@ -13,9 +13,13 @@ import org.eclipse.ui.plugin.AbstractUIPlugin;
 import org.eclipse.xtext.ui.shared.SharedStateModule;
 import org.eclipse.xtext.util.Modules2;
 import org.osgi.framework.BundleContext;
+import org.qwork.AbjadRuntimeModule;
 import org.qwork.ArabicRuntimeModule;
+import org.qwork.QAyahStartRuntimeModule;
 import org.qwork.QiraaRuntimeModule;
+import org.qwork.ui.AbjadUiModule;
 import org.qwork.ui.ArabicUiModule;
+import org.qwork.ui.QAyahStartUiModule;
 import org.qwork.ui.QiraaUiModule;
 
 /**
@@ -26,6 +30,8 @@ public class ArabicActivator extends AbstractUIPlugin {
 
 	public static final String PLUGIN_ID = "org.qwork.arabic.ui";
 	public static final String ORG_QWORK_ARABIC = "org.qwork.Arabic";
+	public static final String ORG_QWORK_QAYAHSTART = "org.qwork.QAyahStart";
+	public static final String ORG_QWORK_ABJAD = "org.qwork.Abjad";
 	public static final String ORG_QWORK_QIRAA = "org.qwork.Qiraa";
 	
 	private static final Logger logger = Logger.getLogger(ArabicActivator.class);
@@ -79,6 +85,12 @@ public class ArabicActivator extends AbstractUIPlugin {
 		if (ORG_QWORK_ARABIC.equals(grammar)) {
 			return new ArabicRuntimeModule();
 		}
+		if (ORG_QWORK_QAYAHSTART.equals(grammar)) {
+			return new QAyahStartRuntimeModule();
+		}
+		if (ORG_QWORK_ABJAD.equals(grammar)) {
+			return new AbjadRuntimeModule();
+		}
 		if (ORG_QWORK_QIRAA.equals(grammar)) {
 			return new QiraaRuntimeModule();
 		}
@@ -88,6 +100,12 @@ public class ArabicActivator extends AbstractUIPlugin {
 	protected com.google.inject.Module getUiModule(String grammar) {
 		if (ORG_QWORK_ARABIC.equals(grammar)) {
 			return new ArabicUiModule(this);
+		}
+		if (ORG_QWORK_QAYAHSTART.equals(grammar)) {
+			return new QAyahStartUiModule(this);
+		}
+		if (ORG_QWORK_ABJAD.equals(grammar)) {
+			return new AbjadUiModule(this);
 		}
 		if (ORG_QWORK_QIRAA.equals(grammar)) {
 			return new QiraaUiModule(this);

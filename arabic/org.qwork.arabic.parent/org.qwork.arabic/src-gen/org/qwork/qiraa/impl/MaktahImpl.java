@@ -3,78 +3,78 @@
  */
 package org.qwork.qiraa.impl;
 
+import java.util.Collection;
+
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.qwork.qiraa.Harakah;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
+
+import org.qwork.qiraa.Kaaedah;
+import org.qwork.qiraa.Maktah;
 import org.qwork.qiraa.QiraaPackage;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Harakah</b></em>'.
+ * An implementation of the model object '<em><b>Maktah</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.qwork.qiraa.impl.HarakahImpl#getName <em>Name</em>}</li>
- *   <li>{@link org.qwork.qiraa.impl.HarakahImpl#getValue <em>Value</em>}</li>
+ *   <li>{@link org.qwork.qiraa.impl.MaktahImpl#getNass <em>Nass</em>}</li>
+ *   <li>{@link org.qwork.qiraa.impl.MaktahImpl#getKedah <em>Kedah</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class HarakahImpl extends MinimalEObjectImpl.Container implements Harakah
+public class MaktahImpl extends MinimalEObjectImpl.Container implements Maktah
 {
   /**
-   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+   * The default value of the '{@link #getNass() <em>Nass</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getName()
+   * @see #getNass()
    * @generated
    * @ordered
    */
-  protected static final String NAME_EDEFAULT = null;
+  protected static final String NASS_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+   * The cached value of the '{@link #getNass() <em>Nass</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getName()
+   * @see #getNass()
    * @generated
    * @ordered
    */
-  protected String name = NAME_EDEFAULT;
+  protected String nass = NASS_EDEFAULT;
 
   /**
-   * The default value of the '{@link #getValue() <em>Value</em>}' attribute.
+   * The cached value of the '{@link #getKedah() <em>Kedah</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getValue()
+   * @see #getKedah()
    * @generated
    * @ordered
    */
-  protected static final String VALUE_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getValue() <em>Value</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getValue()
-   * @generated
-   * @ordered
-   */
-  protected String value = VALUE_EDEFAULT;
+  protected EList<Kaaedah> kedah;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected HarakahImpl()
+  protected MaktahImpl()
   {
     super();
   }
@@ -87,7 +87,7 @@ public class HarakahImpl extends MinimalEObjectImpl.Container implements Harakah
   @Override
   protected EClass eStaticClass()
   {
-    return QiraaPackage.Literals.HARAKAH;
+    return QiraaPackage.Literals.MAKTAH;
   }
 
   /**
@@ -96,9 +96,9 @@ public class HarakahImpl extends MinimalEObjectImpl.Container implements Harakah
    * @generated
    */
   @Override
-  public String getName()
+  public String getNass()
   {
-    return name;
+    return nass;
   }
 
   /**
@@ -107,12 +107,12 @@ public class HarakahImpl extends MinimalEObjectImpl.Container implements Harakah
    * @generated
    */
   @Override
-  public void setName(String newName)
+  public void setNass(String newNass)
   {
-    String oldName = name;
-    name = newName;
+    String oldNass = nass;
+    nass = newNass;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, QiraaPackage.HARAKAH__NAME, oldName, name));
+      eNotify(new ENotificationImpl(this, Notification.SET, QiraaPackage.MAKTAH__NASS, oldNass, nass));
   }
 
   /**
@@ -121,9 +121,13 @@ public class HarakahImpl extends MinimalEObjectImpl.Container implements Harakah
    * @generated
    */
   @Override
-  public String getValue()
+  public EList<Kaaedah> getKedah()
   {
-    return value;
+    if (kedah == null)
+    {
+      kedah = new EObjectContainmentEList<Kaaedah>(Kaaedah.class, this, QiraaPackage.MAKTAH__KEDAH);
+    }
+    return kedah;
   }
 
   /**
@@ -132,12 +136,14 @@ public class HarakahImpl extends MinimalEObjectImpl.Container implements Harakah
    * @generated
    */
   @Override
-  public void setValue(String newValue)
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
-    String oldValue = value;
-    value = newValue;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, QiraaPackage.HARAKAH__VALUE, oldValue, value));
+    switch (featureID)
+    {
+      case QiraaPackage.MAKTAH__KEDAH:
+        return ((InternalEList<?>)getKedah()).basicRemove(otherEnd, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
   }
 
   /**
@@ -150,10 +156,10 @@ public class HarakahImpl extends MinimalEObjectImpl.Container implements Harakah
   {
     switch (featureID)
     {
-      case QiraaPackage.HARAKAH__NAME:
-        return getName();
-      case QiraaPackage.HARAKAH__VALUE:
-        return getValue();
+      case QiraaPackage.MAKTAH__NASS:
+        return getNass();
+      case QiraaPackage.MAKTAH__KEDAH:
+        return getKedah();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -163,16 +169,18 @@ public class HarakahImpl extends MinimalEObjectImpl.Container implements Harakah
    * <!-- end-user-doc -->
    * @generated
    */
+  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
     switch (featureID)
     {
-      case QiraaPackage.HARAKAH__NAME:
-        setName((String)newValue);
+      case QiraaPackage.MAKTAH__NASS:
+        setNass((String)newValue);
         return;
-      case QiraaPackage.HARAKAH__VALUE:
-        setValue((String)newValue);
+      case QiraaPackage.MAKTAH__KEDAH:
+        getKedah().clear();
+        getKedah().addAll((Collection<? extends Kaaedah>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -188,11 +196,11 @@ public class HarakahImpl extends MinimalEObjectImpl.Container implements Harakah
   {
     switch (featureID)
     {
-      case QiraaPackage.HARAKAH__NAME:
-        setName(NAME_EDEFAULT);
+      case QiraaPackage.MAKTAH__NASS:
+        setNass(NASS_EDEFAULT);
         return;
-      case QiraaPackage.HARAKAH__VALUE:
-        setValue(VALUE_EDEFAULT);
+      case QiraaPackage.MAKTAH__KEDAH:
+        getKedah().clear();
         return;
     }
     super.eUnset(featureID);
@@ -208,10 +216,10 @@ public class HarakahImpl extends MinimalEObjectImpl.Container implements Harakah
   {
     switch (featureID)
     {
-      case QiraaPackage.HARAKAH__NAME:
-        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-      case QiraaPackage.HARAKAH__VALUE:
-        return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
+      case QiraaPackage.MAKTAH__NASS:
+        return NASS_EDEFAULT == null ? nass != null : !NASS_EDEFAULT.equals(nass);
+      case QiraaPackage.MAKTAH__KEDAH:
+        return kedah != null && !kedah.isEmpty();
     }
     return super.eIsSet(featureID);
   }
@@ -227,12 +235,10 @@ public class HarakahImpl extends MinimalEObjectImpl.Container implements Harakah
     if (eIsProxy()) return super.toString();
 
     StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (name: ");
-    result.append(name);
-    result.append(", value: ");
-    result.append(value);
+    result.append(" (nass: ");
+    result.append(nass);
     result.append(')');
     return result.toString();
   }
 
-} //HarakahImpl
+} //MaktahImpl

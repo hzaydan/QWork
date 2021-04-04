@@ -97,12 +97,12 @@ public interface Person extends EObject
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the value of the '<em>Towofia</em>' attribute.
-   * @see #setTowofia(String)
+   * @see #setTowofia(int)
    * @see org.qwork.qiraa.QiraaPackage#getPerson_Towofia()
    * @model
    * @generated
    */
-  String getTowofia();
+  int getTowofia();
 
   /**
    * Sets the value of the '{@link org.qwork.qiraa.Person#getTowofia <em>Towofia</em>}' attribute.
@@ -112,6 +112,6 @@ public interface Person extends EObject
    * @see #getTowofia()
    * @generated
    */
-  void setTowofia(String value);
+  void setTowofia(int value);
 
 } // Person

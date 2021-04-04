@@ -159,17 +159,15 @@ rulePhrase returns [EObject current=null]
 
 fragment RULE_ALETTER : '\u0621'..'\u064A';
 
-fragment RULE_ADIGIT : '\u0660'..'\u0669';
+RULE_ADIGIT : '\u0660'..'\u0669';
 
-RULE_AHARAKAH : ('\u064E'..'\u0650'|'\u0652');
+fragment RULE_AHARAKAH : ('\u064E'..'\u0650'|'\u0652');
 
-RULE_ASHADDAH : '\u0651';
+fragment RULE_ASHADDAH : '\u0651';
 
 RULE_ANONLETTER : ('\u0600'..'\u0620'|'\u064B'..'\u06FF');
 
-RULE_ADIGITS : RULE_ADIGIT+;
-
-RULE_AWORD : RULE_ALETTER+;
+RULE_AWORD : (RULE_ALETTER|RULE_AHARAKAH|RULE_ASHADDAH)+;
 
 RULE_KALEMAH : '"' ( options {greedy=false;} : . )*'"';
 

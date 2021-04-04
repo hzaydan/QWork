@@ -68,22 +68,13 @@ public interface QiraaPackage extends EPackage
   int QIRAA_MODEL = 0;
 
   /**
-   * The feature id for the '<em><b>Hourouf</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int QIRAA_MODEL__HOUROUF = 0;
-
-  /**
    * The feature id for the '<em><b>Qoraa</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int QIRAA_MODEL__QORAA = 1;
+  int QIRAA_MODEL__QORAA = 0;
 
   /**
    * The feature id for the '<em><b>Torok</b></em>' containment reference list.
@@ -92,16 +83,7 @@ public interface QiraaPackage extends EPackage
    * @generated
    * @ordered
    */
-  int QIRAA_MODEL__TOROK = 2;
-
-  /**
-   * The feature id for the '<em><b>Harakat</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int QIRAA_MODEL__HARAKAT = 3;
+  int QIRAA_MODEL__TOROK = 1;
 
   /**
    * The feature id for the '<em><b>Rowat</b></em>' containment reference list.
@@ -110,7 +92,43 @@ public interface QiraaPackage extends EPackage
    * @generated
    * @ordered
    */
-  int QIRAA_MODEL__ROWAT = 4;
+  int QIRAA_MODEL__ROWAT = 2;
+
+  /**
+   * The feature id for the '<em><b>Imams</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int QIRAA_MODEL__IMAMS = 3;
+
+  /**
+   * The feature id for the '<em><b>Marjee</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int QIRAA_MODEL__MARJEE = 4;
+
+  /**
+   * The feature id for the '<em><b>Istelahat</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int QIRAA_MODEL__ISTELAHAT = 5;
+
+  /**
+   * The feature id for the '<em><b>Koyod</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int QIRAA_MODEL__KOYOD = 6;
 
   /**
    * The number of structural features of the '<em>Model</em>' class.
@@ -119,90 +137,7 @@ public interface QiraaPackage extends EPackage
    * @generated
    * @ordered
    */
-  int QIRAA_MODEL_FEATURE_COUNT = 5;
-
-  /**
-   * The meta object id for the '{@link org.qwork.qiraa.impl.HarfImpl <em>Harf</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.qwork.qiraa.impl.HarfImpl
-   * @see org.qwork.qiraa.impl.QiraaPackageImpl#getHarf()
-   * @generated
-   */
-  int HARF = 1;
-
-  /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int HARF__NAME = 0;
-
-  /**
-   * The feature id for the '<em><b>Values</b></em>' attribute list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int HARF__VALUES = 1;
-
-  /**
-   * The feature id for the '<em><b>Ref</b></em>' reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int HARF__REF = 2;
-
-  /**
-   * The number of structural features of the '<em>Harf</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int HARF_FEATURE_COUNT = 3;
-
-  /**
-   * The meta object id for the '{@link org.qwork.qiraa.impl.HarakahImpl <em>Harakah</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.qwork.qiraa.impl.HarakahImpl
-   * @see org.qwork.qiraa.impl.QiraaPackageImpl#getHarakah()
-   * @generated
-   */
-  int HARAKAH = 2;
-
-  /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int HARAKAH__NAME = 0;
-
-  /**
-   * The feature id for the '<em><b>Value</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int HARAKAH__VALUE = 1;
-
-  /**
-   * The number of structural features of the '<em>Harakah</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int HARAKAH_FEATURE_COUNT = 2;
+  int QIRAA_MODEL_FEATURE_COUNT = 7;
 
   /**
    * The meta object id for the '{@link org.qwork.qiraa.impl.PersonImpl <em>Person</em>}' class.
@@ -212,7 +147,7 @@ public interface QiraaPackage extends EPackage
    * @see org.qwork.qiraa.impl.QiraaPackageImpl#getPerson()
    * @generated
    */
-  int PERSON = 5;
+  int PERSON = 4;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -267,7 +202,7 @@ public interface QiraaPackage extends EPackage
    * @see org.qwork.qiraa.impl.QiraaPackageImpl#getQaree()
    * @generated
    */
-  int QAREE = 3;
+  int QAREE = 1;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -322,7 +257,7 @@ public interface QiraaPackage extends EPackage
    * @see org.qwork.qiraa.impl.QiraaPackageImpl#getRawee()
    * @generated
    */
-  int RAWEE = 4;
+  int RAWEE = 2;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -379,6 +314,72 @@ public interface QiraaPackage extends EPackage
   int RAWEE_FEATURE_COUNT = PERSON_FEATURE_COUNT + 1;
 
   /**
+   * The meta object id for the '{@link org.qwork.qiraa.impl.YokraaLahWaRamzImpl <em>Yokraa Lah Wa Ramz</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.qwork.qiraa.impl.YokraaLahWaRamzImpl
+   * @see org.qwork.qiraa.impl.QiraaPackageImpl#getYokraaLahWaRamz()
+   * @generated
+   */
+  int YOKRAA_LAH_WA_RAMZ = 13;
+
+  /**
+   * The number of structural features of the '<em>Yokraa Lah Wa Ramz</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int YOKRAA_LAH_WA_RAMZ_FEATURE_COUNT = 0;
+
+  /**
+   * The meta object id for the '{@link org.qwork.qiraa.impl.YokraaLahImpl <em>Yokraa Lah</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.qwork.qiraa.impl.YokraaLahImpl
+   * @see org.qwork.qiraa.impl.QiraaPackageImpl#getYokraaLah()
+   * @generated
+   */
+  int YOKRAA_LAH = 3;
+
+  /**
+   * The number of structural features of the '<em>Yokraa Lah</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int YOKRAA_LAH_FEATURE_COUNT = YOKRAA_LAH_WA_RAMZ_FEATURE_COUNT + 0;
+
+  /**
+   * The meta object id for the '{@link org.qwork.qiraa.impl.DouaaImpl <em>Douaa</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.qwork.qiraa.impl.DouaaImpl
+   * @see org.qwork.qiraa.impl.QiraaPackageImpl#getDouaa()
+   * @generated
+   */
+  int DOUAA = 5;
+
+  /**
+   * The feature id for the '<em><b>D</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DOUAA__D = 0;
+
+  /**
+   * The number of structural features of the '<em>Douaa</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DOUAA_FEATURE_COUNT = 1;
+
+  /**
    * The meta object id for the '{@link org.qwork.qiraa.impl.TareekImpl <em>Tareek</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -398,13 +399,40 @@ public interface QiraaPackage extends EPackage
   int TAREEK__NAME = 0;
 
   /**
+   * The feature id for the '<em><b>Simple</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TAREEK__SIMPLE = 1;
+
+  /**
    * The feature id for the '<em><b>Ref</b></em>' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int TAREEK__REF = 1;
+  int TAREEK__REF = 2;
+
+  /**
+   * The feature id for the '<em><b>Complex</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TAREEK__COMPLEX = 3;
+
+  /**
+   * The feature id for the '<em><b>Refs</b></em>' reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TAREEK__REFS = 4;
 
   /**
    * The number of structural features of the '<em>Tareek</em>' class.
@@ -413,7 +441,366 @@ public interface QiraaPackage extends EPackage
    * @generated
    * @ordered
    */
-  int TAREEK_FEATURE_COUNT = 2;
+  int TAREEK_FEATURE_COUNT = 5;
+
+  /**
+   * The meta object id for the '{@link org.qwork.qiraa.impl.IMAMImpl <em>IMAM</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.qwork.qiraa.impl.IMAMImpl
+   * @see org.qwork.qiraa.impl.QiraaPackageImpl#getIMAM()
+   * @generated
+   */
+  int IMAM = 7;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IMAM__NAME = PERSON__NAME;
+
+  /**
+   * The feature id for the '<em><b>Esm</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IMAM__ESM = PERSON__ESM;
+
+  /**
+   * The feature id for the '<em><b>Lakab</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IMAM__LAKAB = PERSON__LAKAB;
+
+  /**
+   * The feature id for the '<em><b>Towofia</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IMAM__TOWOFIA = PERSON__TOWOFIA;
+
+  /**
+   * The feature id for the '<em><b>D</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IMAM__D = PERSON_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>IMAM</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IMAM_FEATURE_COUNT = PERSON_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link org.qwork.qiraa.impl.MarjehImpl <em>Marjeh</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.qwork.qiraa.impl.MarjehImpl
+   * @see org.qwork.qiraa.impl.QiraaPackageImpl#getMarjeh()
+   * @generated
+   */
+  int MARJEH = 8;
+
+  /**
+   * The feature id for the '<em><b>D</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MARJEH__D = DOUAA__D;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MARJEH__NAME = DOUAA_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Ref</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MARJEH__REF = DOUAA_FEATURE_COUNT + 1;
+
+  /**
+   * The feature id for the '<em><b>Romoz</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MARJEH__ROMOZ = DOUAA_FEATURE_COUNT + 2;
+
+  /**
+   * The feature id for the '<em><b>Makateh</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MARJEH__MAKATEH = DOUAA_FEATURE_COUNT + 3;
+
+  /**
+   * The number of structural features of the '<em>Marjeh</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MARJEH_FEATURE_COUNT = DOUAA_FEATURE_COUNT + 4;
+
+  /**
+   * The meta object id for the '{@link org.qwork.qiraa.impl.MaktahImpl <em>Maktah</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.qwork.qiraa.impl.MaktahImpl
+   * @see org.qwork.qiraa.impl.QiraaPackageImpl#getMaktah()
+   * @generated
+   */
+  int MAKTAH = 9;
+
+  /**
+   * The feature id for the '<em><b>Nass</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MAKTAH__NASS = 0;
+
+  /**
+   * The feature id for the '<em><b>Kedah</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MAKTAH__KEDAH = 1;
+
+  /**
+   * The number of structural features of the '<em>Maktah</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MAKTAH_FEATURE_COUNT = 2;
+
+  /**
+   * The meta object id for the '{@link org.qwork.qiraa.impl.KaydImpl <em>Kayd</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.qwork.qiraa.impl.KaydImpl
+   * @see org.qwork.qiraa.impl.QiraaPackageImpl#getKayd()
+   * @generated
+   */
+  int KAYD = 10;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int KAYD__NAME = 0;
+
+  /**
+   * The number of structural features of the '<em>Kayd</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int KAYD_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link org.qwork.qiraa.impl.IstelahImpl <em>Istelah</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.qwork.qiraa.impl.IstelahImpl
+   * @see org.qwork.qiraa.impl.QiraaPackageImpl#getIstelah()
+   * @generated
+   */
+  int ISTELAH = 11;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ISTELAH__NAME = YOKRAA_LAH_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Refs</b></em>' reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ISTELAH__REFS = YOKRAA_LAH_FEATURE_COUNT + 1;
+
+  /**
+   * The number of structural features of the '<em>Istelah</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ISTELAH_FEATURE_COUNT = YOKRAA_LAH_FEATURE_COUNT + 2;
+
+  /**
+   * The meta object id for the '{@link org.qwork.qiraa.impl.RamzImpl <em>Ramz</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.qwork.qiraa.impl.RamzImpl
+   * @see org.qwork.qiraa.impl.QiraaPackageImpl#getRamz()
+   * @generated
+   */
+  int RAMZ = 12;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int RAMZ__NAME = YOKRAA_LAH_WA_RAMZ_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Refs</b></em>' reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int RAMZ__REFS = YOKRAA_LAH_WA_RAMZ_FEATURE_COUNT + 1;
+
+  /**
+   * The number of structural features of the '<em>Ramz</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int RAMZ_FEATURE_COUNT = YOKRAA_LAH_WA_RAMZ_FEATURE_COUNT + 2;
+
+  /**
+   * The meta object id for the '{@link org.qwork.qiraa.impl.KaaedahImpl <em>Kaaedah</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.qwork.qiraa.impl.KaaedahImpl
+   * @see org.qwork.qiraa.impl.QiraaPackageImpl#getKaaedah()
+   * @generated
+   */
+  int KAAEDAH = 14;
+
+  /**
+   * The feature id for the '<em><b>Refs</b></em>' reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int KAAEDAH__REFS = 0;
+
+  /**
+   * The feature id for the '<em><b>Kayd</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int KAAEDAH__KAYD = 1;
+
+  /**
+   * The feature id for the '<em><b>Harf</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int KAAEDAH__HARF = 2;
+
+  /**
+   * The number of structural features of the '<em>Kaaedah</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int KAAEDAH_FEATURE_COUNT = 3;
+
+  /**
+   * The meta object id for the '{@link org.qwork.qiraa.impl.HarfQuranImpl <em>Harf Quran</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.qwork.qiraa.impl.HarfQuranImpl
+   * @see org.qwork.qiraa.impl.QiraaPackageImpl#getHarfQuran()
+   * @generated
+   */
+  int HARF_QURAN = 15;
+
+  /**
+   * The feature id for the '<em><b>Word</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int HARF_QURAN__WORD = 0;
+
+  /**
+   * The feature id for the '<em><b>Ayah</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int HARF_QURAN__AYAH = 1;
+
+  /**
+   * The feature id for the '<em><b>Mawdee</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int HARF_QURAN__MAWDEE = 2;
+
+  /**
+   * The number of structural features of the '<em>Harf Quran</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int HARF_QURAN_FEATURE_COUNT = 3;
 
 
   /**
@@ -425,17 +812,6 @@ public interface QiraaPackage extends EPackage
    * @generated
    */
   EClass getQiraaModel();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link org.qwork.qiraa.QiraaModel#getHourouf <em>Hourouf</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Hourouf</em>'.
-   * @see org.qwork.qiraa.QiraaModel#getHourouf()
-   * @see #getQiraaModel()
-   * @generated
-   */
-  EReference getQiraaModel_Hourouf();
 
   /**
    * Returns the meta object for the containment reference list '{@link org.qwork.qiraa.QiraaModel#getQoraa <em>Qoraa</em>}'.
@@ -460,17 +836,6 @@ public interface QiraaPackage extends EPackage
   EReference getQiraaModel_Torok();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.qwork.qiraa.QiraaModel#getHarakat <em>Harakat</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Harakat</em>'.
-   * @see org.qwork.qiraa.QiraaModel#getHarakat()
-   * @see #getQiraaModel()
-   * @generated
-   */
-  EReference getQiraaModel_Harakat();
-
-  /**
    * Returns the meta object for the containment reference list '{@link org.qwork.qiraa.QiraaModel#getRowat <em>Rowat</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -482,79 +847,48 @@ public interface QiraaPackage extends EPackage
   EReference getQiraaModel_Rowat();
 
   /**
-   * Returns the meta object for class '{@link org.qwork.qiraa.Harf <em>Harf</em>}'.
+   * Returns the meta object for the containment reference list '{@link org.qwork.qiraa.QiraaModel#getImams <em>Imams</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Harf</em>'.
-   * @see org.qwork.qiraa.Harf
+   * @return the meta object for the containment reference list '<em>Imams</em>'.
+   * @see org.qwork.qiraa.QiraaModel#getImams()
+   * @see #getQiraaModel()
    * @generated
    */
-  EClass getHarf();
+  EReference getQiraaModel_Imams();
 
   /**
-   * Returns the meta object for the attribute '{@link org.qwork.qiraa.Harf#getName <em>Name</em>}'.
+   * Returns the meta object for the containment reference list '{@link org.qwork.qiraa.QiraaModel#getMarjee <em>Marjee</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Name</em>'.
-   * @see org.qwork.qiraa.Harf#getName()
-   * @see #getHarf()
+   * @return the meta object for the containment reference list '<em>Marjee</em>'.
+   * @see org.qwork.qiraa.QiraaModel#getMarjee()
+   * @see #getQiraaModel()
    * @generated
    */
-  EAttribute getHarf_Name();
+  EReference getQiraaModel_Marjee();
 
   /**
-   * Returns the meta object for the attribute list '{@link org.qwork.qiraa.Harf#getValues <em>Values</em>}'.
+   * Returns the meta object for the containment reference list '{@link org.qwork.qiraa.QiraaModel#getIstelahat <em>Istelahat</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute list '<em>Values</em>'.
-   * @see org.qwork.qiraa.Harf#getValues()
-   * @see #getHarf()
+   * @return the meta object for the containment reference list '<em>Istelahat</em>'.
+   * @see org.qwork.qiraa.QiraaModel#getIstelahat()
+   * @see #getQiraaModel()
    * @generated
    */
-  EAttribute getHarf_Values();
+  EReference getQiraaModel_Istelahat();
 
   /**
-   * Returns the meta object for the reference '{@link org.qwork.qiraa.Harf#getRef <em>Ref</em>}'.
+   * Returns the meta object for the containment reference list '{@link org.qwork.qiraa.QiraaModel#getKoyod <em>Koyod</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the reference '<em>Ref</em>'.
-   * @see org.qwork.qiraa.Harf#getRef()
-   * @see #getHarf()
+   * @return the meta object for the containment reference list '<em>Koyod</em>'.
+   * @see org.qwork.qiraa.QiraaModel#getKoyod()
+   * @see #getQiraaModel()
    * @generated
    */
-  EReference getHarf_Ref();
-
-  /**
-   * Returns the meta object for class '{@link org.qwork.qiraa.Harakah <em>Harakah</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Harakah</em>'.
-   * @see org.qwork.qiraa.Harakah
-   * @generated
-   */
-  EClass getHarakah();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.qwork.qiraa.Harakah#getName <em>Name</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Name</em>'.
-   * @see org.qwork.qiraa.Harakah#getName()
-   * @see #getHarakah()
-   * @generated
-   */
-  EAttribute getHarakah_Name();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.qwork.qiraa.Harakah#getValue <em>Value</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Value</em>'.
-   * @see org.qwork.qiraa.Harakah#getValue()
-   * @see #getHarakah()
-   * @generated
-   */
-  EAttribute getHarakah_Value();
+  EReference getQiraaModel_Koyod();
 
   /**
    * Returns the meta object for class '{@link org.qwork.qiraa.Qaree <em>Qaree</em>}'.
@@ -586,6 +920,16 @@ public interface QiraaPackage extends EPackage
    * @generated
    */
   EReference getRawee_Qaree();
+
+  /**
+   * Returns the meta object for class '{@link org.qwork.qiraa.YokraaLah <em>Yokraa Lah</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Yokraa Lah</em>'.
+   * @see org.qwork.qiraa.YokraaLah
+   * @generated
+   */
+  EClass getYokraaLah();
 
   /**
    * Returns the meta object for class '{@link org.qwork.qiraa.Person <em>Person</em>}'.
@@ -642,6 +986,27 @@ public interface QiraaPackage extends EPackage
   EAttribute getPerson_Towofia();
 
   /**
+   * Returns the meta object for class '{@link org.qwork.qiraa.Douaa <em>Douaa</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Douaa</em>'.
+   * @see org.qwork.qiraa.Douaa
+   * @generated
+   */
+  EClass getDouaa();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.qwork.qiraa.Douaa#getD <em>D</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>D</em>'.
+   * @see org.qwork.qiraa.Douaa#getD()
+   * @see #getDouaa()
+   * @generated
+   */
+  EAttribute getDouaa_D();
+
+  /**
    * Returns the meta object for class '{@link org.qwork.qiraa.Tareek <em>Tareek</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -663,6 +1028,17 @@ public interface QiraaPackage extends EPackage
   EAttribute getTareek_Name();
 
   /**
+   * Returns the meta object for the attribute '{@link org.qwork.qiraa.Tareek#isSimple <em>Simple</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Simple</em>'.
+   * @see org.qwork.qiraa.Tareek#isSimple()
+   * @see #getTareek()
+   * @generated
+   */
+  EAttribute getTareek_Simple();
+
+  /**
    * Returns the meta object for the reference '{@link org.qwork.qiraa.Tareek#getRef <em>Ref</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -672,6 +1048,305 @@ public interface QiraaPackage extends EPackage
    * @generated
    */
   EReference getTareek_Ref();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.qwork.qiraa.Tareek#isComplex <em>Complex</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Complex</em>'.
+   * @see org.qwork.qiraa.Tareek#isComplex()
+   * @see #getTareek()
+   * @generated
+   */
+  EAttribute getTareek_Complex();
+
+  /**
+   * Returns the meta object for the reference list '{@link org.qwork.qiraa.Tareek#getRefs <em>Refs</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference list '<em>Refs</em>'.
+   * @see org.qwork.qiraa.Tareek#getRefs()
+   * @see #getTareek()
+   * @generated
+   */
+  EReference getTareek_Refs();
+
+  /**
+   * Returns the meta object for class '{@link org.qwork.qiraa.IMAM <em>IMAM</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>IMAM</em>'.
+   * @see org.qwork.qiraa.IMAM
+   * @generated
+   */
+  EClass getIMAM();
+
+  /**
+   * Returns the meta object for class '{@link org.qwork.qiraa.Marjeh <em>Marjeh</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Marjeh</em>'.
+   * @see org.qwork.qiraa.Marjeh
+   * @generated
+   */
+  EClass getMarjeh();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.qwork.qiraa.Marjeh#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see org.qwork.qiraa.Marjeh#getName()
+   * @see #getMarjeh()
+   * @generated
+   */
+  EAttribute getMarjeh_Name();
+
+  /**
+   * Returns the meta object for the reference '{@link org.qwork.qiraa.Marjeh#getRef <em>Ref</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference '<em>Ref</em>'.
+   * @see org.qwork.qiraa.Marjeh#getRef()
+   * @see #getMarjeh()
+   * @generated
+   */
+  EReference getMarjeh_Ref();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.qwork.qiraa.Marjeh#getRomoz <em>Romoz</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Romoz</em>'.
+   * @see org.qwork.qiraa.Marjeh#getRomoz()
+   * @see #getMarjeh()
+   * @generated
+   */
+  EReference getMarjeh_Romoz();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.qwork.qiraa.Marjeh#getMakateh <em>Makateh</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Makateh</em>'.
+   * @see org.qwork.qiraa.Marjeh#getMakateh()
+   * @see #getMarjeh()
+   * @generated
+   */
+  EReference getMarjeh_Makateh();
+
+  /**
+   * Returns the meta object for class '{@link org.qwork.qiraa.Maktah <em>Maktah</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Maktah</em>'.
+   * @see org.qwork.qiraa.Maktah
+   * @generated
+   */
+  EClass getMaktah();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.qwork.qiraa.Maktah#getNass <em>Nass</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Nass</em>'.
+   * @see org.qwork.qiraa.Maktah#getNass()
+   * @see #getMaktah()
+   * @generated
+   */
+  EAttribute getMaktah_Nass();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.qwork.qiraa.Maktah#getKedah <em>Kedah</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Kedah</em>'.
+   * @see org.qwork.qiraa.Maktah#getKedah()
+   * @see #getMaktah()
+   * @generated
+   */
+  EReference getMaktah_Kedah();
+
+  /**
+   * Returns the meta object for class '{@link org.qwork.qiraa.Kayd <em>Kayd</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Kayd</em>'.
+   * @see org.qwork.qiraa.Kayd
+   * @generated
+   */
+  EClass getKayd();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.qwork.qiraa.Kayd#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see org.qwork.qiraa.Kayd#getName()
+   * @see #getKayd()
+   * @generated
+   */
+  EAttribute getKayd_Name();
+
+  /**
+   * Returns the meta object for class '{@link org.qwork.qiraa.Istelah <em>Istelah</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Istelah</em>'.
+   * @see org.qwork.qiraa.Istelah
+   * @generated
+   */
+  EClass getIstelah();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.qwork.qiraa.Istelah#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see org.qwork.qiraa.Istelah#getName()
+   * @see #getIstelah()
+   * @generated
+   */
+  EAttribute getIstelah_Name();
+
+  /**
+   * Returns the meta object for the reference list '{@link org.qwork.qiraa.Istelah#getRefs <em>Refs</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference list '<em>Refs</em>'.
+   * @see org.qwork.qiraa.Istelah#getRefs()
+   * @see #getIstelah()
+   * @generated
+   */
+  EReference getIstelah_Refs();
+
+  /**
+   * Returns the meta object for class '{@link org.qwork.qiraa.Ramz <em>Ramz</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Ramz</em>'.
+   * @see org.qwork.qiraa.Ramz
+   * @generated
+   */
+  EClass getRamz();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.qwork.qiraa.Ramz#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see org.qwork.qiraa.Ramz#getName()
+   * @see #getRamz()
+   * @generated
+   */
+  EAttribute getRamz_Name();
+
+  /**
+   * Returns the meta object for the reference list '{@link org.qwork.qiraa.Ramz#getRefs <em>Refs</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference list '<em>Refs</em>'.
+   * @see org.qwork.qiraa.Ramz#getRefs()
+   * @see #getRamz()
+   * @generated
+   */
+  EReference getRamz_Refs();
+
+  /**
+   * Returns the meta object for class '{@link org.qwork.qiraa.YokraaLahWaRamz <em>Yokraa Lah Wa Ramz</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Yokraa Lah Wa Ramz</em>'.
+   * @see org.qwork.qiraa.YokraaLahWaRamz
+   * @generated
+   */
+  EClass getYokraaLahWaRamz();
+
+  /**
+   * Returns the meta object for class '{@link org.qwork.qiraa.Kaaedah <em>Kaaedah</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Kaaedah</em>'.
+   * @see org.qwork.qiraa.Kaaedah
+   * @generated
+   */
+  EClass getKaaedah();
+
+  /**
+   * Returns the meta object for the reference list '{@link org.qwork.qiraa.Kaaedah#getRefs <em>Refs</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference list '<em>Refs</em>'.
+   * @see org.qwork.qiraa.Kaaedah#getRefs()
+   * @see #getKaaedah()
+   * @generated
+   */
+  EReference getKaaedah_Refs();
+
+  /**
+   * Returns the meta object for the reference '{@link org.qwork.qiraa.Kaaedah#getKayd <em>Kayd</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference '<em>Kayd</em>'.
+   * @see org.qwork.qiraa.Kaaedah#getKayd()
+   * @see #getKaaedah()
+   * @generated
+   */
+  EReference getKaaedah_Kayd();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.qwork.qiraa.Kaaedah#getHarf <em>Harf</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Harf</em>'.
+   * @see org.qwork.qiraa.Kaaedah#getHarf()
+   * @see #getKaaedah()
+   * @generated
+   */
+  EReference getKaaedah_Harf();
+
+  /**
+   * Returns the meta object for class '{@link org.qwork.qiraa.HarfQuran <em>Harf Quran</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Harf Quran</em>'.
+   * @see org.qwork.qiraa.HarfQuran
+   * @generated
+   */
+  EClass getHarfQuran();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.qwork.qiraa.HarfQuran#getWord <em>Word</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Word</em>'.
+   * @see org.qwork.qiraa.HarfQuran#getWord()
+   * @see #getHarfQuran()
+   * @generated
+   */
+  EAttribute getHarfQuran_Word();
+
+  /**
+   * Returns the meta object for the reference '{@link org.qwork.qiraa.HarfQuran#getAyah <em>Ayah</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference '<em>Ayah</em>'.
+   * @see org.qwork.qiraa.HarfQuran#getAyah()
+   * @see #getHarfQuran()
+   * @generated
+   */
+  EReference getHarfQuran_Ayah();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.qwork.qiraa.HarfQuran#getMawdee <em>Mawdee</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Mawdee</em>'.
+   * @see org.qwork.qiraa.HarfQuran#getMawdee()
+   * @see #getHarfQuran()
+   * @generated
+   */
+  EAttribute getHarfQuran_Mawdee();
 
   /**
    * Returns the factory that creates the instances of the model.
@@ -707,14 +1382,6 @@ public interface QiraaPackage extends EPackage
     EClass QIRAA_MODEL = eINSTANCE.getQiraaModel();
 
     /**
-     * The meta object literal for the '<em><b>Hourouf</b></em>' containment reference list feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference QIRAA_MODEL__HOUROUF = eINSTANCE.getQiraaModel_Hourouf();
-
-    /**
      * The meta object literal for the '<em><b>Qoraa</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -731,14 +1398,6 @@ public interface QiraaPackage extends EPackage
     EReference QIRAA_MODEL__TOROK = eINSTANCE.getQiraaModel_Torok();
 
     /**
-     * The meta object literal for the '<em><b>Harakat</b></em>' containment reference list feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference QIRAA_MODEL__HARAKAT = eINSTANCE.getQiraaModel_Harakat();
-
-    /**
      * The meta object literal for the '<em><b>Rowat</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -747,64 +1406,36 @@ public interface QiraaPackage extends EPackage
     EReference QIRAA_MODEL__ROWAT = eINSTANCE.getQiraaModel_Rowat();
 
     /**
-     * The meta object literal for the '{@link org.qwork.qiraa.impl.HarfImpl <em>Harf</em>}' class.
+     * The meta object literal for the '<em><b>Imams</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see org.qwork.qiraa.impl.HarfImpl
-     * @see org.qwork.qiraa.impl.QiraaPackageImpl#getHarf()
      * @generated
      */
-    EClass HARF = eINSTANCE.getHarf();
+    EReference QIRAA_MODEL__IMAMS = eINSTANCE.getQiraaModel_Imams();
 
     /**
-     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Marjee</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute HARF__NAME = eINSTANCE.getHarf_Name();
+    EReference QIRAA_MODEL__MARJEE = eINSTANCE.getQiraaModel_Marjee();
 
     /**
-     * The meta object literal for the '<em><b>Values</b></em>' attribute list feature.
+     * The meta object literal for the '<em><b>Istelahat</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute HARF__VALUES = eINSTANCE.getHarf_Values();
+    EReference QIRAA_MODEL__ISTELAHAT = eINSTANCE.getQiraaModel_Istelahat();
 
     /**
-     * The meta object literal for the '<em><b>Ref</b></em>' reference feature.
+     * The meta object literal for the '<em><b>Koyod</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference HARF__REF = eINSTANCE.getHarf_Ref();
-
-    /**
-     * The meta object literal for the '{@link org.qwork.qiraa.impl.HarakahImpl <em>Harakah</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.qwork.qiraa.impl.HarakahImpl
-     * @see org.qwork.qiraa.impl.QiraaPackageImpl#getHarakah()
-     * @generated
-     */
-    EClass HARAKAH = eINSTANCE.getHarakah();
-
-    /**
-     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute HARAKAH__NAME = eINSTANCE.getHarakah_Name();
-
-    /**
-     * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute HARAKAH__VALUE = eINSTANCE.getHarakah_Value();
+    EReference QIRAA_MODEL__KOYOD = eINSTANCE.getQiraaModel_Koyod();
 
     /**
      * The meta object literal for the '{@link org.qwork.qiraa.impl.QareeImpl <em>Qaree</em>}' class.
@@ -833,6 +1464,16 @@ public interface QiraaPackage extends EPackage
      * @generated
      */
     EReference RAWEE__QAREE = eINSTANCE.getRawee_Qaree();
+
+    /**
+     * The meta object literal for the '{@link org.qwork.qiraa.impl.YokraaLahImpl <em>Yokraa Lah</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.qwork.qiraa.impl.YokraaLahImpl
+     * @see org.qwork.qiraa.impl.QiraaPackageImpl#getYokraaLah()
+     * @generated
+     */
+    EClass YOKRAA_LAH = eINSTANCE.getYokraaLah();
 
     /**
      * The meta object literal for the '{@link org.qwork.qiraa.impl.PersonImpl <em>Person</em>}' class.
@@ -877,6 +1518,24 @@ public interface QiraaPackage extends EPackage
     EAttribute PERSON__TOWOFIA = eINSTANCE.getPerson_Towofia();
 
     /**
+     * The meta object literal for the '{@link org.qwork.qiraa.impl.DouaaImpl <em>Douaa</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.qwork.qiraa.impl.DouaaImpl
+     * @see org.qwork.qiraa.impl.QiraaPackageImpl#getDouaa()
+     * @generated
+     */
+    EClass DOUAA = eINSTANCE.getDouaa();
+
+    /**
+     * The meta object literal for the '<em><b>D</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute DOUAA__D = eINSTANCE.getDouaa_D();
+
+    /**
      * The meta object literal for the '{@link org.qwork.qiraa.impl.TareekImpl <em>Tareek</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -895,12 +1554,262 @@ public interface QiraaPackage extends EPackage
     EAttribute TAREEK__NAME = eINSTANCE.getTareek_Name();
 
     /**
+     * The meta object literal for the '<em><b>Simple</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute TAREEK__SIMPLE = eINSTANCE.getTareek_Simple();
+
+    /**
      * The meta object literal for the '<em><b>Ref</b></em>' reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
     EReference TAREEK__REF = eINSTANCE.getTareek_Ref();
+
+    /**
+     * The meta object literal for the '<em><b>Complex</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute TAREEK__COMPLEX = eINSTANCE.getTareek_Complex();
+
+    /**
+     * The meta object literal for the '<em><b>Refs</b></em>' reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference TAREEK__REFS = eINSTANCE.getTareek_Refs();
+
+    /**
+     * The meta object literal for the '{@link org.qwork.qiraa.impl.IMAMImpl <em>IMAM</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.qwork.qiraa.impl.IMAMImpl
+     * @see org.qwork.qiraa.impl.QiraaPackageImpl#getIMAM()
+     * @generated
+     */
+    EClass IMAM = eINSTANCE.getIMAM();
+
+    /**
+     * The meta object literal for the '{@link org.qwork.qiraa.impl.MarjehImpl <em>Marjeh</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.qwork.qiraa.impl.MarjehImpl
+     * @see org.qwork.qiraa.impl.QiraaPackageImpl#getMarjeh()
+     * @generated
+     */
+    EClass MARJEH = eINSTANCE.getMarjeh();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute MARJEH__NAME = eINSTANCE.getMarjeh_Name();
+
+    /**
+     * The meta object literal for the '<em><b>Ref</b></em>' reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference MARJEH__REF = eINSTANCE.getMarjeh_Ref();
+
+    /**
+     * The meta object literal for the '<em><b>Romoz</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference MARJEH__ROMOZ = eINSTANCE.getMarjeh_Romoz();
+
+    /**
+     * The meta object literal for the '<em><b>Makateh</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference MARJEH__MAKATEH = eINSTANCE.getMarjeh_Makateh();
+
+    /**
+     * The meta object literal for the '{@link org.qwork.qiraa.impl.MaktahImpl <em>Maktah</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.qwork.qiraa.impl.MaktahImpl
+     * @see org.qwork.qiraa.impl.QiraaPackageImpl#getMaktah()
+     * @generated
+     */
+    EClass MAKTAH = eINSTANCE.getMaktah();
+
+    /**
+     * The meta object literal for the '<em><b>Nass</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute MAKTAH__NASS = eINSTANCE.getMaktah_Nass();
+
+    /**
+     * The meta object literal for the '<em><b>Kedah</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference MAKTAH__KEDAH = eINSTANCE.getMaktah_Kedah();
+
+    /**
+     * The meta object literal for the '{@link org.qwork.qiraa.impl.KaydImpl <em>Kayd</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.qwork.qiraa.impl.KaydImpl
+     * @see org.qwork.qiraa.impl.QiraaPackageImpl#getKayd()
+     * @generated
+     */
+    EClass KAYD = eINSTANCE.getKayd();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute KAYD__NAME = eINSTANCE.getKayd_Name();
+
+    /**
+     * The meta object literal for the '{@link org.qwork.qiraa.impl.IstelahImpl <em>Istelah</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.qwork.qiraa.impl.IstelahImpl
+     * @see org.qwork.qiraa.impl.QiraaPackageImpl#getIstelah()
+     * @generated
+     */
+    EClass ISTELAH = eINSTANCE.getIstelah();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute ISTELAH__NAME = eINSTANCE.getIstelah_Name();
+
+    /**
+     * The meta object literal for the '<em><b>Refs</b></em>' reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference ISTELAH__REFS = eINSTANCE.getIstelah_Refs();
+
+    /**
+     * The meta object literal for the '{@link org.qwork.qiraa.impl.RamzImpl <em>Ramz</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.qwork.qiraa.impl.RamzImpl
+     * @see org.qwork.qiraa.impl.QiraaPackageImpl#getRamz()
+     * @generated
+     */
+    EClass RAMZ = eINSTANCE.getRamz();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute RAMZ__NAME = eINSTANCE.getRamz_Name();
+
+    /**
+     * The meta object literal for the '<em><b>Refs</b></em>' reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference RAMZ__REFS = eINSTANCE.getRamz_Refs();
+
+    /**
+     * The meta object literal for the '{@link org.qwork.qiraa.impl.YokraaLahWaRamzImpl <em>Yokraa Lah Wa Ramz</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.qwork.qiraa.impl.YokraaLahWaRamzImpl
+     * @see org.qwork.qiraa.impl.QiraaPackageImpl#getYokraaLahWaRamz()
+     * @generated
+     */
+    EClass YOKRAA_LAH_WA_RAMZ = eINSTANCE.getYokraaLahWaRamz();
+
+    /**
+     * The meta object literal for the '{@link org.qwork.qiraa.impl.KaaedahImpl <em>Kaaedah</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.qwork.qiraa.impl.KaaedahImpl
+     * @see org.qwork.qiraa.impl.QiraaPackageImpl#getKaaedah()
+     * @generated
+     */
+    EClass KAAEDAH = eINSTANCE.getKaaedah();
+
+    /**
+     * The meta object literal for the '<em><b>Refs</b></em>' reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference KAAEDAH__REFS = eINSTANCE.getKaaedah_Refs();
+
+    /**
+     * The meta object literal for the '<em><b>Kayd</b></em>' reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference KAAEDAH__KAYD = eINSTANCE.getKaaedah_Kayd();
+
+    /**
+     * The meta object literal for the '<em><b>Harf</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference KAAEDAH__HARF = eINSTANCE.getKaaedah_Harf();
+
+    /**
+     * The meta object literal for the '{@link org.qwork.qiraa.impl.HarfQuranImpl <em>Harf Quran</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.qwork.qiraa.impl.HarfQuranImpl
+     * @see org.qwork.qiraa.impl.QiraaPackageImpl#getHarfQuran()
+     * @generated
+     */
+    EClass HARF_QURAN = eINSTANCE.getHarfQuran();
+
+    /**
+     * The meta object literal for the '<em><b>Word</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute HARF_QURAN__WORD = eINSTANCE.getHarfQuran_Word();
+
+    /**
+     * The meta object literal for the '<em><b>Ayah</b></em>' reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference HARF_QURAN__AYAH = eINSTANCE.getHarfQuran_Ayah();
+
+    /**
+     * The meta object literal for the '<em><b>Mawdee</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute HARF_QURAN__MAWDEE = eINSTANCE.getHarfQuran_Mawdee();
 
   }
 

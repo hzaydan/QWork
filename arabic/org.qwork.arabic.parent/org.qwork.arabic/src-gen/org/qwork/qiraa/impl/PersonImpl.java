@@ -99,7 +99,7 @@ public class PersonImpl extends MinimalEObjectImpl.Container implements Person
    * @generated
    * @ordered
    */
-  protected static final String TOWOFIA_EDEFAULT = null;
+  protected static final int TOWOFIA_EDEFAULT = 0;
 
   /**
    * The cached value of the '{@link #getTowofia() <em>Towofia</em>}' attribute.
@@ -109,7 +109,7 @@ public class PersonImpl extends MinimalEObjectImpl.Container implements Person
    * @generated
    * @ordered
    */
-  protected String towofia = TOWOFIA_EDEFAULT;
+  protected int towofia = TOWOFIA_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -213,7 +213,7 @@ public class PersonImpl extends MinimalEObjectImpl.Container implements Person
    * @generated
    */
   @Override
-  public String getTowofia()
+  public int getTowofia()
   {
     return towofia;
   }
@@ -224,9 +224,9 @@ public class PersonImpl extends MinimalEObjectImpl.Container implements Person
    * @generated
    */
   @Override
-  public void setTowofia(String newTowofia)
+  public void setTowofia(int newTowofia)
   {
-    String oldTowofia = towofia;
+    int oldTowofia = towofia;
     towofia = newTowofia;
     if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, QiraaPackage.PERSON__TOWOFIA, oldTowofia, towofia));
@@ -274,7 +274,7 @@ public class PersonImpl extends MinimalEObjectImpl.Container implements Person
         setLakab((String)newValue);
         return;
       case QiraaPackage.PERSON__TOWOFIA:
-        setTowofia((String)newValue);
+        setTowofia((Integer)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -323,7 +323,7 @@ public class PersonImpl extends MinimalEObjectImpl.Container implements Person
       case QiraaPackage.PERSON__LAKAB:
         return LAKAB_EDEFAULT == null ? lakab != null : !LAKAB_EDEFAULT.equals(lakab);
       case QiraaPackage.PERSON__TOWOFIA:
-        return TOWOFIA_EDEFAULT == null ? towofia != null : !TOWOFIA_EDEFAULT.equals(towofia);
+        return towofia != TOWOFIA_EDEFAULT;
     }
     return super.eIsSet(featureID);
   }

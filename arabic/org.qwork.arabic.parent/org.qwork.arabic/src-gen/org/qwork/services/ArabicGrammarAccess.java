@@ -79,7 +79,6 @@ public class ArabicGrammarAccess extends AbstractElementFinder.AbstractGrammarEl
 	private final TerminalRule tAHARAKAH;
 	private final TerminalRule tASHADDAH;
 	private final TerminalRule tANONLETTER;
-	private final TerminalRule tADIGITS;
 	private final TerminalRule tAWORD;
 	private final TerminalRule tKALEMAH;
 	
@@ -99,7 +98,6 @@ public class ArabicGrammarAccess extends AbstractElementFinder.AbstractGrammarEl
 		this.tAHARAKAH = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.qwork.Arabic.AHARAKAH");
 		this.tASHADDAH = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.qwork.Arabic.ASHADDAH");
 		this.tANONLETTER = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.qwork.Arabic.ANONLETTER");
-		this.tADIGITS = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.qwork.Arabic.ADIGITS");
 		this.tAWORD = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.qwork.Arabic.AWORD");
 		this.tKALEMAH = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.qwork.Arabic.KALEMAH");
 	}
@@ -186,15 +184,8 @@ public class ArabicGrammarAccess extends AbstractElementFinder.AbstractGrammarEl
 		return tANONLETTER;
 	}
 	
-	//terminal ADIGITS:
-	//    ADIGIT+
-	//;
-	public TerminalRule getADIGITSRule() {
-		return tADIGITS;
-	}
-	
 	//terminal AWORD:
-	//    ALETTER+
+	//    (ALETTER|AHARAKAH|ASHADDAH)+
 	//;
 	public TerminalRule getAWORDRule() {
 		return tAWORD;

@@ -21,21 +21,20 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalArabicParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_AWORD", "RULE_WS", "RULE_ALETTER", "RULE_ADIGIT", "RULE_AHARAKAH", "RULE_ASHADDAH", "RULE_ANONLETTER", "RULE_ADIGITS", "RULE_KALEMAH", "RULE_ID", "RULE_INT", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_ANY_OTHER"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_AWORD", "RULE_WS", "RULE_ALETTER", "RULE_ADIGIT", "RULE_AHARAKAH", "RULE_ASHADDAH", "RULE_ANONLETTER", "RULE_KALEMAH", "RULE_ID", "RULE_INT", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_ANY_OTHER"
     };
-    public static final int RULE_ID=13;
+    public static final int RULE_ID=12;
     public static final int RULE_WS=5;
     public static final int RULE_AHARAKAH=8;
-    public static final int RULE_STRING=15;
-    public static final int RULE_ANY_OTHER=18;
+    public static final int RULE_STRING=14;
+    public static final int RULE_ANY_OTHER=17;
     public static final int RULE_ANONLETTER=10;
     public static final int RULE_ADIGIT=7;
-    public static final int RULE_ADIGITS=11;
-    public static final int RULE_SL_COMMENT=17;
-    public static final int RULE_KALEMAH=12;
-    public static final int RULE_INT=14;
+    public static final int RULE_SL_COMMENT=16;
+    public static final int RULE_KALEMAH=11;
+    public static final int RULE_INT=13;
     public static final int RULE_AWORD=4;
-    public static final int RULE_ML_COMMENT=16;
+    public static final int RULE_ML_COMMENT=15;
     public static final int RULE_ASHADDAH=9;
     public static final int RULE_ALETTER=6;
     public static final int EOF=-1;

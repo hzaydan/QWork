@@ -1,0 +1,11 @@
+grammar org.qwork.QAyahStart with org.qwork.Arabic
+
+generate qayahstart "http://www.qwork.org/QAyahStart"
+
+AyahStartModel:
+	ayat+=AyahStart+
+;
+
+AyahStart:
+	'السورة' surah=INT 'الآية' ayah=INT name=KALEMAH
+;

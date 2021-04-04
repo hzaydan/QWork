@@ -13,20 +13,33 @@ import org.eclipse.xtext.ParserRule;
 import org.eclipse.xtext.serializer.ISerializationContext;
 import org.eclipse.xtext.serializer.acceptor.SequenceFeeder;
 import org.eclipse.xtext.serializer.sequencer.ITransientValueService.ValueTransient;
+import org.qwork.abjad.AbjadModel;
+import org.qwork.abjad.AbjadPackage;
+import org.qwork.abjad.Harakah;
+import org.qwork.abjad.Harf;
 import org.qwork.arabic.ArabicPackage;
 import org.qwork.arabic.Model;
 import org.qwork.arabic.Phrase;
-import org.qwork.qiraa.Harakah;
-import org.qwork.qiraa.Harf;
+import org.qwork.qayahstart.AyahStart;
+import org.qwork.qayahstart.AyahStartModel;
+import org.qwork.qayahstart.QayahstartPackage;
+import org.qwork.qiraa.HarfQuran;
+import org.qwork.qiraa.IMAM;
+import org.qwork.qiraa.Istelah;
+import org.qwork.qiraa.Kaaedah;
+import org.qwork.qiraa.Kayd;
+import org.qwork.qiraa.Maktah;
+import org.qwork.qiraa.Marjeh;
 import org.qwork.qiraa.Qaree;
 import org.qwork.qiraa.QiraaModel;
 import org.qwork.qiraa.QiraaPackage;
+import org.qwork.qiraa.Ramz;
 import org.qwork.qiraa.Rawee;
 import org.qwork.qiraa.Tareek;
 import org.qwork.services.QiraaGrammarAccess;
 
 @SuppressWarnings("all")
-public class QiraaSemanticSequencer extends ArabicSemanticSequencer {
+public class QiraaSemanticSequencer extends AbjadSemanticSequencer {
 
 	@Inject
 	private QiraaGrammarAccess grammarAccess;
@@ -37,7 +50,19 @@ public class QiraaSemanticSequencer extends ArabicSemanticSequencer {
 		ParserRule rule = context.getParserRule();
 		Action action = context.getAssignedAction();
 		Set<Parameter> parameters = context.getEnabledBooleanParameters();
-		if (epackage == ArabicPackage.eINSTANCE)
+		if (epackage == AbjadPackage.eINSTANCE)
+			switch (semanticObject.eClass().getClassifierID()) {
+			case AbjadPackage.ABJAD_MODEL:
+				sequence_AbjadModel(context, (AbjadModel) semanticObject); 
+				return; 
+			case AbjadPackage.HARAKAH:
+				sequence_Harakah(context, (Harakah) semanticObject); 
+				return; 
+			case AbjadPackage.HARF:
+				sequence_Harf(context, (Harf) semanticObject); 
+				return; 
+			}
+		else if (epackage == ArabicPackage.eINSTANCE)
 			switch (semanticObject.eClass().getClassifierID()) {
 			case ArabicPackage.MODEL:
 				sequence_Model(context, (Model) semanticObject); 
@@ -46,19 +71,46 @@ public class QiraaSemanticSequencer extends ArabicSemanticSequencer {
 				sequence_Phrase(context, (Phrase) semanticObject); 
 				return; 
 			}
+		else if (epackage == QayahstartPackage.eINSTANCE)
+			switch (semanticObject.eClass().getClassifierID()) {
+			case QayahstartPackage.AYAH_START:
+				sequence_AyahStart(context, (AyahStart) semanticObject); 
+				return; 
+			case QayahstartPackage.AYAH_START_MODEL:
+				sequence_AyahStartModel(context, (AyahStartModel) semanticObject); 
+				return; 
+			}
 		else if (epackage == QiraaPackage.eINSTANCE)
 			switch (semanticObject.eClass().getClassifierID()) {
-			case QiraaPackage.HARAKAH:
-				sequence_Harakah(context, (Harakah) semanticObject); 
+			case QiraaPackage.HARF_QURAN:
+				sequence_HarfQuran(context, (HarfQuran) semanticObject); 
 				return; 
-			case QiraaPackage.HARF:
-				sequence_Harf(context, (Harf) semanticObject); 
+			case QiraaPackage.IMAM:
+				sequence_Douaa_Person(context, (IMAM) semanticObject); 
+				return; 
+			case QiraaPackage.ISTELAH:
+				sequence_Istelah(context, (Istelah) semanticObject); 
+				return; 
+			case QiraaPackage.KAAEDAH:
+				sequence_Kaaedah(context, (Kaaedah) semanticObject); 
+				return; 
+			case QiraaPackage.KAYD:
+				sequence_Kayd(context, (Kayd) semanticObject); 
+				return; 
+			case QiraaPackage.MAKTAH:
+				sequence_Maktah(context, (Maktah) semanticObject); 
+				return; 
+			case QiraaPackage.MARJEH:
+				sequence_Douaa_Marjeh(context, (Marjeh) semanticObject); 
 				return; 
 			case QiraaPackage.QAREE:
 				sequence_Person(context, (Qaree) semanticObject); 
 				return; 
 			case QiraaPackage.QIRAA_MODEL:
 				sequence_QiraaModel(context, (QiraaModel) semanticObject); 
+				return; 
+			case QiraaPackage.RAMZ:
+				sequence_Ramz(context, (Ramz) semanticObject); 
 				return; 
 			case QiraaPackage.RAWEE:
 				sequence_Person_Rawee(context, (Rawee) semanticObject); 
@@ -73,33 +125,92 @@ public class QiraaSemanticSequencer extends ArabicSemanticSequencer {
 	
 	/**
 	 * Contexts:
-	 *     Harakah returns Harakah
+	 *     Marjeh returns Marjeh
 	 *
 	 * Constraint:
-	 *     (name=KALEMAH value=AHARAKAH)
+	 *     (name=KALEMAH ref=[IMAM|KALEMAH] (d='رحمه' | d='أكرمه') romoz+=Ramz* makateh+=Maktah+)
 	 */
-	protected void sequence_Harakah(ISerializationContext context, Harakah semanticObject) {
+	protected void sequence_Douaa_Marjeh(ISerializationContext context, Marjeh semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     IMAM returns IMAM
+	 *
+	 * Constraint:
+	 *     (name=KALEMAH esm=KALEMAH? lakab=KALEMAH? towofia=INT? (d='رحمه' | d='أكرمه'))
+	 */
+	protected void sequence_Douaa_Person(ISerializationContext context, IMAM semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     HarfQuran returns HarfQuran
+	 *
+	 * Constraint:
+	 *     (word=AWORD ayah=[AyahStart|KALEMAH] mawdee=Mawdee?)
+	 */
+	protected void sequence_HarfQuran(ISerializationContext context, HarfQuran semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     YokraaLah returns Istelah
+	 *     Istelah returns Istelah
+	 *     YokraaLahWaRamz returns Istelah
+	 *
+	 * Constraint:
+	 *     (name=KALEMAH refs+=[YokraaLah|KALEMAH] refs+=[YokraaLah|KALEMAH]*)
+	 */
+	protected void sequence_Istelah(ISerializationContext context, Istelah semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Kaaedah returns Kaaedah
+	 *
+	 * Constraint:
+	 *     (refs+=[YokraaLahWaRamz|KALEMAH] kayd=[Kayd|KALEMAH] harf=HarfQuran)
+	 */
+	protected void sequence_Kaaedah(ISerializationContext context, Kaaedah semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Kayd returns Kayd
+	 *
+	 * Constraint:
+	 *     name=KALEMAH
+	 */
+	protected void sequence_Kayd(ISerializationContext context, Kayd semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, QiraaPackage.Literals.HARAKAH__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, QiraaPackage.Literals.HARAKAH__NAME));
-			if (transientValues.isValueTransient(semanticObject, QiraaPackage.Literals.HARAKAH__VALUE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, QiraaPackage.Literals.HARAKAH__VALUE));
+			if (transientValues.isValueTransient(semanticObject, QiraaPackage.Literals.KAYD__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, QiraaPackage.Literals.KAYD__NAME));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getHarakahAccess().getNameKALEMAHTerminalRuleCall_1_0(), semanticObject.getName());
-		feeder.accept(grammarAccess.getHarakahAccess().getValueAHARAKAHTerminalRuleCall_3_0(), semanticObject.getValue());
+		feeder.accept(grammarAccess.getKaydAccess().getNameKALEMAHTerminalRuleCall_1_0(), semanticObject.getName());
 		feeder.finish();
 	}
 	
 	
 	/**
 	 * Contexts:
-	 *     Harf returns Harf
+	 *     Maktah returns Maktah
 	 *
 	 * Constraint:
-	 *     (name=AWORD ((values+=ALETTER values+=ALETTER*) | ref=[Harf|AWORD]))
+	 *     (nass=KALEMAH kedah+=Kaaedah)
 	 */
-	protected void sequence_Harf(ISerializationContext context, Harf semanticObject) {
+	protected void sequence_Maktah(ISerializationContext context, Maktah semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -107,9 +218,11 @@ public class QiraaSemanticSequencer extends ArabicSemanticSequencer {
 	/**
 	 * Contexts:
 	 *     Qaree returns Qaree
+	 *     YokraaLah returns Qaree
+	 *     YokraaLahWaRamz returns Qaree
 	 *
 	 * Constraint:
-	 *     (name=KALEMAH esm=KALEMAH? lakab=KALEMAH? towofia=ADIGITS?)
+	 *     (name=KALEMAH esm=KALEMAH? lakab=KALEMAH? towofia=INT?)
 	 */
 	protected void sequence_Person(ISerializationContext context, Qaree semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -119,9 +232,11 @@ public class QiraaSemanticSequencer extends ArabicSemanticSequencer {
 	/**
 	 * Contexts:
 	 *     Rawee returns Rawee
+	 *     YokraaLah returns Rawee
+	 *     YokraaLahWaRamz returns Rawee
 	 *
 	 * Constraint:
-	 *     (name=KALEMAH esm=KALEMAH? lakab=KALEMAH? towofia=ADIGITS? qaree=[Qaree|KALEMAH])
+	 *     (name=KALEMAH esm=KALEMAH? lakab=KALEMAH? towofia=INT? qaree=[Qaree|KALEMAH])
 	 */
 	protected void sequence_Person_Rawee(ISerializationContext context, Rawee semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -133,9 +248,30 @@ public class QiraaSemanticSequencer extends ArabicSemanticSequencer {
 	 *     QiraaModel returns QiraaModel
 	 *
 	 * Constraint:
-	 *     (hourouf+=Harf | qoraa+=Qaree | torok+=Tareek | harakat+=Harakah | rowat+=Rawee)+
+	 *     (
+	 *         qoraa+=Qaree | 
+	 *         torok+=Tareek | 
+	 *         rowat+=Rawee | 
+	 *         imams+=IMAM | 
+	 *         marjee+=Marjeh | 
+	 *         istelahat+=Istelah | 
+	 *         koyod+=Kayd
+	 *     )+
 	 */
 	protected void sequence_QiraaModel(ISerializationContext context, QiraaModel semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Ramz returns Ramz
+	 *     YokraaLahWaRamz returns Ramz
+	 *
+	 * Constraint:
+	 *     (name=AWORD refs+=[YokraaLah|KALEMAH] refs+=[YokraaLah|KALEMAH]*)
+	 */
+	protected void sequence_Ramz(ISerializationContext context, Ramz semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -145,7 +281,7 @@ public class QiraaSemanticSequencer extends ArabicSemanticSequencer {
 	 *     Tareek returns Tareek
 	 *
 	 * Constraint:
-	 *     (name=KALEMAH ref=[Tareek|KALEMAH]?)
+	 *     (name=KALEMAH ((simple?='خالص' ref=[YokraaLah|KALEMAH]) | (complex?='مركب' refs+=[Tareek|KALEMAH]+)))
 	 */
 	protected void sequence_Tareek(ISerializationContext context, Tareek semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

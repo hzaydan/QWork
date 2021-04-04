@@ -47,6 +47,44 @@ Workflow {
 			}
 		}
 		language = StandardLanguage {
+			name = "org.qwork.QAyahStart"
+			fileExtensions = "qayahstart"
+
+			serializer = {
+				generateStub = false
+			}
+			validator = {
+				// composedCheck = "org.eclipse.xtext.validation.NamesAreUniqueValidator"
+				// Generates checks for @Deprecated grammar annotations, an IssueProvider and a corresponding PropertyPage
+				generateDeprecationValidation = true
+			}
+			generator = {
+				generateXtendStub = true
+			}
+			junitSupport = {
+				junitVersion = "5"
+			}
+		}
+		language = StandardLanguage {
+			name = "org.qwork.Abjad"
+			fileExtensions = "abjad"
+
+			serializer = {
+				generateStub = false
+			}
+			validator = {
+				// composedCheck = "org.eclipse.xtext.validation.NamesAreUniqueValidator"
+				// Generates checks for @Deprecated grammar annotations, an IssueProvider and a corresponding PropertyPage
+				generateDeprecationValidation = true
+			}
+			generator = {
+				generateXtendStub = true
+			}
+			junitSupport = {
+				junitVersion = "5"
+			}
+		}
+		language = StandardLanguage {
 			name = "org.qwork.Qiraa"
 			fileExtensions = "qiraa"
 

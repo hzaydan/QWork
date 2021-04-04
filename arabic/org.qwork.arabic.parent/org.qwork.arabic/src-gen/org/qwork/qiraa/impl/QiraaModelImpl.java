@@ -17,8 +17,10 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
-import org.qwork.qiraa.Harakah;
-import org.qwork.qiraa.Harf;
+import org.qwork.qiraa.IMAM;
+import org.qwork.qiraa.Istelah;
+import org.qwork.qiraa.Kayd;
+import org.qwork.qiraa.Marjeh;
 import org.qwork.qiraa.Qaree;
 import org.qwork.qiraa.QiraaModel;
 import org.qwork.qiraa.QiraaPackage;
@@ -33,27 +35,19 @@ import org.qwork.qiraa.Tareek;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.qwork.qiraa.impl.QiraaModelImpl#getHourouf <em>Hourouf</em>}</li>
  *   <li>{@link org.qwork.qiraa.impl.QiraaModelImpl#getQoraa <em>Qoraa</em>}</li>
  *   <li>{@link org.qwork.qiraa.impl.QiraaModelImpl#getTorok <em>Torok</em>}</li>
- *   <li>{@link org.qwork.qiraa.impl.QiraaModelImpl#getHarakat <em>Harakat</em>}</li>
  *   <li>{@link org.qwork.qiraa.impl.QiraaModelImpl#getRowat <em>Rowat</em>}</li>
+ *   <li>{@link org.qwork.qiraa.impl.QiraaModelImpl#getImams <em>Imams</em>}</li>
+ *   <li>{@link org.qwork.qiraa.impl.QiraaModelImpl#getMarjee <em>Marjee</em>}</li>
+ *   <li>{@link org.qwork.qiraa.impl.QiraaModelImpl#getIstelahat <em>Istelahat</em>}</li>
+ *   <li>{@link org.qwork.qiraa.impl.QiraaModelImpl#getKoyod <em>Koyod</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class QiraaModelImpl extends MinimalEObjectImpl.Container implements QiraaModel
 {
-  /**
-   * The cached value of the '{@link #getHourouf() <em>Hourouf</em>}' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getHourouf()
-   * @generated
-   * @ordered
-   */
-  protected EList<Harf> hourouf;
-
   /**
    * The cached value of the '{@link #getQoraa() <em>Qoraa</em>}' containment reference list.
    * <!-- begin-user-doc -->
@@ -75,16 +69,6 @@ public class QiraaModelImpl extends MinimalEObjectImpl.Container implements Qira
   protected EList<Tareek> torok;
 
   /**
-   * The cached value of the '{@link #getHarakat() <em>Harakat</em>}' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getHarakat()
-   * @generated
-   * @ordered
-   */
-  protected EList<Harakah> harakat;
-
-  /**
    * The cached value of the '{@link #getRowat() <em>Rowat</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -93,6 +77,46 @@ public class QiraaModelImpl extends MinimalEObjectImpl.Container implements Qira
    * @ordered
    */
   protected EList<Rawee> rowat;
+
+  /**
+   * The cached value of the '{@link #getImams() <em>Imams</em>}' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getImams()
+   * @generated
+   * @ordered
+   */
+  protected EList<IMAM> imams;
+
+  /**
+   * The cached value of the '{@link #getMarjee() <em>Marjee</em>}' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getMarjee()
+   * @generated
+   * @ordered
+   */
+  protected EList<Marjeh> marjee;
+
+  /**
+   * The cached value of the '{@link #getIstelahat() <em>Istelahat</em>}' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getIstelahat()
+   * @generated
+   * @ordered
+   */
+  protected EList<Istelah> istelahat;
+
+  /**
+   * The cached value of the '{@link #getKoyod() <em>Koyod</em>}' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getKoyod()
+   * @generated
+   * @ordered
+   */
+  protected EList<Kayd> koyod;
 
   /**
    * <!-- begin-user-doc -->
@@ -113,21 +137,6 @@ public class QiraaModelImpl extends MinimalEObjectImpl.Container implements Qira
   protected EClass eStaticClass()
   {
     return QiraaPackage.Literals.QIRAA_MODEL;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EList<Harf> getHourouf()
-  {
-    if (hourouf == null)
-    {
-      hourouf = new EObjectContainmentEList<Harf>(Harf.class, this, QiraaPackage.QIRAA_MODEL__HOUROUF);
-    }
-    return hourouf;
   }
 
   /**
@@ -166,21 +175,6 @@ public class QiraaModelImpl extends MinimalEObjectImpl.Container implements Qira
    * @generated
    */
   @Override
-  public EList<Harakah> getHarakat()
-  {
-    if (harakat == null)
-    {
-      harakat = new EObjectContainmentEList<Harakah>(Harakah.class, this, QiraaPackage.QIRAA_MODEL__HARAKAT);
-    }
-    return harakat;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
   public EList<Rawee> getRowat()
   {
     if (rowat == null)
@@ -196,20 +190,84 @@ public class QiraaModelImpl extends MinimalEObjectImpl.Container implements Qira
    * @generated
    */
   @Override
+  public EList<IMAM> getImams()
+  {
+    if (imams == null)
+    {
+      imams = new EObjectContainmentEList<IMAM>(IMAM.class, this, QiraaPackage.QIRAA_MODEL__IMAMS);
+    }
+    return imams;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EList<Marjeh> getMarjee()
+  {
+    if (marjee == null)
+    {
+      marjee = new EObjectContainmentEList<Marjeh>(Marjeh.class, this, QiraaPackage.QIRAA_MODEL__MARJEE);
+    }
+    return marjee;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EList<Istelah> getIstelahat()
+  {
+    if (istelahat == null)
+    {
+      istelahat = new EObjectContainmentEList<Istelah>(Istelah.class, this, QiraaPackage.QIRAA_MODEL__ISTELAHAT);
+    }
+    return istelahat;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EList<Kayd> getKoyod()
+  {
+    if (koyod == null)
+    {
+      koyod = new EObjectContainmentEList<Kayd>(Kayd.class, this, QiraaPackage.QIRAA_MODEL__KOYOD);
+    }
+    return koyod;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
     switch (featureID)
     {
-      case QiraaPackage.QIRAA_MODEL__HOUROUF:
-        return ((InternalEList<?>)getHourouf()).basicRemove(otherEnd, msgs);
       case QiraaPackage.QIRAA_MODEL__QORAA:
         return ((InternalEList<?>)getQoraa()).basicRemove(otherEnd, msgs);
       case QiraaPackage.QIRAA_MODEL__TOROK:
         return ((InternalEList<?>)getTorok()).basicRemove(otherEnd, msgs);
-      case QiraaPackage.QIRAA_MODEL__HARAKAT:
-        return ((InternalEList<?>)getHarakat()).basicRemove(otherEnd, msgs);
       case QiraaPackage.QIRAA_MODEL__ROWAT:
         return ((InternalEList<?>)getRowat()).basicRemove(otherEnd, msgs);
+      case QiraaPackage.QIRAA_MODEL__IMAMS:
+        return ((InternalEList<?>)getImams()).basicRemove(otherEnd, msgs);
+      case QiraaPackage.QIRAA_MODEL__MARJEE:
+        return ((InternalEList<?>)getMarjee()).basicRemove(otherEnd, msgs);
+      case QiraaPackage.QIRAA_MODEL__ISTELAHAT:
+        return ((InternalEList<?>)getIstelahat()).basicRemove(otherEnd, msgs);
+      case QiraaPackage.QIRAA_MODEL__KOYOD:
+        return ((InternalEList<?>)getKoyod()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -224,16 +282,20 @@ public class QiraaModelImpl extends MinimalEObjectImpl.Container implements Qira
   {
     switch (featureID)
     {
-      case QiraaPackage.QIRAA_MODEL__HOUROUF:
-        return getHourouf();
       case QiraaPackage.QIRAA_MODEL__QORAA:
         return getQoraa();
       case QiraaPackage.QIRAA_MODEL__TOROK:
         return getTorok();
-      case QiraaPackage.QIRAA_MODEL__HARAKAT:
-        return getHarakat();
       case QiraaPackage.QIRAA_MODEL__ROWAT:
         return getRowat();
+      case QiraaPackage.QIRAA_MODEL__IMAMS:
+        return getImams();
+      case QiraaPackage.QIRAA_MODEL__MARJEE:
+        return getMarjee();
+      case QiraaPackage.QIRAA_MODEL__ISTELAHAT:
+        return getIstelahat();
+      case QiraaPackage.QIRAA_MODEL__KOYOD:
+        return getKoyod();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -249,10 +311,6 @@ public class QiraaModelImpl extends MinimalEObjectImpl.Container implements Qira
   {
     switch (featureID)
     {
-      case QiraaPackage.QIRAA_MODEL__HOUROUF:
-        getHourouf().clear();
-        getHourouf().addAll((Collection<? extends Harf>)newValue);
-        return;
       case QiraaPackage.QIRAA_MODEL__QORAA:
         getQoraa().clear();
         getQoraa().addAll((Collection<? extends Qaree>)newValue);
@@ -261,13 +319,25 @@ public class QiraaModelImpl extends MinimalEObjectImpl.Container implements Qira
         getTorok().clear();
         getTorok().addAll((Collection<? extends Tareek>)newValue);
         return;
-      case QiraaPackage.QIRAA_MODEL__HARAKAT:
-        getHarakat().clear();
-        getHarakat().addAll((Collection<? extends Harakah>)newValue);
-        return;
       case QiraaPackage.QIRAA_MODEL__ROWAT:
         getRowat().clear();
         getRowat().addAll((Collection<? extends Rawee>)newValue);
+        return;
+      case QiraaPackage.QIRAA_MODEL__IMAMS:
+        getImams().clear();
+        getImams().addAll((Collection<? extends IMAM>)newValue);
+        return;
+      case QiraaPackage.QIRAA_MODEL__MARJEE:
+        getMarjee().clear();
+        getMarjee().addAll((Collection<? extends Marjeh>)newValue);
+        return;
+      case QiraaPackage.QIRAA_MODEL__ISTELAHAT:
+        getIstelahat().clear();
+        getIstelahat().addAll((Collection<? extends Istelah>)newValue);
+        return;
+      case QiraaPackage.QIRAA_MODEL__KOYOD:
+        getKoyod().clear();
+        getKoyod().addAll((Collection<? extends Kayd>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -283,20 +353,26 @@ public class QiraaModelImpl extends MinimalEObjectImpl.Container implements Qira
   {
     switch (featureID)
     {
-      case QiraaPackage.QIRAA_MODEL__HOUROUF:
-        getHourouf().clear();
-        return;
       case QiraaPackage.QIRAA_MODEL__QORAA:
         getQoraa().clear();
         return;
       case QiraaPackage.QIRAA_MODEL__TOROK:
         getTorok().clear();
         return;
-      case QiraaPackage.QIRAA_MODEL__HARAKAT:
-        getHarakat().clear();
-        return;
       case QiraaPackage.QIRAA_MODEL__ROWAT:
         getRowat().clear();
+        return;
+      case QiraaPackage.QIRAA_MODEL__IMAMS:
+        getImams().clear();
+        return;
+      case QiraaPackage.QIRAA_MODEL__MARJEE:
+        getMarjee().clear();
+        return;
+      case QiraaPackage.QIRAA_MODEL__ISTELAHAT:
+        getIstelahat().clear();
+        return;
+      case QiraaPackage.QIRAA_MODEL__KOYOD:
+        getKoyod().clear();
         return;
     }
     super.eUnset(featureID);
@@ -312,16 +388,20 @@ public class QiraaModelImpl extends MinimalEObjectImpl.Container implements Qira
   {
     switch (featureID)
     {
-      case QiraaPackage.QIRAA_MODEL__HOUROUF:
-        return hourouf != null && !hourouf.isEmpty();
       case QiraaPackage.QIRAA_MODEL__QORAA:
         return qoraa != null && !qoraa.isEmpty();
       case QiraaPackage.QIRAA_MODEL__TOROK:
         return torok != null && !torok.isEmpty();
-      case QiraaPackage.QIRAA_MODEL__HARAKAT:
-        return harakat != null && !harakat.isEmpty();
       case QiraaPackage.QIRAA_MODEL__ROWAT:
         return rowat != null && !rowat.isEmpty();
+      case QiraaPackage.QIRAA_MODEL__IMAMS:
+        return imams != null && !imams.isEmpty();
+      case QiraaPackage.QIRAA_MODEL__MARJEE:
+        return marjee != null && !marjee.isEmpty();
+      case QiraaPackage.QIRAA_MODEL__ISTELAHAT:
+        return istelahat != null && !istelahat.isEmpty();
+      case QiraaPackage.QIRAA_MODEL__KOYOD:
+        return koyod != null && !koyod.isEmpty();
     }
     return super.eIsSet(featureID);
   }

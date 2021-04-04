@@ -14,6 +14,6 @@ package org.qwork.qiraa;
  * @model
  * @generated
  */
-public interface Qaree extends Person
+public interface Qaree extends Person, YokraaLah
 {
 } // Qaree

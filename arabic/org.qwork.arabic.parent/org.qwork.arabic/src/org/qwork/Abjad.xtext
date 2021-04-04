@@ -1,0 +1,20 @@
+grammar org.qwork.Abjad with org.qwork.QAyahStart
+
+generate abjad "http://www.qwork.org/Abjad"
+
+AbjadModel:
+	(
+		hourouf+=Harf | harakat+=Harakah
+	)*
+;
+
+
+Harf:
+	'حرف' name=AWORD 
+		(('هو' values+=ALETTER ('أو' values+=ALETTER)*) |
+		('ذاته' ref=[Harf|AWORD]))
+;
+
+Harakah:
+	'حركة' name=KALEMAH 'هي' value=AHARAKAH
+;

@@ -80,25 +80,13 @@ public class QiraaSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case QiraaPackage.HARF:
-      {
-        Harf harf = (Harf)theEObject;
-        T result = caseHarf(harf);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case QiraaPackage.HARAKAH:
-      {
-        Harakah harakah = (Harakah)theEObject;
-        T result = caseHarakah(harakah);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
       case QiraaPackage.QAREE:
       {
         Qaree qaree = (Qaree)theEObject;
         T result = caseQaree(qaree);
         if (result == null) result = casePerson(qaree);
+        if (result == null) result = caseYokraaLah(qaree);
+        if (result == null) result = caseYokraaLahWaRamz(qaree);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -107,6 +95,16 @@ public class QiraaSwitch<T> extends Switch<T>
         Rawee rawee = (Rawee)theEObject;
         T result = caseRawee(rawee);
         if (result == null) result = casePerson(rawee);
+        if (result == null) result = caseYokraaLah(rawee);
+        if (result == null) result = caseYokraaLahWaRamz(rawee);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case QiraaPackage.YOKRAA_LAH:
+      {
+        YokraaLah yokraaLah = (YokraaLah)theEObject;
+        T result = caseYokraaLah(yokraaLah);
+        if (result == null) result = caseYokraaLahWaRamz(yokraaLah);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -117,10 +115,86 @@ public class QiraaSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case QiraaPackage.DOUAA:
+      {
+        Douaa douaa = (Douaa)theEObject;
+        T result = caseDouaa(douaa);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case QiraaPackage.TAREEK:
       {
         Tareek tareek = (Tareek)theEObject;
         T result = caseTareek(tareek);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case QiraaPackage.IMAM:
+      {
+        IMAM imam = (IMAM)theEObject;
+        T result = caseIMAM(imam);
+        if (result == null) result = casePerson(imam);
+        if (result == null) result = caseDouaa(imam);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case QiraaPackage.MARJEH:
+      {
+        Marjeh marjeh = (Marjeh)theEObject;
+        T result = caseMarjeh(marjeh);
+        if (result == null) result = caseDouaa(marjeh);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case QiraaPackage.MAKTAH:
+      {
+        Maktah maktah = (Maktah)theEObject;
+        T result = caseMaktah(maktah);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case QiraaPackage.KAYD:
+      {
+        Kayd kayd = (Kayd)theEObject;
+        T result = caseKayd(kayd);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case QiraaPackage.ISTELAH:
+      {
+        Istelah istelah = (Istelah)theEObject;
+        T result = caseIstelah(istelah);
+        if (result == null) result = caseYokraaLah(istelah);
+        if (result == null) result = caseYokraaLahWaRamz(istelah);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case QiraaPackage.RAMZ:
+      {
+        Ramz ramz = (Ramz)theEObject;
+        T result = caseRamz(ramz);
+        if (result == null) result = caseYokraaLahWaRamz(ramz);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case QiraaPackage.YOKRAA_LAH_WA_RAMZ:
+      {
+        YokraaLahWaRamz yokraaLahWaRamz = (YokraaLahWaRamz)theEObject;
+        T result = caseYokraaLahWaRamz(yokraaLahWaRamz);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case QiraaPackage.KAAEDAH:
+      {
+        Kaaedah kaaedah = (Kaaedah)theEObject;
+        T result = caseKaaedah(kaaedah);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case QiraaPackage.HARF_QURAN:
+      {
+        HarfQuran harfQuran = (HarfQuran)theEObject;
+        T result = caseHarfQuran(harfQuran);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -140,38 +214,6 @@ public class QiraaSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseQiraaModel(QiraaModel object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Harf</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Harf</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseHarf(Harf object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Harakah</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Harakah</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseHarakah(Harakah object)
   {
     return null;
   }
@@ -209,6 +251,22 @@ public class QiraaSwitch<T> extends Switch<T>
   }
 
   /**
+   * Returns the result of interpreting the object as an instance of '<em>Yokraa Lah</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Yokraa Lah</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseYokraaLah(YokraaLah object)
+  {
+    return null;
+  }
+
+  /**
    * Returns the result of interpreting the object as an instance of '<em>Person</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -225,6 +283,22 @@ public class QiraaSwitch<T> extends Switch<T>
   }
 
   /**
+   * Returns the result of interpreting the object as an instance of '<em>Douaa</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Douaa</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseDouaa(Douaa object)
+  {
+    return null;
+  }
+
+  /**
    * Returns the result of interpreting the object as an instance of '<em>Tareek</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -236,6 +310,150 @@ public class QiraaSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseTareek(Tareek object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>IMAM</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>IMAM</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseIMAM(IMAM object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Marjeh</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Marjeh</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseMarjeh(Marjeh object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Maktah</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Maktah</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseMaktah(Maktah object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Kayd</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Kayd</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseKayd(Kayd object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Istelah</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Istelah</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseIstelah(Istelah object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Ramz</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Ramz</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseRamz(Ramz object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Yokraa Lah Wa Ramz</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Yokraa Lah Wa Ramz</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseYokraaLahWaRamz(YokraaLahWaRamz object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Kaaedah</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Kaaedah</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseKaaedah(Kaaedah object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Harf Quran</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Harf Quran</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseHarfQuran(HarfQuran object)
   {
     return null;
   }

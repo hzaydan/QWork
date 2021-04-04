@@ -20,7 +20,7 @@ package org.qwork.qiraa;
  * @model
  * @generated
  */
-public interface Rawee extends Person
+public interface Rawee extends Person, YokraaLah
 {
   /**
    * Returns the value of the '<em><b>Qaree</b></em>' reference.
