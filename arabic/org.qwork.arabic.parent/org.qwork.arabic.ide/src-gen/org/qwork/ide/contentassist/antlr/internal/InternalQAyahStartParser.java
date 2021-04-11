@@ -22,25 +22,28 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalQAyahStartParser extends AbstractInternalContentAssistParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_WS", "RULE_INT", "RULE_KALEMAH", "RULE_AWORD", "RULE_ALETTER", "RULE_ADIGIT", "RULE_AHARAKAH", "RULE_ASHADDAH", "RULE_ANONLETTER", "RULE_ID", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_ANY_OTHER", "'\\u0627\\u0644\\u0633\\u0648\\u0631\\u0629'", "'\\u0627\\u0644\\u0622\\u064A\\u0629'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_INT", "RULE_KALEMAH", "RULE_BASMALAH", "RULE_AWORD", "RULE_ALETTER", "RULE_AHARAKAH", "RULE_ATANWEEN", "RULE_ASHADDAH", "RULE_ALIGATURES", "RULE_ADIGIT", "RULE_ANONLETTER", "RULE_SL_COMMENT", "RULE_ID", "RULE_STRING", "RULE_ML_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'\\u0627\\u0644\\u0633\\u0648\\u0631\\u0629'", "'\\u0627\\u0644\\u0622\\u064A\\u0629'"
     };
-    public static final int RULE_AHARAKAH=10;
-    public static final int RULE_STRING=14;
-    public static final int RULE_ANONLETTER=12;
-    public static final int RULE_SL_COMMENT=16;
-    public static final int T__19=19;
-    public static final int RULE_KALEMAH=6;
-    public static final int T__18=18;
+    public static final int RULE_BASMALAH=6;
+    public static final int RULE_AHARAKAH=9;
+    public static final int RULE_STRING=17;
+    public static final int RULE_ANONLETTER=14;
+    public static final int RULE_SL_COMMENT=15;
+    public static final int RULE_KALEMAH=5;
     public static final int RULE_ASHADDAH=11;
     public static final int RULE_ALETTER=8;
+    public static final int RULE_ATANWEEN=10;
     public static final int EOF=-1;
-    public static final int RULE_ID=13;
-    public static final int RULE_WS=4;
-    public static final int RULE_ANY_OTHER=17;
-    public static final int RULE_ADIGIT=9;
-    public static final int RULE_INT=5;
+    public static final int RULE_ALIGATURES=12;
+    public static final int RULE_ID=16;
+    public static final int RULE_WS=19;
+    public static final int RULE_ANY_OTHER=20;
+    public static final int RULE_ADIGIT=13;
+    public static final int RULE_INT=4;
     public static final int RULE_AWORD=7;
-    public static final int RULE_ML_COMMENT=15;
+    public static final int T__22=22;
+    public static final int RULE_ML_COMMENT=18;
+    public static final int T__21=21;
 
     // delegates
     // delegators
@@ -149,7 +152,7 @@ public class InternalQAyahStartParser extends AbstractInternalContentAssistParse
                 int alt1=2;
                 int LA1_0 = input.LA(1);
 
-                if ( (LA1_0==18) ) {
+                if ( (LA1_0==21) ) {
                     alt1=1;
                 }
 
@@ -403,7 +406,7 @@ public class InternalQAyahStartParser extends AbstractInternalContentAssistParse
             // InternalQAyahStart.g:152:2: '\\u0627\\u0644\\u0633\\u0648\\u0631\\u0629'
             {
              before(grammarAccess.getAyahStartAccess().getArabicLetterAlefArabicLetterLamArabicLetterSeenArabicLetterWawArabicLetterRehArabicLetterTehMarbutaKeyword_0()); 
-            match(input,18,FOLLOW_2); 
+            match(input,21,FOLLOW_2); 
              after(grammarAccess.getAyahStartAccess().getArabicLetterAlefArabicLetterLamArabicLetterSeenArabicLetterWawArabicLetterRehArabicLetterTehMarbutaKeyword_0()); 
 
             }
@@ -563,7 +566,7 @@ public class InternalQAyahStartParser extends AbstractInternalContentAssistParse
             // InternalQAyahStart.g:206:2: '\\u0627\\u0644\\u0622\\u064A\\u0629'
             {
              before(grammarAccess.getAyahStartAccess().getArabicLetterAlefArabicLetterLamArabicLetterAlefWithMaddaAboveArabicLetterYehArabicLetterTehMarbutaKeyword_2()); 
-            match(input,19,FOLLOW_2); 
+            match(input,22,FOLLOW_2); 
              after(grammarAccess.getAyahStartAccess().getArabicLetterAlefArabicLetterLamArabicLetterAlefWithMaddaAboveArabicLetterYehArabicLetterTehMarbutaKeyword_2()); 
 
             }
@@ -790,31 +793,42 @@ public class InternalQAyahStartParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Phrase__Group__0__Impl"
-    // InternalQAyahStart.g:281:1: rule__Phrase__Group__0__Impl : ( ( rule__Phrase__WordsAssignment_0 ) ) ;
+    // InternalQAyahStart.g:281:1: rule__Phrase__Group__0__Impl : ( ( rule__Phrase__BasmalahAssignment_0 )? ) ;
     public final void rule__Phrase__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQAyahStart.g:285:1: ( ( ( rule__Phrase__WordsAssignment_0 ) ) )
-            // InternalQAyahStart.g:286:1: ( ( rule__Phrase__WordsAssignment_0 ) )
+            // InternalQAyahStart.g:285:1: ( ( ( rule__Phrase__BasmalahAssignment_0 )? ) )
+            // InternalQAyahStart.g:286:1: ( ( rule__Phrase__BasmalahAssignment_0 )? )
             {
-            // InternalQAyahStart.g:286:1: ( ( rule__Phrase__WordsAssignment_0 ) )
-            // InternalQAyahStart.g:287:2: ( rule__Phrase__WordsAssignment_0 )
+            // InternalQAyahStart.g:286:1: ( ( rule__Phrase__BasmalahAssignment_0 )? )
+            // InternalQAyahStart.g:287:2: ( rule__Phrase__BasmalahAssignment_0 )?
             {
-             before(grammarAccess.getPhraseAccess().getWordsAssignment_0()); 
-            // InternalQAyahStart.g:288:2: ( rule__Phrase__WordsAssignment_0 )
-            // InternalQAyahStart.g:288:3: rule__Phrase__WordsAssignment_0
-            {
-            pushFollow(FOLLOW_2);
-            rule__Phrase__WordsAssignment_0();
+             before(grammarAccess.getPhraseAccess().getBasmalahAssignment_0()); 
+            // InternalQAyahStart.g:288:2: ( rule__Phrase__BasmalahAssignment_0 )?
+            int alt2=2;
+            int LA2_0 = input.LA(1);
 
-            state._fsp--;
+            if ( (LA2_0==RULE_BASMALAH) ) {
+                alt2=1;
+            }
+            switch (alt2) {
+                case 1 :
+                    // InternalQAyahStart.g:288:3: rule__Phrase__BasmalahAssignment_0
+                    {
+                    pushFollow(FOLLOW_2);
+                    rule__Phrase__BasmalahAssignment_0();
 
+                    state._fsp--;
+
+
+                    }
+                    break;
 
             }
 
-             after(grammarAccess.getPhraseAccess().getWordsAssignment_0()); 
+             after(grammarAccess.getPhraseAccess().getBasmalahAssignment_0()); 
 
             }
 
@@ -870,36 +884,58 @@ public class InternalQAyahStartParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Phrase__Group__1__Impl"
-    // InternalQAyahStart.g:307:1: rule__Phrase__Group__1__Impl : ( ( rule__Phrase__Group_1__0 )* ) ;
+    // InternalQAyahStart.g:307:1: rule__Phrase__Group__1__Impl : ( ( ( rule__Phrase__WordsAssignment_1 ) ) ( ( rule__Phrase__WordsAssignment_1 )* ) ) ;
     public final void rule__Phrase__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQAyahStart.g:311:1: ( ( ( rule__Phrase__Group_1__0 )* ) )
-            // InternalQAyahStart.g:312:1: ( ( rule__Phrase__Group_1__0 )* )
+            // InternalQAyahStart.g:311:1: ( ( ( ( rule__Phrase__WordsAssignment_1 ) ) ( ( rule__Phrase__WordsAssignment_1 )* ) ) )
+            // InternalQAyahStart.g:312:1: ( ( ( rule__Phrase__WordsAssignment_1 ) ) ( ( rule__Phrase__WordsAssignment_1 )* ) )
             {
-            // InternalQAyahStart.g:312:1: ( ( rule__Phrase__Group_1__0 )* )
-            // InternalQAyahStart.g:313:2: ( rule__Phrase__Group_1__0 )*
+            // InternalQAyahStart.g:312:1: ( ( ( rule__Phrase__WordsAssignment_1 ) ) ( ( rule__Phrase__WordsAssignment_1 )* ) )
+            // InternalQAyahStart.g:313:2: ( ( rule__Phrase__WordsAssignment_1 ) ) ( ( rule__Phrase__WordsAssignment_1 )* )
             {
-             before(grammarAccess.getPhraseAccess().getGroup_1()); 
-            // InternalQAyahStart.g:314:2: ( rule__Phrase__Group_1__0 )*
-            loop2:
-            do {
-                int alt2=2;
-                int LA2_0 = input.LA(1);
+            // InternalQAyahStart.g:313:2: ( ( rule__Phrase__WordsAssignment_1 ) )
+            // InternalQAyahStart.g:314:3: ( rule__Phrase__WordsAssignment_1 )
+            {
+             before(grammarAccess.getPhraseAccess().getWordsAssignment_1()); 
+            // InternalQAyahStart.g:315:3: ( rule__Phrase__WordsAssignment_1 )
+            // InternalQAyahStart.g:315:4: rule__Phrase__WordsAssignment_1
+            {
+            pushFollow(FOLLOW_8);
+            rule__Phrase__WordsAssignment_1();
 
-                if ( (LA2_0==RULE_WS) ) {
-                    alt2=1;
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getPhraseAccess().getWordsAssignment_1()); 
+
+            }
+
+            // InternalQAyahStart.g:318:2: ( ( rule__Phrase__WordsAssignment_1 )* )
+            // InternalQAyahStart.g:319:3: ( rule__Phrase__WordsAssignment_1 )*
+            {
+             before(grammarAccess.getPhraseAccess().getWordsAssignment_1()); 
+            // InternalQAyahStart.g:320:3: ( rule__Phrase__WordsAssignment_1 )*
+            loop3:
+            do {
+                int alt3=2;
+                int LA3_0 = input.LA(1);
+
+                if ( (LA3_0==RULE_AWORD) ) {
+                    alt3=1;
                 }
 
 
-                switch (alt2) {
+                switch (alt3) {
             	case 1 :
-            	    // InternalQAyahStart.g:314:3: rule__Phrase__Group_1__0
+            	    // InternalQAyahStart.g:320:4: rule__Phrase__WordsAssignment_1
             	    {
             	    pushFollow(FOLLOW_8);
-            	    rule__Phrase__Group_1__0();
+            	    rule__Phrase__WordsAssignment_1();
 
             	    state._fsp--;
 
@@ -908,11 +944,14 @@ public class InternalQAyahStartParser extends AbstractInternalContentAssistParse
             	    break;
 
             	default :
-            	    break loop2;
+            	    break loop3;
                 }
             } while (true);
 
-             after(grammarAccess.getPhraseAccess().getGroup_1()); 
+             after(grammarAccess.getPhraseAccess().getWordsAssignment_1()); 
+
+            }
+
 
             }
 
@@ -934,173 +973,18 @@ public class InternalQAyahStartParser extends AbstractInternalContentAssistParse
     // $ANTLR end "rule__Phrase__Group__1__Impl"
 
 
-    // $ANTLR start "rule__Phrase__Group_1__0"
-    // InternalQAyahStart.g:323:1: rule__Phrase__Group_1__0 : rule__Phrase__Group_1__0__Impl rule__Phrase__Group_1__1 ;
-    public final void rule__Phrase__Group_1__0() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalQAyahStart.g:327:1: ( rule__Phrase__Group_1__0__Impl rule__Phrase__Group_1__1 )
-            // InternalQAyahStart.g:328:2: rule__Phrase__Group_1__0__Impl rule__Phrase__Group_1__1
-            {
-            pushFollow(FOLLOW_9);
-            rule__Phrase__Group_1__0__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_2);
-            rule__Phrase__Group_1__1();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Phrase__Group_1__0"
-
-
-    // $ANTLR start "rule__Phrase__Group_1__0__Impl"
-    // InternalQAyahStart.g:335:1: rule__Phrase__Group_1__0__Impl : ( RULE_WS ) ;
-    public final void rule__Phrase__Group_1__0__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalQAyahStart.g:339:1: ( ( RULE_WS ) )
-            // InternalQAyahStart.g:340:1: ( RULE_WS )
-            {
-            // InternalQAyahStart.g:340:1: ( RULE_WS )
-            // InternalQAyahStart.g:341:2: RULE_WS
-            {
-             before(grammarAccess.getPhraseAccess().getWSTerminalRuleCall_1_0()); 
-            match(input,RULE_WS,FOLLOW_2); 
-             after(grammarAccess.getPhraseAccess().getWSTerminalRuleCall_1_0()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Phrase__Group_1__0__Impl"
-
-
-    // $ANTLR start "rule__Phrase__Group_1__1"
-    // InternalQAyahStart.g:350:1: rule__Phrase__Group_1__1 : rule__Phrase__Group_1__1__Impl ;
-    public final void rule__Phrase__Group_1__1() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalQAyahStart.g:354:1: ( rule__Phrase__Group_1__1__Impl )
-            // InternalQAyahStart.g:355:2: rule__Phrase__Group_1__1__Impl
-            {
-            pushFollow(FOLLOW_2);
-            rule__Phrase__Group_1__1__Impl();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Phrase__Group_1__1"
-
-
-    // $ANTLR start "rule__Phrase__Group_1__1__Impl"
-    // InternalQAyahStart.g:361:1: rule__Phrase__Group_1__1__Impl : ( ( rule__Phrase__WordsAssignment_1_1 ) ) ;
-    public final void rule__Phrase__Group_1__1__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalQAyahStart.g:365:1: ( ( ( rule__Phrase__WordsAssignment_1_1 ) ) )
-            // InternalQAyahStart.g:366:1: ( ( rule__Phrase__WordsAssignment_1_1 ) )
-            {
-            // InternalQAyahStart.g:366:1: ( ( rule__Phrase__WordsAssignment_1_1 ) )
-            // InternalQAyahStart.g:367:2: ( rule__Phrase__WordsAssignment_1_1 )
-            {
-             before(grammarAccess.getPhraseAccess().getWordsAssignment_1_1()); 
-            // InternalQAyahStart.g:368:2: ( rule__Phrase__WordsAssignment_1_1 )
-            // InternalQAyahStart.g:368:3: rule__Phrase__WordsAssignment_1_1
-            {
-            pushFollow(FOLLOW_2);
-            rule__Phrase__WordsAssignment_1_1();
-
-            state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getPhraseAccess().getWordsAssignment_1_1()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Phrase__Group_1__1__Impl"
-
-
     // $ANTLR start "rule__AyahStartModel__AyatAssignment"
-    // InternalQAyahStart.g:377:1: rule__AyahStartModel__AyatAssignment : ( ruleAyahStart ) ;
+    // InternalQAyahStart.g:330:1: rule__AyahStartModel__AyatAssignment : ( ruleAyahStart ) ;
     public final void rule__AyahStartModel__AyatAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQAyahStart.g:381:1: ( ( ruleAyahStart ) )
-            // InternalQAyahStart.g:382:2: ( ruleAyahStart )
+            // InternalQAyahStart.g:334:1: ( ( ruleAyahStart ) )
+            // InternalQAyahStart.g:335:2: ( ruleAyahStart )
             {
-            // InternalQAyahStart.g:382:2: ( ruleAyahStart )
-            // InternalQAyahStart.g:383:3: ruleAyahStart
+            // InternalQAyahStart.g:335:2: ( ruleAyahStart )
+            // InternalQAyahStart.g:336:3: ruleAyahStart
             {
              before(grammarAccess.getAyahStartModelAccess().getAyatAyahStartParserRuleCall_0()); 
             pushFollow(FOLLOW_2);
@@ -1131,17 +1015,17 @@ public class InternalQAyahStartParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__AyahStart__SurahAssignment_1"
-    // InternalQAyahStart.g:392:1: rule__AyahStart__SurahAssignment_1 : ( RULE_INT ) ;
+    // InternalQAyahStart.g:345:1: rule__AyahStart__SurahAssignment_1 : ( RULE_INT ) ;
     public final void rule__AyahStart__SurahAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQAyahStart.g:396:1: ( ( RULE_INT ) )
-            // InternalQAyahStart.g:397:2: ( RULE_INT )
+            // InternalQAyahStart.g:349:1: ( ( RULE_INT ) )
+            // InternalQAyahStart.g:350:2: ( RULE_INT )
             {
-            // InternalQAyahStart.g:397:2: ( RULE_INT )
-            // InternalQAyahStart.g:398:3: RULE_INT
+            // InternalQAyahStart.g:350:2: ( RULE_INT )
+            // InternalQAyahStart.g:351:3: RULE_INT
             {
              before(grammarAccess.getAyahStartAccess().getSurahINTTerminalRuleCall_1_0()); 
             match(input,RULE_INT,FOLLOW_2); 
@@ -1168,17 +1052,17 @@ public class InternalQAyahStartParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__AyahStart__AyahAssignment_3"
-    // InternalQAyahStart.g:407:1: rule__AyahStart__AyahAssignment_3 : ( RULE_INT ) ;
+    // InternalQAyahStart.g:360:1: rule__AyahStart__AyahAssignment_3 : ( RULE_INT ) ;
     public final void rule__AyahStart__AyahAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQAyahStart.g:411:1: ( ( RULE_INT ) )
-            // InternalQAyahStart.g:412:2: ( RULE_INT )
+            // InternalQAyahStart.g:364:1: ( ( RULE_INT ) )
+            // InternalQAyahStart.g:365:2: ( RULE_INT )
             {
-            // InternalQAyahStart.g:412:2: ( RULE_INT )
-            // InternalQAyahStart.g:413:3: RULE_INT
+            // InternalQAyahStart.g:365:2: ( RULE_INT )
+            // InternalQAyahStart.g:366:3: RULE_INT
             {
              before(grammarAccess.getAyahStartAccess().getAyahINTTerminalRuleCall_3_0()); 
             match(input,RULE_INT,FOLLOW_2); 
@@ -1205,17 +1089,17 @@ public class InternalQAyahStartParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__AyahStart__NameAssignment_4"
-    // InternalQAyahStart.g:422:1: rule__AyahStart__NameAssignment_4 : ( RULE_KALEMAH ) ;
+    // InternalQAyahStart.g:375:1: rule__AyahStart__NameAssignment_4 : ( RULE_KALEMAH ) ;
     public final void rule__AyahStart__NameAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQAyahStart.g:426:1: ( ( RULE_KALEMAH ) )
-            // InternalQAyahStart.g:427:2: ( RULE_KALEMAH )
+            // InternalQAyahStart.g:379:1: ( ( RULE_KALEMAH ) )
+            // InternalQAyahStart.g:380:2: ( RULE_KALEMAH )
             {
-            // InternalQAyahStart.g:427:2: ( RULE_KALEMAH )
-            // InternalQAyahStart.g:428:3: RULE_KALEMAH
+            // InternalQAyahStart.g:380:2: ( RULE_KALEMAH )
+            // InternalQAyahStart.g:381:3: RULE_KALEMAH
             {
              before(grammarAccess.getAyahStartAccess().getNameKALEMAHTerminalRuleCall_4_0()); 
             match(input,RULE_KALEMAH,FOLLOW_2); 
@@ -1241,22 +1125,22 @@ public class InternalQAyahStartParser extends AbstractInternalContentAssistParse
     // $ANTLR end "rule__AyahStart__NameAssignment_4"
 
 
-    // $ANTLR start "rule__Phrase__WordsAssignment_0"
-    // InternalQAyahStart.g:437:1: rule__Phrase__WordsAssignment_0 : ( RULE_AWORD ) ;
-    public final void rule__Phrase__WordsAssignment_0() throws RecognitionException {
+    // $ANTLR start "rule__Phrase__BasmalahAssignment_0"
+    // InternalQAyahStart.g:390:1: rule__Phrase__BasmalahAssignment_0 : ( RULE_BASMALAH ) ;
+    public final void rule__Phrase__BasmalahAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQAyahStart.g:441:1: ( ( RULE_AWORD ) )
-            // InternalQAyahStart.g:442:2: ( RULE_AWORD )
+            // InternalQAyahStart.g:394:1: ( ( RULE_BASMALAH ) )
+            // InternalQAyahStart.g:395:2: ( RULE_BASMALAH )
             {
-            // InternalQAyahStart.g:442:2: ( RULE_AWORD )
-            // InternalQAyahStart.g:443:3: RULE_AWORD
+            // InternalQAyahStart.g:395:2: ( RULE_BASMALAH )
+            // InternalQAyahStart.g:396:3: RULE_BASMALAH
             {
-             before(grammarAccess.getPhraseAccess().getWordsAWORDTerminalRuleCall_0_0()); 
-            match(input,RULE_AWORD,FOLLOW_2); 
-             after(grammarAccess.getPhraseAccess().getWordsAWORDTerminalRuleCall_0_0()); 
+             before(grammarAccess.getPhraseAccess().getBasmalahBASMALAHTerminalRuleCall_0_0()); 
+            match(input,RULE_BASMALAH,FOLLOW_2); 
+             after(grammarAccess.getPhraseAccess().getBasmalahBASMALAHTerminalRuleCall_0_0()); 
 
             }
 
@@ -1275,25 +1159,25 @@ public class InternalQAyahStartParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Phrase__WordsAssignment_0"
+    // $ANTLR end "rule__Phrase__BasmalahAssignment_0"
 
 
-    // $ANTLR start "rule__Phrase__WordsAssignment_1_1"
-    // InternalQAyahStart.g:452:1: rule__Phrase__WordsAssignment_1_1 : ( RULE_AWORD ) ;
-    public final void rule__Phrase__WordsAssignment_1_1() throws RecognitionException {
+    // $ANTLR start "rule__Phrase__WordsAssignment_1"
+    // InternalQAyahStart.g:405:1: rule__Phrase__WordsAssignment_1 : ( RULE_AWORD ) ;
+    public final void rule__Phrase__WordsAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQAyahStart.g:456:1: ( ( RULE_AWORD ) )
-            // InternalQAyahStart.g:457:2: ( RULE_AWORD )
+            // InternalQAyahStart.g:409:1: ( ( RULE_AWORD ) )
+            // InternalQAyahStart.g:410:2: ( RULE_AWORD )
             {
-            // InternalQAyahStart.g:457:2: ( RULE_AWORD )
-            // InternalQAyahStart.g:458:3: RULE_AWORD
+            // InternalQAyahStart.g:410:2: ( RULE_AWORD )
+            // InternalQAyahStart.g:411:3: RULE_AWORD
             {
-             before(grammarAccess.getPhraseAccess().getWordsAWORDTerminalRuleCall_1_1_0()); 
+             before(grammarAccess.getPhraseAccess().getWordsAWORDTerminalRuleCall_1_0()); 
             match(input,RULE_AWORD,FOLLOW_2); 
-             after(grammarAccess.getPhraseAccess().getWordsAWORDTerminalRuleCall_1_1_0()); 
+             after(grammarAccess.getPhraseAccess().getWordsAWORDTerminalRuleCall_1_0()); 
 
             }
 
@@ -1312,7 +1196,7 @@ public class InternalQAyahStartParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Phrase__WordsAssignment_1_1"
+    // $ANTLR end "rule__Phrase__WordsAssignment_1"
 
     // Delegated rules
 
@@ -1321,12 +1205,11 @@ public class InternalQAyahStartParser extends AbstractInternalContentAssistParse
 
     public static final BitSet FOLLOW_1 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_2 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_3 = new BitSet(new long[]{0x0000000000040002L});
-    public static final BitSet FOLLOW_4 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_5 = new BitSet(new long[]{0x0000000000080000L});
-    public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x0000000000000012L});
-    public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x0000000000000080L});
+    public static final BitSet FOLLOW_3 = new BitSet(new long[]{0x0000000000200002L});
+    public static final BitSet FOLLOW_4 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_5 = new BitSet(new long[]{0x0000000000400000L});
+    public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x0000000000000080L});
+    public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x0000000000000082L});
 
 }

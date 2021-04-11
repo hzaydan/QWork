@@ -14,15 +14,18 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
-import org.qwork.qiraa.IMAM;
-import org.qwork.qiraa.Maktah;
+import org.qwork.matn.Matn;
+
+import org.qwork.osolqiraa.Ramz;
+
 import org.qwork.qiraa.Marjeh;
 import org.qwork.qiraa.QiraaPackage;
-import org.qwork.qiraa.Ramz;
+import org.qwork.qiraa.Tafsil;
 
 /**
  * <!-- begin-user-doc -->
@@ -33,14 +36,14 @@ import org.qwork.qiraa.Ramz;
  * </p>
  * <ul>
  *   <li>{@link org.qwork.qiraa.impl.MarjehImpl#getName <em>Name</em>}</li>
- *   <li>{@link org.qwork.qiraa.impl.MarjehImpl#getRef <em>Ref</em>}</li>
+ *   <li>{@link org.qwork.qiraa.impl.MarjehImpl#getMatn <em>Matn</em>}</li>
  *   <li>{@link org.qwork.qiraa.impl.MarjehImpl#getRomoz <em>Romoz</em>}</li>
- *   <li>{@link org.qwork.qiraa.impl.MarjehImpl#getMakateh <em>Makateh</em>}</li>
+ *   <li>{@link org.qwork.qiraa.impl.MarjehImpl#getTafsil <em>Tafsil</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class MarjehImpl extends DouaaImpl implements Marjeh
+public class MarjehImpl extends MinimalEObjectImpl.Container implements Marjeh
 {
   /**
    * The default value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -63,14 +66,14 @@ public class MarjehImpl extends DouaaImpl implements Marjeh
   protected String name = NAME_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getRef() <em>Ref</em>}' reference.
+   * The cached value of the '{@link #getMatn() <em>Matn</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getRef()
+   * @see #getMatn()
    * @generated
    * @ordered
    */
-  protected IMAM ref;
+  protected Matn matn;
 
   /**
    * The cached value of the '{@link #getRomoz() <em>Romoz</em>}' containment reference list.
@@ -83,14 +86,14 @@ public class MarjehImpl extends DouaaImpl implements Marjeh
   protected EList<Ramz> romoz;
 
   /**
-   * The cached value of the '{@link #getMakateh() <em>Makateh</em>}' containment reference list.
+   * The cached value of the '{@link #getTafsil() <em>Tafsil</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getMakateh()
+   * @see #getTafsil()
    * @generated
    * @ordered
    */
-  protected EList<Maktah> makateh;
+  protected EList<Tafsil> tafsil;
 
   /**
    * <!-- begin-user-doc -->
@@ -144,19 +147,19 @@ public class MarjehImpl extends DouaaImpl implements Marjeh
    * @generated
    */
   @Override
-  public IMAM getRef()
+  public Matn getMatn()
   {
-    if (ref != null && ref.eIsProxy())
+    if (matn != null && matn.eIsProxy())
     {
-      InternalEObject oldRef = (InternalEObject)ref;
-      ref = (IMAM)eResolveProxy(oldRef);
-      if (ref != oldRef)
+      InternalEObject oldMatn = (InternalEObject)matn;
+      matn = (Matn)eResolveProxy(oldMatn);
+      if (matn != oldMatn)
       {
         if (eNotificationRequired())
-          eNotify(new ENotificationImpl(this, Notification.RESOLVE, QiraaPackage.MARJEH__REF, oldRef, ref));
+          eNotify(new ENotificationImpl(this, Notification.RESOLVE, QiraaPackage.MARJEH__MATN, oldMatn, matn));
       }
     }
-    return ref;
+    return matn;
   }
 
   /**
@@ -164,9 +167,9 @@ public class MarjehImpl extends DouaaImpl implements Marjeh
    * <!-- end-user-doc -->
    * @generated
    */
-  public IMAM basicGetRef()
+  public Matn basicGetMatn()
   {
-    return ref;
+    return matn;
   }
 
   /**
@@ -175,12 +178,12 @@ public class MarjehImpl extends DouaaImpl implements Marjeh
    * @generated
    */
   @Override
-  public void setRef(IMAM newRef)
+  public void setMatn(Matn newMatn)
   {
-    IMAM oldRef = ref;
-    ref = newRef;
+    Matn oldMatn = matn;
+    matn = newMatn;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, QiraaPackage.MARJEH__REF, oldRef, ref));
+      eNotify(new ENotificationImpl(this, Notification.SET, QiraaPackage.MARJEH__MATN, oldMatn, matn));
   }
 
   /**
@@ -204,13 +207,13 @@ public class MarjehImpl extends DouaaImpl implements Marjeh
    * @generated
    */
   @Override
-  public EList<Maktah> getMakateh()
+  public EList<Tafsil> getTafsil()
   {
-    if (makateh == null)
+    if (tafsil == null)
     {
-      makateh = new EObjectContainmentEList<Maktah>(Maktah.class, this, QiraaPackage.MARJEH__MAKATEH);
+      tafsil = new EObjectContainmentEList<Tafsil>(Tafsil.class, this, QiraaPackage.MARJEH__TAFSIL);
     }
-    return makateh;
+    return tafsil;
   }
 
   /**
@@ -225,8 +228,8 @@ public class MarjehImpl extends DouaaImpl implements Marjeh
     {
       case QiraaPackage.MARJEH__ROMOZ:
         return ((InternalEList<?>)getRomoz()).basicRemove(otherEnd, msgs);
-      case QiraaPackage.MARJEH__MAKATEH:
-        return ((InternalEList<?>)getMakateh()).basicRemove(otherEnd, msgs);
+      case QiraaPackage.MARJEH__TAFSIL:
+        return ((InternalEList<?>)getTafsil()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -243,13 +246,13 @@ public class MarjehImpl extends DouaaImpl implements Marjeh
     {
       case QiraaPackage.MARJEH__NAME:
         return getName();
-      case QiraaPackage.MARJEH__REF:
-        if (resolve) return getRef();
-        return basicGetRef();
+      case QiraaPackage.MARJEH__MATN:
+        if (resolve) return getMatn();
+        return basicGetMatn();
       case QiraaPackage.MARJEH__ROMOZ:
         return getRomoz();
-      case QiraaPackage.MARJEH__MAKATEH:
-        return getMakateh();
+      case QiraaPackage.MARJEH__TAFSIL:
+        return getTafsil();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -268,16 +271,16 @@ public class MarjehImpl extends DouaaImpl implements Marjeh
       case QiraaPackage.MARJEH__NAME:
         setName((String)newValue);
         return;
-      case QiraaPackage.MARJEH__REF:
-        setRef((IMAM)newValue);
+      case QiraaPackage.MARJEH__MATN:
+        setMatn((Matn)newValue);
         return;
       case QiraaPackage.MARJEH__ROMOZ:
         getRomoz().clear();
         getRomoz().addAll((Collection<? extends Ramz>)newValue);
         return;
-      case QiraaPackage.MARJEH__MAKATEH:
-        getMakateh().clear();
-        getMakateh().addAll((Collection<? extends Maktah>)newValue);
+      case QiraaPackage.MARJEH__TAFSIL:
+        getTafsil().clear();
+        getTafsil().addAll((Collection<? extends Tafsil>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -296,14 +299,14 @@ public class MarjehImpl extends DouaaImpl implements Marjeh
       case QiraaPackage.MARJEH__NAME:
         setName(NAME_EDEFAULT);
         return;
-      case QiraaPackage.MARJEH__REF:
-        setRef((IMAM)null);
+      case QiraaPackage.MARJEH__MATN:
+        setMatn((Matn)null);
         return;
       case QiraaPackage.MARJEH__ROMOZ:
         getRomoz().clear();
         return;
-      case QiraaPackage.MARJEH__MAKATEH:
-        getMakateh().clear();
+      case QiraaPackage.MARJEH__TAFSIL:
+        getTafsil().clear();
         return;
     }
     super.eUnset(featureID);
@@ -321,12 +324,12 @@ public class MarjehImpl extends DouaaImpl implements Marjeh
     {
       case QiraaPackage.MARJEH__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-      case QiraaPackage.MARJEH__REF:
-        return ref != null;
+      case QiraaPackage.MARJEH__MATN:
+        return matn != null;
       case QiraaPackage.MARJEH__ROMOZ:
         return romoz != null && !romoz.isEmpty();
-      case QiraaPackage.MARJEH__MAKATEH:
-        return makateh != null && !makateh.isEmpty();
+      case QiraaPackage.MARJEH__TAFSIL:
+        return tafsil != null && !tafsil.isEmpty();
     }
     return super.eIsSet(featureID);
   }

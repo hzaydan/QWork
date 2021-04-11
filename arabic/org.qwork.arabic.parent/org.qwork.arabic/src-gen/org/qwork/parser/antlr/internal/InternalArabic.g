@@ -114,9 +114,27 @@ rulePhrase returns [EObject current=null]
 	(
 		(
 			(
-				lv_words_0_0=RULE_AWORD
+				lv_basmalah_0_0=RULE_BASMALAH
 				{
-					newLeafNode(lv_words_0_0, grammarAccess.getPhraseAccess().getWordsAWORDTerminalRuleCall_0_0());
+					newLeafNode(lv_basmalah_0_0, grammarAccess.getPhraseAccess().getBasmalahBASMALAHTerminalRuleCall_0_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getPhraseRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"basmalah",
+						lv_basmalah_0_0 != null,
+						"org.qwork.Arabic.BASMALAH");
+				}
+			)
+		)?
+		(
+			(
+				lv_words_1_0=RULE_AWORD
+				{
+					newLeafNode(lv_words_1_0, grammarAccess.getPhraseAccess().getWordsAWORDTerminalRuleCall_1_0());
 				}
 				{
 					if ($current==null) {
@@ -125,51 +143,35 @@ rulePhrase returns [EObject current=null]
 					addWithLastConsumed(
 						$current,
 						"words",
-						lv_words_0_0,
+						lv_words_1_0,
 						"org.qwork.Arabic.AWORD");
 				}
 			)
-		)
-		(
-			this_WS_1=RULE_WS
-			{
-				newLeafNode(this_WS_1, grammarAccess.getPhraseAccess().getWSTerminalRuleCall_1_0());
-			}
-			(
-				(
-					lv_words_2_0=RULE_AWORD
-					{
-						newLeafNode(lv_words_2_0, grammarAccess.getPhraseAccess().getWordsAWORDTerminalRuleCall_1_1_0());
-					}
-					{
-						if ($current==null) {
-							$current = createModelElement(grammarAccess.getPhraseRule());
-						}
-						addWithLastConsumed(
-							$current,
-							"words",
-							lv_words_2_0,
-							"org.qwork.Arabic.AWORD");
-					}
-				)
-			)
-		)*
+		)+
 	)
 ;
 
+RULE_BASMALAH : '\u0628\u0650\u0633\u0652\u0645\u0650 \u0627\u0644\u0644\u0651\u064E\u0647\u0650 \u0627\u0644\u0631\u0651\u064E\u062D\u0652\u0645\u064E\u0646\u0650 \u0627\u0644\u0631\u0651\u064E\u062D\u0650\u064A\u0645\u0650';
+
+RULE_AWORD : (RULE_ALETTER|RULE_AHARAKAH|RULE_ATANWEEN|RULE_ASHADDAH)+;
+
+fragment RULE_ALIGATURES : '\uFDF0'..'\uFDFD';
+
 fragment RULE_ALETTER : '\u0621'..'\u064A';
 
-RULE_ADIGIT : '\u0660'..'\u0669';
+fragment RULE_ADIGIT : '\u0660'..'\u0669';
+
+fragment RULE_ATANWEEN : '\u064B'..'\u064D';
 
 fragment RULE_AHARAKAH : ('\u064E'..'\u0650'|'\u0652');
 
 fragment RULE_ASHADDAH : '\u0651';
 
-RULE_ANONLETTER : ('\u0600'..'\u0620'|'\u064B'..'\u06FF');
-
-RULE_AWORD : (RULE_ALETTER|RULE_AHARAKAH|RULE_ASHADDAH)+;
+fragment RULE_ANONLETTER : ('\u0600'..'\u0620'|'\u064B'..'\u06FF');
 
 RULE_KALEMAH : '"' ( options {greedy=false;} : . )*'"';
+
+RULE_SL_COMMENT : 'deactivated';
 
 RULE_ID : '^'? ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
 
@@ -178,8 +180,6 @@ RULE_INT : ('0'..'9')+;
 RULE_STRING : ('"' ('\\' .|~(('\\'|'"')))* '"'|'\'' ('\\' .|~(('\\'|'\'')))* '\'');
 
 RULE_ML_COMMENT : '/*' ( options {greedy=false;} : . )*'*/';
-
-RULE_SL_COMMENT : '//' ~(('\n'|'\r'))* ('\r'? '\n')?;
 
 RULE_WS : (' '|'\t'|'\r'|'\n')+;
 

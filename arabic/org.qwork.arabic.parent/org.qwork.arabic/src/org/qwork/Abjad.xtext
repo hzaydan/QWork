@@ -11,10 +11,10 @@ AbjadModel:
 
 Harf:
 	'حرف' name=AWORD 
-		(('هو' values+=ALETTER ('أو' values+=ALETTER)*) |
+		(('هو' values+=AWORD ('أو' values+=AWORD)*) |
 		('ذاته' ref=[Harf|AWORD]))
 ;
 
 Harakah:
-	'حركة' name=KALEMAH 'هي' value=AHARAKAH
+	'حركة' name=KALEMAH 'هي' value=AWORD
 ;

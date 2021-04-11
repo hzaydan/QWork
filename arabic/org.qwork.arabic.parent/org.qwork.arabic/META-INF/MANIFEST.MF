@@ -34,5 +34,11 @@ Export-Package: org.qwork.validation,
  org.qwork.qayahstart.impl,
  org.qwork.abjad.impl,
  org.qwork.abjad,
- org.qwork.abjad.util
+ org.qwork.abjad.util,
+ org.qwork.matn.util,
+ org.qwork.matn.impl,
+ org.qwork.matn,
+ org.qwork.osolqiraa.impl,
+ org.qwork.osolqiraa,
+ org.qwork.osolqiraa.util
 Import-Package: org.apache.log4j

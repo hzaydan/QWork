@@ -1,0 +1,81 @@
+grammar org.qwork.OsolQiraa with org.qwork.Abjad
+
+generate osolqiraa "http://www.qwork.org/OsolQiraa"
+
+import "http://www.qwork.org/QAyahStart"
+
+OsolQiraaModel:
+	(
+		qoraa+=Qaree | torok+=Tareek | rowat+=Rawee |
+		imams+=IMAM | istelahat+=Istelah | koyod+=Kayd
+	)*
+;
+
+fragment Person:
+	name=KALEMAH
+	('اسمه' esm=KALEMAH)?
+	('لقبه' lakab=KALEMAH)?
+	('توفي' towofia=INT)? 	
+;
+
+fragment Douaa:
+	d=('رحمه' | 'أكرمه') 'الله'
+;
+
+IMAM:
+	'الإمام' Person Douaa
+;
+
+
+Qaree:
+	'قارئ'
+	Person 
+;
+
+Rawee:
+	'راو'
+	Person
+	'عن' qaree=[Qaree|KALEMAH]
+;
+
+YokraaLah:
+	Qaree | Rawee | Istelah
+;
+
+
+Tareek:
+	'طريق' 'تلاوة' name=KALEMAH
+	(
+		(simple?='خالص' 'ل' ref=[YokraaLah|KALEMAH]) | 
+		((complex?='مركب' 'من')
+			(refs+=[Tareek|KALEMAH])+
+		)
+	)
+;
+
+Kayd:
+	'قيد' name=KALEMAH
+;
+
+Istelah:
+	'اصطلاح' name=KALEMAH 'يعني' refs+=[YokraaLah|KALEMAH] ('و' refs+=[YokraaLah|KALEMAH])*
+;
+
+Ramz:
+	'رمز' name=KALEMAH 'يعني' refs+=[YokraaLah|KALEMAH] ('و' refs+=[YokraaLah|KALEMAH])*
+;
+
+YokraaLahWaRamz:
+	YokraaLah | Ramz
+;
+
+HarfQuran:
+	word=AWORD 'من' 'قوله' 'تعالى' ayah=[AyahStart|KALEMAH] ('الموضع' mawdee=Mawdee)?
+;
+
+Mawdee:
+	'الأول'|
+	'الثاني'|
+	'الثالث'|
+	'الأخير'
+;

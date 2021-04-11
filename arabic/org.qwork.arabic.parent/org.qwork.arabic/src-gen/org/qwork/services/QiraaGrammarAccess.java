@@ -6,7 +6,6 @@ package org.qwork.services;
 import com.google.inject.Inject;
 import com.google.inject.Singleton;
 import java.util.List;
-import org.eclipse.xtext.Alternatives;
 import org.eclipse.xtext.Assignment;
 import org.eclipse.xtext.CrossReference;
 import org.eclipse.xtext.Grammar;
@@ -25,404 +24,23 @@ public class QiraaGrammarAccess extends AbstractElementFinder.AbstractGrammarEle
 	
 	public class QiraaModelElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.qwork.Qiraa.QiraaModel");
-		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final Assignment cQoraaAssignment_0 = (Assignment)cAlternatives.eContents().get(0);
-		private final RuleCall cQoraaQareeParserRuleCall_0_0 = (RuleCall)cQoraaAssignment_0.eContents().get(0);
-		private final Assignment cTorokAssignment_1 = (Assignment)cAlternatives.eContents().get(1);
-		private final RuleCall cTorokTareekParserRuleCall_1_0 = (RuleCall)cTorokAssignment_1.eContents().get(0);
-		private final Assignment cRowatAssignment_2 = (Assignment)cAlternatives.eContents().get(2);
-		private final RuleCall cRowatRaweeParserRuleCall_2_0 = (RuleCall)cRowatAssignment_2.eContents().get(0);
-		private final Assignment cImamsAssignment_3 = (Assignment)cAlternatives.eContents().get(3);
-		private final RuleCall cImamsIMAMParserRuleCall_3_0 = (RuleCall)cImamsAssignment_3.eContents().get(0);
-		private final Assignment cMarjeeAssignment_4 = (Assignment)cAlternatives.eContents().get(4);
-		private final RuleCall cMarjeeMarjehParserRuleCall_4_0 = (RuleCall)cMarjeeAssignment_4.eContents().get(0);
-		private final Assignment cIstelahatAssignment_5 = (Assignment)cAlternatives.eContents().get(5);
-		private final RuleCall cIstelahatIstelahParserRuleCall_5_0 = (RuleCall)cIstelahatAssignment_5.eContents().get(0);
-		private final Assignment cKoyodAssignment_6 = (Assignment)cAlternatives.eContents().get(6);
-		private final RuleCall cKoyodKaydParserRuleCall_6_0 = (RuleCall)cKoyodAssignment_6.eContents().get(0);
+		private final Assignment cMarjeeAssignment = (Assignment)rule.eContents().get(1);
+		private final RuleCall cMarjeeMarjehParserRuleCall_0 = (RuleCall)cMarjeeAssignment.eContents().get(0);
 		
 		//QiraaModel:
 		//    (
-		//        qoraa+=Qaree | torok+=Tareek | rowat+=Rawee |
-		//        imams+=IMAM | marjee+=Marjeh | istelahat+=Istelah | koyod+=Kayd
+		//         marjee+=Marjeh
 		//    )*
 		//;
 		@Override public ParserRule getRule() { return rule; }
 		
 		//(
-		//    qoraa+=Qaree | torok+=Tareek | rowat+=Rawee |
-		//    imams+=IMAM | marjee+=Marjeh | istelahat+=Istelah | koyod+=Kayd
+		//     marjee+=Marjeh
 		//)*
-		public Alternatives getAlternatives() { return cAlternatives; }
-		
-		//qoraa+=Qaree
-		public Assignment getQoraaAssignment_0() { return cQoraaAssignment_0; }
-		
-		//Qaree
-		public RuleCall getQoraaQareeParserRuleCall_0_0() { return cQoraaQareeParserRuleCall_0_0; }
-		
-		//torok+=Tareek
-		public Assignment getTorokAssignment_1() { return cTorokAssignment_1; }
-		
-		//Tareek
-		public RuleCall getTorokTareekParserRuleCall_1_0() { return cTorokTareekParserRuleCall_1_0; }
-		
-		//rowat+=Rawee
-		public Assignment getRowatAssignment_2() { return cRowatAssignment_2; }
-		
-		//Rawee
-		public RuleCall getRowatRaweeParserRuleCall_2_0() { return cRowatRaweeParserRuleCall_2_0; }
-		
-		//imams+=IMAM
-		public Assignment getImamsAssignment_3() { return cImamsAssignment_3; }
-		
-		//IMAM
-		public RuleCall getImamsIMAMParserRuleCall_3_0() { return cImamsIMAMParserRuleCall_3_0; }
-		
-		//marjee+=Marjeh
-		public Assignment getMarjeeAssignment_4() { return cMarjeeAssignment_4; }
+		public Assignment getMarjeeAssignment() { return cMarjeeAssignment; }
 		
 		//Marjeh
-		public RuleCall getMarjeeMarjehParserRuleCall_4_0() { return cMarjeeMarjehParserRuleCall_4_0; }
-		
-		//istelahat+=Istelah
-		public Assignment getIstelahatAssignment_5() { return cIstelahatAssignment_5; }
-		
-		//Istelah
-		public RuleCall getIstelahatIstelahParserRuleCall_5_0() { return cIstelahatIstelahParserRuleCall_5_0; }
-		
-		//koyod+=Kayd
-		public Assignment getKoyodAssignment_6() { return cKoyodAssignment_6; }
-		
-		//Kayd
-		public RuleCall getKoyodKaydParserRuleCall_6_0() { return cKoyodKaydParserRuleCall_6_0; }
-	}
-	public class QareeElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.qwork.Qiraa.Qaree");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cArabicLetterQafArabicLetterAlefArabicLetterRehArabicLetterYehWithHamzaAboveKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final RuleCall cPersonParserRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
-		
-		//Qaree:
-		//    'قارئ'
-		//    Person
-		//;
-		@Override public ParserRule getRule() { return rule; }
-		
-		//'قارئ'
-		//Person
-		public Group getGroup() { return cGroup; }
-		
-		//'قارئ'
-		public Keyword getArabicLetterQafArabicLetterAlefArabicLetterRehArabicLetterYehWithHamzaAboveKeyword_0() { return cArabicLetterQafArabicLetterAlefArabicLetterRehArabicLetterYehWithHamzaAboveKeyword_0; }
-		
-		//Person
-		public RuleCall getPersonParserRuleCall_1() { return cPersonParserRuleCall_1; }
-	}
-	public class RaweeElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.qwork.Qiraa.Rawee");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cArabicLetterRehArabicLetterAlefArabicLetterWawKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final RuleCall cPersonParserRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
-		private final Keyword cArabicLetterAinArabicLetterNoonKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Assignment cQareeAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final CrossReference cQareeQareeCrossReference_3_0 = (CrossReference)cQareeAssignment_3.eContents().get(0);
-		private final RuleCall cQareeQareeKALEMAHTerminalRuleCall_3_0_1 = (RuleCall)cQareeQareeCrossReference_3_0.eContents().get(1);
-		
-		//Rawee:
-		//    'راو'
-		//    Person
-		//    'عن' qaree=[Qaree|KALEMAH]
-		//;
-		@Override public ParserRule getRule() { return rule; }
-		
-		//'راو'
-		//Person
-		//'عن' qaree=[Qaree|KALEMAH]
-		public Group getGroup() { return cGroup; }
-		
-		//'راو'
-		public Keyword getArabicLetterRehArabicLetterAlefArabicLetterWawKeyword_0() { return cArabicLetterRehArabicLetterAlefArabicLetterWawKeyword_0; }
-		
-		//Person
-		public RuleCall getPersonParserRuleCall_1() { return cPersonParserRuleCall_1; }
-		
-		//'عن'
-		public Keyword getArabicLetterAinArabicLetterNoonKeyword_2() { return cArabicLetterAinArabicLetterNoonKeyword_2; }
-		
-		//qaree=[Qaree|KALEMAH]
-		public Assignment getQareeAssignment_3() { return cQareeAssignment_3; }
-		
-		//[Qaree|KALEMAH]
-		public CrossReference getQareeQareeCrossReference_3_0() { return cQareeQareeCrossReference_3_0; }
-		
-		//KALEMAH
-		public RuleCall getQareeQareeKALEMAHTerminalRuleCall_3_0_1() { return cQareeQareeKALEMAHTerminalRuleCall_3_0_1; }
-	}
-	public class YokraaLahElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.qwork.Qiraa.YokraaLah");
-		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final RuleCall cQareeParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
-		private final RuleCall cRaweeParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
-		private final RuleCall cIstelahParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
-		
-		//YokraaLah:
-		//    Qaree | Rawee | Istelah
-		//;
-		@Override public ParserRule getRule() { return rule; }
-		
-		//Qaree | Rawee | Istelah
-		public Alternatives getAlternatives() { return cAlternatives; }
-		
-		//Qaree
-		public RuleCall getQareeParserRuleCall_0() { return cQareeParserRuleCall_0; }
-		
-		//Rawee
-		public RuleCall getRaweeParserRuleCall_1() { return cRaweeParserRuleCall_1; }
-		
-		//Istelah
-		public RuleCall getIstelahParserRuleCall_2() { return cIstelahParserRuleCall_2; }
-	}
-	public class PersonElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.qwork.Qiraa.Person");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final RuleCall cNameKALEMAHTerminalRuleCall_0_0 = (RuleCall)cNameAssignment_0.eContents().get(0);
-		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
-		private final Keyword cArabicLetterAlefArabicLetterSeenArabicLetterMeemArabicLetterHehKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
-		private final Assignment cEsmAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
-		private final RuleCall cEsmKALEMAHTerminalRuleCall_1_1_0 = (RuleCall)cEsmAssignment_1_1.eContents().get(0);
-		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
-		private final Keyword cArabicLetterLamArabicLetterQafArabicLetterBehArabicLetterHehKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
-		private final Assignment cLakabAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
-		private final RuleCall cLakabKALEMAHTerminalRuleCall_2_1_0 = (RuleCall)cLakabAssignment_2_1.eContents().get(0);
-		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
-		private final Keyword cArabicLetterTehArabicLetterWawArabicLetterFehArabicLetterYehKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
-		private final Assignment cTowofiaAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
-		private final RuleCall cTowofiaINTTerminalRuleCall_3_1_0 = (RuleCall)cTowofiaAssignment_3_1.eContents().get(0);
-		
-		//fragment Person:
-		//    name=KALEMAH
-		//    ('اسمه' esm=KALEMAH)?
-		//    ('لقبه' lakab=KALEMAH)?
-		//    ('توفي' towofia=INT)?
-		//;
-		@Override public ParserRule getRule() { return rule; }
-		
-		//name=KALEMAH
-		//('اسمه' esm=KALEMAH)?
-		//('لقبه' lakab=KALEMAH)?
-		//('توفي' towofia=INT)?
-		public Group getGroup() { return cGroup; }
-		
-		//name=KALEMAH
-		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
-		
-		//KALEMAH
-		public RuleCall getNameKALEMAHTerminalRuleCall_0_0() { return cNameKALEMAHTerminalRuleCall_0_0; }
-		
-		//('اسمه' esm=KALEMAH)?
-		public Group getGroup_1() { return cGroup_1; }
-		
-		//'اسمه'
-		public Keyword getArabicLetterAlefArabicLetterSeenArabicLetterMeemArabicLetterHehKeyword_1_0() { return cArabicLetterAlefArabicLetterSeenArabicLetterMeemArabicLetterHehKeyword_1_0; }
-		
-		//esm=KALEMAH
-		public Assignment getEsmAssignment_1_1() { return cEsmAssignment_1_1; }
-		
-		//KALEMAH
-		public RuleCall getEsmKALEMAHTerminalRuleCall_1_1_0() { return cEsmKALEMAHTerminalRuleCall_1_1_0; }
-		
-		//('لقبه' lakab=KALEMAH)?
-		public Group getGroup_2() { return cGroup_2; }
-		
-		//'لقبه'
-		public Keyword getArabicLetterLamArabicLetterQafArabicLetterBehArabicLetterHehKeyword_2_0() { return cArabicLetterLamArabicLetterQafArabicLetterBehArabicLetterHehKeyword_2_0; }
-		
-		//lakab=KALEMAH
-		public Assignment getLakabAssignment_2_1() { return cLakabAssignment_2_1; }
-		
-		//KALEMAH
-		public RuleCall getLakabKALEMAHTerminalRuleCall_2_1_0() { return cLakabKALEMAHTerminalRuleCall_2_1_0; }
-		
-		//('توفي' towofia=INT)?
-		public Group getGroup_3() { return cGroup_3; }
-		
-		//'توفي'
-		public Keyword getArabicLetterTehArabicLetterWawArabicLetterFehArabicLetterYehKeyword_3_0() { return cArabicLetterTehArabicLetterWawArabicLetterFehArabicLetterYehKeyword_3_0; }
-		
-		//towofia=INT
-		public Assignment getTowofiaAssignment_3_1() { return cTowofiaAssignment_3_1; }
-		
-		//INT
-		public RuleCall getTowofiaINTTerminalRuleCall_3_1_0() { return cTowofiaINTTerminalRuleCall_3_1_0; }
-	}
-	public class DouaaElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.qwork.Qiraa.Douaa");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cDAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final Alternatives cDAlternatives_0_0 = (Alternatives)cDAssignment_0.eContents().get(0);
-		private final Keyword cDArabicLetterRehArabicLetterHahArabicLetterMeemArabicLetterHehKeyword_0_0_0 = (Keyword)cDAlternatives_0_0.eContents().get(0);
-		private final Keyword cDArabicLetterAlefWithHamzaAboveArabicLetterKafArabicLetterRehArabicLetterMeemArabicLetterHehKeyword_0_0_1 = (Keyword)cDAlternatives_0_0.eContents().get(1);
-		private final Keyword cArabicLetterAlefArabicLetterLamArabicLetterLamArabicLetterHehKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		
-		//fragment Douaa:
-		//    d=('رحمه' | 'أكرمه') 'الله'
-		//;
-		@Override public ParserRule getRule() { return rule; }
-		
-		//d=('رحمه' | 'أكرمه') 'الله'
-		public Group getGroup() { return cGroup; }
-		
-		//d=('رحمه' | 'أكرمه')
-		public Assignment getDAssignment_0() { return cDAssignment_0; }
-		
-		//('رحمه' | 'أكرمه')
-		public Alternatives getDAlternatives_0_0() { return cDAlternatives_0_0; }
-		
-		//'رحمه'
-		public Keyword getDArabicLetterRehArabicLetterHahArabicLetterMeemArabicLetterHehKeyword_0_0_0() { return cDArabicLetterRehArabicLetterHahArabicLetterMeemArabicLetterHehKeyword_0_0_0; }
-		
-		//'أكرمه'
-		public Keyword getDArabicLetterAlefWithHamzaAboveArabicLetterKafArabicLetterRehArabicLetterMeemArabicLetterHehKeyword_0_0_1() { return cDArabicLetterAlefWithHamzaAboveArabicLetterKafArabicLetterRehArabicLetterMeemArabicLetterHehKeyword_0_0_1; }
-		
-		//'الله'
-		public Keyword getArabicLetterAlefArabicLetterLamArabicLetterLamArabicLetterHehKeyword_1() { return cArabicLetterAlefArabicLetterLamArabicLetterLamArabicLetterHehKeyword_1; }
-	}
-	public class TareekElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.qwork.Qiraa.Tareek");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cArabicLetterTahArabicLetterRehArabicLetterYehArabicLetterQafKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Keyword cArabicLetterTehArabicLetterLamArabicLetterAlefArabicLetterWawArabicLetterTehMarbutaKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cNameKALEMAHTerminalRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
-		private final Alternatives cAlternatives_3 = (Alternatives)cGroup.eContents().get(3);
-		private final Group cGroup_3_0 = (Group)cAlternatives_3.eContents().get(0);
-		private final Assignment cSimpleAssignment_3_0_0 = (Assignment)cGroup_3_0.eContents().get(0);
-		private final Keyword cSimpleArabicLetterKhahArabicLetterAlefArabicLetterLamArabicLetterSadKeyword_3_0_0_0 = (Keyword)cSimpleAssignment_3_0_0.eContents().get(0);
-		private final Keyword cArabicLetterLamKeyword_3_0_1 = (Keyword)cGroup_3_0.eContents().get(1);
-		private final Assignment cRefAssignment_3_0_2 = (Assignment)cGroup_3_0.eContents().get(2);
-		private final CrossReference cRefYokraaLahCrossReference_3_0_2_0 = (CrossReference)cRefAssignment_3_0_2.eContents().get(0);
-		private final RuleCall cRefYokraaLahKALEMAHTerminalRuleCall_3_0_2_0_1 = (RuleCall)cRefYokraaLahCrossReference_3_0_2_0.eContents().get(1);
-		private final Group cGroup_3_1 = (Group)cAlternatives_3.eContents().get(1);
-		private final Group cGroup_3_1_0 = (Group)cGroup_3_1.eContents().get(0);
-		private final Assignment cComplexAssignment_3_1_0_0 = (Assignment)cGroup_3_1_0.eContents().get(0);
-		private final Keyword cComplexArabicLetterMeemArabicLetterRehArabicLetterKafArabicLetterBehKeyword_3_1_0_0_0 = (Keyword)cComplexAssignment_3_1_0_0.eContents().get(0);
-		private final Keyword cArabicLetterMeemArabicLetterNoonKeyword_3_1_0_1 = (Keyword)cGroup_3_1_0.eContents().get(1);
-		private final Assignment cRefsAssignment_3_1_1 = (Assignment)cGroup_3_1.eContents().get(1);
-		private final CrossReference cRefsTareekCrossReference_3_1_1_0 = (CrossReference)cRefsAssignment_3_1_1.eContents().get(0);
-		private final RuleCall cRefsTareekKALEMAHTerminalRuleCall_3_1_1_0_1 = (RuleCall)cRefsTareekCrossReference_3_1_1_0.eContents().get(1);
-		
-		//Tareek:
-		//    'طريق' 'تلاوة' name=KALEMAH
-		//    (
-		//        (simple?='خالص' 'ل' ref=[YokraaLah|KALEMAH]) |
-		//        ((complex?='مركب' 'من')
-		//            (refs+=[Tareek|KALEMAH])+
-		//        )
-		//    )
-		//;
-		@Override public ParserRule getRule() { return rule; }
-		
-		//'طريق' 'تلاوة' name=KALEMAH
-		//(
-		//    (simple?='خالص' 'ل' ref=[YokraaLah|KALEMAH]) |
-		//    ((complex?='مركب' 'من')
-		//        (refs+=[Tareek|KALEMAH])+
-		//    )
-		//)
-		public Group getGroup() { return cGroup; }
-		
-		//'طريق'
-		public Keyword getArabicLetterTahArabicLetterRehArabicLetterYehArabicLetterQafKeyword_0() { return cArabicLetterTahArabicLetterRehArabicLetterYehArabicLetterQafKeyword_0; }
-		
-		//'تلاوة'
-		public Keyword getArabicLetterTehArabicLetterLamArabicLetterAlefArabicLetterWawArabicLetterTehMarbutaKeyword_1() { return cArabicLetterTehArabicLetterLamArabicLetterAlefArabicLetterWawArabicLetterTehMarbutaKeyword_1; }
-		
-		//name=KALEMAH
-		public Assignment getNameAssignment_2() { return cNameAssignment_2; }
-		
-		//KALEMAH
-		public RuleCall getNameKALEMAHTerminalRuleCall_2_0() { return cNameKALEMAHTerminalRuleCall_2_0; }
-		
-		//(
-		//    (simple?='خالص' 'ل' ref=[YokraaLah|KALEMAH]) |
-		//    ((complex?='مركب' 'من')
-		//        (refs+=[Tareek|KALEMAH])+
-		//    )
-		//)
-		public Alternatives getAlternatives_3() { return cAlternatives_3; }
-		
-		//(simple?='خالص' 'ل' ref=[YokraaLah|KALEMAH])
-		public Group getGroup_3_0() { return cGroup_3_0; }
-		
-		//simple?='خالص'
-		public Assignment getSimpleAssignment_3_0_0() { return cSimpleAssignment_3_0_0; }
-		
-		//'خالص'
-		public Keyword getSimpleArabicLetterKhahArabicLetterAlefArabicLetterLamArabicLetterSadKeyword_3_0_0_0() { return cSimpleArabicLetterKhahArabicLetterAlefArabicLetterLamArabicLetterSadKeyword_3_0_0_0; }
-		
-		//'ل'
-		public Keyword getArabicLetterLamKeyword_3_0_1() { return cArabicLetterLamKeyword_3_0_1; }
-		
-		//ref=[YokraaLah|KALEMAH]
-		public Assignment getRefAssignment_3_0_2() { return cRefAssignment_3_0_2; }
-		
-		//[YokraaLah|KALEMAH]
-		public CrossReference getRefYokraaLahCrossReference_3_0_2_0() { return cRefYokraaLahCrossReference_3_0_2_0; }
-		
-		//KALEMAH
-		public RuleCall getRefYokraaLahKALEMAHTerminalRuleCall_3_0_2_0_1() { return cRefYokraaLahKALEMAHTerminalRuleCall_3_0_2_0_1; }
-		
-		//((complex?='مركب' 'من')
-		//    (refs+=[Tareek|KALEMAH])+
-		//)
-		public Group getGroup_3_1() { return cGroup_3_1; }
-		
-		//(complex?='مركب' 'من')
-		public Group getGroup_3_1_0() { return cGroup_3_1_0; }
-		
-		//complex?='مركب'
-		public Assignment getComplexAssignment_3_1_0_0() { return cComplexAssignment_3_1_0_0; }
-		
-		//'مركب'
-		public Keyword getComplexArabicLetterMeemArabicLetterRehArabicLetterKafArabicLetterBehKeyword_3_1_0_0_0() { return cComplexArabicLetterMeemArabicLetterRehArabicLetterKafArabicLetterBehKeyword_3_1_0_0_0; }
-		
-		//'من'
-		public Keyword getArabicLetterMeemArabicLetterNoonKeyword_3_1_0_1() { return cArabicLetterMeemArabicLetterNoonKeyword_3_1_0_1; }
-		
-		//(refs+=[Tareek|KALEMAH])+
-		public Assignment getRefsAssignment_3_1_1() { return cRefsAssignment_3_1_1; }
-		
-		//[Tareek|KALEMAH]
-		public CrossReference getRefsTareekCrossReference_3_1_1_0() { return cRefsTareekCrossReference_3_1_1_0; }
-		
-		//KALEMAH
-		public RuleCall getRefsTareekKALEMAHTerminalRuleCall_3_1_1_0_1() { return cRefsTareekKALEMAHTerminalRuleCall_3_1_1_0_1; }
-	}
-	public class IMAMElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.qwork.Qiraa.IMAM");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cArabicLetterAlefArabicLetterLamArabicLetterAlefWithHamzaBelowArabicLetterMeemArabicLetterAlefArabicLetterMeemKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final RuleCall cPersonParserRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
-		private final RuleCall cDouaaParserRuleCall_2 = (RuleCall)cGroup.eContents().get(2);
-		
-		//IMAM:
-		//    'الإمام' Person Douaa
-		//;
-		@Override public ParserRule getRule() { return rule; }
-		
-		//'الإمام' Person Douaa
-		public Group getGroup() { return cGroup; }
-		
-		//'الإمام'
-		public Keyword getArabicLetterAlefArabicLetterLamArabicLetterAlefWithHamzaBelowArabicLetterMeemArabicLetterAlefArabicLetterMeemKeyword_0() { return cArabicLetterAlefArabicLetterLamArabicLetterAlefWithHamzaBelowArabicLetterMeemArabicLetterAlefArabicLetterMeemKeyword_0; }
-		
-		//Person
-		public RuleCall getPersonParserRuleCall_1() { return cPersonParserRuleCall_1; }
-		
-		//Douaa
-		public RuleCall getDouaaParserRuleCall_2() { return cDouaaParserRuleCall_2; }
+		public RuleCall getMarjeeMarjehParserRuleCall_0() { return cMarjeeMarjehParserRuleCall_0; }
 	}
 	public class MarjehElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.qwork.Qiraa.Marjeh");
@@ -430,31 +48,31 @@ public class QiraaGrammarAccess extends AbstractElementFinder.AbstractGrammarEle
 		private final Keyword cArabicLetterMeemArabicLetterRehArabicLetterJeemArabicLetterAinKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cNameKALEMAHTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
-		private final Keyword cArabicLetterLamArabicLetterLamArabicLetterAlefWithHamzaBelowArabicLetterMeemArabicLetterAlefArabicLetterMeemKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Assignment cRefAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final CrossReference cRefIMAMCrossReference_3_0 = (CrossReference)cRefAssignment_3.eContents().get(0);
-		private final RuleCall cRefIMAMKALEMAHTerminalRuleCall_3_0_1 = (RuleCall)cRefIMAMCrossReference_3_0.eContents().get(1);
-		private final RuleCall cDouaaParserRuleCall_4 = (RuleCall)cGroup.eContents().get(4);
+		private final Keyword cArabicLetterMeemArabicLetterBehArabicLetterNoonArabicLetterYehKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Keyword cArabicLetterAinArabicLetterLamArabicLetterAlefMaksuraKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Assignment cMatnAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final CrossReference cMatnMatnCrossReference_4_0 = (CrossReference)cMatnAssignment_4.eContents().get(0);
+		private final RuleCall cMatnMatnAWORDSParserRuleCall_4_0_1 = (RuleCall)cMatnMatnCrossReference_4_0.eContents().get(1);
 		private final Keyword cArabicLetterTehArabicLetterFehArabicLetterSadArabicLetterYehArabicLetterLamArabicLetterHehKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		private final Assignment cRomozAssignment_6 = (Assignment)cGroup.eContents().get(6);
 		private final RuleCall cRomozRamzParserRuleCall_6_0 = (RuleCall)cRomozAssignment_6.eContents().get(0);
-		private final Assignment cMakatehAssignment_7 = (Assignment)cGroup.eContents().get(7);
-		private final RuleCall cMakatehMaktahParserRuleCall_7_0 = (RuleCall)cMakatehAssignment_7.eContents().get(0);
+		private final Assignment cTafsilAssignment_7 = (Assignment)cGroup.eContents().get(7);
+		private final RuleCall cTafsilTafsilParserRuleCall_7_0 = (RuleCall)cTafsilAssignment_7.eContents().get(0);
 		private final Keyword cArabicLetterAlefArabicLetterNoonArabicLetterTehArabicLetterHehArabicLetterAlefMaksuraKeyword_8 = (Keyword)cGroup.eContents().get(8);
 		
 		//Marjeh:
-		//    'مرجع' name=KALEMAH 'للإمام' ref=[IMAM|KALEMAH] Douaa
+		//    'مرجع' name=KALEMAH "مبني" "على" matn=[Matn|AWORDS]
 		//    'تفصيله'
 		//        (romoz+=Ramz)*
-		//        (makateh+=Maktah)+
+		//        (tafsil+=Tafsil)+
 		//    'انتهى'
 		//;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'مرجع' name=KALEMAH 'للإمام' ref=[IMAM|KALEMAH] Douaa
+		//'مرجع' name=KALEMAH "مبني" "على" matn=[Matn|AWORDS]
 		//'تفصيله'
 		//    (romoz+=Ramz)*
-		//    (makateh+=Maktah)+
+		//    (tafsil+=Tafsil)+
 		//'انتهى'
 		public Group getGroup() { return cGroup; }
 		
@@ -467,20 +85,20 @@ public class QiraaGrammarAccess extends AbstractElementFinder.AbstractGrammarEle
 		//KALEMAH
 		public RuleCall getNameKALEMAHTerminalRuleCall_1_0() { return cNameKALEMAHTerminalRuleCall_1_0; }
 		
-		//'للإمام'
-		public Keyword getArabicLetterLamArabicLetterLamArabicLetterAlefWithHamzaBelowArabicLetterMeemArabicLetterAlefArabicLetterMeemKeyword_2() { return cArabicLetterLamArabicLetterLamArabicLetterAlefWithHamzaBelowArabicLetterMeemArabicLetterAlefArabicLetterMeemKeyword_2; }
+		//"مبني"
+		public Keyword getArabicLetterMeemArabicLetterBehArabicLetterNoonArabicLetterYehKeyword_2() { return cArabicLetterMeemArabicLetterBehArabicLetterNoonArabicLetterYehKeyword_2; }
 		
-		//ref=[IMAM|KALEMAH]
-		public Assignment getRefAssignment_3() { return cRefAssignment_3; }
+		//"على"
+		public Keyword getArabicLetterAinArabicLetterLamArabicLetterAlefMaksuraKeyword_3() { return cArabicLetterAinArabicLetterLamArabicLetterAlefMaksuraKeyword_3; }
 		
-		//[IMAM|KALEMAH]
-		public CrossReference getRefIMAMCrossReference_3_0() { return cRefIMAMCrossReference_3_0; }
+		//matn=[Matn|AWORDS]
+		public Assignment getMatnAssignment_4() { return cMatnAssignment_4; }
 		
-		//KALEMAH
-		public RuleCall getRefIMAMKALEMAHTerminalRuleCall_3_0_1() { return cRefIMAMKALEMAHTerminalRuleCall_3_0_1; }
+		//[Matn|AWORDS]
+		public CrossReference getMatnMatnCrossReference_4_0() { return cMatnMatnCrossReference_4_0; }
 		
-		//Douaa
-		public RuleCall getDouaaParserRuleCall_4() { return cDouaaParserRuleCall_4; }
+		//AWORDS
+		public RuleCall getMatnMatnAWORDSParserRuleCall_4_0_1() { return cMatnMatnAWORDSParserRuleCall_4_0_1; }
 		
 		//'تفصيله'
 		public Keyword getArabicLetterTehArabicLetterFehArabicLetterSadArabicLetterYehArabicLetterLamArabicLetterHehKeyword_5() { return cArabicLetterTehArabicLetterFehArabicLetterSadArabicLetterYehArabicLetterLamArabicLetterHehKeyword_5; }
@@ -491,17 +109,17 @@ public class QiraaGrammarAccess extends AbstractElementFinder.AbstractGrammarEle
 		//Ramz
 		public RuleCall getRomozRamzParserRuleCall_6_0() { return cRomozRamzParserRuleCall_6_0; }
 		
-		//(makateh+=Maktah)+
-		public Assignment getMakatehAssignment_7() { return cMakatehAssignment_7; }
+		//(tafsil+=Tafsil)+
+		public Assignment getTafsilAssignment_7() { return cTafsilAssignment_7; }
 		
-		//Maktah
-		public RuleCall getMakatehMaktahParserRuleCall_7_0() { return cMakatehMaktahParserRuleCall_7_0; }
+		//Tafsil
+		public RuleCall getTafsilTafsilParserRuleCall_7_0() { return cTafsilTafsilParserRuleCall_7_0; }
 		
 		//'انتهى'
 		public Keyword getArabicLetterAlefArabicLetterNoonArabicLetterTehArabicLetterHehArabicLetterAlefMaksuraKeyword_8() { return cArabicLetterAlefArabicLetterNoonArabicLetterTehArabicLetterHehArabicLetterAlefMaksuraKeyword_8; }
 	}
-	public class MaktahElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.qwork.Qiraa.Maktah");
+	public class TafsilElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.qwork.Qiraa.Tafsil");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cArabicLetterQafArabicLetterWawArabicLetterLamArabicLetterHehKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNassAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -510,7 +128,7 @@ public class QiraaGrammarAccess extends AbstractElementFinder.AbstractGrammarEle
 		private final Assignment cKedahAssignment_3 = (Assignment)cGroup.eContents().get(3);
 		private final RuleCall cKedahKaaedahParserRuleCall_3_0 = (RuleCall)cKedahAssignment_3.eContents().get(0);
 		
-		//Maktah:
+		//Tafsil:
 		//    'قوله'
 		//    nass=KALEMAH
 		//    'معناه'
@@ -541,170 +159,6 @@ public class QiraaGrammarAccess extends AbstractElementFinder.AbstractGrammarEle
 		
 		//Kaaedah
 		public RuleCall getKedahKaaedahParserRuleCall_3_0() { return cKedahKaaedahParserRuleCall_3_0; }
-	}
-	public class KaydElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.qwork.Qiraa.Kayd");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cArabicLetterQafArabicLetterYehArabicLetterDalKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cNameKALEMAHTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
-		
-		//Kayd:
-		//    'قيد' name=KALEMAH
-		//;
-		@Override public ParserRule getRule() { return rule; }
-		
-		//'قيد' name=KALEMAH
-		public Group getGroup() { return cGroup; }
-		
-		//'قيد'
-		public Keyword getArabicLetterQafArabicLetterYehArabicLetterDalKeyword_0() { return cArabicLetterQafArabicLetterYehArabicLetterDalKeyword_0; }
-		
-		//name=KALEMAH
-		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
-		
-		//KALEMAH
-		public RuleCall getNameKALEMAHTerminalRuleCall_1_0() { return cNameKALEMAHTerminalRuleCall_1_0; }
-	}
-	public class IstelahElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.qwork.Qiraa.Istelah");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cArabicLetterAlefArabicLetterSadArabicLetterTahArabicLetterLamArabicLetterAlefArabicLetterHahKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cNameKALEMAHTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
-		private final Keyword cArabicLetterYehArabicLetterAinArabicLetterNoonArabicLetterYehKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Assignment cRefsAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final CrossReference cRefsYokraaLahCrossReference_3_0 = (CrossReference)cRefsAssignment_3.eContents().get(0);
-		private final RuleCall cRefsYokraaLahKALEMAHTerminalRuleCall_3_0_1 = (RuleCall)cRefsYokraaLahCrossReference_3_0.eContents().get(1);
-		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
-		private final Keyword cArabicLetterWawKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
-		private final Assignment cRefsAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
-		private final CrossReference cRefsYokraaLahCrossReference_4_1_0 = (CrossReference)cRefsAssignment_4_1.eContents().get(0);
-		private final RuleCall cRefsYokraaLahKALEMAHTerminalRuleCall_4_1_0_1 = (RuleCall)cRefsYokraaLahCrossReference_4_1_0.eContents().get(1);
-		
-		//Istelah:
-		//    'اصطلاح' name=KALEMAH 'يعني' refs+=[YokraaLah|KALEMAH] ('و' refs+=[YokraaLah|KALEMAH])*
-		//;
-		@Override public ParserRule getRule() { return rule; }
-		
-		//'اصطلاح' name=KALEMAH 'يعني' refs+=[YokraaLah|KALEMAH] ('و' refs+=[YokraaLah|KALEMAH])*
-		public Group getGroup() { return cGroup; }
-		
-		//'اصطلاح'
-		public Keyword getArabicLetterAlefArabicLetterSadArabicLetterTahArabicLetterLamArabicLetterAlefArabicLetterHahKeyword_0() { return cArabicLetterAlefArabicLetterSadArabicLetterTahArabicLetterLamArabicLetterAlefArabicLetterHahKeyword_0; }
-		
-		//name=KALEMAH
-		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
-		
-		//KALEMAH
-		public RuleCall getNameKALEMAHTerminalRuleCall_1_0() { return cNameKALEMAHTerminalRuleCall_1_0; }
-		
-		//'يعني'
-		public Keyword getArabicLetterYehArabicLetterAinArabicLetterNoonArabicLetterYehKeyword_2() { return cArabicLetterYehArabicLetterAinArabicLetterNoonArabicLetterYehKeyword_2; }
-		
-		//refs+=[YokraaLah|KALEMAH]
-		public Assignment getRefsAssignment_3() { return cRefsAssignment_3; }
-		
-		//[YokraaLah|KALEMAH]
-		public CrossReference getRefsYokraaLahCrossReference_3_0() { return cRefsYokraaLahCrossReference_3_0; }
-		
-		//KALEMAH
-		public RuleCall getRefsYokraaLahKALEMAHTerminalRuleCall_3_0_1() { return cRefsYokraaLahKALEMAHTerminalRuleCall_3_0_1; }
-		
-		//('و' refs+=[YokraaLah|KALEMAH])*
-		public Group getGroup_4() { return cGroup_4; }
-		
-		//'و'
-		public Keyword getArabicLetterWawKeyword_4_0() { return cArabicLetterWawKeyword_4_0; }
-		
-		//refs+=[YokraaLah|KALEMAH]
-		public Assignment getRefsAssignment_4_1() { return cRefsAssignment_4_1; }
-		
-		//[YokraaLah|KALEMAH]
-		public CrossReference getRefsYokraaLahCrossReference_4_1_0() { return cRefsYokraaLahCrossReference_4_1_0; }
-		
-		//KALEMAH
-		public RuleCall getRefsYokraaLahKALEMAHTerminalRuleCall_4_1_0_1() { return cRefsYokraaLahKALEMAHTerminalRuleCall_4_1_0_1; }
-	}
-	public class RamzElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.qwork.Qiraa.Ramz");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cArabicLetterRehArabicLetterMeemArabicLetterZainKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cNameAWORDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
-		private final Keyword cArabicLetterYehArabicLetterAinArabicLetterNoonArabicLetterYehKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Assignment cRefsAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final CrossReference cRefsYokraaLahCrossReference_3_0 = (CrossReference)cRefsAssignment_3.eContents().get(0);
-		private final RuleCall cRefsYokraaLahKALEMAHTerminalRuleCall_3_0_1 = (RuleCall)cRefsYokraaLahCrossReference_3_0.eContents().get(1);
-		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
-		private final Keyword cArabicLetterWawKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
-		private final Assignment cRefsAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
-		private final CrossReference cRefsYokraaLahCrossReference_4_1_0 = (CrossReference)cRefsAssignment_4_1.eContents().get(0);
-		private final RuleCall cRefsYokraaLahKALEMAHTerminalRuleCall_4_1_0_1 = (RuleCall)cRefsYokraaLahCrossReference_4_1_0.eContents().get(1);
-		
-		//Ramz:
-		//    'رمز' name=AWORD 'يعني' refs+=[YokraaLah|KALEMAH] ('و' refs+=[YokraaLah|KALEMAH])*
-		//;
-		@Override public ParserRule getRule() { return rule; }
-		
-		//'رمز' name=AWORD 'يعني' refs+=[YokraaLah|KALEMAH] ('و' refs+=[YokraaLah|KALEMAH])*
-		public Group getGroup() { return cGroup; }
-		
-		//'رمز'
-		public Keyword getArabicLetterRehArabicLetterMeemArabicLetterZainKeyword_0() { return cArabicLetterRehArabicLetterMeemArabicLetterZainKeyword_0; }
-		
-		//name=AWORD
-		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
-		
-		//AWORD
-		public RuleCall getNameAWORDTerminalRuleCall_1_0() { return cNameAWORDTerminalRuleCall_1_0; }
-		
-		//'يعني'
-		public Keyword getArabicLetterYehArabicLetterAinArabicLetterNoonArabicLetterYehKeyword_2() { return cArabicLetterYehArabicLetterAinArabicLetterNoonArabicLetterYehKeyword_2; }
-		
-		//refs+=[YokraaLah|KALEMAH]
-		public Assignment getRefsAssignment_3() { return cRefsAssignment_3; }
-		
-		//[YokraaLah|KALEMAH]
-		public CrossReference getRefsYokraaLahCrossReference_3_0() { return cRefsYokraaLahCrossReference_3_0; }
-		
-		//KALEMAH
-		public RuleCall getRefsYokraaLahKALEMAHTerminalRuleCall_3_0_1() { return cRefsYokraaLahKALEMAHTerminalRuleCall_3_0_1; }
-		
-		//('و' refs+=[YokraaLah|KALEMAH])*
-		public Group getGroup_4() { return cGroup_4; }
-		
-		//'و'
-		public Keyword getArabicLetterWawKeyword_4_0() { return cArabicLetterWawKeyword_4_0; }
-		
-		//refs+=[YokraaLah|KALEMAH]
-		public Assignment getRefsAssignment_4_1() { return cRefsAssignment_4_1; }
-		
-		//[YokraaLah|KALEMAH]
-		public CrossReference getRefsYokraaLahCrossReference_4_1_0() { return cRefsYokraaLahCrossReference_4_1_0; }
-		
-		//KALEMAH
-		public RuleCall getRefsYokraaLahKALEMAHTerminalRuleCall_4_1_0_1() { return cRefsYokraaLahKALEMAHTerminalRuleCall_4_1_0_1; }
-	}
-	public class YokraaLahWaRamzElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.qwork.Qiraa.YokraaLahWaRamz");
-		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final RuleCall cYokraaLahParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
-		private final RuleCall cRamzParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
-		
-		//YokraaLahWaRamz:
-		//    YokraaLah | Ramz
-		//;
-		@Override public ParserRule getRule() { return rule; }
-		
-		//YokraaLah | Ramz
-		public Alternatives getAlternatives() { return cAlternatives; }
-		
-		//YokraaLah
-		public RuleCall getYokraaLahParserRuleCall_0() { return cYokraaLahParserRuleCall_0; }
-		
-		//Ramz
-		public RuleCall getRamzParserRuleCall_1() { return cRamzParserRuleCall_1; }
 	}
 	public class KaaedahElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.qwork.Qiraa.Kaaedah");
@@ -762,121 +216,18 @@ public class QiraaGrammarAccess extends AbstractElementFinder.AbstractGrammarEle
 		//HarfQuran
 		public RuleCall getHarfHarfQuranParserRuleCall_5_0() { return cHarfHarfQuranParserRuleCall_5_0; }
 	}
-	public class HarfQuranElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.qwork.Qiraa.HarfQuran");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cWordAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final RuleCall cWordAWORDTerminalRuleCall_0_0 = (RuleCall)cWordAssignment_0.eContents().get(0);
-		private final Keyword cArabicLetterMeemArabicLetterNoonKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Keyword cArabicLetterQafArabicLetterWawArabicLetterLamArabicLetterHehKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Keyword cArabicLetterTehArabicLetterAinArabicLetterAlefArabicLetterLamArabicLetterAlefMaksuraKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Assignment cAyahAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final CrossReference cAyahAyahStartCrossReference_4_0 = (CrossReference)cAyahAssignment_4.eContents().get(0);
-		private final RuleCall cAyahAyahStartKALEMAHTerminalRuleCall_4_0_1 = (RuleCall)cAyahAyahStartCrossReference_4_0.eContents().get(1);
-		private final Group cGroup_5 = (Group)cGroup.eContents().get(5);
-		private final Keyword cArabicLetterAlefArabicLetterLamArabicLetterMeemArabicLetterWawArabicLetterDadArabicLetterAinKeyword_5_0 = (Keyword)cGroup_5.eContents().get(0);
-		private final Assignment cMawdeeAssignment_5_1 = (Assignment)cGroup_5.eContents().get(1);
-		private final RuleCall cMawdeeMawdeeParserRuleCall_5_1_0 = (RuleCall)cMawdeeAssignment_5_1.eContents().get(0);
-		
-		//HarfQuran:
-		//    word=AWORD 'من' 'قوله' 'تعالى' ayah=[AyahStart|KALEMAH] ('الموضع' mawdee=Mawdee)?
-		//;
-		@Override public ParserRule getRule() { return rule; }
-		
-		//word=AWORD 'من' 'قوله' 'تعالى' ayah=[AyahStart|KALEMAH] ('الموضع' mawdee=Mawdee)?
-		public Group getGroup() { return cGroup; }
-		
-		//word=AWORD
-		public Assignment getWordAssignment_0() { return cWordAssignment_0; }
-		
-		//AWORD
-		public RuleCall getWordAWORDTerminalRuleCall_0_0() { return cWordAWORDTerminalRuleCall_0_0; }
-		
-		//'من'
-		public Keyword getArabicLetterMeemArabicLetterNoonKeyword_1() { return cArabicLetterMeemArabicLetterNoonKeyword_1; }
-		
-		//'قوله'
-		public Keyword getArabicLetterQafArabicLetterWawArabicLetterLamArabicLetterHehKeyword_2() { return cArabicLetterQafArabicLetterWawArabicLetterLamArabicLetterHehKeyword_2; }
-		
-		//'تعالى'
-		public Keyword getArabicLetterTehArabicLetterAinArabicLetterAlefArabicLetterLamArabicLetterAlefMaksuraKeyword_3() { return cArabicLetterTehArabicLetterAinArabicLetterAlefArabicLetterLamArabicLetterAlefMaksuraKeyword_3; }
-		
-		//ayah=[AyahStart|KALEMAH]
-		public Assignment getAyahAssignment_4() { return cAyahAssignment_4; }
-		
-		//[AyahStart|KALEMAH]
-		public CrossReference getAyahAyahStartCrossReference_4_0() { return cAyahAyahStartCrossReference_4_0; }
-		
-		//KALEMAH
-		public RuleCall getAyahAyahStartKALEMAHTerminalRuleCall_4_0_1() { return cAyahAyahStartKALEMAHTerminalRuleCall_4_0_1; }
-		
-		//('الموضع' mawdee=Mawdee)?
-		public Group getGroup_5() { return cGroup_5; }
-		
-		//'الموضع'
-		public Keyword getArabicLetterAlefArabicLetterLamArabicLetterMeemArabicLetterWawArabicLetterDadArabicLetterAinKeyword_5_0() { return cArabicLetterAlefArabicLetterLamArabicLetterMeemArabicLetterWawArabicLetterDadArabicLetterAinKeyword_5_0; }
-		
-		//mawdee=Mawdee
-		public Assignment getMawdeeAssignment_5_1() { return cMawdeeAssignment_5_1; }
-		
-		//Mawdee
-		public RuleCall getMawdeeMawdeeParserRuleCall_5_1_0() { return cMawdeeMawdeeParserRuleCall_5_1_0; }
-	}
-	public class MawdeeElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.qwork.Qiraa.Mawdee");
-		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final Keyword cArabicLetterAlefArabicLetterLamArabicLetterAlefWithHamzaAboveArabicLetterWawArabicLetterLamKeyword_0 = (Keyword)cAlternatives.eContents().get(0);
-		private final Keyword cArabicLetterAlefArabicLetterLamArabicLetterThehArabicLetterAlefArabicLetterNoonArabicLetterYehKeyword_1 = (Keyword)cAlternatives.eContents().get(1);
-		private final Keyword cArabicLetterAlefArabicLetterLamArabicLetterThehArabicLetterAlefArabicLetterLamArabicLetterThehKeyword_2 = (Keyword)cAlternatives.eContents().get(2);
-		private final Keyword cArabicLetterAlefArabicLetterLamArabicLetterAlefWithHamzaAboveArabicLetterKhahArabicLetterYehArabicLetterRehKeyword_3 = (Keyword)cAlternatives.eContents().get(3);
-		
-		//Mawdee:
-		//    'الأول'|
-		//    'الثاني'|
-		//    'الثالث'|
-		//    'الأخير'
-		//;
-		@Override public ParserRule getRule() { return rule; }
-		
-		//'الأول'|
-		//'الثاني'|
-		//'الثالث'|
-		//'الأخير'
-		public Alternatives getAlternatives() { return cAlternatives; }
-		
-		//'الأول'
-		public Keyword getArabicLetterAlefArabicLetterLamArabicLetterAlefWithHamzaAboveArabicLetterWawArabicLetterLamKeyword_0() { return cArabicLetterAlefArabicLetterLamArabicLetterAlefWithHamzaAboveArabicLetterWawArabicLetterLamKeyword_0; }
-		
-		//'الثاني'
-		public Keyword getArabicLetterAlefArabicLetterLamArabicLetterThehArabicLetterAlefArabicLetterNoonArabicLetterYehKeyword_1() { return cArabicLetterAlefArabicLetterLamArabicLetterThehArabicLetterAlefArabicLetterNoonArabicLetterYehKeyword_1; }
-		
-		//'الثالث'
-		public Keyword getArabicLetterAlefArabicLetterLamArabicLetterThehArabicLetterAlefArabicLetterLamArabicLetterThehKeyword_2() { return cArabicLetterAlefArabicLetterLamArabicLetterThehArabicLetterAlefArabicLetterLamArabicLetterThehKeyword_2; }
-		
-		//'الأخير'
-		public Keyword getArabicLetterAlefArabicLetterLamArabicLetterAlefWithHamzaAboveArabicLetterKhahArabicLetterYehArabicLetterRehKeyword_3() { return cArabicLetterAlefArabicLetterLamArabicLetterAlefWithHamzaAboveArabicLetterKhahArabicLetterYehArabicLetterRehKeyword_3; }
-	}
 	
 	
 	private final QiraaModelElements pQiraaModel;
-	private final QareeElements pQaree;
-	private final RaweeElements pRawee;
-	private final YokraaLahElements pYokraaLah;
-	private final PersonElements pPerson;
-	private final DouaaElements pDouaa;
-	private final TareekElements pTareek;
-	private final IMAMElements pIMAM;
 	private final MarjehElements pMarjeh;
-	private final MaktahElements pMaktah;
-	private final KaydElements pKayd;
-	private final IstelahElements pIstelah;
-	private final RamzElements pRamz;
-	private final YokraaLahWaRamzElements pYokraaLahWaRamz;
+	private final TafsilElements pTafsil;
 	private final KaaedahElements pKaaedah;
-	private final HarfQuranElements pHarfQuran;
-	private final MawdeeElements pMawdee;
 	
 	private final Grammar grammar;
+	
+	private final MatnGrammarAccess gaMatn;
+	
+	private final OsolQiraaGrammarAccess gaOsolQiraa;
 	
 	private final AbjadGrammarAccess gaAbjad;
 	
@@ -888,32 +239,23 @@ public class QiraaGrammarAccess extends AbstractElementFinder.AbstractGrammarEle
 
 	@Inject
 	public QiraaGrammarAccess(GrammarProvider grammarProvider,
+			MatnGrammarAccess gaMatn,
+			OsolQiraaGrammarAccess gaOsolQiraa,
 			AbjadGrammarAccess gaAbjad,
 			QAyahStartGrammarAccess gaQAyahStart,
 			ArabicGrammarAccess gaArabic,
 			TerminalsGrammarAccess gaTerminals) {
 		this.grammar = internalFindGrammar(grammarProvider);
+		this.gaMatn = gaMatn;
+		this.gaOsolQiraa = gaOsolQiraa;
 		this.gaAbjad = gaAbjad;
 		this.gaQAyahStart = gaQAyahStart;
 		this.gaArabic = gaArabic;
 		this.gaTerminals = gaTerminals;
 		this.pQiraaModel = new QiraaModelElements();
-		this.pQaree = new QareeElements();
-		this.pRawee = new RaweeElements();
-		this.pYokraaLah = new YokraaLahElements();
-		this.pPerson = new PersonElements();
-		this.pDouaa = new DouaaElements();
-		this.pTareek = new TareekElements();
-		this.pIMAM = new IMAMElements();
 		this.pMarjeh = new MarjehElements();
-		this.pMaktah = new MaktahElements();
-		this.pKayd = new KaydElements();
-		this.pIstelah = new IstelahElements();
-		this.pRamz = new RamzElements();
-		this.pYokraaLahWaRamz = new YokraaLahWaRamzElements();
+		this.pTafsil = new TafsilElements();
 		this.pKaaedah = new KaaedahElements();
-		this.pHarfQuran = new HarfQuranElements();
-		this.pMawdee = new MawdeeElements();
 	}
 	
 	protected Grammar internalFindGrammar(GrammarProvider grammarProvider) {
@@ -938,6 +280,14 @@ public class QiraaGrammarAccess extends AbstractElementFinder.AbstractGrammarEle
 	}
 	
 	
+	public MatnGrammarAccess getMatnGrammarAccess() {
+		return gaMatn;
+	}
+	
+	public OsolQiraaGrammarAccess getOsolQiraaGrammarAccess() {
+		return gaOsolQiraa;
+	}
+	
 	public AbjadGrammarAccess getAbjadGrammarAccess() {
 		return gaAbjad;
 	}
@@ -957,8 +307,7 @@ public class QiraaGrammarAccess extends AbstractElementFinder.AbstractGrammarEle
 	
 	//QiraaModel:
 	//    (
-	//        qoraa+=Qaree | torok+=Tareek | rowat+=Rawee |
-	//        imams+=IMAM | marjee+=Marjeh | istelahat+=Istelah | koyod+=Kayd
+	//         marjee+=Marjeh
 	//    )*
 	//;
 	public QiraaModelElements getQiraaModelAccess() {
@@ -969,100 +318,11 @@ public class QiraaGrammarAccess extends AbstractElementFinder.AbstractGrammarEle
 		return getQiraaModelAccess().getRule();
 	}
 	
-	//Qaree:
-	//    'قارئ'
-	//    Person
-	//;
-	public QareeElements getQareeAccess() {
-		return pQaree;
-	}
-	
-	public ParserRule getQareeRule() {
-		return getQareeAccess().getRule();
-	}
-	
-	//Rawee:
-	//    'راو'
-	//    Person
-	//    'عن' qaree=[Qaree|KALEMAH]
-	//;
-	public RaweeElements getRaweeAccess() {
-		return pRawee;
-	}
-	
-	public ParserRule getRaweeRule() {
-		return getRaweeAccess().getRule();
-	}
-	
-	//YokraaLah:
-	//    Qaree | Rawee | Istelah
-	//;
-	public YokraaLahElements getYokraaLahAccess() {
-		return pYokraaLah;
-	}
-	
-	public ParserRule getYokraaLahRule() {
-		return getYokraaLahAccess().getRule();
-	}
-	
-	//fragment Person:
-	//    name=KALEMAH
-	//    ('اسمه' esm=KALEMAH)?
-	//    ('لقبه' lakab=KALEMAH)?
-	//    ('توفي' towofia=INT)?
-	//;
-	public PersonElements getPersonAccess() {
-		return pPerson;
-	}
-	
-	public ParserRule getPersonRule() {
-		return getPersonAccess().getRule();
-	}
-	
-	//fragment Douaa:
-	//    d=('رحمه' | 'أكرمه') 'الله'
-	//;
-	public DouaaElements getDouaaAccess() {
-		return pDouaa;
-	}
-	
-	public ParserRule getDouaaRule() {
-		return getDouaaAccess().getRule();
-	}
-	
-	//Tareek:
-	//    'طريق' 'تلاوة' name=KALEMAH
-	//    (
-	//        (simple?='خالص' 'ل' ref=[YokraaLah|KALEMAH]) |
-	//        ((complex?='مركب' 'من')
-	//            (refs+=[Tareek|KALEMAH])+
-	//        )
-	//    )
-	//;
-	public TareekElements getTareekAccess() {
-		return pTareek;
-	}
-	
-	public ParserRule getTareekRule() {
-		return getTareekAccess().getRule();
-	}
-	
-	//IMAM:
-	//    'الإمام' Person Douaa
-	//;
-	public IMAMElements getIMAMAccess() {
-		return pIMAM;
-	}
-	
-	public ParserRule getIMAMRule() {
-		return getIMAMAccess().getRule();
-	}
-	
 	//Marjeh:
-	//    'مرجع' name=KALEMAH 'للإمام' ref=[IMAM|KALEMAH] Douaa
+	//    'مرجع' name=KALEMAH "مبني" "على" matn=[Matn|AWORDS]
 	//    'تفصيله'
 	//        (romoz+=Ramz)*
-	//        (makateh+=Maktah)+
+	//        (tafsil+=Tafsil)+
 	//    'انتهى'
 	//;
 	public MarjehElements getMarjehAccess() {
@@ -1073,62 +333,18 @@ public class QiraaGrammarAccess extends AbstractElementFinder.AbstractGrammarEle
 		return getMarjehAccess().getRule();
 	}
 	
-	//Maktah:
+	//Tafsil:
 	//    'قوله'
 	//    nass=KALEMAH
 	//    'معناه'
 	//    kedah+=Kaaedah
 	//;
-	public MaktahElements getMaktahAccess() {
-		return pMaktah;
+	public TafsilElements getTafsilAccess() {
+		return pTafsil;
 	}
 	
-	public ParserRule getMaktahRule() {
-		return getMaktahAccess().getRule();
-	}
-	
-	//Kayd:
-	//    'قيد' name=KALEMAH
-	//;
-	public KaydElements getKaydAccess() {
-		return pKayd;
-	}
-	
-	public ParserRule getKaydRule() {
-		return getKaydAccess().getRule();
-	}
-	
-	//Istelah:
-	//    'اصطلاح' name=KALEMAH 'يعني' refs+=[YokraaLah|KALEMAH] ('و' refs+=[YokraaLah|KALEMAH])*
-	//;
-	public IstelahElements getIstelahAccess() {
-		return pIstelah;
-	}
-	
-	public ParserRule getIstelahRule() {
-		return getIstelahAccess().getRule();
-	}
-	
-	//Ramz:
-	//    'رمز' name=AWORD 'يعني' refs+=[YokraaLah|KALEMAH] ('و' refs+=[YokraaLah|KALEMAH])*
-	//;
-	public RamzElements getRamzAccess() {
-		return pRamz;
-	}
-	
-	public ParserRule getRamzRule() {
-		return getRamzAccess().getRule();
-	}
-	
-	//YokraaLahWaRamz:
-	//    YokraaLah | Ramz
-	//;
-	public YokraaLahWaRamzElements getYokraaLahWaRamzAccess() {
-		return pYokraaLahWaRamz;
-	}
-	
-	public ParserRule getYokraaLahWaRamzRule() {
-		return getYokraaLahWaRamzAccess().getRule();
+	public ParserRule getTafsilRule() {
+		return getTafsilAccess().getRule();
 	}
 	
 	//Kaaedah:
@@ -1142,11 +358,221 @@ public class QiraaGrammarAccess extends AbstractElementFinder.AbstractGrammarEle
 		return getKaaedahAccess().getRule();
 	}
 	
+	//MatnModel:
+	//    matn=Matn
+	//;
+	public MatnGrammarAccess.MatnModelElements getMatnModelAccess() {
+		return gaMatn.getMatnModelAccess();
+	}
+	
+	public ParserRule getMatnModelRule() {
+		return getMatnModelAccess().getRule();
+	}
+	
+	//Matn:
+	//    BASMALAH
+	//    name=AWORDS
+	//    makateh+=Maktah+
+	//;
+	public MatnGrammarAccess.MatnElements getMatnAccess() {
+		return gaMatn.getMatnAccess();
+	}
+	
+	public ParserRule getMatnRule() {
+		return getMatnAccess().getRule();
+	}
+	
+	//Maktah:
+	//    '*' '*' '*'
+	//    name = AWORDS
+	//    '(' abyatCount=INT ')'
+	//    abyat+=Bayt+
+	//;
+	public MatnGrammarAccess.MaktahElements getMaktahAccess() {
+		return gaMatn.getMaktahAccess();
+	}
+	
+	public ParserRule getMaktahRule() {
+		return getMaktahAccess().getRule();
+	}
+	
+	//Bayt:
+	//    rakm=INT '-'
+	//    sadr+=AWORD+
+	//    '...'
+	//    ajoz+=AWORD+
+	//;
+	public MatnGrammarAccess.BaytElements getBaytAccess() {
+		return gaMatn.getBaytAccess();
+	}
+	
+	public ParserRule getBaytRule() {
+		return getBaytAccess().getRule();
+	}
+	
+	//AWORDS:
+	//    AWORD+
+	//;
+	public MatnGrammarAccess.AWORDSElements getAWORDSAccess() {
+		return gaMatn.getAWORDSAccess();
+	}
+	
+	public ParserRule getAWORDSRule() {
+		return getAWORDSAccess().getRule();
+	}
+	
+	//OsolQiraaModel:
+	//    (
+	//        qoraa+=Qaree | torok+=Tareek | rowat+=Rawee |
+	//        imams+=IMAM | istelahat+=Istelah | koyod+=Kayd
+	//    )*
+	//;
+	public OsolQiraaGrammarAccess.OsolQiraaModelElements getOsolQiraaModelAccess() {
+		return gaOsolQiraa.getOsolQiraaModelAccess();
+	}
+	
+	public ParserRule getOsolQiraaModelRule() {
+		return getOsolQiraaModelAccess().getRule();
+	}
+	
+	//fragment Person:
+	//    name=KALEMAH
+	//    ('اسمه' esm=KALEMAH)?
+	//    ('لقبه' lakab=KALEMAH)?
+	//    ('توفي' towofia=INT)?
+	//;
+	public OsolQiraaGrammarAccess.PersonElements getPersonAccess() {
+		return gaOsolQiraa.getPersonAccess();
+	}
+	
+	public ParserRule getPersonRule() {
+		return getPersonAccess().getRule();
+	}
+	
+	//fragment Douaa:
+	//    d=('رحمه' | 'أكرمه') 'الله'
+	//;
+	public OsolQiraaGrammarAccess.DouaaElements getDouaaAccess() {
+		return gaOsolQiraa.getDouaaAccess();
+	}
+	
+	public ParserRule getDouaaRule() {
+		return getDouaaAccess().getRule();
+	}
+	
+	//IMAM:
+	//    'الإمام' Person Douaa
+	//;
+	public OsolQiraaGrammarAccess.IMAMElements getIMAMAccess() {
+		return gaOsolQiraa.getIMAMAccess();
+	}
+	
+	public ParserRule getIMAMRule() {
+		return getIMAMAccess().getRule();
+	}
+	
+	//Qaree:
+	//    'قارئ'
+	//    Person
+	//;
+	public OsolQiraaGrammarAccess.QareeElements getQareeAccess() {
+		return gaOsolQiraa.getQareeAccess();
+	}
+	
+	public ParserRule getQareeRule() {
+		return getQareeAccess().getRule();
+	}
+	
+	//Rawee:
+	//    'راو'
+	//    Person
+	//    'عن' qaree=[Qaree|KALEMAH]
+	//;
+	public OsolQiraaGrammarAccess.RaweeElements getRaweeAccess() {
+		return gaOsolQiraa.getRaweeAccess();
+	}
+	
+	public ParserRule getRaweeRule() {
+		return getRaweeAccess().getRule();
+	}
+	
+	//YokraaLah:
+	//    Qaree | Rawee | Istelah
+	//;
+	public OsolQiraaGrammarAccess.YokraaLahElements getYokraaLahAccess() {
+		return gaOsolQiraa.getYokraaLahAccess();
+	}
+	
+	public ParserRule getYokraaLahRule() {
+		return getYokraaLahAccess().getRule();
+	}
+	
+	//Tareek:
+	//    'طريق' 'تلاوة' name=KALEMAH
+	//    (
+	//        (simple?='خالص' 'ل' ref=[YokraaLah|KALEMAH]) |
+	//        ((complex?='مركب' 'من')
+	//            (refs+=[Tareek|KALEMAH])+
+	//        )
+	//    )
+	//;
+	public OsolQiraaGrammarAccess.TareekElements getTareekAccess() {
+		return gaOsolQiraa.getTareekAccess();
+	}
+	
+	public ParserRule getTareekRule() {
+		return getTareekAccess().getRule();
+	}
+	
+	//Kayd:
+	//    'قيد' name=KALEMAH
+	//;
+	public OsolQiraaGrammarAccess.KaydElements getKaydAccess() {
+		return gaOsolQiraa.getKaydAccess();
+	}
+	
+	public ParserRule getKaydRule() {
+		return getKaydAccess().getRule();
+	}
+	
+	//Istelah:
+	//    'اصطلاح' name=KALEMAH 'يعني' refs+=[YokraaLah|KALEMAH] ('و' refs+=[YokraaLah|KALEMAH])*
+	//;
+	public OsolQiraaGrammarAccess.IstelahElements getIstelahAccess() {
+		return gaOsolQiraa.getIstelahAccess();
+	}
+	
+	public ParserRule getIstelahRule() {
+		return getIstelahAccess().getRule();
+	}
+	
+	//Ramz:
+	//    'رمز' name=KALEMAH 'يعني' refs+=[YokraaLah|KALEMAH] ('و' refs+=[YokraaLah|KALEMAH])*
+	//;
+	public OsolQiraaGrammarAccess.RamzElements getRamzAccess() {
+		return gaOsolQiraa.getRamzAccess();
+	}
+	
+	public ParserRule getRamzRule() {
+		return getRamzAccess().getRule();
+	}
+	
+	//YokraaLahWaRamz:
+	//    YokraaLah | Ramz
+	//;
+	public OsolQiraaGrammarAccess.YokraaLahWaRamzElements getYokraaLahWaRamzAccess() {
+		return gaOsolQiraa.getYokraaLahWaRamzAccess();
+	}
+	
+	public ParserRule getYokraaLahWaRamzRule() {
+		return getYokraaLahWaRamzAccess().getRule();
+	}
+	
 	//HarfQuran:
 	//    word=AWORD 'من' 'قوله' 'تعالى' ayah=[AyahStart|KALEMAH] ('الموضع' mawdee=Mawdee)?
 	//;
-	public HarfQuranElements getHarfQuranAccess() {
-		return pHarfQuran;
+	public OsolQiraaGrammarAccess.HarfQuranElements getHarfQuranAccess() {
+		return gaOsolQiraa.getHarfQuranAccess();
 	}
 	
 	public ParserRule getHarfQuranRule() {
@@ -1159,8 +585,8 @@ public class QiraaGrammarAccess extends AbstractElementFinder.AbstractGrammarEle
 	//    'الثالث'|
 	//    'الأخير'
 	//;
-	public MawdeeElements getMawdeeAccess() {
-		return pMawdee;
+	public OsolQiraaGrammarAccess.MawdeeElements getMawdeeAccess() {
+		return gaOsolQiraa.getMawdeeAccess();
 	}
 	
 	public ParserRule getMawdeeRule() {
@@ -1182,7 +608,7 @@ public class QiraaGrammarAccess extends AbstractElementFinder.AbstractGrammarEle
 	
 	//Harf:
 	//    'حرف' name=AWORD
-	//        (('هو' values+=ALETTER ('أو' values+=ALETTER)*) |
+	//        (('هو' values+=AWORD ('أو' values+=AWORD)*) |
 	//        ('ذاته' ref=[Harf|AWORD]))
 	//;
 	public AbjadGrammarAccess.HarfElements getHarfAccess() {
@@ -1194,7 +620,7 @@ public class QiraaGrammarAccess extends AbstractElementFinder.AbstractGrammarEle
 	}
 	
 	//Harakah:
-	//    'حركة' name=KALEMAH 'هي' value=AHARAKAH
+	//    'حركة' name=KALEMAH 'هي' value=AWORD
 	//;
 	public AbjadGrammarAccess.HarakahElements getHarakahAccess() {
 		return gaAbjad.getHarakahAccess();
@@ -1237,7 +663,7 @@ public class QiraaGrammarAccess extends AbstractElementFinder.AbstractGrammarEle
 	}
 	
 	//Phrase:
-	//    words+=AWORD (WS words+=AWORD)*;
+	//    basmalah?=BASMALAH? words+=AWORD+;
 	public ArabicGrammarAccess.PhraseElements getPhraseAccess() {
 		return gaArabic.getPhraseAccess();
 	}
@@ -1246,46 +672,67 @@ public class QiraaGrammarAccess extends AbstractElementFinder.AbstractGrammarEle
 		return getPhraseAccess().getRule();
 	}
 	
-	//terminal ALETTER:
+	//terminal BASMALAH:
+	//    'بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ'
+	//;
+	public TerminalRule getBASMALAHRule() {
+		return gaArabic.getBASMALAHRule();
+	}
+	
+	//terminal AWORD:
+	//    (ALETTER|AHARAKAH|ATANWEEN|ASHADDAH)+
+	//;
+	public TerminalRule getAWORDRule() {
+		return gaArabic.getAWORDRule();
+	}
+	
+	//terminal fragment ALIGATURES:
+	//    '\uFDF0' ..'\uFDFD'
+	//;
+	public TerminalRule getALIGATURESRule() {
+		return gaArabic.getALIGATURESRule();
+	}
+	
+	//terminal fragment ALETTER:
 	//    '\u0621' ..'\u064a'
 	//;
 	public TerminalRule getALETTERRule() {
 		return gaArabic.getALETTERRule();
 	}
 	
-	//terminal ADIGIT:
+	//terminal fragment ADIGIT:
 	//    '\u0660' .. '\u0669'
 	//;
 	public TerminalRule getADIGITRule() {
 		return gaArabic.getADIGITRule();
 	}
 	
-	//terminal AHARAKAH:
+	//terminal fragment ATANWEEN:
+	//    '\u064b' .. '\u064d'
+	//;
+	public TerminalRule getATANWEENRule() {
+		return gaArabic.getATANWEENRule();
+	}
+	
+	//terminal fragment AHARAKAH:
 	//    '\u064e' .. '\u0650' | '\u0652'
 	//;
 	public TerminalRule getAHARAKAHRule() {
 		return gaArabic.getAHARAKAHRule();
 	}
 	
-	//terminal ASHADDAH:
+	//terminal fragment ASHADDAH:
 	//    '\u0651'
 	//;
 	public TerminalRule getASHADDAHRule() {
 		return gaArabic.getASHADDAHRule();
 	}
 	
-	//terminal ANONLETTER:
+	//terminal fragment ANONLETTER:
 	//    ('\u0600' .. '\u0620') | ('\u064b' .. '\u06ff')
 	//;
 	public TerminalRule getANONLETTERRule() {
 		return gaArabic.getANONLETTERRule();
-	}
-	
-	//terminal AWORD:
-	//    (ALETTER|AHARAKAH|ASHADDAH)+
-	//;
-	public TerminalRule getAWORDRule() {
-		return gaArabic.getAWORDRule();
 	}
 	
 	//terminal KALEMAH:
@@ -1293,6 +740,13 @@ public class QiraaGrammarAccess extends AbstractElementFinder.AbstractGrammarEle
 	//;
 	public TerminalRule getKALEMAHRule() {
 		return gaArabic.getKALEMAHRule();
+	}
+	
+	//@Override
+	//terminal SL_COMMENT:
+	//    'deactivated';
+	public TerminalRule getSL_COMMENTRule() {
+		return gaArabic.getSL_COMMENTRule();
 	}
 	
 	//terminal ID: '^'?('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
@@ -1316,11 +770,6 @@ public class QiraaGrammarAccess extends AbstractElementFinder.AbstractGrammarEle
 	//terminal ML_COMMENT : '/*' -> '*/';
 	public TerminalRule getML_COMMENTRule() {
 		return gaTerminals.getML_COMMENTRule();
-	}
-	
-	//terminal SL_COMMENT : '//' !('\n'|'\r')* ('\r'? '\n')?;
-	public TerminalRule getSL_COMMENTRule() {
-		return gaTerminals.getSL_COMMENTRule();
 	}
 	
 	//terminal WS         : (' '|'\t'|'\r'|'\n')+;

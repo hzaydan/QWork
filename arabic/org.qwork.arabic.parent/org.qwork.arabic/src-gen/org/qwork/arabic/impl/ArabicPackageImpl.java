@@ -139,9 +139,20 @@ public class ArabicPackageImpl extends EPackageImpl implements ArabicPackage
    * @generated
    */
   @Override
-  public EAttribute getPhrase_Words()
+  public EAttribute getPhrase_Basmalah()
   {
     return (EAttribute)phraseEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getPhrase_Words()
+  {
+    return (EAttribute)phraseEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -179,6 +190,7 @@ public class ArabicPackageImpl extends EPackageImpl implements ArabicPackage
     createEReference(modelEClass, MODEL__PHRASES);
 
     phraseEClass = createEClass(PHRASE);
+    createEAttribute(phraseEClass, PHRASE__BASMALAH);
     createEAttribute(phraseEClass, PHRASE__WORDS);
   }
 
@@ -217,6 +229,7 @@ public class ArabicPackageImpl extends EPackageImpl implements ArabicPackage
     initEReference(getModel_Phrases(), this.getPhrase(), null, "phrases", null, 0, -1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(phraseEClass, Phrase.class, "Phrase", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getPhrase_Basmalah(), ecorePackage.getEBoolean(), "basmalah", null, 0, 1, Phrase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getPhrase_Words(), ecorePackage.getEString(), "words", null, 0, -1, Phrase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     // Create resource

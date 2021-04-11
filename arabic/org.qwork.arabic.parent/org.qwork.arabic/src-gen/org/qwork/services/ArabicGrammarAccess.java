@@ -38,49 +38,45 @@ public class ArabicGrammarAccess extends AbstractElementFinder.AbstractGrammarEl
 	public class PhraseElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.qwork.Arabic.Phrase");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cWordsAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final RuleCall cWordsAWORDTerminalRuleCall_0_0 = (RuleCall)cWordsAssignment_0.eContents().get(0);
-		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
-		private final RuleCall cWSTerminalRuleCall_1_0 = (RuleCall)cGroup_1.eContents().get(0);
-		private final Assignment cWordsAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
-		private final RuleCall cWordsAWORDTerminalRuleCall_1_1_0 = (RuleCall)cWordsAssignment_1_1.eContents().get(0);
+		private final Assignment cBasmalahAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cBasmalahBASMALAHTerminalRuleCall_0_0 = (RuleCall)cBasmalahAssignment_0.eContents().get(0);
+		private final Assignment cWordsAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cWordsAWORDTerminalRuleCall_1_0 = (RuleCall)cWordsAssignment_1.eContents().get(0);
 		
 		//Phrase:
-		//    words+=AWORD (WS words+=AWORD)*;
+		//    basmalah?=BASMALAH? words+=AWORD+;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//words+=AWORD (WS words+=AWORD)*
+		//basmalah?=BASMALAH? words+=AWORD+
 		public Group getGroup() { return cGroup; }
 		
-		//words+=AWORD
-		public Assignment getWordsAssignment_0() { return cWordsAssignment_0; }
+		//basmalah?=BASMALAH?
+		public Assignment getBasmalahAssignment_0() { return cBasmalahAssignment_0; }
+		
+		//BASMALAH
+		public RuleCall getBasmalahBASMALAHTerminalRuleCall_0_0() { return cBasmalahBASMALAHTerminalRuleCall_0_0; }
+		
+		//words+=AWORD+
+		public Assignment getWordsAssignment_1() { return cWordsAssignment_1; }
 		
 		//AWORD
-		public RuleCall getWordsAWORDTerminalRuleCall_0_0() { return cWordsAWORDTerminalRuleCall_0_0; }
-		
-		//(WS words+=AWORD)*
-		public Group getGroup_1() { return cGroup_1; }
-		
-		//WS
-		public RuleCall getWSTerminalRuleCall_1_0() { return cWSTerminalRuleCall_1_0; }
-		
-		//words+=AWORD
-		public Assignment getWordsAssignment_1_1() { return cWordsAssignment_1_1; }
-		
-		//AWORD
-		public RuleCall getWordsAWORDTerminalRuleCall_1_1_0() { return cWordsAWORDTerminalRuleCall_1_1_0; }
+		public RuleCall getWordsAWORDTerminalRuleCall_1_0() { return cWordsAWORDTerminalRuleCall_1_0; }
 	}
 	
 	
 	private final ModelElements pModel;
 	private final PhraseElements pPhrase;
+	private final TerminalRule tBASMALAH;
+	private final TerminalRule tAWORD;
+	private final TerminalRule tALIGATURES;
 	private final TerminalRule tALETTER;
 	private final TerminalRule tADIGIT;
+	private final TerminalRule tATANWEEN;
 	private final TerminalRule tAHARAKAH;
 	private final TerminalRule tASHADDAH;
 	private final TerminalRule tANONLETTER;
-	private final TerminalRule tAWORD;
 	private final TerminalRule tKALEMAH;
+	private final TerminalRule tSL_COMMENT;
 	
 	private final Grammar grammar;
 	
@@ -93,13 +89,17 @@ public class ArabicGrammarAccess extends AbstractElementFinder.AbstractGrammarEl
 		this.gaTerminals = gaTerminals;
 		this.pModel = new ModelElements();
 		this.pPhrase = new PhraseElements();
+		this.tBASMALAH = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.qwork.Arabic.BASMALAH");
+		this.tAWORD = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.qwork.Arabic.AWORD");
+		this.tALIGATURES = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.qwork.Arabic.ALIGATURES");
 		this.tALETTER = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.qwork.Arabic.ALETTER");
 		this.tADIGIT = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.qwork.Arabic.ADIGIT");
+		this.tATANWEEN = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.qwork.Arabic.ATANWEEN");
 		this.tAHARAKAH = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.qwork.Arabic.AHARAKAH");
 		this.tASHADDAH = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.qwork.Arabic.ASHADDAH");
 		this.tANONLETTER = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.qwork.Arabic.ANONLETTER");
-		this.tAWORD = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.qwork.Arabic.AWORD");
 		this.tKALEMAH = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.qwork.Arabic.KALEMAH");
+		this.tSL_COMMENT = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.qwork.Arabic.SL_COMMENT");
 	}
 	
 	protected Grammar internalFindGrammar(GrammarProvider grammarProvider) {
@@ -140,7 +140,7 @@ public class ArabicGrammarAccess extends AbstractElementFinder.AbstractGrammarEl
 	}
 	
 	//Phrase:
-	//    words+=AWORD (WS words+=AWORD)*;
+	//    basmalah?=BASMALAH? words+=AWORD+;
 	public PhraseElements getPhraseAccess() {
 		return pPhrase;
 	}
@@ -149,46 +149,67 @@ public class ArabicGrammarAccess extends AbstractElementFinder.AbstractGrammarEl
 		return getPhraseAccess().getRule();
 	}
 	
-	//terminal ALETTER:
+	//terminal BASMALAH:
+	//    'بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ'
+	//;
+	public TerminalRule getBASMALAHRule() {
+		return tBASMALAH;
+	}
+	
+	//terminal AWORD:
+	//    (ALETTER|AHARAKAH|ATANWEEN|ASHADDAH)+
+	//;
+	public TerminalRule getAWORDRule() {
+		return tAWORD;
+	}
+	
+	//terminal fragment ALIGATURES:
+	//    '\uFDF0' ..'\uFDFD'
+	//;
+	public TerminalRule getALIGATURESRule() {
+		return tALIGATURES;
+	}
+	
+	//terminal fragment ALETTER:
 	//    '\u0621' ..'\u064a'
 	//;
 	public TerminalRule getALETTERRule() {
 		return tALETTER;
 	}
 	
-	//terminal ADIGIT:
+	//terminal fragment ADIGIT:
 	//    '\u0660' .. '\u0669'
 	//;
 	public TerminalRule getADIGITRule() {
 		return tADIGIT;
 	}
 	
-	//terminal AHARAKAH:
+	//terminal fragment ATANWEEN:
+	//    '\u064b' .. '\u064d'
+	//;
+	public TerminalRule getATANWEENRule() {
+		return tATANWEEN;
+	}
+	
+	//terminal fragment AHARAKAH:
 	//    '\u064e' .. '\u0650' | '\u0652'
 	//;
 	public TerminalRule getAHARAKAHRule() {
 		return tAHARAKAH;
 	}
 	
-	//terminal ASHADDAH:
+	//terminal fragment ASHADDAH:
 	//    '\u0651'
 	//;
 	public TerminalRule getASHADDAHRule() {
 		return tASHADDAH;
 	}
 	
-	//terminal ANONLETTER:
+	//terminal fragment ANONLETTER:
 	//    ('\u0600' .. '\u0620') | ('\u064b' .. '\u06ff')
 	//;
 	public TerminalRule getANONLETTERRule() {
 		return tANONLETTER;
-	}
-	
-	//terminal AWORD:
-	//    (ALETTER|AHARAKAH|ASHADDAH)+
-	//;
-	public TerminalRule getAWORDRule() {
-		return tAWORD;
 	}
 	
 	//terminal KALEMAH:
@@ -196,6 +217,13 @@ public class ArabicGrammarAccess extends AbstractElementFinder.AbstractGrammarEl
 	//;
 	public TerminalRule getKALEMAHRule() {
 		return tKALEMAH;
+	}
+	
+	//@Override
+	//terminal SL_COMMENT:
+	//    'deactivated';
+	public TerminalRule getSL_COMMENTRule() {
+		return tSL_COMMENT;
 	}
 	
 	//terminal ID: '^'?('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
@@ -219,11 +247,6 @@ public class ArabicGrammarAccess extends AbstractElementFinder.AbstractGrammarEl
 	//terminal ML_COMMENT : '/*' -> '*/';
 	public TerminalRule getML_COMMENTRule() {
 		return gaTerminals.getML_COMMENTRule();
-	}
-	
-	//terminal SL_COMMENT : '//' !('\n'|'\r')* ('\r'? '\n')?;
-	public TerminalRule getSL_COMMENTRule() {
-		return gaTerminals.getSL_COMMENTRule();
 	}
 	
 	//terminal WS         : (' '|'\t'|'\r'|'\n')+;

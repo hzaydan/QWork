@@ -21,30 +21,33 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalAbjadParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_AWORD", "RULE_ALETTER", "RULE_KALEMAH", "RULE_AHARAKAH", "RULE_INT", "RULE_WS", "RULE_ADIGIT", "RULE_ASHADDAH", "RULE_ANONLETTER", "RULE_ID", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_ANY_OTHER", "'\\u062D\\u0631\\u0641'", "'\\u0647\\u0648'", "'\\u0623\\u0648'", "'\\u0630\\u0627\\u062A\\u0647'", "'\\u062D\\u0631\\u0643\\u0629'", "'\\u0647\\u064A'", "'\\u0627\\u0644\\u0633\\u0648\\u0631\\u0629'", "'\\u0627\\u0644\\u0622\\u064A\\u0629'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_AWORD", "RULE_KALEMAH", "RULE_INT", "RULE_BASMALAH", "RULE_ALETTER", "RULE_AHARAKAH", "RULE_ATANWEEN", "RULE_ASHADDAH", "RULE_ALIGATURES", "RULE_ADIGIT", "RULE_ANONLETTER", "RULE_SL_COMMENT", "RULE_ID", "RULE_STRING", "RULE_ML_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'\\u062D\\u0631\\u0641'", "'\\u0647\\u0648'", "'\\u0623\\u0648'", "'\\u0630\\u0627\\u062A\\u0647'", "'\\u062D\\u0631\\u0643\\u0629'", "'\\u0647\\u064A'", "'\\u0627\\u0644\\u0633\\u0648\\u0631\\u0629'", "'\\u0627\\u0644\\u0622\\u064A\\u0629'"
     };
-    public static final int RULE_AHARAKAH=7;
-    public static final int RULE_STRING=14;
-    public static final int RULE_ANONLETTER=12;
-    public static final int RULE_SL_COMMENT=16;
-    public static final int T__19=19;
-    public static final int RULE_KALEMAH=6;
-    public static final int T__18=18;
+    public static final int RULE_BASMALAH=7;
+    public static final int RULE_AHARAKAH=9;
+    public static final int RULE_STRING=17;
+    public static final int RULE_ANONLETTER=14;
+    public static final int RULE_SL_COMMENT=15;
+    public static final int RULE_KALEMAH=5;
     public static final int RULE_ASHADDAH=11;
-    public static final int RULE_ALETTER=5;
+    public static final int RULE_ALETTER=8;
+    public static final int RULE_ATANWEEN=10;
     public static final int EOF=-1;
-    public static final int RULE_ID=13;
-    public static final int RULE_WS=9;
-    public static final int RULE_ANY_OTHER=17;
-    public static final int RULE_ADIGIT=10;
-    public static final int RULE_INT=8;
+    public static final int RULE_ALIGATURES=12;
+    public static final int RULE_ID=16;
+    public static final int RULE_WS=19;
+    public static final int RULE_ANY_OTHER=20;
+    public static final int RULE_ADIGIT=13;
+    public static final int T__26=26;
+    public static final int T__27=27;
+    public static final int T__28=28;
+    public static final int RULE_INT=6;
     public static final int RULE_AWORD=4;
     public static final int T__22=22;
-    public static final int RULE_ML_COMMENT=15;
+    public static final int RULE_ML_COMMENT=18;
     public static final int T__23=23;
     public static final int T__24=24;
     public static final int T__25=25;
-    public static final int T__20=20;
     public static final int T__21=21;
 
     // delegates
@@ -145,10 +148,10 @@ public class InternalAbjadParser extends AbstractInternalAntlrParser {
                 int alt1=3;
                 int LA1_0 = input.LA(1);
 
-                if ( (LA1_0==18) ) {
+                if ( (LA1_0==21) ) {
                     alt1=1;
                 }
-                else if ( (LA1_0==22) ) {
+                else if ( (LA1_0==25) ) {
                     alt1=2;
                 }
 
@@ -290,7 +293,7 @@ public class InternalAbjadParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleHarf"
-    // InternalAbjad.g:129:1: ruleHarf returns [EObject current=null] : (otherlv_0= '\\u062D\\u0631\\u0641' ( (lv_name_1_0= RULE_AWORD ) ) ( (otherlv_2= '\\u0647\\u0648' ( (lv_values_3_0= RULE_ALETTER ) ) (otherlv_4= '\\u0623\\u0648' ( (lv_values_5_0= RULE_ALETTER ) ) )* ) | (otherlv_6= '\\u0630\\u0627\\u062A\\u0647' ( (otherlv_7= RULE_AWORD ) ) ) ) ) ;
+    // InternalAbjad.g:129:1: ruleHarf returns [EObject current=null] : (otherlv_0= '\\u062D\\u0631\\u0641' ( (lv_name_1_0= RULE_AWORD ) ) ( (otherlv_2= '\\u0647\\u0648' ( (lv_values_3_0= RULE_AWORD ) ) (otherlv_4= '\\u0623\\u0648' ( (lv_values_5_0= RULE_AWORD ) ) )* ) | (otherlv_6= '\\u0630\\u0627\\u062A\\u0647' ( (otherlv_7= RULE_AWORD ) ) ) ) ) ;
     public final EObject ruleHarf() throws RecognitionException {
         EObject current = null;
 
@@ -307,13 +310,13 @@ public class InternalAbjadParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalAbjad.g:135:2: ( (otherlv_0= '\\u062D\\u0631\\u0641' ( (lv_name_1_0= RULE_AWORD ) ) ( (otherlv_2= '\\u0647\\u0648' ( (lv_values_3_0= RULE_ALETTER ) ) (otherlv_4= '\\u0623\\u0648' ( (lv_values_5_0= RULE_ALETTER ) ) )* ) | (otherlv_6= '\\u0630\\u0627\\u062A\\u0647' ( (otherlv_7= RULE_AWORD ) ) ) ) ) )
-            // InternalAbjad.g:136:2: (otherlv_0= '\\u062D\\u0631\\u0641' ( (lv_name_1_0= RULE_AWORD ) ) ( (otherlv_2= '\\u0647\\u0648' ( (lv_values_3_0= RULE_ALETTER ) ) (otherlv_4= '\\u0623\\u0648' ( (lv_values_5_0= RULE_ALETTER ) ) )* ) | (otherlv_6= '\\u0630\\u0627\\u062A\\u0647' ( (otherlv_7= RULE_AWORD ) ) ) ) )
+            // InternalAbjad.g:135:2: ( (otherlv_0= '\\u062D\\u0631\\u0641' ( (lv_name_1_0= RULE_AWORD ) ) ( (otherlv_2= '\\u0647\\u0648' ( (lv_values_3_0= RULE_AWORD ) ) (otherlv_4= '\\u0623\\u0648' ( (lv_values_5_0= RULE_AWORD ) ) )* ) | (otherlv_6= '\\u0630\\u0627\\u062A\\u0647' ( (otherlv_7= RULE_AWORD ) ) ) ) ) )
+            // InternalAbjad.g:136:2: (otherlv_0= '\\u062D\\u0631\\u0641' ( (lv_name_1_0= RULE_AWORD ) ) ( (otherlv_2= '\\u0647\\u0648' ( (lv_values_3_0= RULE_AWORD ) ) (otherlv_4= '\\u0623\\u0648' ( (lv_values_5_0= RULE_AWORD ) ) )* ) | (otherlv_6= '\\u0630\\u0627\\u062A\\u0647' ( (otherlv_7= RULE_AWORD ) ) ) ) )
             {
-            // InternalAbjad.g:136:2: (otherlv_0= '\\u062D\\u0631\\u0641' ( (lv_name_1_0= RULE_AWORD ) ) ( (otherlv_2= '\\u0647\\u0648' ( (lv_values_3_0= RULE_ALETTER ) ) (otherlv_4= '\\u0623\\u0648' ( (lv_values_5_0= RULE_ALETTER ) ) )* ) | (otherlv_6= '\\u0630\\u0627\\u062A\\u0647' ( (otherlv_7= RULE_AWORD ) ) ) ) )
-            // InternalAbjad.g:137:3: otherlv_0= '\\u062D\\u0631\\u0641' ( (lv_name_1_0= RULE_AWORD ) ) ( (otherlv_2= '\\u0647\\u0648' ( (lv_values_3_0= RULE_ALETTER ) ) (otherlv_4= '\\u0623\\u0648' ( (lv_values_5_0= RULE_ALETTER ) ) )* ) | (otherlv_6= '\\u0630\\u0627\\u062A\\u0647' ( (otherlv_7= RULE_AWORD ) ) ) )
+            // InternalAbjad.g:136:2: (otherlv_0= '\\u062D\\u0631\\u0641' ( (lv_name_1_0= RULE_AWORD ) ) ( (otherlv_2= '\\u0647\\u0648' ( (lv_values_3_0= RULE_AWORD ) ) (otherlv_4= '\\u0623\\u0648' ( (lv_values_5_0= RULE_AWORD ) ) )* ) | (otherlv_6= '\\u0630\\u0627\\u062A\\u0647' ( (otherlv_7= RULE_AWORD ) ) ) ) )
+            // InternalAbjad.g:137:3: otherlv_0= '\\u062D\\u0631\\u0641' ( (lv_name_1_0= RULE_AWORD ) ) ( (otherlv_2= '\\u0647\\u0648' ( (lv_values_3_0= RULE_AWORD ) ) (otherlv_4= '\\u0623\\u0648' ( (lv_values_5_0= RULE_AWORD ) ) )* ) | (otherlv_6= '\\u0630\\u0627\\u062A\\u0647' ( (otherlv_7= RULE_AWORD ) ) ) )
             {
-            otherlv_0=(Token)match(input,18,FOLLOW_4); 
+            otherlv_0=(Token)match(input,21,FOLLOW_4); 
 
             			newLeafNode(otherlv_0, grammarAccess.getHarfAccess().getArabicLetterHahArabicLetterRehArabicLetterFehKeyword_0());
             		
@@ -343,14 +346,14 @@ public class InternalAbjadParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalAbjad.g:159:3: ( (otherlv_2= '\\u0647\\u0648' ( (lv_values_3_0= RULE_ALETTER ) ) (otherlv_4= '\\u0623\\u0648' ( (lv_values_5_0= RULE_ALETTER ) ) )* ) | (otherlv_6= '\\u0630\\u0627\\u062A\\u0647' ( (otherlv_7= RULE_AWORD ) ) ) )
+            // InternalAbjad.g:159:3: ( (otherlv_2= '\\u0647\\u0648' ( (lv_values_3_0= RULE_AWORD ) ) (otherlv_4= '\\u0623\\u0648' ( (lv_values_5_0= RULE_AWORD ) ) )* ) | (otherlv_6= '\\u0630\\u0627\\u062A\\u0647' ( (otherlv_7= RULE_AWORD ) ) ) )
             int alt3=2;
             int LA3_0 = input.LA(1);
 
-            if ( (LA3_0==19) ) {
+            if ( (LA3_0==22) ) {
                 alt3=1;
             }
-            else if ( (LA3_0==21) ) {
+            else if ( (LA3_0==24) ) {
                 alt3=2;
             }
             else {
@@ -361,24 +364,24 @@ public class InternalAbjadParser extends AbstractInternalAntlrParser {
             }
             switch (alt3) {
                 case 1 :
-                    // InternalAbjad.g:160:4: (otherlv_2= '\\u0647\\u0648' ( (lv_values_3_0= RULE_ALETTER ) ) (otherlv_4= '\\u0623\\u0648' ( (lv_values_5_0= RULE_ALETTER ) ) )* )
+                    // InternalAbjad.g:160:4: (otherlv_2= '\\u0647\\u0648' ( (lv_values_3_0= RULE_AWORD ) ) (otherlv_4= '\\u0623\\u0648' ( (lv_values_5_0= RULE_AWORD ) ) )* )
                     {
-                    // InternalAbjad.g:160:4: (otherlv_2= '\\u0647\\u0648' ( (lv_values_3_0= RULE_ALETTER ) ) (otherlv_4= '\\u0623\\u0648' ( (lv_values_5_0= RULE_ALETTER ) ) )* )
-                    // InternalAbjad.g:161:5: otherlv_2= '\\u0647\\u0648' ( (lv_values_3_0= RULE_ALETTER ) ) (otherlv_4= '\\u0623\\u0648' ( (lv_values_5_0= RULE_ALETTER ) ) )*
+                    // InternalAbjad.g:160:4: (otherlv_2= '\\u0647\\u0648' ( (lv_values_3_0= RULE_AWORD ) ) (otherlv_4= '\\u0623\\u0648' ( (lv_values_5_0= RULE_AWORD ) ) )* )
+                    // InternalAbjad.g:161:5: otherlv_2= '\\u0647\\u0648' ( (lv_values_3_0= RULE_AWORD ) ) (otherlv_4= '\\u0623\\u0648' ( (lv_values_5_0= RULE_AWORD ) ) )*
                     {
-                    otherlv_2=(Token)match(input,19,FOLLOW_6); 
+                    otherlv_2=(Token)match(input,22,FOLLOW_4); 
 
                     					newLeafNode(otherlv_2, grammarAccess.getHarfAccess().getArabicLetterHehArabicLetterWawKeyword_2_0_0());
                     				
-                    // InternalAbjad.g:165:5: ( (lv_values_3_0= RULE_ALETTER ) )
-                    // InternalAbjad.g:166:6: (lv_values_3_0= RULE_ALETTER )
+                    // InternalAbjad.g:165:5: ( (lv_values_3_0= RULE_AWORD ) )
+                    // InternalAbjad.g:166:6: (lv_values_3_0= RULE_AWORD )
                     {
-                    // InternalAbjad.g:166:6: (lv_values_3_0= RULE_ALETTER )
-                    // InternalAbjad.g:167:7: lv_values_3_0= RULE_ALETTER
+                    // InternalAbjad.g:166:6: (lv_values_3_0= RULE_AWORD )
+                    // InternalAbjad.g:167:7: lv_values_3_0= RULE_AWORD
                     {
-                    lv_values_3_0=(Token)match(input,RULE_ALETTER,FOLLOW_7); 
+                    lv_values_3_0=(Token)match(input,RULE_AWORD,FOLLOW_6); 
 
-                    							newLeafNode(lv_values_3_0, grammarAccess.getHarfAccess().getValuesALETTERTerminalRuleCall_2_0_1_0());
+                    							newLeafNode(lv_values_3_0, grammarAccess.getHarfAccess().getValuesAWORDTerminalRuleCall_2_0_1_0());
                     						
 
                     							if (current==null) {
@@ -388,7 +391,7 @@ public class InternalAbjadParser extends AbstractInternalAntlrParser {
                     								current,
                     								"values",
                     								lv_values_3_0,
-                    								"org.qwork.Arabic.ALETTER");
+                    								"org.qwork.Arabic.AWORD");
                     						
 
                     }
@@ -396,34 +399,34 @@ public class InternalAbjadParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalAbjad.g:183:5: (otherlv_4= '\\u0623\\u0648' ( (lv_values_5_0= RULE_ALETTER ) ) )*
+                    // InternalAbjad.g:183:5: (otherlv_4= '\\u0623\\u0648' ( (lv_values_5_0= RULE_AWORD ) ) )*
                     loop2:
                     do {
                         int alt2=2;
                         int LA2_0 = input.LA(1);
 
-                        if ( (LA2_0==20) ) {
+                        if ( (LA2_0==23) ) {
                             alt2=1;
                         }
 
 
                         switch (alt2) {
                     	case 1 :
-                    	    // InternalAbjad.g:184:6: otherlv_4= '\\u0623\\u0648' ( (lv_values_5_0= RULE_ALETTER ) )
+                    	    // InternalAbjad.g:184:6: otherlv_4= '\\u0623\\u0648' ( (lv_values_5_0= RULE_AWORD ) )
                     	    {
-                    	    otherlv_4=(Token)match(input,20,FOLLOW_6); 
+                    	    otherlv_4=(Token)match(input,23,FOLLOW_4); 
 
                     	    						newLeafNode(otherlv_4, grammarAccess.getHarfAccess().getArabicLetterAlefWithHamzaAboveArabicLetterWawKeyword_2_0_2_0());
                     	    					
-                    	    // InternalAbjad.g:188:6: ( (lv_values_5_0= RULE_ALETTER ) )
-                    	    // InternalAbjad.g:189:7: (lv_values_5_0= RULE_ALETTER )
+                    	    // InternalAbjad.g:188:6: ( (lv_values_5_0= RULE_AWORD ) )
+                    	    // InternalAbjad.g:189:7: (lv_values_5_0= RULE_AWORD )
                     	    {
-                    	    // InternalAbjad.g:189:7: (lv_values_5_0= RULE_ALETTER )
-                    	    // InternalAbjad.g:190:8: lv_values_5_0= RULE_ALETTER
+                    	    // InternalAbjad.g:189:7: (lv_values_5_0= RULE_AWORD )
+                    	    // InternalAbjad.g:190:8: lv_values_5_0= RULE_AWORD
                     	    {
-                    	    lv_values_5_0=(Token)match(input,RULE_ALETTER,FOLLOW_7); 
+                    	    lv_values_5_0=(Token)match(input,RULE_AWORD,FOLLOW_6); 
 
-                    	    								newLeafNode(lv_values_5_0, grammarAccess.getHarfAccess().getValuesALETTERTerminalRuleCall_2_0_2_1_0());
+                    	    								newLeafNode(lv_values_5_0, grammarAccess.getHarfAccess().getValuesAWORDTerminalRuleCall_2_0_2_1_0());
                     	    							
 
                     	    								if (current==null) {
@@ -433,7 +436,7 @@ public class InternalAbjadParser extends AbstractInternalAntlrParser {
                     	    									current,
                     	    									"values",
                     	    									lv_values_5_0,
-                    	    									"org.qwork.Arabic.ALETTER");
+                    	    									"org.qwork.Arabic.AWORD");
                     	    							
 
                     	    }
@@ -462,7 +465,7 @@ public class InternalAbjadParser extends AbstractInternalAntlrParser {
                     // InternalAbjad.g:209:4: (otherlv_6= '\\u0630\\u0627\\u062A\\u0647' ( (otherlv_7= RULE_AWORD ) ) )
                     // InternalAbjad.g:210:5: otherlv_6= '\\u0630\\u0627\\u062A\\u0647' ( (otherlv_7= RULE_AWORD ) )
                     {
-                    otherlv_6=(Token)match(input,21,FOLLOW_4); 
+                    otherlv_6=(Token)match(input,24,FOLLOW_4); 
 
                     					newLeafNode(otherlv_6, grammarAccess.getHarfAccess().getArabicLetterThalArabicLetterAlefArabicLetterTehArabicLetterHehKeyword_2_1_0());
                     				
@@ -555,7 +558,7 @@ public class InternalAbjadParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleHarakah"
-    // InternalAbjad.g:240:1: ruleHarakah returns [EObject current=null] : (otherlv_0= '\\u062D\\u0631\\u0643\\u0629' ( (lv_name_1_0= RULE_KALEMAH ) ) otherlv_2= '\\u0647\\u064A' ( (lv_value_3_0= RULE_AHARAKAH ) ) ) ;
+    // InternalAbjad.g:240:1: ruleHarakah returns [EObject current=null] : (otherlv_0= '\\u062D\\u0631\\u0643\\u0629' ( (lv_name_1_0= RULE_KALEMAH ) ) otherlv_2= '\\u0647\\u064A' ( (lv_value_3_0= RULE_AWORD ) ) ) ;
     public final EObject ruleHarakah() throws RecognitionException {
         EObject current = null;
 
@@ -568,13 +571,13 @@ public class InternalAbjadParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalAbjad.g:246:2: ( (otherlv_0= '\\u062D\\u0631\\u0643\\u0629' ( (lv_name_1_0= RULE_KALEMAH ) ) otherlv_2= '\\u0647\\u064A' ( (lv_value_3_0= RULE_AHARAKAH ) ) ) )
-            // InternalAbjad.g:247:2: (otherlv_0= '\\u062D\\u0631\\u0643\\u0629' ( (lv_name_1_0= RULE_KALEMAH ) ) otherlv_2= '\\u0647\\u064A' ( (lv_value_3_0= RULE_AHARAKAH ) ) )
+            // InternalAbjad.g:246:2: ( (otherlv_0= '\\u062D\\u0631\\u0643\\u0629' ( (lv_name_1_0= RULE_KALEMAH ) ) otherlv_2= '\\u0647\\u064A' ( (lv_value_3_0= RULE_AWORD ) ) ) )
+            // InternalAbjad.g:247:2: (otherlv_0= '\\u062D\\u0631\\u0643\\u0629' ( (lv_name_1_0= RULE_KALEMAH ) ) otherlv_2= '\\u0647\\u064A' ( (lv_value_3_0= RULE_AWORD ) ) )
             {
-            // InternalAbjad.g:247:2: (otherlv_0= '\\u062D\\u0631\\u0643\\u0629' ( (lv_name_1_0= RULE_KALEMAH ) ) otherlv_2= '\\u0647\\u064A' ( (lv_value_3_0= RULE_AHARAKAH ) ) )
-            // InternalAbjad.g:248:3: otherlv_0= '\\u062D\\u0631\\u0643\\u0629' ( (lv_name_1_0= RULE_KALEMAH ) ) otherlv_2= '\\u0647\\u064A' ( (lv_value_3_0= RULE_AHARAKAH ) )
+            // InternalAbjad.g:247:2: (otherlv_0= '\\u062D\\u0631\\u0643\\u0629' ( (lv_name_1_0= RULE_KALEMAH ) ) otherlv_2= '\\u0647\\u064A' ( (lv_value_3_0= RULE_AWORD ) ) )
+            // InternalAbjad.g:248:3: otherlv_0= '\\u062D\\u0631\\u0643\\u0629' ( (lv_name_1_0= RULE_KALEMAH ) ) otherlv_2= '\\u0647\\u064A' ( (lv_value_3_0= RULE_AWORD ) )
             {
-            otherlv_0=(Token)match(input,22,FOLLOW_8); 
+            otherlv_0=(Token)match(input,25,FOLLOW_7); 
 
             			newLeafNode(otherlv_0, grammarAccess.getHarakahAccess().getArabicLetterHahArabicLetterRehArabicLetterKafArabicLetterTehMarbutaKeyword_0());
             		
@@ -584,7 +587,7 @@ public class InternalAbjadParser extends AbstractInternalAntlrParser {
             // InternalAbjad.g:253:4: (lv_name_1_0= RULE_KALEMAH )
             // InternalAbjad.g:254:5: lv_name_1_0= RULE_KALEMAH
             {
-            lv_name_1_0=(Token)match(input,RULE_KALEMAH,FOLLOW_9); 
+            lv_name_1_0=(Token)match(input,RULE_KALEMAH,FOLLOW_8); 
 
             					newLeafNode(lv_name_1_0, grammarAccess.getHarakahAccess().getNameKALEMAHTerminalRuleCall_1_0());
             				
@@ -604,19 +607,19 @@ public class InternalAbjadParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,23,FOLLOW_10); 
+            otherlv_2=(Token)match(input,26,FOLLOW_4); 
 
             			newLeafNode(otherlv_2, grammarAccess.getHarakahAccess().getArabicLetterHehArabicLetterYehKeyword_2());
             		
-            // InternalAbjad.g:274:3: ( (lv_value_3_0= RULE_AHARAKAH ) )
-            // InternalAbjad.g:275:4: (lv_value_3_0= RULE_AHARAKAH )
+            // InternalAbjad.g:274:3: ( (lv_value_3_0= RULE_AWORD ) )
+            // InternalAbjad.g:275:4: (lv_value_3_0= RULE_AWORD )
             {
-            // InternalAbjad.g:275:4: (lv_value_3_0= RULE_AHARAKAH )
-            // InternalAbjad.g:276:5: lv_value_3_0= RULE_AHARAKAH
+            // InternalAbjad.g:275:4: (lv_value_3_0= RULE_AWORD )
+            // InternalAbjad.g:276:5: lv_value_3_0= RULE_AWORD
             {
-            lv_value_3_0=(Token)match(input,RULE_AHARAKAH,FOLLOW_2); 
+            lv_value_3_0=(Token)match(input,RULE_AWORD,FOLLOW_2); 
 
-            					newLeafNode(lv_value_3_0, grammarAccess.getHarakahAccess().getValueAHARAKAHTerminalRuleCall_3_0());
+            					newLeafNode(lv_value_3_0, grammarAccess.getHarakahAccess().getValueAWORDTerminalRuleCall_3_0());
             				
 
             					if (current==null) {
@@ -626,7 +629,7 @@ public class InternalAbjadParser extends AbstractInternalAntlrParser {
             						current,
             						"value",
             						lv_value_3_0,
-            						"org.qwork.Arabic.AHARAKAH");
+            						"org.qwork.Arabic.AWORD");
             				
 
             }
@@ -713,7 +716,7 @@ public class InternalAbjadParser extends AbstractInternalAntlrParser {
             // InternalAbjad.g:310:2: (otherlv_0= '\\u0627\\u0644\\u0633\\u0648\\u0631\\u0629' ( (lv_surah_1_0= RULE_INT ) ) otherlv_2= '\\u0627\\u0644\\u0622\\u064A\\u0629' ( (lv_ayah_3_0= RULE_INT ) ) ( (lv_name_4_0= RULE_KALEMAH ) ) )
             // InternalAbjad.g:311:3: otherlv_0= '\\u0627\\u0644\\u0633\\u0648\\u0631\\u0629' ( (lv_surah_1_0= RULE_INT ) ) otherlv_2= '\\u0627\\u0644\\u0622\\u064A\\u0629' ( (lv_ayah_3_0= RULE_INT ) ) ( (lv_name_4_0= RULE_KALEMAH ) )
             {
-            otherlv_0=(Token)match(input,24,FOLLOW_11); 
+            otherlv_0=(Token)match(input,27,FOLLOW_9); 
 
             			newLeafNode(otherlv_0, grammarAccess.getAyahStartAccess().getArabicLetterAlefArabicLetterLamArabicLetterSeenArabicLetterWawArabicLetterRehArabicLetterTehMarbutaKeyword_0());
             		
@@ -723,7 +726,7 @@ public class InternalAbjadParser extends AbstractInternalAntlrParser {
             // InternalAbjad.g:316:4: (lv_surah_1_0= RULE_INT )
             // InternalAbjad.g:317:5: lv_surah_1_0= RULE_INT
             {
-            lv_surah_1_0=(Token)match(input,RULE_INT,FOLLOW_12); 
+            lv_surah_1_0=(Token)match(input,RULE_INT,FOLLOW_10); 
 
             					newLeafNode(lv_surah_1_0, grammarAccess.getAyahStartAccess().getSurahINTTerminalRuleCall_1_0());
             				
@@ -743,7 +746,7 @@ public class InternalAbjadParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,25,FOLLOW_11); 
+            otherlv_2=(Token)match(input,28,FOLLOW_9); 
 
             			newLeafNode(otherlv_2, grammarAccess.getAyahStartAccess().getArabicLetterAlefArabicLetterLamArabicLetterAlefWithMaddaAboveArabicLetterYehArabicLetterTehMarbutaKeyword_2());
             		
@@ -753,7 +756,7 @@ public class InternalAbjadParser extends AbstractInternalAntlrParser {
             // InternalAbjad.g:338:4: (lv_ayah_3_0= RULE_INT )
             // InternalAbjad.g:339:5: lv_ayah_3_0= RULE_INT
             {
-            lv_ayah_3_0=(Token)match(input,RULE_INT,FOLLOW_8); 
+            lv_ayah_3_0=(Token)match(input,RULE_INT,FOLLOW_7); 
 
             					newLeafNode(lv_ayah_3_0, grammarAccess.getAyahStartAccess().getAyahINTTerminalRuleCall_3_0());
             				
@@ -858,92 +861,93 @@ public class InternalAbjadParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulePhrase"
-    // InternalAbjad.g:384:1: rulePhrase returns [EObject current=null] : ( ( (lv_words_0_0= RULE_AWORD ) ) (this_WS_1= RULE_WS ( (lv_words_2_0= RULE_AWORD ) ) )* ) ;
+    // InternalAbjad.g:384:1: rulePhrase returns [EObject current=null] : ( ( (lv_basmalah_0_0= RULE_BASMALAH ) )? ( (lv_words_1_0= RULE_AWORD ) )+ ) ;
     public final EObject rulePhrase() throws RecognitionException {
         EObject current = null;
 
-        Token lv_words_0_0=null;
-        Token this_WS_1=null;
-        Token lv_words_2_0=null;
+        Token lv_basmalah_0_0=null;
+        Token lv_words_1_0=null;
 
 
         	enterRule();
 
         try {
-            // InternalAbjad.g:390:2: ( ( ( (lv_words_0_0= RULE_AWORD ) ) (this_WS_1= RULE_WS ( (lv_words_2_0= RULE_AWORD ) ) )* ) )
-            // InternalAbjad.g:391:2: ( ( (lv_words_0_0= RULE_AWORD ) ) (this_WS_1= RULE_WS ( (lv_words_2_0= RULE_AWORD ) ) )* )
+            // InternalAbjad.g:390:2: ( ( ( (lv_basmalah_0_0= RULE_BASMALAH ) )? ( (lv_words_1_0= RULE_AWORD ) )+ ) )
+            // InternalAbjad.g:391:2: ( ( (lv_basmalah_0_0= RULE_BASMALAH ) )? ( (lv_words_1_0= RULE_AWORD ) )+ )
             {
-            // InternalAbjad.g:391:2: ( ( (lv_words_0_0= RULE_AWORD ) ) (this_WS_1= RULE_WS ( (lv_words_2_0= RULE_AWORD ) ) )* )
-            // InternalAbjad.g:392:3: ( (lv_words_0_0= RULE_AWORD ) ) (this_WS_1= RULE_WS ( (lv_words_2_0= RULE_AWORD ) ) )*
+            // InternalAbjad.g:391:2: ( ( (lv_basmalah_0_0= RULE_BASMALAH ) )? ( (lv_words_1_0= RULE_AWORD ) )+ )
+            // InternalAbjad.g:392:3: ( (lv_basmalah_0_0= RULE_BASMALAH ) )? ( (lv_words_1_0= RULE_AWORD ) )+
             {
-            // InternalAbjad.g:392:3: ( (lv_words_0_0= RULE_AWORD ) )
-            // InternalAbjad.g:393:4: (lv_words_0_0= RULE_AWORD )
-            {
-            // InternalAbjad.g:393:4: (lv_words_0_0= RULE_AWORD )
-            // InternalAbjad.g:394:5: lv_words_0_0= RULE_AWORD
-            {
-            lv_words_0_0=(Token)match(input,RULE_AWORD,FOLLOW_13); 
+            // InternalAbjad.g:392:3: ( (lv_basmalah_0_0= RULE_BASMALAH ) )?
+            int alt4=2;
+            int LA4_0 = input.LA(1);
 
-            					newLeafNode(lv_words_0_0, grammarAccess.getPhraseAccess().getWordsAWORDTerminalRuleCall_0_0());
-            				
+            if ( (LA4_0==RULE_BASMALAH) ) {
+                alt4=1;
+            }
+            switch (alt4) {
+                case 1 :
+                    // InternalAbjad.g:393:4: (lv_basmalah_0_0= RULE_BASMALAH )
+                    {
+                    // InternalAbjad.g:393:4: (lv_basmalah_0_0= RULE_BASMALAH )
+                    // InternalAbjad.g:394:5: lv_basmalah_0_0= RULE_BASMALAH
+                    {
+                    lv_basmalah_0_0=(Token)match(input,RULE_BASMALAH,FOLLOW_4); 
 
-            					if (current==null) {
-            						current = createModelElement(grammarAccess.getPhraseRule());
-            					}
-            					addWithLastConsumed(
-            						current,
-            						"words",
-            						lv_words_0_0,
-            						"org.qwork.Arabic.AWORD");
-            				
+                    					newLeafNode(lv_basmalah_0_0, grammarAccess.getPhraseAccess().getBasmalahBASMALAHTerminalRuleCall_0_0());
+                    				
+
+                    					if (current==null) {
+                    						current = createModelElement(grammarAccess.getPhraseRule());
+                    					}
+                    					setWithLastConsumed(
+                    						current,
+                    						"basmalah",
+                    						lv_basmalah_0_0 != null,
+                    						"org.qwork.Arabic.BASMALAH");
+                    				
+
+                    }
+
+
+                    }
+                    break;
 
             }
 
-
-            }
-
-            // InternalAbjad.g:410:3: (this_WS_1= RULE_WS ( (lv_words_2_0= RULE_AWORD ) ) )*
-            loop4:
+            // InternalAbjad.g:410:3: ( (lv_words_1_0= RULE_AWORD ) )+
+            int cnt5=0;
+            loop5:
             do {
-                int alt4=2;
-                int LA4_0 = input.LA(1);
+                int alt5=2;
+                int LA5_0 = input.LA(1);
 
-                if ( (LA4_0==RULE_WS) ) {
-                    alt4=1;
+                if ( (LA5_0==RULE_AWORD) ) {
+                    alt5=1;
                 }
 
 
-                switch (alt4) {
+                switch (alt5) {
             	case 1 :
-            	    // InternalAbjad.g:411:4: this_WS_1= RULE_WS ( (lv_words_2_0= RULE_AWORD ) )
+            	    // InternalAbjad.g:411:4: (lv_words_1_0= RULE_AWORD )
             	    {
-            	    this_WS_1=(Token)match(input,RULE_WS,FOLLOW_4); 
-
-            	    				newLeafNode(this_WS_1, grammarAccess.getPhraseAccess().getWSTerminalRuleCall_1_0());
-            	    			
-            	    // InternalAbjad.g:415:4: ( (lv_words_2_0= RULE_AWORD ) )
-            	    // InternalAbjad.g:416:5: (lv_words_2_0= RULE_AWORD )
+            	    // InternalAbjad.g:411:4: (lv_words_1_0= RULE_AWORD )
+            	    // InternalAbjad.g:412:5: lv_words_1_0= RULE_AWORD
             	    {
-            	    // InternalAbjad.g:416:5: (lv_words_2_0= RULE_AWORD )
-            	    // InternalAbjad.g:417:6: lv_words_2_0= RULE_AWORD
-            	    {
-            	    lv_words_2_0=(Token)match(input,RULE_AWORD,FOLLOW_13); 
+            	    lv_words_1_0=(Token)match(input,RULE_AWORD,FOLLOW_11); 
 
-            	    						newLeafNode(lv_words_2_0, grammarAccess.getPhraseAccess().getWordsAWORDTerminalRuleCall_1_1_0());
-            	    					
+            	    					newLeafNode(lv_words_1_0, grammarAccess.getPhraseAccess().getWordsAWORDTerminalRuleCall_1_0());
+            	    				
 
-            	    						if (current==null) {
-            	    							current = createModelElement(grammarAccess.getPhraseRule());
-            	    						}
-            	    						addWithLastConsumed(
-            	    							current,
-            	    							"words",
-            	    							lv_words_2_0,
-            	    							"org.qwork.Arabic.AWORD");
-            	    					
-
-            	    }
-
+            	    					if (current==null) {
+            	    						current = createModelElement(grammarAccess.getPhraseRule());
+            	    					}
+            	    					addWithLastConsumed(
+            	    						current,
+            	    						"words",
+            	    						lv_words_1_0,
+            	    						"org.qwork.Arabic.AWORD");
+            	    				
 
             	    }
 
@@ -952,8 +956,12 @@ public class InternalAbjadParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop4;
+            	    if ( cnt5 >= 1 ) break loop5;
+                        EarlyExitException eee =
+                            new EarlyExitException(5, input);
+                        throw eee;
                 }
+                cnt5++;
             } while (true);
 
 
@@ -984,16 +992,14 @@ public class InternalAbjadParser extends AbstractInternalAntlrParser {
 
     public static final BitSet FOLLOW_1 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_2 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_3 = new BitSet(new long[]{0x0000000000440002L});
+    public static final BitSet FOLLOW_3 = new BitSet(new long[]{0x0000000002200002L});
     public static final BitSet FOLLOW_4 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_5 = new BitSet(new long[]{0x0000000000280000L});
-    public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x0000000000100002L});
-    public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x0000000000800000L});
-    public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x0000000000000080L});
-    public static final BitSet FOLLOW_11 = new BitSet(new long[]{0x0000000000000100L});
-    public static final BitSet FOLLOW_12 = new BitSet(new long[]{0x0000000002000000L});
-    public static final BitSet FOLLOW_13 = new BitSet(new long[]{0x0000000000000202L});
+    public static final BitSet FOLLOW_5 = new BitSet(new long[]{0x0000000001400000L});
+    public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x0000000000800002L});
+    public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x0000000004000000L});
+    public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x0000000010000000L});
+    public static final BitSet FOLLOW_11 = new BitSet(new long[]{0x0000000000000012L});
 
 }

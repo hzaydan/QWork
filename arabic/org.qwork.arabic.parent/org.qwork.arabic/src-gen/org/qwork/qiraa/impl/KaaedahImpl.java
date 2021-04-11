@@ -18,11 +18,12 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
-import org.qwork.qiraa.HarfQuran;
+import org.qwork.osolqiraa.HarfQuran;
+import org.qwork.osolqiraa.Kayd;
+import org.qwork.osolqiraa.YokraaLahWaRamz;
+
 import org.qwork.qiraa.Kaaedah;
-import org.qwork.qiraa.Kayd;
 import org.qwork.qiraa.QiraaPackage;
-import org.qwork.qiraa.YokraaLahWaRamz;
 
 /**
  * <!-- begin-user-doc -->

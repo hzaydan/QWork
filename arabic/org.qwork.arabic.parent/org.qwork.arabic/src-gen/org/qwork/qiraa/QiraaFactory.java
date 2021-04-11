@@ -33,69 +33,6 @@ public interface QiraaFactory extends EFactory
   QiraaModel createQiraaModel();
 
   /**
-   * Returns a new object of class '<em>Qaree</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Qaree</em>'.
-   * @generated
-   */
-  Qaree createQaree();
-
-  /**
-   * Returns a new object of class '<em>Rawee</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Rawee</em>'.
-   * @generated
-   */
-  Rawee createRawee();
-
-  /**
-   * Returns a new object of class '<em>Yokraa Lah</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Yokraa Lah</em>'.
-   * @generated
-   */
-  YokraaLah createYokraaLah();
-
-  /**
-   * Returns a new object of class '<em>Person</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Person</em>'.
-   * @generated
-   */
-  Person createPerson();
-
-  /**
-   * Returns a new object of class '<em>Douaa</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Douaa</em>'.
-   * @generated
-   */
-  Douaa createDouaa();
-
-  /**
-   * Returns a new object of class '<em>Tareek</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Tareek</em>'.
-   * @generated
-   */
-  Tareek createTareek();
-
-  /**
-   * Returns a new object of class '<em>IMAM</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>IMAM</em>'.
-   * @generated
-   */
-  IMAM createIMAM();
-
-  /**
    * Returns a new object of class '<em>Marjeh</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -105,49 +42,13 @@ public interface QiraaFactory extends EFactory
   Marjeh createMarjeh();
 
   /**
-   * Returns a new object of class '<em>Maktah</em>'.
+   * Returns a new object of class '<em>Tafsil</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Maktah</em>'.
+   * @return a new object of class '<em>Tafsil</em>'.
    * @generated
    */
-  Maktah createMaktah();
-
-  /**
-   * Returns a new object of class '<em>Kayd</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Kayd</em>'.
-   * @generated
-   */
-  Kayd createKayd();
-
-  /**
-   * Returns a new object of class '<em>Istelah</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Istelah</em>'.
-   * @generated
-   */
-  Istelah createIstelah();
-
-  /**
-   * Returns a new object of class '<em>Ramz</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Ramz</em>'.
-   * @generated
-   */
-  Ramz createRamz();
-
-  /**
-   * Returns a new object of class '<em>Yokraa Lah Wa Ramz</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Yokraa Lah Wa Ramz</em>'.
-   * @generated
-   */
-  YokraaLahWaRamz createYokraaLahWaRamz();
+  Tafsil createTafsil();
 
   /**
    * Returns a new object of class '<em>Kaaedah</em>'.
@@ -157,15 +58,6 @@ public interface QiraaFactory extends EFactory
    * @generated
    */
   Kaaedah createKaaedah();
-
-  /**
-   * Returns a new object of class '<em>Harf Quran</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Harf Quran</em>'.
-   * @generated
-   */
-  HarfQuran createHarfQuran();
 
   /**
    * Returns the package supported by this factory.

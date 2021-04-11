@@ -21,25 +21,28 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalQAyahStartParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_INT", "RULE_KALEMAH", "RULE_AWORD", "RULE_WS", "RULE_ALETTER", "RULE_ADIGIT", "RULE_AHARAKAH", "RULE_ASHADDAH", "RULE_ANONLETTER", "RULE_ID", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_ANY_OTHER", "'\\u0627\\u0644\\u0633\\u0648\\u0631\\u0629'", "'\\u0627\\u0644\\u0622\\u064A\\u0629'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_INT", "RULE_KALEMAH", "RULE_BASMALAH", "RULE_AWORD", "RULE_ALETTER", "RULE_AHARAKAH", "RULE_ATANWEEN", "RULE_ASHADDAH", "RULE_ALIGATURES", "RULE_ADIGIT", "RULE_ANONLETTER", "RULE_SL_COMMENT", "RULE_ID", "RULE_STRING", "RULE_ML_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'\\u0627\\u0644\\u0633\\u0648\\u0631\\u0629'", "'\\u0627\\u0644\\u0622\\u064A\\u0629'"
     };
-    public static final int RULE_AHARAKAH=10;
-    public static final int RULE_STRING=14;
-    public static final int RULE_ANONLETTER=12;
-    public static final int RULE_SL_COMMENT=16;
-    public static final int T__19=19;
+    public static final int RULE_BASMALAH=6;
+    public static final int RULE_AHARAKAH=9;
+    public static final int RULE_STRING=17;
+    public static final int RULE_ANONLETTER=14;
+    public static final int RULE_SL_COMMENT=15;
     public static final int RULE_KALEMAH=5;
-    public static final int T__18=18;
     public static final int RULE_ASHADDAH=11;
     public static final int RULE_ALETTER=8;
+    public static final int RULE_ATANWEEN=10;
     public static final int EOF=-1;
-    public static final int RULE_ID=13;
-    public static final int RULE_WS=7;
-    public static final int RULE_ANY_OTHER=17;
-    public static final int RULE_ADIGIT=9;
+    public static final int RULE_ALIGATURES=12;
+    public static final int RULE_ID=16;
+    public static final int RULE_WS=19;
+    public static final int RULE_ANY_OTHER=20;
+    public static final int RULE_ADIGIT=13;
     public static final int RULE_INT=4;
-    public static final int RULE_AWORD=6;
-    public static final int RULE_ML_COMMENT=15;
+    public static final int RULE_AWORD=7;
+    public static final int T__22=22;
+    public static final int RULE_ML_COMMENT=18;
+    public static final int T__21=21;
 
     // delegates
     // delegators
@@ -138,7 +141,7 @@ public class InternalQAyahStartParser extends AbstractInternalAntlrParser {
                 int alt1=2;
                 int LA1_0 = input.LA(1);
 
-                if ( (LA1_0==18) ) {
+                if ( (LA1_0==21) ) {
                     alt1=1;
                 }
 
@@ -261,7 +264,7 @@ public class InternalQAyahStartParser extends AbstractInternalAntlrParser {
             // InternalQAyahStart.g:114:2: (otherlv_0= '\\u0627\\u0644\\u0633\\u0648\\u0631\\u0629' ( (lv_surah_1_0= RULE_INT ) ) otherlv_2= '\\u0627\\u0644\\u0622\\u064A\\u0629' ( (lv_ayah_3_0= RULE_INT ) ) ( (lv_name_4_0= RULE_KALEMAH ) ) )
             // InternalQAyahStart.g:115:3: otherlv_0= '\\u0627\\u0644\\u0633\\u0648\\u0631\\u0629' ( (lv_surah_1_0= RULE_INT ) ) otherlv_2= '\\u0627\\u0644\\u0622\\u064A\\u0629' ( (lv_ayah_3_0= RULE_INT ) ) ( (lv_name_4_0= RULE_KALEMAH ) )
             {
-            otherlv_0=(Token)match(input,18,FOLLOW_4); 
+            otherlv_0=(Token)match(input,21,FOLLOW_4); 
 
             			newLeafNode(otherlv_0, grammarAccess.getAyahStartAccess().getArabicLetterAlefArabicLetterLamArabicLetterSeenArabicLetterWawArabicLetterRehArabicLetterTehMarbutaKeyword_0());
             		
@@ -291,7 +294,7 @@ public class InternalQAyahStartParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,19,FOLLOW_4); 
+            otherlv_2=(Token)match(input,22,FOLLOW_4); 
 
             			newLeafNode(otherlv_2, grammarAccess.getAyahStartAccess().getArabicLetterAlefArabicLetterLamArabicLetterAlefWithMaddaAboveArabicLetterYehArabicLetterTehMarbutaKeyword_2());
             		
@@ -406,92 +409,93 @@ public class InternalQAyahStartParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulePhrase"
-    // InternalQAyahStart.g:188:1: rulePhrase returns [EObject current=null] : ( ( (lv_words_0_0= RULE_AWORD ) ) (this_WS_1= RULE_WS ( (lv_words_2_0= RULE_AWORD ) ) )* ) ;
+    // InternalQAyahStart.g:188:1: rulePhrase returns [EObject current=null] : ( ( (lv_basmalah_0_0= RULE_BASMALAH ) )? ( (lv_words_1_0= RULE_AWORD ) )+ ) ;
     public final EObject rulePhrase() throws RecognitionException {
         EObject current = null;
 
-        Token lv_words_0_0=null;
-        Token this_WS_1=null;
-        Token lv_words_2_0=null;
+        Token lv_basmalah_0_0=null;
+        Token lv_words_1_0=null;
 
 
         	enterRule();
 
         try {
-            // InternalQAyahStart.g:194:2: ( ( ( (lv_words_0_0= RULE_AWORD ) ) (this_WS_1= RULE_WS ( (lv_words_2_0= RULE_AWORD ) ) )* ) )
-            // InternalQAyahStart.g:195:2: ( ( (lv_words_0_0= RULE_AWORD ) ) (this_WS_1= RULE_WS ( (lv_words_2_0= RULE_AWORD ) ) )* )
+            // InternalQAyahStart.g:194:2: ( ( ( (lv_basmalah_0_0= RULE_BASMALAH ) )? ( (lv_words_1_0= RULE_AWORD ) )+ ) )
+            // InternalQAyahStart.g:195:2: ( ( (lv_basmalah_0_0= RULE_BASMALAH ) )? ( (lv_words_1_0= RULE_AWORD ) )+ )
             {
-            // InternalQAyahStart.g:195:2: ( ( (lv_words_0_0= RULE_AWORD ) ) (this_WS_1= RULE_WS ( (lv_words_2_0= RULE_AWORD ) ) )* )
-            // InternalQAyahStart.g:196:3: ( (lv_words_0_0= RULE_AWORD ) ) (this_WS_1= RULE_WS ( (lv_words_2_0= RULE_AWORD ) ) )*
+            // InternalQAyahStart.g:195:2: ( ( (lv_basmalah_0_0= RULE_BASMALAH ) )? ( (lv_words_1_0= RULE_AWORD ) )+ )
+            // InternalQAyahStart.g:196:3: ( (lv_basmalah_0_0= RULE_BASMALAH ) )? ( (lv_words_1_0= RULE_AWORD ) )+
             {
-            // InternalQAyahStart.g:196:3: ( (lv_words_0_0= RULE_AWORD ) )
-            // InternalQAyahStart.g:197:4: (lv_words_0_0= RULE_AWORD )
-            {
-            // InternalQAyahStart.g:197:4: (lv_words_0_0= RULE_AWORD )
-            // InternalQAyahStart.g:198:5: lv_words_0_0= RULE_AWORD
-            {
-            lv_words_0_0=(Token)match(input,RULE_AWORD,FOLLOW_7); 
+            // InternalQAyahStart.g:196:3: ( (lv_basmalah_0_0= RULE_BASMALAH ) )?
+            int alt2=2;
+            int LA2_0 = input.LA(1);
 
-            					newLeafNode(lv_words_0_0, grammarAccess.getPhraseAccess().getWordsAWORDTerminalRuleCall_0_0());
-            				
+            if ( (LA2_0==RULE_BASMALAH) ) {
+                alt2=1;
+            }
+            switch (alt2) {
+                case 1 :
+                    // InternalQAyahStart.g:197:4: (lv_basmalah_0_0= RULE_BASMALAH )
+                    {
+                    // InternalQAyahStart.g:197:4: (lv_basmalah_0_0= RULE_BASMALAH )
+                    // InternalQAyahStart.g:198:5: lv_basmalah_0_0= RULE_BASMALAH
+                    {
+                    lv_basmalah_0_0=(Token)match(input,RULE_BASMALAH,FOLLOW_7); 
 
-            					if (current==null) {
-            						current = createModelElement(grammarAccess.getPhraseRule());
-            					}
-            					addWithLastConsumed(
-            						current,
-            						"words",
-            						lv_words_0_0,
-            						"org.qwork.Arabic.AWORD");
-            				
+                    					newLeafNode(lv_basmalah_0_0, grammarAccess.getPhraseAccess().getBasmalahBASMALAHTerminalRuleCall_0_0());
+                    				
+
+                    					if (current==null) {
+                    						current = createModelElement(grammarAccess.getPhraseRule());
+                    					}
+                    					setWithLastConsumed(
+                    						current,
+                    						"basmalah",
+                    						lv_basmalah_0_0 != null,
+                    						"org.qwork.Arabic.BASMALAH");
+                    				
+
+                    }
+
+
+                    }
+                    break;
 
             }
 
-
-            }
-
-            // InternalQAyahStart.g:214:3: (this_WS_1= RULE_WS ( (lv_words_2_0= RULE_AWORD ) ) )*
-            loop2:
+            // InternalQAyahStart.g:214:3: ( (lv_words_1_0= RULE_AWORD ) )+
+            int cnt3=0;
+            loop3:
             do {
-                int alt2=2;
-                int LA2_0 = input.LA(1);
+                int alt3=2;
+                int LA3_0 = input.LA(1);
 
-                if ( (LA2_0==RULE_WS) ) {
-                    alt2=1;
+                if ( (LA3_0==RULE_AWORD) ) {
+                    alt3=1;
                 }
 
 
-                switch (alt2) {
+                switch (alt3) {
             	case 1 :
-            	    // InternalQAyahStart.g:215:4: this_WS_1= RULE_WS ( (lv_words_2_0= RULE_AWORD ) )
+            	    // InternalQAyahStart.g:215:4: (lv_words_1_0= RULE_AWORD )
             	    {
-            	    this_WS_1=(Token)match(input,RULE_WS,FOLLOW_8); 
-
-            	    				newLeafNode(this_WS_1, grammarAccess.getPhraseAccess().getWSTerminalRuleCall_1_0());
-            	    			
-            	    // InternalQAyahStart.g:219:4: ( (lv_words_2_0= RULE_AWORD ) )
-            	    // InternalQAyahStart.g:220:5: (lv_words_2_0= RULE_AWORD )
+            	    // InternalQAyahStart.g:215:4: (lv_words_1_0= RULE_AWORD )
+            	    // InternalQAyahStart.g:216:5: lv_words_1_0= RULE_AWORD
             	    {
-            	    // InternalQAyahStart.g:220:5: (lv_words_2_0= RULE_AWORD )
-            	    // InternalQAyahStart.g:221:6: lv_words_2_0= RULE_AWORD
-            	    {
-            	    lv_words_2_0=(Token)match(input,RULE_AWORD,FOLLOW_7); 
+            	    lv_words_1_0=(Token)match(input,RULE_AWORD,FOLLOW_8); 
 
-            	    						newLeafNode(lv_words_2_0, grammarAccess.getPhraseAccess().getWordsAWORDTerminalRuleCall_1_1_0());
-            	    					
+            	    					newLeafNode(lv_words_1_0, grammarAccess.getPhraseAccess().getWordsAWORDTerminalRuleCall_1_0());
+            	    				
 
-            	    						if (current==null) {
-            	    							current = createModelElement(grammarAccess.getPhraseRule());
-            	    						}
-            	    						addWithLastConsumed(
-            	    							current,
-            	    							"words",
-            	    							lv_words_2_0,
-            	    							"org.qwork.Arabic.AWORD");
-            	    					
-
-            	    }
-
+            	    					if (current==null) {
+            	    						current = createModelElement(grammarAccess.getPhraseRule());
+            	    					}
+            	    					addWithLastConsumed(
+            	    						current,
+            	    						"words",
+            	    						lv_words_1_0,
+            	    						"org.qwork.Arabic.AWORD");
+            	    				
 
             	    }
 
@@ -500,8 +504,12 @@ public class InternalQAyahStartParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop2;
+            	    if ( cnt3 >= 1 ) break loop3;
+                        EarlyExitException eee =
+                            new EarlyExitException(3, input);
+                        throw eee;
                 }
+                cnt3++;
             } while (true);
 
 
@@ -532,11 +540,11 @@ public class InternalQAyahStartParser extends AbstractInternalAntlrParser {
 
     public static final BitSet FOLLOW_1 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_2 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_3 = new BitSet(new long[]{0x0000000000040002L});
+    public static final BitSet FOLLOW_3 = new BitSet(new long[]{0x0000000000200002L});
     public static final BitSet FOLLOW_4 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_5 = new BitSet(new long[]{0x0000000000080000L});
+    public static final BitSet FOLLOW_5 = new BitSet(new long[]{0x0000000000400000L});
     public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x0000000000000082L});
-    public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x0000000000000080L});
+    public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x0000000000000082L});
 
 }

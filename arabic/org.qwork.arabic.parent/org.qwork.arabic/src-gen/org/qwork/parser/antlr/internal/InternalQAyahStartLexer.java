@@ -12,23 +12,26 @@ import java.util.ArrayList;
 
 @SuppressWarnings("all")
 public class InternalQAyahStartLexer extends Lexer {
-    public static final int RULE_AHARAKAH=10;
-    public static final int RULE_STRING=14;
-    public static final int RULE_ANONLETTER=12;
-    public static final int RULE_SL_COMMENT=16;
-    public static final int T__19=19;
+    public static final int RULE_BASMALAH=6;
+    public static final int RULE_AHARAKAH=9;
+    public static final int RULE_STRING=17;
+    public static final int RULE_ANONLETTER=14;
+    public static final int RULE_SL_COMMENT=15;
     public static final int RULE_KALEMAH=5;
-    public static final int T__18=18;
     public static final int RULE_ASHADDAH=11;
     public static final int RULE_ALETTER=8;
+    public static final int RULE_ATANWEEN=10;
     public static final int EOF=-1;
-    public static final int RULE_ID=13;
-    public static final int RULE_WS=7;
-    public static final int RULE_ANY_OTHER=17;
-    public static final int RULE_ADIGIT=9;
+    public static final int RULE_ALIGATURES=12;
+    public static final int RULE_ID=16;
+    public static final int RULE_WS=19;
+    public static final int RULE_ANY_OTHER=20;
+    public static final int RULE_ADIGIT=13;
     public static final int RULE_INT=4;
-    public static final int RULE_AWORD=6;
-    public static final int RULE_ML_COMMENT=15;
+    public static final int RULE_AWORD=7;
+    public static final int T__22=22;
+    public static final int RULE_ML_COMMENT=18;
+    public static final int T__21=21;
 
     // delegates
     // delegators
@@ -43,10 +46,10 @@ public class InternalQAyahStartLexer extends Lexer {
     }
     public String getGrammarFileName() { return "InternalQAyahStart.g"; }
 
-    // $ANTLR start "T__18"
-    public final void mT__18() throws RecognitionException {
+    // $ANTLR start "T__21"
+    public final void mT__21() throws RecognitionException {
         try {
-            int _type = T__18;
+            int _type = T__21;
             int _channel = DEFAULT_TOKEN_CHANNEL;
             // InternalQAyahStart.g:11:7: ( '\\u0627\\u0644\\u0633\\u0648\\u0631\\u0629' )
             // InternalQAyahStart.g:11:9: '\\u0627\\u0644\\u0633\\u0648\\u0631\\u0629'
@@ -62,12 +65,12 @@ public class InternalQAyahStartLexer extends Lexer {
         finally {
         }
     }
-    // $ANTLR end "T__18"
+    // $ANTLR end "T__21"
 
-    // $ANTLR start "T__19"
-    public final void mT__19() throws RecognitionException {
+    // $ANTLR start "T__22"
+    public final void mT__22() throws RecognitionException {
         try {
-            int _type = T__19;
+            int _type = T__22;
             int _channel = DEFAULT_TOKEN_CHANNEL;
             // InternalQAyahStart.g:12:7: ( '\\u0627\\u0644\\u0622\\u064A\\u0629' )
             // InternalQAyahStart.g:12:9: '\\u0627\\u0644\\u0622\\u064A\\u0629'
@@ -83,100 +86,17 @@ public class InternalQAyahStartLexer extends Lexer {
         finally {
         }
     }
-    // $ANTLR end "T__19"
+    // $ANTLR end "T__22"
 
-    // $ANTLR start "RULE_ALETTER"
-    public final void mRULE_ALETTER() throws RecognitionException {
+    // $ANTLR start "RULE_BASMALAH"
+    public final void mRULE_BASMALAH() throws RecognitionException {
         try {
-            // InternalQAyahStart.g:241:23: ( '\\u0621' .. '\\u064A' )
-            // InternalQAyahStart.g:241:25: '\\u0621' .. '\\u064A'
-            {
-            matchRange('\u0621','\u064A'); 
-
-            }
-
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "RULE_ALETTER"
-
-    // $ANTLR start "RULE_ADIGIT"
-    public final void mRULE_ADIGIT() throws RecognitionException {
-        try {
-            int _type = RULE_ADIGIT;
+            int _type = RULE_BASMALAH;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalQAyahStart.g:243:13: ( '\\u0660' .. '\\u0669' )
-            // InternalQAyahStart.g:243:15: '\\u0660' .. '\\u0669'
+            // InternalQAyahStart.g:235:15: ( '\\u0628\\u0650\\u0633\\u0652\\u0645\\u0650 \\u0627\\u0644\\u0644\\u0651\\u064E\\u0647\\u0650 \\u0627\\u0644\\u0631\\u0651\\u064E\\u062D\\u0652\\u0645\\u064E\\u0646\\u0650 \\u0627\\u0644\\u0631\\u0651\\u064E\\u062D\\u0650\\u064A\\u0645\\u0650' )
+            // InternalQAyahStart.g:235:17: '\\u0628\\u0650\\u0633\\u0652\\u0645\\u0650 \\u0627\\u0644\\u0644\\u0651\\u064E\\u0647\\u0650 \\u0627\\u0644\\u0631\\u0651\\u064E\\u062D\\u0652\\u0645\\u064E\\u0646\\u0650 \\u0627\\u0644\\u0631\\u0651\\u064E\\u062D\\u0650\\u064A\\u0645\\u0650'
             {
-            matchRange('\u0660','\u0669'); 
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "RULE_ADIGIT"
-
-    // $ANTLR start "RULE_AHARAKAH"
-    public final void mRULE_AHARAKAH() throws RecognitionException {
-        try {
-            // InternalQAyahStart.g:245:24: ( ( '\\u064E' .. '\\u0650' | '\\u0652' ) )
-            // InternalQAyahStart.g:245:26: ( '\\u064E' .. '\\u0650' | '\\u0652' )
-            {
-            if ( (input.LA(1)>='\u064E' && input.LA(1)<='\u0650')||input.LA(1)=='\u0652' ) {
-                input.consume();
-
-            }
-            else {
-                MismatchedSetException mse = new MismatchedSetException(null,input);
-                recover(mse);
-                throw mse;}
-
-
-            }
-
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "RULE_AHARAKAH"
-
-    // $ANTLR start "RULE_ASHADDAH"
-    public final void mRULE_ASHADDAH() throws RecognitionException {
-        try {
-            // InternalQAyahStart.g:247:24: ( '\\u0651' )
-            // InternalQAyahStart.g:247:26: '\\u0651'
-            {
-            match('\u0651'); 
-
-            }
-
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "RULE_ASHADDAH"
-
-    // $ANTLR start "RULE_ANONLETTER"
-    public final void mRULE_ANONLETTER() throws RecognitionException {
-        try {
-            int _type = RULE_ANONLETTER;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalQAyahStart.g:249:17: ( ( '\\u0600' .. '\\u0620' | '\\u064B' .. '\\u06FF' ) )
-            // InternalQAyahStart.g:249:19: ( '\\u0600' .. '\\u0620' | '\\u064B' .. '\\u06FF' )
-            {
-            if ( (input.LA(1)>='\u0600' && input.LA(1)<='\u0620')||(input.LA(1)>='\u064B' && input.LA(1)<='\u06FF') ) {
-                input.consume();
-
-            }
-            else {
-                MismatchedSetException mse = new MismatchedSetException(null,input);
-                recover(mse);
-                throw mse;}
+            match("\u0628\u0650\u0633\u0652\u0645\u0650 \u0627\u0644\u0644\u0651\u064E\u0647\u0650 \u0627\u0644\u0631\u0651\u064E\u062D\u0652\u0645\u064E\u0646\u0650 \u0627\u0644\u0631\u0651\u064E\u062D\u0650\u064A\u0645\u0650"); 
 
 
             }
@@ -187,24 +107,24 @@ public class InternalQAyahStartLexer extends Lexer {
         finally {
         }
     }
-    // $ANTLR end "RULE_ANONLETTER"
+    // $ANTLR end "RULE_BASMALAH"
 
     // $ANTLR start "RULE_AWORD"
     public final void mRULE_AWORD() throws RecognitionException {
         try {
             int _type = RULE_AWORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalQAyahStart.g:251:12: ( ( RULE_ALETTER | RULE_AHARAKAH | RULE_ASHADDAH )+ )
-            // InternalQAyahStart.g:251:14: ( RULE_ALETTER | RULE_AHARAKAH | RULE_ASHADDAH )+
+            // InternalQAyahStart.g:237:12: ( ( RULE_ALETTER | RULE_AHARAKAH | RULE_ATANWEEN | RULE_ASHADDAH )+ )
+            // InternalQAyahStart.g:237:14: ( RULE_ALETTER | RULE_AHARAKAH | RULE_ATANWEEN | RULE_ASHADDAH )+
             {
-            // InternalQAyahStart.g:251:14: ( RULE_ALETTER | RULE_AHARAKAH | RULE_ASHADDAH )+
+            // InternalQAyahStart.g:237:14: ( RULE_ALETTER | RULE_AHARAKAH | RULE_ATANWEEN | RULE_ASHADDAH )+
             int cnt1=0;
             loop1:
             do {
                 int alt1=2;
                 int LA1_0 = input.LA(1);
 
-                if ( ((LA1_0>='\u0621' && LA1_0<='\u064A')||(LA1_0>='\u064E' && LA1_0<='\u0652')) ) {
+                if ( ((LA1_0>='\u0621' && LA1_0<='\u0652')) ) {
                     alt1=1;
                 }
 
@@ -213,7 +133,7 @@ public class InternalQAyahStartLexer extends Lexer {
             	case 1 :
             	    // InternalQAyahStart.g:
             	    {
-            	    if ( (input.LA(1)>='\u0621' && input.LA(1)<='\u064A')||(input.LA(1)>='\u064E' && input.LA(1)<='\u0652') ) {
+            	    if ( (input.LA(1)>='\u0621' && input.LA(1)<='\u0652') ) {
             	        input.consume();
 
             	    }
@@ -245,6 +165,134 @@ public class InternalQAyahStartLexer extends Lexer {
         }
     }
     // $ANTLR end "RULE_AWORD"
+
+    // $ANTLR start "RULE_ALIGATURES"
+    public final void mRULE_ALIGATURES() throws RecognitionException {
+        try {
+            // InternalQAyahStart.g:239:26: ( '\\uFDF0' .. '\\uFDFD' )
+            // InternalQAyahStart.g:239:28: '\\uFDF0' .. '\\uFDFD'
+            {
+            matchRange('\uFDF0','\uFDFD'); 
+
+            }
+
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "RULE_ALIGATURES"
+
+    // $ANTLR start "RULE_ALETTER"
+    public final void mRULE_ALETTER() throws RecognitionException {
+        try {
+            // InternalQAyahStart.g:241:23: ( '\\u0621' .. '\\u064A' )
+            // InternalQAyahStart.g:241:25: '\\u0621' .. '\\u064A'
+            {
+            matchRange('\u0621','\u064A'); 
+
+            }
+
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "RULE_ALETTER"
+
+    // $ANTLR start "RULE_ADIGIT"
+    public final void mRULE_ADIGIT() throws RecognitionException {
+        try {
+            // InternalQAyahStart.g:243:22: ( '\\u0660' .. '\\u0669' )
+            // InternalQAyahStart.g:243:24: '\\u0660' .. '\\u0669'
+            {
+            matchRange('\u0660','\u0669'); 
+
+            }
+
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "RULE_ADIGIT"
+
+    // $ANTLR start "RULE_ATANWEEN"
+    public final void mRULE_ATANWEEN() throws RecognitionException {
+        try {
+            // InternalQAyahStart.g:245:24: ( '\\u064B' .. '\\u064D' )
+            // InternalQAyahStart.g:245:26: '\\u064B' .. '\\u064D'
+            {
+            matchRange('\u064B','\u064D'); 
+
+            }
+
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "RULE_ATANWEEN"
+
+    // $ANTLR start "RULE_AHARAKAH"
+    public final void mRULE_AHARAKAH() throws RecognitionException {
+        try {
+            // InternalQAyahStart.g:247:24: ( ( '\\u064E' .. '\\u0650' | '\\u0652' ) )
+            // InternalQAyahStart.g:247:26: ( '\\u064E' .. '\\u0650' | '\\u0652' )
+            {
+            if ( (input.LA(1)>='\u064E' && input.LA(1)<='\u0650')||input.LA(1)=='\u0652' ) {
+                input.consume();
+
+            }
+            else {
+                MismatchedSetException mse = new MismatchedSetException(null,input);
+                recover(mse);
+                throw mse;}
+
+
+            }
+
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "RULE_AHARAKAH"
+
+    // $ANTLR start "RULE_ASHADDAH"
+    public final void mRULE_ASHADDAH() throws RecognitionException {
+        try {
+            // InternalQAyahStart.g:249:24: ( '\\u0651' )
+            // InternalQAyahStart.g:249:26: '\\u0651'
+            {
+            match('\u0651'); 
+
+            }
+
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "RULE_ASHADDAH"
+
+    // $ANTLR start "RULE_ANONLETTER"
+    public final void mRULE_ANONLETTER() throws RecognitionException {
+        try {
+            // InternalQAyahStart.g:251:26: ( ( '\\u0600' .. '\\u0620' | '\\u064B' .. '\\u06FF' ) )
+            // InternalQAyahStart.g:251:28: ( '\\u0600' .. '\\u0620' | '\\u064B' .. '\\u06FF' )
+            {
+            if ( (input.LA(1)>='\u0600' && input.LA(1)<='\u0620')||(input.LA(1)>='\u064B' && input.LA(1)<='\u06FF') ) {
+                input.consume();
+
+            }
+            else {
+                MismatchedSetException mse = new MismatchedSetException(null,input);
+                recover(mse);
+                throw mse;}
+
+
+            }
+
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "RULE_ANONLETTER"
 
     // $ANTLR start "RULE_KALEMAH"
     public final void mRULE_KALEMAH() throws RecognitionException {
@@ -295,15 +343,36 @@ public class InternalQAyahStartLexer extends Lexer {
     }
     // $ANTLR end "RULE_KALEMAH"
 
+    // $ANTLR start "RULE_SL_COMMENT"
+    public final void mRULE_SL_COMMENT() throws RecognitionException {
+        try {
+            int _type = RULE_SL_COMMENT;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // InternalQAyahStart.g:255:17: ( 'deactivated' )
+            // InternalQAyahStart.g:255:19: 'deactivated'
+            {
+            match("deactivated"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "RULE_SL_COMMENT"
+
     // $ANTLR start "RULE_ID"
     public final void mRULE_ID() throws RecognitionException {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalQAyahStart.g:255:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-            // InternalQAyahStart.g:255:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // InternalQAyahStart.g:257:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // InternalQAyahStart.g:257:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             {
-            // InternalQAyahStart.g:255:11: ( '^' )?
+            // InternalQAyahStart.g:257:11: ( '^' )?
             int alt3=2;
             int LA3_0 = input.LA(1);
 
@@ -312,7 +381,7 @@ public class InternalQAyahStartLexer extends Lexer {
             }
             switch (alt3) {
                 case 1 :
-                    // InternalQAyahStart.g:255:11: '^'
+                    // InternalQAyahStart.g:257:11: '^'
                     {
                     match('^'); 
 
@@ -330,7 +399,7 @@ public class InternalQAyahStartLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // InternalQAyahStart.g:255:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // InternalQAyahStart.g:257:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             loop4:
             do {
                 int alt4=2;
@@ -379,10 +448,10 @@ public class InternalQAyahStartLexer extends Lexer {
         try {
             int _type = RULE_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalQAyahStart.g:257:10: ( ( '0' .. '9' )+ )
-            // InternalQAyahStart.g:257:12: ( '0' .. '9' )+
+            // InternalQAyahStart.g:259:10: ( ( '0' .. '9' )+ )
+            // InternalQAyahStart.g:259:12: ( '0' .. '9' )+
             {
-            // InternalQAyahStart.g:257:12: ( '0' .. '9' )+
+            // InternalQAyahStart.g:259:12: ( '0' .. '9' )+
             int cnt5=0;
             loop5:
             do {
@@ -396,7 +465,7 @@ public class InternalQAyahStartLexer extends Lexer {
 
                 switch (alt5) {
             	case 1 :
-            	    // InternalQAyahStart.g:257:13: '0' .. '9'
+            	    // InternalQAyahStart.g:259:13: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -428,10 +497,10 @@ public class InternalQAyahStartLexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalQAyahStart.g:259:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
-            // InternalQAyahStart.g:259:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // InternalQAyahStart.g:261:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
+            // InternalQAyahStart.g:261:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             {
-            // InternalQAyahStart.g:259:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // InternalQAyahStart.g:261:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             int alt8=2;
             int LA8_0 = input.LA(1);
 
@@ -449,10 +518,10 @@ public class InternalQAyahStartLexer extends Lexer {
             }
             switch (alt8) {
                 case 1 :
-                    // InternalQAyahStart.g:259:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // InternalQAyahStart.g:261:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // InternalQAyahStart.g:259:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
+                    // InternalQAyahStart.g:261:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
                     loop6:
                     do {
                         int alt6=3;
@@ -468,7 +537,7 @@ public class InternalQAyahStartLexer extends Lexer {
 
                         switch (alt6) {
                     	case 1 :
-                    	    // InternalQAyahStart.g:259:21: '\\\\' .
+                    	    // InternalQAyahStart.g:261:21: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -476,7 +545,7 @@ public class InternalQAyahStartLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // InternalQAyahStart.g:259:28: ~ ( ( '\\\\' | '\"' ) )
+                    	    // InternalQAyahStart.g:261:28: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -501,10 +570,10 @@ public class InternalQAyahStartLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // InternalQAyahStart.g:259:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+                    // InternalQAyahStart.g:261:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
                     {
                     match('\''); 
-                    // InternalQAyahStart.g:259:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    // InternalQAyahStart.g:261:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
                     loop7:
                     do {
                         int alt7=3;
@@ -520,7 +589,7 @@ public class InternalQAyahStartLexer extends Lexer {
 
                         switch (alt7) {
                     	case 1 :
-                    	    // InternalQAyahStart.g:259:54: '\\\\' .
+                    	    // InternalQAyahStart.g:261:54: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -528,7 +597,7 @@ public class InternalQAyahStartLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // InternalQAyahStart.g:259:61: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // InternalQAyahStart.g:261:61: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -571,12 +640,12 @@ public class InternalQAyahStartLexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalQAyahStart.g:261:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // InternalQAyahStart.g:261:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // InternalQAyahStart.g:263:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // InternalQAyahStart.g:263:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // InternalQAyahStart.g:261:24: ( options {greedy=false; } : . )*
+            // InternalQAyahStart.g:263:24: ( options {greedy=false; } : . )*
             loop9:
             do {
                 int alt9=2;
@@ -601,7 +670,7 @@ public class InternalQAyahStartLexer extends Lexer {
 
                 switch (alt9) {
             	case 1 :
-            	    // InternalQAyahStart.g:261:52: .
+            	    // InternalQAyahStart.g:263:52: .
             	    {
             	    matchAny(); 
 
@@ -626,96 +695,6 @@ public class InternalQAyahStartLexer extends Lexer {
     }
     // $ANTLR end "RULE_ML_COMMENT"
 
-    // $ANTLR start "RULE_SL_COMMENT"
-    public final void mRULE_SL_COMMENT() throws RecognitionException {
-        try {
-            int _type = RULE_SL_COMMENT;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalQAyahStart.g:263:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // InternalQAyahStart.g:263:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
-            {
-            match("//"); 
-
-            // InternalQAyahStart.g:263:24: (~ ( ( '\\n' | '\\r' ) ) )*
-            loop10:
-            do {
-                int alt10=2;
-                int LA10_0 = input.LA(1);
-
-                if ( ((LA10_0>='\u0000' && LA10_0<='\t')||(LA10_0>='\u000B' && LA10_0<='\f')||(LA10_0>='\u000E' && LA10_0<='\uFFFF')) ) {
-                    alt10=1;
-                }
-
-
-                switch (alt10) {
-            	case 1 :
-            	    // InternalQAyahStart.g:263:24: ~ ( ( '\\n' | '\\r' ) )
-            	    {
-            	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
-            	        input.consume();
-
-            	    }
-            	    else {
-            	        MismatchedSetException mse = new MismatchedSetException(null,input);
-            	        recover(mse);
-            	        throw mse;}
-
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop10;
-                }
-            } while (true);
-
-            // InternalQAyahStart.g:263:40: ( ( '\\r' )? '\\n' )?
-            int alt12=2;
-            int LA12_0 = input.LA(1);
-
-            if ( (LA12_0=='\n'||LA12_0=='\r') ) {
-                alt12=1;
-            }
-            switch (alt12) {
-                case 1 :
-                    // InternalQAyahStart.g:263:41: ( '\\r' )? '\\n'
-                    {
-                    // InternalQAyahStart.g:263:41: ( '\\r' )?
-                    int alt11=2;
-                    int LA11_0 = input.LA(1);
-
-                    if ( (LA11_0=='\r') ) {
-                        alt11=1;
-                    }
-                    switch (alt11) {
-                        case 1 :
-                            // InternalQAyahStart.g:263:41: '\\r'
-                            {
-                            match('\r'); 
-
-                            }
-                            break;
-
-                    }
-
-                    match('\n'); 
-
-                    }
-                    break;
-
-            }
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "RULE_SL_COMMENT"
-
     // $ANTLR start "RULE_WS"
     public final void mRULE_WS() throws RecognitionException {
         try {
@@ -725,18 +704,18 @@ public class InternalQAyahStartLexer extends Lexer {
             // InternalQAyahStart.g:265:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
             // InternalQAyahStart.g:265:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
-            int cnt13=0;
-            loop13:
+            int cnt10=0;
+            loop10:
             do {
-                int alt13=2;
-                int LA13_0 = input.LA(1);
+                int alt10=2;
+                int LA10_0 = input.LA(1);
 
-                if ( ((LA13_0>='\t' && LA13_0<='\n')||LA13_0=='\r'||LA13_0==' ') ) {
-                    alt13=1;
+                if ( ((LA10_0>='\t' && LA10_0<='\n')||LA10_0=='\r'||LA10_0==' ') ) {
+                    alt10=1;
                 }
 
 
-                switch (alt13) {
+                switch (alt10) {
             	case 1 :
             	    // InternalQAyahStart.g:
             	    {
@@ -754,12 +733,12 @@ public class InternalQAyahStartLexer extends Lexer {
             	    break;
 
             	default :
-            	    if ( cnt13 >= 1 ) break loop13;
+            	    if ( cnt10 >= 1 ) break loop10;
                         EarlyExitException eee =
-                            new EarlyExitException(13, input);
+                            new EarlyExitException(10, input);
                         throw eee;
                 }
-                cnt13++;
+                cnt10++;
             } while (true);
 
 
@@ -794,96 +773,89 @@ public class InternalQAyahStartLexer extends Lexer {
     // $ANTLR end "RULE_ANY_OTHER"
 
     public void mTokens() throws RecognitionException {
-        // InternalQAyahStart.g:1:8: ( T__18 | T__19 | RULE_ADIGIT | RULE_ANONLETTER | RULE_AWORD | RULE_KALEMAH | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
-        int alt14=13;
-        alt14 = dfa14.predict(input);
-        switch (alt14) {
+        // InternalQAyahStart.g:1:8: ( T__21 | T__22 | RULE_BASMALAH | RULE_AWORD | RULE_KALEMAH | RULE_SL_COMMENT | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_WS | RULE_ANY_OTHER )
+        int alt11=12;
+        alt11 = dfa11.predict(input);
+        switch (alt11) {
             case 1 :
-                // InternalQAyahStart.g:1:10: T__18
+                // InternalQAyahStart.g:1:10: T__21
                 {
-                mT__18(); 
+                mT__21(); 
 
                 }
                 break;
             case 2 :
-                // InternalQAyahStart.g:1:16: T__19
+                // InternalQAyahStart.g:1:16: T__22
                 {
-                mT__19(); 
+                mT__22(); 
 
                 }
                 break;
             case 3 :
-                // InternalQAyahStart.g:1:22: RULE_ADIGIT
+                // InternalQAyahStart.g:1:22: RULE_BASMALAH
                 {
-                mRULE_ADIGIT(); 
+                mRULE_BASMALAH(); 
 
                 }
                 break;
             case 4 :
-                // InternalQAyahStart.g:1:34: RULE_ANONLETTER
-                {
-                mRULE_ANONLETTER(); 
-
-                }
-                break;
-            case 5 :
-                // InternalQAyahStart.g:1:50: RULE_AWORD
+                // InternalQAyahStart.g:1:36: RULE_AWORD
                 {
                 mRULE_AWORD(); 
 
                 }
                 break;
-            case 6 :
-                // InternalQAyahStart.g:1:61: RULE_KALEMAH
+            case 5 :
+                // InternalQAyahStart.g:1:47: RULE_KALEMAH
                 {
                 mRULE_KALEMAH(); 
 
                 }
                 break;
+            case 6 :
+                // InternalQAyahStart.g:1:60: RULE_SL_COMMENT
+                {
+                mRULE_SL_COMMENT(); 
+
+                }
+                break;
             case 7 :
-                // InternalQAyahStart.g:1:74: RULE_ID
+                // InternalQAyahStart.g:1:76: RULE_ID
                 {
                 mRULE_ID(); 
 
                 }
                 break;
             case 8 :
-                // InternalQAyahStart.g:1:82: RULE_INT
+                // InternalQAyahStart.g:1:84: RULE_INT
                 {
                 mRULE_INT(); 
 
                 }
                 break;
             case 9 :
-                // InternalQAyahStart.g:1:91: RULE_STRING
+                // InternalQAyahStart.g:1:93: RULE_STRING
                 {
                 mRULE_STRING(); 
 
                 }
                 break;
             case 10 :
-                // InternalQAyahStart.g:1:103: RULE_ML_COMMENT
+                // InternalQAyahStart.g:1:105: RULE_ML_COMMENT
                 {
                 mRULE_ML_COMMENT(); 
 
                 }
                 break;
             case 11 :
-                // InternalQAyahStart.g:1:119: RULE_SL_COMMENT
-                {
-                mRULE_SL_COMMENT(); 
-
-                }
-                break;
-            case 12 :
-                // InternalQAyahStart.g:1:135: RULE_WS
+                // InternalQAyahStart.g:1:121: RULE_WS
                 {
                 mRULE_WS(); 
 
                 }
                 break;
-            case 13 :
-                // InternalQAyahStart.g:1:143: RULE_ANY_OTHER
+            case 12 :
+                // InternalQAyahStart.g:1:129: RULE_ANY_OTHER
                 {
                 mRULE_ANY_OTHER(); 
 
@@ -895,42 +867,40 @@ public class InternalQAyahStartLexer extends Lexer {
     }
 
 
-    protected DFA14 dfa14 = new DFA14(this);
-    static final String DFA14_eotS =
-        "\1\uffff\1\17\1\uffff\1\21\2\uffff\2\15\2\uffff\2\15\2\uffff\1\17\14\uffff\2\17\1\37\2\uffff\3\17\1\45\1\46\2\uffff";
-    static final String DFA14_eofS =
-        "\47\uffff";
-    static final String DFA14_minS =
-        "\1\0\1\u0644\1\uffff\1\u0621\2\uffff\1\0\1\101\2\uffff\1\0\1\52\2\uffff\1\u0622\3\uffff\2\0\7\uffff\1\u0648\1\u064a\2\0\1\uffff\1\u0631\2\u0629\2\u0621\2\uffff";
-    static final String DFA14_maxS =
-        "\1\uffff\1\u0644\1\uffff\1\u0652\2\uffff\1\uffff\1\172\2\uffff\1\uffff\1\57\2\uffff\1\u0633\3\uffff\2\uffff\7\uffff\1\u0648\1\u064a\2\uffff\1\uffff\1\u0631\2\u0629\2\u0652\2\uffff";
-    static final String DFA14_acceptS =
-        "\2\uffff\1\3\1\uffff\1\4\1\5\2\uffff\1\7\1\10\2\uffff\1\14\1\15\1\uffff\1\5\1\3\1\4\2\uffff\1\6\1\7\1\10\1\11\1\12\1\13\1\14\4\uffff\1\6\5\uffff\1\2\1\1";
-    static final String DFA14_specialS =
-        "\1\0\5\uffff\1\5\3\uffff\1\4\7\uffff\1\6\1\2\11\uffff\1\3\1\1\10\uffff}>";
-    static final String[] DFA14_transitionS = {
-            "\11\15\2\14\2\15\1\14\22\15\1\14\1\15\1\6\4\15\1\12\7\15\1\13\12\11\7\15\32\10\3\15\1\7\1\10\1\15\32\10\u0585\15\41\4\6\5\1\1\43\5\3\4\5\3\15\4\12\2\u0096\4\uf900\15",
-            "\1\16",
+    protected DFA11 dfa11 = new DFA11(this);
+    static final String DFA11_eotS =
+        "\1\uffff\2\16\1\uffff\1\14\1\24\1\14\2\uffff\2\14\2\uffff\1\16\1\uffff\1\16\3\uffff\1\24\5\uffff\3\16\1\uffff\1\34\1\uffff\1\24\3\16\1\24\1\16\1\51\1\16\1\24\1\54\1\uffff\1\16\1\24\2\uffff\4\24\1\63\1\uffff";
+    static final String DFA11_eofS =
+        "\64\uffff";
+    static final String DFA11_minS =
+        "\1\0\1\u0644\1\u0650\1\uffff\1\0\1\145\1\101\2\uffff\1\0\1\52\2\uffff\1\u0622\1\uffff\1\u0633\1\uffff\2\0\1\141\5\uffff\1\u0648\1\u064a\1\u0652\1\uffff\2\0\1\143\1\u0631\1\u0629\1\u0645\1\164\1\u0629\1\u0621\1\u0650\1\151\1\u0621\1\uffff\1\40\1\166\2\uffff\1\141\1\164\1\145\1\144\1\60\1\uffff";
+    static final String DFA11_maxS =
+        "\1\uffff\1\u0644\1\u0650\1\uffff\1\uffff\1\145\1\172\2\uffff\1\uffff\1\52\2\uffff\1\u0633\1\uffff\1\u0633\1\uffff\2\uffff\1\141\5\uffff\1\u0648\1\u064a\1\u0652\1\uffff\2\uffff\1\143\1\u0631\1\u0629\1\u0645\1\164\1\u0629\1\u0652\1\u0650\1\151\1\u0652\1\uffff\1\40\1\166\2\uffff\1\141\1\164\1\145\1\144\1\172\1\uffff";
+    static final String DFA11_acceptS =
+        "\3\uffff\1\4\3\uffff\1\7\1\10\2\uffff\1\13\1\14\1\uffff\1\4\1\uffff\1\5\3\uffff\1\7\1\10\1\11\1\12\1\13\3\uffff\1\5\14\uffff\1\2\2\uffff\1\1\1\3\5\uffff\1\6";
+    static final String DFA11_specialS =
+        "\1\3\3\uffff\1\4\4\uffff\1\5\7\uffff\1\2\1\1\12\uffff\1\6\1\0\25\uffff}>";
+    static final String[] DFA11_transitionS = {
+            "\11\14\2\13\2\14\1\13\22\14\1\13\1\14\1\4\4\14\1\11\7\14\1\12\12\10\7\14\32\7\3\14\1\6\1\7\1\14\3\7\1\5\26\7\u05a6\14\6\3\1\1\1\2\52\3\uf9ad\14",
+            "\1\15",
+            "\1\17",
             "",
-            "\52\17\3\uffff\5\17",
-            "",
-            "",
-            "\42\23\1\24\71\23\1\22\uffa3\23",
-            "\32\25\4\uffff\1\25\1\uffff\32\25",
-            "",
-            "",
-            "\0\27",
-            "\1\30\4\uffff\1\31",
+            "\42\22\1\20\71\22\1\21\uffa3\22",
+            "\1\23",
+            "\32\24\4\uffff\1\24\1\uffff\32\24",
             "",
             "",
-            "\1\34\20\uffff\1\33",
+            "\0\26",
+            "\1\27",
             "",
             "",
+            "\1\32\20\uffff\1\31",
+            "",
+            "\1\33",
             "",
             "\42\36\1\35\uffdd\36",
-            "\42\23\1\24\71\23\1\22\uffa3\23",
-            "",
-            "",
+            "\42\22\1\20\71\22\1\21\uffa3\22",
+            "\1\37",
             "",
             "",
             "",
@@ -938,161 +908,174 @@ public class InternalQAyahStartLexer extends Lexer {
             "",
             "\1\40",
             "\1\41",
-            "\42\23\1\24\71\23\1\22\uffa3\23",
-            "\42\23\1\24\71\23\1\22\uffa3\23",
-            "",
             "\1\42",
+            "",
+            "\42\22\1\20\71\22\1\21\uffa3\22",
+            "\42\22\1\20\71\22\1\21\uffa3\22",
             "\1\43",
             "\1\44",
-            "\52\17\3\uffff\5\17",
-            "\52\17\3\uffff\5\17",
+            "\1\45",
+            "\1\46",
+            "\1\47",
+            "\1\50",
+            "\62\16",
+            "\1\52",
+            "\1\53",
+            "\62\16",
             "",
+            "\1\55",
+            "\1\56",
+            "",
+            "",
+            "\1\57",
+            "\1\60",
+            "\1\61",
+            "\1\62",
+            "\12\24\7\uffff\32\24\4\uffff\1\24\1\uffff\32\24",
             ""
     };
 
-    static final short[] DFA14_eot = DFA.unpackEncodedString(DFA14_eotS);
-    static final short[] DFA14_eof = DFA.unpackEncodedString(DFA14_eofS);
-    static final char[] DFA14_min = DFA.unpackEncodedStringToUnsignedChars(DFA14_minS);
-    static final char[] DFA14_max = DFA.unpackEncodedStringToUnsignedChars(DFA14_maxS);
-    static final short[] DFA14_accept = DFA.unpackEncodedString(DFA14_acceptS);
-    static final short[] DFA14_special = DFA.unpackEncodedString(DFA14_specialS);
-    static final short[][] DFA14_transition;
+    static final short[] DFA11_eot = DFA.unpackEncodedString(DFA11_eotS);
+    static final short[] DFA11_eof = DFA.unpackEncodedString(DFA11_eofS);
+    static final char[] DFA11_min = DFA.unpackEncodedStringToUnsignedChars(DFA11_minS);
+    static final char[] DFA11_max = DFA.unpackEncodedStringToUnsignedChars(DFA11_maxS);
+    static final short[] DFA11_accept = DFA.unpackEncodedString(DFA11_acceptS);
+    static final short[] DFA11_special = DFA.unpackEncodedString(DFA11_specialS);
+    static final short[][] DFA11_transition;
 
     static {
-        int numStates = DFA14_transitionS.length;
-        DFA14_transition = new short[numStates][];
+        int numStates = DFA11_transitionS.length;
+        DFA11_transition = new short[numStates][];
         for (int i=0; i<numStates; i++) {
-            DFA14_transition[i] = DFA.unpackEncodedString(DFA14_transitionS[i]);
+            DFA11_transition[i] = DFA.unpackEncodedString(DFA11_transitionS[i]);
         }
     }
 
-    class DFA14 extends DFA {
+    class DFA11 extends DFA {
 
-        public DFA14(BaseRecognizer recognizer) {
+        public DFA11(BaseRecognizer recognizer) {
             this.recognizer = recognizer;
-            this.decisionNumber = 14;
-            this.eot = DFA14_eot;
-            this.eof = DFA14_eof;
-            this.min = DFA14_min;
-            this.max = DFA14_max;
-            this.accept = DFA14_accept;
-            this.special = DFA14_special;
-            this.transition = DFA14_transition;
+            this.decisionNumber = 11;
+            this.eot = DFA11_eot;
+            this.eof = DFA11_eof;
+            this.min = DFA11_min;
+            this.max = DFA11_max;
+            this.accept = DFA11_accept;
+            this.special = DFA11_special;
+            this.transition = DFA11_transition;
         }
         public String getDescription() {
-            return "1:1: Tokens : ( T__18 | T__19 | RULE_ADIGIT | RULE_ANONLETTER | RULE_AWORD | RULE_KALEMAH | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER );";
+            return "1:1: Tokens : ( T__21 | T__22 | RULE_BASMALAH | RULE_AWORD | RULE_KALEMAH | RULE_SL_COMMENT | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_WS | RULE_ANY_OTHER );";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             IntStream input = _input;
         	int _s = s;
             switch ( s ) {
                     case 0 : 
-                        int LA14_0 = input.LA(1);
+                        int LA11_30 = input.LA(1);
 
                         s = -1;
-                        if ( (LA14_0=='\u0627') ) {s = 1;}
+                        if ( (LA11_30=='\"') ) {s = 16;}
 
-                        else if ( ((LA14_0>='\u0660' && LA14_0<='\u0669')) ) {s = 2;}
+                        else if ( (LA11_30=='\\') ) {s = 17;}
 
-                        else if ( ((LA14_0>='\u064E' && LA14_0<='\u0652')) ) {s = 3;}
-
-                        else if ( ((LA14_0>='\u0600' && LA14_0<='\u0620')||(LA14_0>='\u064B' && LA14_0<='\u064D')||(LA14_0>='\u0653' && LA14_0<='\u065F')||(LA14_0>='\u066A' && LA14_0<='\u06FF')) ) {s = 4;}
-
-                        else if ( ((LA14_0>='\u0621' && LA14_0<='\u0626')||(LA14_0>='\u0628' && LA14_0<='\u064A')) ) {s = 5;}
-
-                        else if ( (LA14_0=='\"') ) {s = 6;}
-
-                        else if ( (LA14_0=='^') ) {s = 7;}
-
-                        else if ( ((LA14_0>='A' && LA14_0<='Z')||LA14_0=='_'||(LA14_0>='a' && LA14_0<='z')) ) {s = 8;}
-
-                        else if ( ((LA14_0>='0' && LA14_0<='9')) ) {s = 9;}
-
-                        else if ( (LA14_0=='\'') ) {s = 10;}
-
-                        else if ( (LA14_0=='/') ) {s = 11;}
-
-                        else if ( ((LA14_0>='\t' && LA14_0<='\n')||LA14_0=='\r'||LA14_0==' ') ) {s = 12;}
-
-                        else if ( ((LA14_0>='\u0000' && LA14_0<='\b')||(LA14_0>='\u000B' && LA14_0<='\f')||(LA14_0>='\u000E' && LA14_0<='\u001F')||LA14_0=='!'||(LA14_0>='#' && LA14_0<='&')||(LA14_0>='(' && LA14_0<='.')||(LA14_0>=':' && LA14_0<='@')||(LA14_0>='[' && LA14_0<=']')||LA14_0=='`'||(LA14_0>='{' && LA14_0<='\u05FF')||(LA14_0>='\u0700' && LA14_0<='\uFFFF')) ) {s = 13;}
+                        else if ( ((LA11_30>='\u0000' && LA11_30<='!')||(LA11_30>='#' && LA11_30<='[')||(LA11_30>=']' && LA11_30<='\uFFFF')) ) {s = 18;}
 
                         if ( s>=0 ) return s;
                         break;
                     case 1 : 
-                        int LA14_30 = input.LA(1);
+                        int LA11_18 = input.LA(1);
 
                         s = -1;
-                        if ( (LA14_30=='\"') ) {s = 20;}
+                        if ( (LA11_18=='\"') ) {s = 16;}
 
-                        else if ( (LA14_30=='\\') ) {s = 18;}
+                        else if ( (LA11_18=='\\') ) {s = 17;}
 
-                        else if ( ((LA14_30>='\u0000' && LA14_30<='!')||(LA14_30>='#' && LA14_30<='[')||(LA14_30>=']' && LA14_30<='\uFFFF')) ) {s = 19;}
+                        else if ( ((LA11_18>='\u0000' && LA11_18<='!')||(LA11_18>='#' && LA11_18<='[')||(LA11_18>=']' && LA11_18<='\uFFFF')) ) {s = 18;}
 
                         if ( s>=0 ) return s;
                         break;
                     case 2 : 
-                        int LA14_19 = input.LA(1);
+                        int LA11_17 = input.LA(1);
 
                         s = -1;
-                        if ( (LA14_19=='\"') ) {s = 20;}
+                        if ( (LA11_17=='\"') ) {s = 29;}
 
-                        else if ( (LA14_19=='\\') ) {s = 18;}
-
-                        else if ( ((LA14_19>='\u0000' && LA14_19<='!')||(LA14_19>='#' && LA14_19<='[')||(LA14_19>=']' && LA14_19<='\uFFFF')) ) {s = 19;}
+                        else if ( ((LA11_17>='\u0000' && LA11_17<='!')||(LA11_17>='#' && LA11_17<='\uFFFF')) ) {s = 30;}
 
                         if ( s>=0 ) return s;
                         break;
                     case 3 : 
-                        int LA14_29 = input.LA(1);
+                        int LA11_0 = input.LA(1);
 
                         s = -1;
-                        if ( (LA14_29=='\"') ) {s = 20;}
+                        if ( (LA11_0=='\u0627') ) {s = 1;}
 
-                        else if ( (LA14_29=='\\') ) {s = 18;}
+                        else if ( (LA11_0=='\u0628') ) {s = 2;}
 
-                        else if ( ((LA14_29>='\u0000' && LA14_29<='!')||(LA14_29>='#' && LA14_29<='[')||(LA14_29>=']' && LA14_29<='\uFFFF')) ) {s = 19;}
+                        else if ( ((LA11_0>='\u0621' && LA11_0<='\u0626')||(LA11_0>='\u0629' && LA11_0<='\u0652')) ) {s = 3;}
 
-                        else s = 31;
+                        else if ( (LA11_0=='\"') ) {s = 4;}
+
+                        else if ( (LA11_0=='d') ) {s = 5;}
+
+                        else if ( (LA11_0=='^') ) {s = 6;}
+
+                        else if ( ((LA11_0>='A' && LA11_0<='Z')||LA11_0=='_'||(LA11_0>='a' && LA11_0<='c')||(LA11_0>='e' && LA11_0<='z')) ) {s = 7;}
+
+                        else if ( ((LA11_0>='0' && LA11_0<='9')) ) {s = 8;}
+
+                        else if ( (LA11_0=='\'') ) {s = 9;}
+
+                        else if ( (LA11_0=='/') ) {s = 10;}
+
+                        else if ( ((LA11_0>='\t' && LA11_0<='\n')||LA11_0=='\r'||LA11_0==' ') ) {s = 11;}
+
+                        else if ( ((LA11_0>='\u0000' && LA11_0<='\b')||(LA11_0>='\u000B' && LA11_0<='\f')||(LA11_0>='\u000E' && LA11_0<='\u001F')||LA11_0=='!'||(LA11_0>='#' && LA11_0<='&')||(LA11_0>='(' && LA11_0<='.')||(LA11_0>=':' && LA11_0<='@')||(LA11_0>='[' && LA11_0<=']')||LA11_0=='`'||(LA11_0>='{' && LA11_0<='\u0620')||(LA11_0>='\u0653' && LA11_0<='\uFFFF')) ) {s = 12;}
 
                         if ( s>=0 ) return s;
                         break;
                     case 4 : 
-                        int LA14_10 = input.LA(1);
+                        int LA11_4 = input.LA(1);
 
                         s = -1;
-                        if ( ((LA14_10>='\u0000' && LA14_10<='\uFFFF')) ) {s = 23;}
+                        if ( (LA11_4=='\"') ) {s = 16;}
 
-                        else s = 13;
+                        else if ( (LA11_4=='\\') ) {s = 17;}
+
+                        else if ( ((LA11_4>='\u0000' && LA11_4<='!')||(LA11_4>='#' && LA11_4<='[')||(LA11_4>=']' && LA11_4<='\uFFFF')) ) {s = 18;}
+
+                        else s = 12;
 
                         if ( s>=0 ) return s;
                         break;
                     case 5 : 
-                        int LA14_6 = input.LA(1);
+                        int LA11_9 = input.LA(1);
 
                         s = -1;
-                        if ( (LA14_6=='\\') ) {s = 18;}
+                        if ( ((LA11_9>='\u0000' && LA11_9<='\uFFFF')) ) {s = 22;}
 
-                        else if ( ((LA14_6>='\u0000' && LA14_6<='!')||(LA14_6>='#' && LA14_6<='[')||(LA14_6>=']' && LA14_6<='\uFFFF')) ) {s = 19;}
-
-                        else if ( (LA14_6=='\"') ) {s = 20;}
-
-                        else s = 13;
+                        else s = 12;
 
                         if ( s>=0 ) return s;
                         break;
                     case 6 : 
-                        int LA14_18 = input.LA(1);
+                        int LA11_29 = input.LA(1);
 
                         s = -1;
-                        if ( (LA14_18=='\"') ) {s = 29;}
+                        if ( (LA11_29=='\"') ) {s = 16;}
 
-                        else if ( ((LA14_18>='\u0000' && LA14_18<='!')||(LA14_18>='#' && LA14_18<='\uFFFF')) ) {s = 30;}
+                        else if ( (LA11_29=='\\') ) {s = 17;}
+
+                        else if ( ((LA11_29>='\u0000' && LA11_29<='!')||(LA11_29>='#' && LA11_29<='[')||(LA11_29>=']' && LA11_29<='\uFFFF')) ) {s = 18;}
+
+                        else s = 28;
 
                         if ( s>=0 ) return s;
                         break;
             }
             NoViableAltException nvae =
-                new NoViableAltException(getDescription(), 14, _s, input);
+                new NoViableAltException(getDescription(), 11, _s, input);
             error(nvae);
             throw nvae;
         }

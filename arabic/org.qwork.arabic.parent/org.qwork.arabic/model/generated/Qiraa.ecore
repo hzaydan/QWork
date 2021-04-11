@@ -2,81 +2,27 @@
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="qiraa" nsURI="http://www.qwork.org/Qiraa" nsPrefix="qiraa">
   <eClassifiers xsi:type="ecore:EClass" name="QiraaModel">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="qoraa" upperBound="-1"
-        eType="#//Qaree" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="torok" upperBound="-1"
-        eType="#//Tareek" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="rowat" upperBound="-1"
-        eType="#//Rawee" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="imams" upperBound="-1"
-        eType="#//IMAM" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="marjee" upperBound="-1"
         eType="#//Marjeh" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="istelahat" upperBound="-1"
-        eType="#//Istelah" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="koyod" upperBound="-1"
-        eType="#//Kayd" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Qaree" eSuperTypes="#//Person #//YokraaLah"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Rawee" eSuperTypes="#//Person #//YokraaLah">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="qaree" eType="#//Qaree"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="YokraaLah" eSuperTypes="#//YokraaLahWaRamz"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Person">
+  <eClassifiers xsi:type="ecore:EClass" name="Marjeh">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="esm" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="lakab" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="towofia" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Douaa">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="d" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Tareek">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="simple" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="ref" eType="#//YokraaLah"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="complex" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="refs" unique="false" upperBound="-1"
-        eType="#//Tareek"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="IMAM" eSuperTypes="#//Person #//Douaa"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Marjeh" eSuperTypes="#//Douaa">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="ref" eType="#//IMAM"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="matn" eType="ecore:EClass Matn.ecore#//Matn"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="romoz" upperBound="-1"
-        eType="#//Ramz" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="makateh" upperBound="-1"
-        eType="#//Maktah" containment="true"/>
+        eType="ecore:EClass OsolQiraa.ecore#//Ramz" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tafsil" upperBound="-1"
+        eType="#//Tafsil" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Maktah">
+  <eClassifiers xsi:type="ecore:EClass" name="Tafsil">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nass" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="kedah" upperBound="-1"
         eType="#//Kaaedah" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Kayd">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Istelah" eSuperTypes="#//YokraaLah">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="refs" unique="false" upperBound="-1"
-        eType="#//YokraaLah"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Ramz" eSuperTypes="#//YokraaLahWaRamz">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="refs" unique="false" upperBound="-1"
-        eType="#//YokraaLah"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="YokraaLahWaRamz"/>
   <eClassifiers xsi:type="ecore:EClass" name="Kaaedah">
     <eStructuralFeatures xsi:type="ecore:EReference" name="refs" unique="false" upperBound="-1"
-        eType="#//YokraaLahWaRamz"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="kayd" eType="#//Kayd"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="harf" eType="#//HarfQuran"
+        eType="ecore:EClass OsolQiraa.ecore#//YokraaLahWaRamz"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="kayd" eType="ecore:EClass OsolQiraa.ecore#//Kayd"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="harf" eType="ecore:EClass OsolQiraa.ecore#//HarfQuran"
         containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="HarfQuran">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="word" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="ayah" eType="ecore:EClass QAyahStart.ecore#//AyahStart"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="mawdee" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
 </ecore:EPackage>

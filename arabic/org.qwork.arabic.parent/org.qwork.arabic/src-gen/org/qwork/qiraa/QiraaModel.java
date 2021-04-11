@@ -16,13 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.qwork.qiraa.QiraaModel#getQoraa <em>Qoraa</em>}</li>
- *   <li>{@link org.qwork.qiraa.QiraaModel#getTorok <em>Torok</em>}</li>
- *   <li>{@link org.qwork.qiraa.QiraaModel#getRowat <em>Rowat</em>}</li>
- *   <li>{@link org.qwork.qiraa.QiraaModel#getImams <em>Imams</em>}</li>
  *   <li>{@link org.qwork.qiraa.QiraaModel#getMarjee <em>Marjee</em>}</li>
- *   <li>{@link org.qwork.qiraa.QiraaModel#getIstelahat <em>Istelahat</em>}</li>
- *   <li>{@link org.qwork.qiraa.QiraaModel#getKoyod <em>Koyod</em>}</li>
  * </ul>
  *
  * @see org.qwork.qiraa.QiraaPackage#getQiraaModel()
@@ -31,54 +25,6 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface QiraaModel extends EObject
 {
-  /**
-   * Returns the value of the '<em><b>Qoraa</b></em>' containment reference list.
-   * The list contents are of type {@link org.qwork.qiraa.Qaree}.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Qoraa</em>' containment reference list.
-   * @see org.qwork.qiraa.QiraaPackage#getQiraaModel_Qoraa()
-   * @model containment="true"
-   * @generated
-   */
-  EList<Qaree> getQoraa();
-
-  /**
-   * Returns the value of the '<em><b>Torok</b></em>' containment reference list.
-   * The list contents are of type {@link org.qwork.qiraa.Tareek}.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Torok</em>' containment reference list.
-   * @see org.qwork.qiraa.QiraaPackage#getQiraaModel_Torok()
-   * @model containment="true"
-   * @generated
-   */
-  EList<Tareek> getTorok();
-
-  /**
-   * Returns the value of the '<em><b>Rowat</b></em>' containment reference list.
-   * The list contents are of type {@link org.qwork.qiraa.Rawee}.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Rowat</em>' containment reference list.
-   * @see org.qwork.qiraa.QiraaPackage#getQiraaModel_Rowat()
-   * @model containment="true"
-   * @generated
-   */
-  EList<Rawee> getRowat();
-
-  /**
-   * Returns the value of the '<em><b>Imams</b></em>' containment reference list.
-   * The list contents are of type {@link org.qwork.qiraa.IMAM}.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Imams</em>' containment reference list.
-   * @see org.qwork.qiraa.QiraaPackage#getQiraaModel_Imams()
-   * @model containment="true"
-   * @generated
-   */
-  EList<IMAM> getImams();
-
   /**
    * Returns the value of the '<em><b>Marjee</b></em>' containment reference list.
    * The list contents are of type {@link org.qwork.qiraa.Marjeh}.
@@ -90,29 +36,5 @@ public interface QiraaModel extends EObject
    * @generated
    */
   EList<Marjeh> getMarjee();
-
-  /**
-   * Returns the value of the '<em><b>Istelahat</b></em>' containment reference list.
-   * The list contents are of type {@link org.qwork.qiraa.Istelah}.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Istelahat</em>' containment reference list.
-   * @see org.qwork.qiraa.QiraaPackage#getQiraaModel_Istelahat()
-   * @model containment="true"
-   * @generated
-   */
-  EList<Istelah> getIstelahat();
-
-  /**
-   * Returns the value of the '<em><b>Koyod</b></em>' containment reference list.
-   * The list contents are of type {@link org.qwork.qiraa.Kayd}.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Koyod</em>' containment reference list.
-   * @see org.qwork.qiraa.QiraaPackage#getQiraaModel_Koyod()
-   * @model containment="true"
-   * @generated
-   */
-  EList<Kayd> getKoyod();
 
 } // QiraaModel

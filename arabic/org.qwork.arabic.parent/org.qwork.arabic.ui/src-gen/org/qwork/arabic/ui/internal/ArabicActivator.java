@@ -15,10 +15,14 @@ import org.eclipse.xtext.util.Modules2;
 import org.osgi.framework.BundleContext;
 import org.qwork.AbjadRuntimeModule;
 import org.qwork.ArabicRuntimeModule;
+import org.qwork.MatnRuntimeModule;
+import org.qwork.OsolQiraaRuntimeModule;
 import org.qwork.QAyahStartRuntimeModule;
 import org.qwork.QiraaRuntimeModule;
 import org.qwork.ui.AbjadUiModule;
 import org.qwork.ui.ArabicUiModule;
+import org.qwork.ui.MatnUiModule;
+import org.qwork.ui.OsolQiraaUiModule;
 import org.qwork.ui.QAyahStartUiModule;
 import org.qwork.ui.QiraaUiModule;
 
@@ -32,6 +36,8 @@ public class ArabicActivator extends AbstractUIPlugin {
 	public static final String ORG_QWORK_ARABIC = "org.qwork.Arabic";
 	public static final String ORG_QWORK_QAYAHSTART = "org.qwork.QAyahStart";
 	public static final String ORG_QWORK_ABJAD = "org.qwork.Abjad";
+	public static final String ORG_QWORK_OSOLQIRAA = "org.qwork.OsolQiraa";
+	public static final String ORG_QWORK_MATN = "org.qwork.Matn";
 	public static final String ORG_QWORK_QIRAA = "org.qwork.Qiraa";
 	
 	private static final Logger logger = Logger.getLogger(ArabicActivator.class);
@@ -91,6 +97,12 @@ public class ArabicActivator extends AbstractUIPlugin {
 		if (ORG_QWORK_ABJAD.equals(grammar)) {
 			return new AbjadRuntimeModule();
 		}
+		if (ORG_QWORK_OSOLQIRAA.equals(grammar)) {
+			return new OsolQiraaRuntimeModule();
+		}
+		if (ORG_QWORK_MATN.equals(grammar)) {
+			return new MatnRuntimeModule();
+		}
 		if (ORG_QWORK_QIRAA.equals(grammar)) {
 			return new QiraaRuntimeModule();
 		}
@@ -106,6 +118,12 @@ public class ArabicActivator extends AbstractUIPlugin {
 		}
 		if (ORG_QWORK_ABJAD.equals(grammar)) {
 			return new AbjadUiModule(this);
+		}
+		if (ORG_QWORK_OSOLQIRAA.equals(grammar)) {
+			return new OsolQiraaUiModule(this);
+		}
+		if (ORG_QWORK_MATN.equals(grammar)) {
+			return new MatnUiModule(this);
 		}
 		if (ORG_QWORK_QIRAA.equals(grammar)) {
 			return new QiraaUiModule(this);

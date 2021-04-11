@@ -1,0 +1,56 @@
+grammar org.qwork.Matn with org.qwork.OsolQiraa
+
+generate matn "http://www.qwork.org/Matn"
+
+import "http://www.qwork.org/OsolQiraa"
+
+import "http://www.qwork.org/QAyahStart"
+
+MatnModel:
+	matn=Matn
+;
+
+Matn:
+	BASMALAH
+	name=AWORDS
+	makateh+=Maktah+
+;
+
+Maktah:
+	'*' '*' '*'
+	name = AWORDS
+	'(' abyatCount=INT ')'
+	abyat+=Bayt+
+;
+
+Bayt:
+	rakm=INT '-'
+	sadr+=AWORD+
+	'...'
+	ajoz+=AWORD+
+;
+
+AWORDS:
+	AWORD+
+;
+
+
+
+/*
+Matn:
+	"متن" name=KALEMAH "المسمى" alias=KALEMAH 'للإمام' ref=[IMAM|KALEMAH] Douaa
+	(tasnifs+=Tasnif | Fasel | words+=AWORD)*
+;
+
+Tasnif:
+	
+	'[['
+		({TBab} 'باب' | {TRamz} 'رمز' | {THarf} 'حرف' | {TKayd} 'قيد' | {TSurah} 'سورة')
+		'{{' words+=AWORD+ '}}'
+	']]'
+;
+
+Fasel:
+	'///'
+;
+*/

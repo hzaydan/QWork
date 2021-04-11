@@ -65,11 +65,11 @@ public class AbjadGrammarAccess extends AbstractElementFinder.AbstractGrammarEle
 		private final Group cGroup_2_0 = (Group)cAlternatives_2.eContents().get(0);
 		private final Keyword cArabicLetterHehArabicLetterWawKeyword_2_0_0 = (Keyword)cGroup_2_0.eContents().get(0);
 		private final Assignment cValuesAssignment_2_0_1 = (Assignment)cGroup_2_0.eContents().get(1);
-		private final RuleCall cValuesALETTERTerminalRuleCall_2_0_1_0 = (RuleCall)cValuesAssignment_2_0_1.eContents().get(0);
+		private final RuleCall cValuesAWORDTerminalRuleCall_2_0_1_0 = (RuleCall)cValuesAssignment_2_0_1.eContents().get(0);
 		private final Group cGroup_2_0_2 = (Group)cGroup_2_0.eContents().get(2);
 		private final Keyword cArabicLetterAlefWithHamzaAboveArabicLetterWawKeyword_2_0_2_0 = (Keyword)cGroup_2_0_2.eContents().get(0);
 		private final Assignment cValuesAssignment_2_0_2_1 = (Assignment)cGroup_2_0_2.eContents().get(1);
-		private final RuleCall cValuesALETTERTerminalRuleCall_2_0_2_1_0 = (RuleCall)cValuesAssignment_2_0_2_1.eContents().get(0);
+		private final RuleCall cValuesAWORDTerminalRuleCall_2_0_2_1_0 = (RuleCall)cValuesAssignment_2_0_2_1.eContents().get(0);
 		private final Group cGroup_2_1 = (Group)cAlternatives_2.eContents().get(1);
 		private final Keyword cArabicLetterThalArabicLetterAlefArabicLetterTehArabicLetterHehKeyword_2_1_0 = (Keyword)cGroup_2_1.eContents().get(0);
 		private final Assignment cRefAssignment_2_1_1 = (Assignment)cGroup_2_1.eContents().get(1);
@@ -78,13 +78,13 @@ public class AbjadGrammarAccess extends AbstractElementFinder.AbstractGrammarEle
 		
 		//Harf:
 		//    'حرف' name=AWORD
-		//        (('هو' values+=ALETTER ('أو' values+=ALETTER)*) |
+		//        (('هو' values+=AWORD ('أو' values+=AWORD)*) |
 		//        ('ذاته' ref=[Harf|AWORD]))
 		//;
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'حرف' name=AWORD
-		//    (('هو' values+=ALETTER ('أو' values+=ALETTER)*) |
+		//    (('هو' values+=AWORD ('أو' values+=AWORD)*) |
 		//    ('ذاته' ref=[Harf|AWORD]))
 		public Group getGroup() { return cGroup; }
 		
@@ -97,33 +97,33 @@ public class AbjadGrammarAccess extends AbstractElementFinder.AbstractGrammarEle
 		//AWORD
 		public RuleCall getNameAWORDTerminalRuleCall_1_0() { return cNameAWORDTerminalRuleCall_1_0; }
 		
-		//(('هو' values+=ALETTER ('أو' values+=ALETTER)*) |
+		//(('هو' values+=AWORD ('أو' values+=AWORD)*) |
 		//('ذاته' ref=[Harf|AWORD]))
 		public Alternatives getAlternatives_2() { return cAlternatives_2; }
 		
-		//('هو' values+=ALETTER ('أو' values+=ALETTER)*)
+		//('هو' values+=AWORD ('أو' values+=AWORD)*)
 		public Group getGroup_2_0() { return cGroup_2_0; }
 		
 		//'هو'
 		public Keyword getArabicLetterHehArabicLetterWawKeyword_2_0_0() { return cArabicLetterHehArabicLetterWawKeyword_2_0_0; }
 		
-		//values+=ALETTER
+		//values+=AWORD
 		public Assignment getValuesAssignment_2_0_1() { return cValuesAssignment_2_0_1; }
 		
-		//ALETTER
-		public RuleCall getValuesALETTERTerminalRuleCall_2_0_1_0() { return cValuesALETTERTerminalRuleCall_2_0_1_0; }
+		//AWORD
+		public RuleCall getValuesAWORDTerminalRuleCall_2_0_1_0() { return cValuesAWORDTerminalRuleCall_2_0_1_0; }
 		
-		//('أو' values+=ALETTER)*
+		//('أو' values+=AWORD)*
 		public Group getGroup_2_0_2() { return cGroup_2_0_2; }
 		
 		//'أو'
 		public Keyword getArabicLetterAlefWithHamzaAboveArabicLetterWawKeyword_2_0_2_0() { return cArabicLetterAlefWithHamzaAboveArabicLetterWawKeyword_2_0_2_0; }
 		
-		//values+=ALETTER
+		//values+=AWORD
 		public Assignment getValuesAssignment_2_0_2_1() { return cValuesAssignment_2_0_2_1; }
 		
-		//ALETTER
-		public RuleCall getValuesALETTERTerminalRuleCall_2_0_2_1_0() { return cValuesALETTERTerminalRuleCall_2_0_2_1_0; }
+		//AWORD
+		public RuleCall getValuesAWORDTerminalRuleCall_2_0_2_1_0() { return cValuesAWORDTerminalRuleCall_2_0_2_1_0; }
 		
 		//('ذاته' ref=[Harf|AWORD])
 		public Group getGroup_2_1() { return cGroup_2_1; }
@@ -148,14 +148,14 @@ public class AbjadGrammarAccess extends AbstractElementFinder.AbstractGrammarEle
 		private final RuleCall cNameKALEMAHTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
 		private final Keyword cArabicLetterHehArabicLetterYehKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		private final Assignment cValueAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cValueAHARAKAHTerminalRuleCall_3_0 = (RuleCall)cValueAssignment_3.eContents().get(0);
+		private final RuleCall cValueAWORDTerminalRuleCall_3_0 = (RuleCall)cValueAssignment_3.eContents().get(0);
 		
 		//Harakah:
-		//    'حركة' name=KALEMAH 'هي' value=AHARAKAH
+		//    'حركة' name=KALEMAH 'هي' value=AWORD
 		//;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'حركة' name=KALEMAH 'هي' value=AHARAKAH
+		//'حركة' name=KALEMAH 'هي' value=AWORD
 		public Group getGroup() { return cGroup; }
 		
 		//'حركة'
@@ -170,11 +170,11 @@ public class AbjadGrammarAccess extends AbstractElementFinder.AbstractGrammarEle
 		//'هي'
 		public Keyword getArabicLetterHehArabicLetterYehKeyword_2() { return cArabicLetterHehArabicLetterYehKeyword_2; }
 		
-		//value=AHARAKAH
+		//value=AWORD
 		public Assignment getValueAssignment_3() { return cValueAssignment_3; }
 		
-		//AHARAKAH
-		public RuleCall getValueAHARAKAHTerminalRuleCall_3_0() { return cValueAHARAKAHTerminalRuleCall_3_0; }
+		//AWORD
+		public RuleCall getValueAWORDTerminalRuleCall_3_0() { return cValueAWORDTerminalRuleCall_3_0; }
 	}
 	
 	
@@ -254,7 +254,7 @@ public class AbjadGrammarAccess extends AbstractElementFinder.AbstractGrammarEle
 	
 	//Harf:
 	//    'حرف' name=AWORD
-	//        (('هو' values+=ALETTER ('أو' values+=ALETTER)*) |
+	//        (('هو' values+=AWORD ('أو' values+=AWORD)*) |
 	//        ('ذاته' ref=[Harf|AWORD]))
 	//;
 	public HarfElements getHarfAccess() {
@@ -266,7 +266,7 @@ public class AbjadGrammarAccess extends AbstractElementFinder.AbstractGrammarEle
 	}
 	
 	//Harakah:
-	//    'حركة' name=KALEMAH 'هي' value=AHARAKAH
+	//    'حركة' name=KALEMAH 'هي' value=AWORD
 	//;
 	public HarakahElements getHarakahAccess() {
 		return pHarakah;
@@ -309,7 +309,7 @@ public class AbjadGrammarAccess extends AbstractElementFinder.AbstractGrammarEle
 	}
 	
 	//Phrase:
-	//    words+=AWORD (WS words+=AWORD)*;
+	//    basmalah?=BASMALAH? words+=AWORD+;
 	public ArabicGrammarAccess.PhraseElements getPhraseAccess() {
 		return gaArabic.getPhraseAccess();
 	}
@@ -318,46 +318,67 @@ public class AbjadGrammarAccess extends AbstractElementFinder.AbstractGrammarEle
 		return getPhraseAccess().getRule();
 	}
 	
-	//terminal ALETTER:
+	//terminal BASMALAH:
+	//    'بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ'
+	//;
+	public TerminalRule getBASMALAHRule() {
+		return gaArabic.getBASMALAHRule();
+	}
+	
+	//terminal AWORD:
+	//    (ALETTER|AHARAKAH|ATANWEEN|ASHADDAH)+
+	//;
+	public TerminalRule getAWORDRule() {
+		return gaArabic.getAWORDRule();
+	}
+	
+	//terminal fragment ALIGATURES:
+	//    '\uFDF0' ..'\uFDFD'
+	//;
+	public TerminalRule getALIGATURESRule() {
+		return gaArabic.getALIGATURESRule();
+	}
+	
+	//terminal fragment ALETTER:
 	//    '\u0621' ..'\u064a'
 	//;
 	public TerminalRule getALETTERRule() {
 		return gaArabic.getALETTERRule();
 	}
 	
-	//terminal ADIGIT:
+	//terminal fragment ADIGIT:
 	//    '\u0660' .. '\u0669'
 	//;
 	public TerminalRule getADIGITRule() {
 		return gaArabic.getADIGITRule();
 	}
 	
-	//terminal AHARAKAH:
+	//terminal fragment ATANWEEN:
+	//    '\u064b' .. '\u064d'
+	//;
+	public TerminalRule getATANWEENRule() {
+		return gaArabic.getATANWEENRule();
+	}
+	
+	//terminal fragment AHARAKAH:
 	//    '\u064e' .. '\u0650' | '\u0652'
 	//;
 	public TerminalRule getAHARAKAHRule() {
 		return gaArabic.getAHARAKAHRule();
 	}
 	
-	//terminal ASHADDAH:
+	//terminal fragment ASHADDAH:
 	//    '\u0651'
 	//;
 	public TerminalRule getASHADDAHRule() {
 		return gaArabic.getASHADDAHRule();
 	}
 	
-	//terminal ANONLETTER:
+	//terminal fragment ANONLETTER:
 	//    ('\u0600' .. '\u0620') | ('\u064b' .. '\u06ff')
 	//;
 	public TerminalRule getANONLETTERRule() {
 		return gaArabic.getANONLETTERRule();
-	}
-	
-	//terminal AWORD:
-	//    (ALETTER|AHARAKAH|ASHADDAH)+
-	//;
-	public TerminalRule getAWORDRule() {
-		return gaArabic.getAWORDRule();
 	}
 	
 	//terminal KALEMAH:
@@ -365,6 +386,13 @@ public class AbjadGrammarAccess extends AbstractElementFinder.AbstractGrammarEle
 	//;
 	public TerminalRule getKALEMAHRule() {
 		return gaArabic.getKALEMAHRule();
+	}
+	
+	//@Override
+	//terminal SL_COMMENT:
+	//    'deactivated';
+	public TerminalRule getSL_COMMENTRule() {
+		return gaArabic.getSL_COMMENTRule();
 	}
 	
 	//terminal ID: '^'?('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
@@ -388,11 +416,6 @@ public class AbjadGrammarAccess extends AbstractElementFinder.AbstractGrammarEle
 	//terminal ML_COMMENT : '/*' -> '*/';
 	public TerminalRule getML_COMMENTRule() {
 		return gaTerminals.getML_COMMENTRule();
-	}
-	
-	//terminal SL_COMMENT : '//' !('\n'|'\r')* ('\r'? '\n')?;
-	public TerminalRule getSL_COMMENTRule() {
-		return gaTerminals.getSL_COMMENTRule();
 	}
 	
 	//terminal WS         : (' '|'\t'|'\r'|'\n')+;

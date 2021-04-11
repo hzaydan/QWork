@@ -77,156 +77,34 @@ ruleQiraaModel returns [EObject current=null]
 }:
 	(
 		(
-			(
-				{
-					newCompositeNode(grammarAccess.getQiraaModelAccess().getQoraaQareeParserRuleCall_0_0());
+			{
+				newCompositeNode(grammarAccess.getQiraaModelAccess().getMarjeeMarjehParserRuleCall_0());
+			}
+			lv_marjee_0_0=ruleMarjeh
+			{
+				if ($current==null) {
+					$current = createModelElementForParent(grammarAccess.getQiraaModelRule());
 				}
-				lv_qoraa_0_0=ruleQaree
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getQiraaModelRule());
-					}
-					add(
-						$current,
-						"qoraa",
-						lv_qoraa_0_0,
-						"org.qwork.Qiraa.Qaree");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
-		    |
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getQiraaModelAccess().getTorokTareekParserRuleCall_1_0());
-				}
-				lv_torok_1_0=ruleTareek
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getQiraaModelRule());
-					}
-					add(
-						$current,
-						"torok",
-						lv_torok_1_0,
-						"org.qwork.Qiraa.Tareek");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
-		    |
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getQiraaModelAccess().getRowatRaweeParserRuleCall_2_0());
-				}
-				lv_rowat_2_0=ruleRawee
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getQiraaModelRule());
-					}
-					add(
-						$current,
-						"rowat",
-						lv_rowat_2_0,
-						"org.qwork.Qiraa.Rawee");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
-		    |
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getQiraaModelAccess().getImamsIMAMParserRuleCall_3_0());
-				}
-				lv_imams_3_0=ruleIMAM
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getQiraaModelRule());
-					}
-					add(
-						$current,
-						"imams",
-						lv_imams_3_0,
-						"org.qwork.Qiraa.IMAM");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
-		    |
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getQiraaModelAccess().getMarjeeMarjehParserRuleCall_4_0());
-				}
-				lv_marjee_4_0=ruleMarjeh
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getQiraaModelRule());
-					}
-					add(
-						$current,
-						"marjee",
-						lv_marjee_4_0,
-						"org.qwork.Qiraa.Marjeh");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
-		    |
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getQiraaModelAccess().getIstelahatIstelahParserRuleCall_5_0());
-				}
-				lv_istelahat_5_0=ruleIstelah
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getQiraaModelRule());
-					}
-					add(
-						$current,
-						"istelahat",
-						lv_istelahat_5_0,
-						"org.qwork.Qiraa.Istelah");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
-		    |
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getQiraaModelAccess().getKoyodKaydParserRuleCall_6_0());
-				}
-				lv_koyod_6_0=ruleKayd
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getQiraaModelRule());
-					}
-					add(
-						$current,
-						"koyod",
-						lv_koyod_6_0,
-						"org.qwork.Qiraa.Kayd");
-					afterParserOrEnumRuleCall();
-				}
-			)
+				add(
+					$current,
+					"marjee",
+					lv_marjee_0_0,
+					"org.qwork.Qiraa.Marjeh");
+				afterParserOrEnumRuleCall();
+			}
 		)
 	)*
 ;
 
-// Entry rule entryRuleQaree
-entryRuleQaree returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getQareeRule()); }
-	iv_ruleQaree=ruleQaree
-	{ $current=$iv_ruleQaree.current; }
+// Entry rule entryRuleMarjeh
+entryRuleMarjeh returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getMarjehRule()); }
+	iv_ruleMarjeh=ruleMarjeh
+	{ $current=$iv_ruleMarjeh.current; }
 	EOF;
 
-// Rule Qaree
-ruleQaree returns [EObject current=null]
+// Rule Marjeh
+ruleMarjeh returns [EObject current=null]
 @init {
 	enterRule();
 }
@@ -234,84 +112,174 @@ ruleQaree returns [EObject current=null]
 	leaveRule();
 }:
 	(
-		otherlv_0='\u0642\u0627\u0631\u0626'
+		otherlv_0='\u0645\u0631\u062C\u0639'
 		{
-			newLeafNode(otherlv_0, grammarAccess.getQareeAccess().getArabicLetterQafArabicLetterAlefArabicLetterRehArabicLetterYehWithHamzaAboveKeyword_0());
+			newLeafNode(otherlv_0, grammarAccess.getMarjehAccess().getArabicLetterMeemArabicLetterRehArabicLetterJeemArabicLetterAinKeyword_0());
 		}
+		(
+			(
+				lv_name_1_0=RULE_KALEMAH
+				{
+					newLeafNode(lv_name_1_0, grammarAccess.getMarjehAccess().getNameKALEMAHTerminalRuleCall_1_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getMarjehRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"name",
+						lv_name_1_0,
+						"org.qwork.Arabic.KALEMAH");
+				}
+			)
+		)
+		otherlv_2='\u0645\u0628\u0646\u064A'
 		{
-			if ($current==null) {
-				$current = createModelElement(grammarAccess.getQareeRule());
-			}
-			newCompositeNode(grammarAccess.getQareeAccess().getPersonParserRuleCall_1());
+			newLeafNode(otherlv_2, grammarAccess.getMarjehAccess().getArabicLetterMeemArabicLetterBehArabicLetterNoonArabicLetterYehKeyword_2());
 		}
-		this_Person_1=rulePerson[$current]
+		otherlv_3='\u0639\u0644\u0649'
 		{
-			$current = $this_Person_1.current;
-			afterParserOrEnumRuleCall();
-		}
-	)
-;
-
-// Entry rule entryRuleRawee
-entryRuleRawee returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getRaweeRule()); }
-	iv_ruleRawee=ruleRawee
-	{ $current=$iv_ruleRawee.current; }
-	EOF;
-
-// Rule Rawee
-ruleRawee returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
-	(
-		otherlv_0='\u0631\u0627\u0648'
-		{
-			newLeafNode(otherlv_0, grammarAccess.getRaweeAccess().getArabicLetterRehArabicLetterAlefArabicLetterWawKeyword_0());
-		}
-		{
-			if ($current==null) {
-				$current = createModelElement(grammarAccess.getRaweeRule());
-			}
-			newCompositeNode(grammarAccess.getRaweeAccess().getPersonParserRuleCall_1());
-		}
-		this_Person_1=rulePerson[$current]
-		{
-			$current = $this_Person_1.current;
-			afterParserOrEnumRuleCall();
-		}
-		otherlv_2='\u0639\u0646'
-		{
-			newLeafNode(otherlv_2, grammarAccess.getRaweeAccess().getArabicLetterAinArabicLetterNoonKeyword_2());
+			newLeafNode(otherlv_3, grammarAccess.getMarjehAccess().getArabicLetterAinArabicLetterLamArabicLetterAlefMaksuraKeyword_3());
 		}
 		(
 			(
 				{
 					if ($current==null) {
-						$current = createModelElement(grammarAccess.getRaweeRule());
+						$current = createModelElement(grammarAccess.getMarjehRule());
 					}
 				}
-				otherlv_3=RULE_KALEMAH
 				{
-					newLeafNode(otherlv_3, grammarAccess.getRaweeAccess().getQareeQareeCrossReference_3_0());
+					newCompositeNode(grammarAccess.getMarjehAccess().getMatnMatnCrossReference_4_0());
+				}
+				ruleAWORDS
+				{
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		otherlv_5='\u062A\u0641\u0635\u064A\u0644\u0647'
+		{
+			newLeafNode(otherlv_5, grammarAccess.getMarjehAccess().getArabicLetterTehArabicLetterFehArabicLetterSadArabicLetterYehArabicLetterLamArabicLetterHehKeyword_5());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getMarjehAccess().getRomozRamzParserRuleCall_6_0());
+				}
+				lv_romoz_6_0=ruleRamz
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getMarjehRule());
+					}
+					add(
+						$current,
+						"romoz",
+						lv_romoz_6_0,
+						"org.qwork.OsolQiraa.Ramz");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)*
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getMarjehAccess().getTafsilTafsilParserRuleCall_7_0());
+				}
+				lv_tafsil_7_0=ruleTafsil
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getMarjehRule());
+					}
+					add(
+						$current,
+						"tafsil",
+						lv_tafsil_7_0,
+						"org.qwork.Qiraa.Tafsil");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)+
+		otherlv_8='\u0627\u0646\u062A\u0647\u0649'
+		{
+			newLeafNode(otherlv_8, grammarAccess.getMarjehAccess().getArabicLetterAlefArabicLetterNoonArabicLetterTehArabicLetterHehArabicLetterAlefMaksuraKeyword_8());
+		}
+	)
+;
+
+// Entry rule entryRuleTafsil
+entryRuleTafsil returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getTafsilRule()); }
+	iv_ruleTafsil=ruleTafsil
+	{ $current=$iv_ruleTafsil.current; }
+	EOF;
+
+// Rule Tafsil
+ruleTafsil returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		otherlv_0='\u0642\u0648\u0644\u0647'
+		{
+			newLeafNode(otherlv_0, grammarAccess.getTafsilAccess().getArabicLetterQafArabicLetterWawArabicLetterLamArabicLetterHehKeyword_0());
+		}
+		(
+			(
+				lv_nass_1_0=RULE_KALEMAH
+				{
+					newLeafNode(lv_nass_1_0, grammarAccess.getTafsilAccess().getNassKALEMAHTerminalRuleCall_1_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getTafsilRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"nass",
+						lv_nass_1_0,
+						"org.qwork.Arabic.KALEMAH");
+				}
+			)
+		)
+		otherlv_2='\u0645\u0639\u0646\u0627\u0647'
+		{
+			newLeafNode(otherlv_2, grammarAccess.getTafsilAccess().getArabicLetterMeemArabicLetterAinArabicLetterNoonArabicLetterAlefArabicLetterHehKeyword_2());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getTafsilAccess().getKedahKaaedahParserRuleCall_3_0());
+				}
+				lv_kedah_3_0=ruleKaaedah
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getTafsilRule());
+					}
+					add(
+						$current,
+						"kedah",
+						lv_kedah_3_0,
+						"org.qwork.Qiraa.Kaaedah");
+					afterParserOrEnumRuleCall();
 				}
 			)
 		)
 	)
 ;
 
-// Entry rule entryRuleYokraaLah
-entryRuleYokraaLah returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getYokraaLahRule()); }
-	iv_ruleYokraaLah=ruleYokraaLah
-	{ $current=$iv_ruleYokraaLah.current; }
+// Entry rule entryRuleKaaedah
+entryRuleKaaedah returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getKaaedahRule()); }
+	iv_ruleKaaedah=ruleKaaedah
+	{ $current=$iv_ruleKaaedah.current; }
 	EOF;
 
-// Rule YokraaLah
-ruleYokraaLah returns [EObject current=null]
+// Rule Kaaedah
+ruleKaaedah returns [EObject current=null]
 @init {
 	enterRule();
 }
@@ -319,33 +287,327 @@ ruleYokraaLah returns [EObject current=null]
 	leaveRule();
 }:
 	(
+		otherlv_0='\u0642\u0631\u0623'
 		{
-			newCompositeNode(grammarAccess.getYokraaLahAccess().getQareeParserRuleCall_0());
+			newLeafNode(otherlv_0, grammarAccess.getKaaedahAccess().getArabicLetterQafArabicLetterRehArabicLetterAlefWithHamzaAboveKeyword_0());
 		}
-		this_Qaree_0=ruleQaree
+		(
+			(
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getKaaedahRule());
+					}
+				}
+				otherlv_1=RULE_KALEMAH
+				{
+					newLeafNode(otherlv_1, grammarAccess.getKaaedahAccess().getRefsYokraaLahWaRamzCrossReference_1_0());
+				}
+			)
+		)
+		otherlv_2='\u0628'
 		{
-			$current = $this_Qaree_0.current;
-			afterParserOrEnumRuleCall();
+			newLeafNode(otherlv_2, grammarAccess.getKaaedahAccess().getArabicLetterBehKeyword_2());
 		}
-		    |
+		(
+			(
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getKaaedahRule());
+					}
+				}
+				otherlv_3=RULE_KALEMAH
+				{
+					newLeafNode(otherlv_3, grammarAccess.getKaaedahAccess().getKaydKaydCrossReference_3_0());
+				}
+			)
+		)
+		otherlv_4='\u0641\u064A'
 		{
-			newCompositeNode(grammarAccess.getYokraaLahAccess().getRaweeParserRuleCall_1());
+			newLeafNode(otherlv_4, grammarAccess.getKaaedahAccess().getArabicLetterFehArabicLetterYehKeyword_4());
 		}
-		this_Rawee_1=ruleRawee
-		{
-			$current = $this_Rawee_1.current;
-			afterParserOrEnumRuleCall();
-		}
-		    |
-		{
-			newCompositeNode(grammarAccess.getYokraaLahAccess().getIstelahParserRuleCall_2());
-		}
-		this_Istelah_2=ruleIstelah
-		{
-			$current = $this_Istelah_2.current;
-			afterParserOrEnumRuleCall();
-		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getKaaedahAccess().getHarfHarfQuranParserRuleCall_5_0());
+				}
+				lv_harf_5_0=ruleHarfQuran
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getKaaedahRule());
+					}
+					set(
+						$current,
+						"harf",
+						lv_harf_5_0,
+						"org.qwork.OsolQiraa.HarfQuran");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
 	)
+;
+
+// Entry rule entryRuleMatn
+entryRuleMatn returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getMatnRule()); }
+	iv_ruleMatn=ruleMatn
+	{ $current=$iv_ruleMatn.current; }
+	EOF;
+
+// Rule Matn
+ruleMatn returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		this_BASMALAH_0=RULE_BASMALAH
+		{
+			newLeafNode(this_BASMALAH_0, grammarAccess.getMatnAccess().getBASMALAHTerminalRuleCall_0());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getMatnAccess().getNameAWORDSParserRuleCall_1_0());
+				}
+				lv_name_1_0=ruleAWORDS
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getMatnRule());
+					}
+					set(
+						$current,
+						"name",
+						lv_name_1_0,
+						"org.qwork.Matn.AWORDS");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getMatnAccess().getMakatehMaktahParserRuleCall_2_0());
+				}
+				lv_makateh_2_0=ruleMaktah
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getMatnRule());
+					}
+					add(
+						$current,
+						"makateh",
+						lv_makateh_2_0,
+						"org.qwork.Matn.Maktah");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)+
+	)
+;
+
+// Entry rule entryRuleMaktah
+entryRuleMaktah returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getMaktahRule()); }
+	iv_ruleMaktah=ruleMaktah
+	{ $current=$iv_ruleMaktah.current; }
+	EOF;
+
+// Rule Maktah
+ruleMaktah returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		otherlv_0='*'
+		{
+			newLeafNode(otherlv_0, grammarAccess.getMaktahAccess().getAsteriskKeyword_0());
+		}
+		otherlv_1='*'
+		{
+			newLeafNode(otherlv_1, grammarAccess.getMaktahAccess().getAsteriskKeyword_1());
+		}
+		otherlv_2='*'
+		{
+			newLeafNode(otherlv_2, grammarAccess.getMaktahAccess().getAsteriskKeyword_2());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getMaktahAccess().getNameAWORDSParserRuleCall_3_0());
+				}
+				lv_name_3_0=ruleAWORDS
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getMaktahRule());
+					}
+					set(
+						$current,
+						"name",
+						lv_name_3_0,
+						"org.qwork.Matn.AWORDS");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		otherlv_4='('
+		{
+			newLeafNode(otherlv_4, grammarAccess.getMaktahAccess().getLeftParenthesisKeyword_4());
+		}
+		(
+			(
+				lv_abyatCount_5_0=RULE_INT
+				{
+					newLeafNode(lv_abyatCount_5_0, grammarAccess.getMaktahAccess().getAbyatCountINTTerminalRuleCall_5_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getMaktahRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"abyatCount",
+						lv_abyatCount_5_0,
+						"org.eclipse.xtext.common.Terminals.INT");
+				}
+			)
+		)
+		otherlv_6=')'
+		{
+			newLeafNode(otherlv_6, grammarAccess.getMaktahAccess().getRightParenthesisKeyword_6());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getMaktahAccess().getAbyatBaytParserRuleCall_7_0());
+				}
+				lv_abyat_7_0=ruleBayt
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getMaktahRule());
+					}
+					add(
+						$current,
+						"abyat",
+						lv_abyat_7_0,
+						"org.qwork.Matn.Bayt");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)+
+	)
+;
+
+// Entry rule entryRuleBayt
+entryRuleBayt returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getBaytRule()); }
+	iv_ruleBayt=ruleBayt
+	{ $current=$iv_ruleBayt.current; }
+	EOF;
+
+// Rule Bayt
+ruleBayt returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		(
+			(
+				lv_rakm_0_0=RULE_INT
+				{
+					newLeafNode(lv_rakm_0_0, grammarAccess.getBaytAccess().getRakmINTTerminalRuleCall_0_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getBaytRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"rakm",
+						lv_rakm_0_0,
+						"org.eclipse.xtext.common.Terminals.INT");
+				}
+			)
+		)
+		otherlv_1='-'
+		{
+			newLeafNode(otherlv_1, grammarAccess.getBaytAccess().getHyphenMinusKeyword_1());
+		}
+		(
+			(
+				lv_sadr_2_0=RULE_AWORD
+				{
+					newLeafNode(lv_sadr_2_0, grammarAccess.getBaytAccess().getSadrAWORDTerminalRuleCall_2_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getBaytRule());
+					}
+					addWithLastConsumed(
+						$current,
+						"sadr",
+						lv_sadr_2_0,
+						"org.qwork.Arabic.AWORD");
+				}
+			)
+		)+
+		otherlv_3='...'
+		{
+			newLeafNode(otherlv_3, grammarAccess.getBaytAccess().getFullStopFullStopFullStopKeyword_3());
+		}
+		(
+			(
+				lv_ajoz_4_0=RULE_AWORD
+				{
+					newLeafNode(lv_ajoz_4_0, grammarAccess.getBaytAccess().getAjozAWORDTerminalRuleCall_4_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getBaytRule());
+					}
+					addWithLastConsumed(
+						$current,
+						"ajoz",
+						lv_ajoz_4_0,
+						"org.qwork.Arabic.AWORD");
+				}
+			)
+		)+
+	)
+;
+
+// Entry rule entryRuleAWORDS
+entryRuleAWORDS returns [String current=null]:
+	{ newCompositeNode(grammarAccess.getAWORDSRule()); }
+	iv_ruleAWORDS=ruleAWORDS
+	{ $current=$iv_ruleAWORDS.current.getText(); }
+	EOF;
+
+// Rule AWORDS
+ruleAWORDS returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		this_AWORD_0=RULE_AWORD
+		{
+			$current.merge(this_AWORD_0);
+		}
+		{
+			newLeafNode(this_AWORD_0, grammarAccess.getAWORDSAccess().getAWORDTerminalRuleCall());
+		}
+	)+
 ;
 
 
@@ -495,6 +757,181 @@ ruleDouaa[EObject in_current]  returns [EObject current=in_current]
 	)
 ;
 
+// Entry rule entryRuleIMAM
+entryRuleIMAM returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getIMAMRule()); }
+	iv_ruleIMAM=ruleIMAM
+	{ $current=$iv_ruleIMAM.current; }
+	EOF;
+
+// Rule IMAM
+ruleIMAM returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		otherlv_0='\u0627\u0644\u0625\u0645\u0627\u0645'
+		{
+			newLeafNode(otherlv_0, grammarAccess.getIMAMAccess().getArabicLetterAlefArabicLetterLamArabicLetterAlefWithHamzaBelowArabicLetterMeemArabicLetterAlefArabicLetterMeemKeyword_0());
+		}
+		{
+			if ($current==null) {
+				$current = createModelElement(grammarAccess.getIMAMRule());
+			}
+			newCompositeNode(grammarAccess.getIMAMAccess().getPersonParserRuleCall_1());
+		}
+		this_Person_1=rulePerson[$current]
+		{
+			$current = $this_Person_1.current;
+			afterParserOrEnumRuleCall();
+		}
+		{
+			if ($current==null) {
+				$current = createModelElement(grammarAccess.getIMAMRule());
+			}
+			newCompositeNode(grammarAccess.getIMAMAccess().getDouaaParserRuleCall_2());
+		}
+		this_Douaa_2=ruleDouaa[$current]
+		{
+			$current = $this_Douaa_2.current;
+			afterParserOrEnumRuleCall();
+		}
+	)
+;
+
+// Entry rule entryRuleQaree
+entryRuleQaree returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getQareeRule()); }
+	iv_ruleQaree=ruleQaree
+	{ $current=$iv_ruleQaree.current; }
+	EOF;
+
+// Rule Qaree
+ruleQaree returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		otherlv_0='\u0642\u0627\u0631\u0626'
+		{
+			newLeafNode(otherlv_0, grammarAccess.getQareeAccess().getArabicLetterQafArabicLetterAlefArabicLetterRehArabicLetterYehWithHamzaAboveKeyword_0());
+		}
+		{
+			if ($current==null) {
+				$current = createModelElement(grammarAccess.getQareeRule());
+			}
+			newCompositeNode(grammarAccess.getQareeAccess().getPersonParserRuleCall_1());
+		}
+		this_Person_1=rulePerson[$current]
+		{
+			$current = $this_Person_1.current;
+			afterParserOrEnumRuleCall();
+		}
+	)
+;
+
+// Entry rule entryRuleRawee
+entryRuleRawee returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getRaweeRule()); }
+	iv_ruleRawee=ruleRawee
+	{ $current=$iv_ruleRawee.current; }
+	EOF;
+
+// Rule Rawee
+ruleRawee returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		otherlv_0='\u0631\u0627\u0648'
+		{
+			newLeafNode(otherlv_0, grammarAccess.getRaweeAccess().getArabicLetterRehArabicLetterAlefArabicLetterWawKeyword_0());
+		}
+		{
+			if ($current==null) {
+				$current = createModelElement(grammarAccess.getRaweeRule());
+			}
+			newCompositeNode(grammarAccess.getRaweeAccess().getPersonParserRuleCall_1());
+		}
+		this_Person_1=rulePerson[$current]
+		{
+			$current = $this_Person_1.current;
+			afterParserOrEnumRuleCall();
+		}
+		otherlv_2='\u0639\u0646'
+		{
+			newLeafNode(otherlv_2, grammarAccess.getRaweeAccess().getArabicLetterAinArabicLetterNoonKeyword_2());
+		}
+		(
+			(
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getRaweeRule());
+					}
+				}
+				otherlv_3=RULE_KALEMAH
+				{
+					newLeafNode(otherlv_3, grammarAccess.getRaweeAccess().getQareeQareeCrossReference_3_0());
+				}
+			)
+		)
+	)
+;
+
+// Entry rule entryRuleYokraaLah
+entryRuleYokraaLah returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getYokraaLahRule()); }
+	iv_ruleYokraaLah=ruleYokraaLah
+	{ $current=$iv_ruleYokraaLah.current; }
+	EOF;
+
+// Rule YokraaLah
+ruleYokraaLah returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		{
+			newCompositeNode(grammarAccess.getYokraaLahAccess().getQareeParserRuleCall_0());
+		}
+		this_Qaree_0=ruleQaree
+		{
+			$current = $this_Qaree_0.current;
+			afterParserOrEnumRuleCall();
+		}
+		    |
+		{
+			newCompositeNode(grammarAccess.getYokraaLahAccess().getRaweeParserRuleCall_1());
+		}
+		this_Rawee_1=ruleRawee
+		{
+			$current = $this_Rawee_1.current;
+			afterParserOrEnumRuleCall();
+		}
+		    |
+		{
+			newCompositeNode(grammarAccess.getYokraaLahAccess().getIstelahParserRuleCall_2());
+		}
+		this_Istelah_2=ruleIstelah
+		{
+			$current = $this_Istelah_2.current;
+			afterParserOrEnumRuleCall();
+		}
+	)
+;
+
 // Entry rule entryRuleTareek
 entryRuleTareek returns [EObject current=null]:
 	{ newCompositeNode(grammarAccess.getTareekRule()); }
@@ -606,230 +1043,6 @@ ruleTareek returns [EObject current=null]
 						}
 					)
 				)+
-			)
-		)
-	)
-;
-
-// Entry rule entryRuleIMAM
-entryRuleIMAM returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getIMAMRule()); }
-	iv_ruleIMAM=ruleIMAM
-	{ $current=$iv_ruleIMAM.current; }
-	EOF;
-
-// Rule IMAM
-ruleIMAM returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
-	(
-		otherlv_0='\u0627\u0644\u0625\u0645\u0627\u0645'
-		{
-			newLeafNode(otherlv_0, grammarAccess.getIMAMAccess().getArabicLetterAlefArabicLetterLamArabicLetterAlefWithHamzaBelowArabicLetterMeemArabicLetterAlefArabicLetterMeemKeyword_0());
-		}
-		{
-			if ($current==null) {
-				$current = createModelElement(grammarAccess.getIMAMRule());
-			}
-			newCompositeNode(grammarAccess.getIMAMAccess().getPersonParserRuleCall_1());
-		}
-		this_Person_1=rulePerson[$current]
-		{
-			$current = $this_Person_1.current;
-			afterParserOrEnumRuleCall();
-		}
-		{
-			if ($current==null) {
-				$current = createModelElement(grammarAccess.getIMAMRule());
-			}
-			newCompositeNode(grammarAccess.getIMAMAccess().getDouaaParserRuleCall_2());
-		}
-		this_Douaa_2=ruleDouaa[$current]
-		{
-			$current = $this_Douaa_2.current;
-			afterParserOrEnumRuleCall();
-		}
-	)
-;
-
-// Entry rule entryRuleMarjeh
-entryRuleMarjeh returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getMarjehRule()); }
-	iv_ruleMarjeh=ruleMarjeh
-	{ $current=$iv_ruleMarjeh.current; }
-	EOF;
-
-// Rule Marjeh
-ruleMarjeh returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
-	(
-		otherlv_0='\u0645\u0631\u062C\u0639'
-		{
-			newLeafNode(otherlv_0, grammarAccess.getMarjehAccess().getArabicLetterMeemArabicLetterRehArabicLetterJeemArabicLetterAinKeyword_0());
-		}
-		(
-			(
-				lv_name_1_0=RULE_KALEMAH
-				{
-					newLeafNode(lv_name_1_0, grammarAccess.getMarjehAccess().getNameKALEMAHTerminalRuleCall_1_0());
-				}
-				{
-					if ($current==null) {
-						$current = createModelElement(grammarAccess.getMarjehRule());
-					}
-					setWithLastConsumed(
-						$current,
-						"name",
-						lv_name_1_0,
-						"org.qwork.Arabic.KALEMAH");
-				}
-			)
-		)
-		otherlv_2='\u0644\u0644\u0625\u0645\u0627\u0645'
-		{
-			newLeafNode(otherlv_2, grammarAccess.getMarjehAccess().getArabicLetterLamArabicLetterLamArabicLetterAlefWithHamzaBelowArabicLetterMeemArabicLetterAlefArabicLetterMeemKeyword_2());
-		}
-		(
-			(
-				{
-					if ($current==null) {
-						$current = createModelElement(grammarAccess.getMarjehRule());
-					}
-				}
-				otherlv_3=RULE_KALEMAH
-				{
-					newLeafNode(otherlv_3, grammarAccess.getMarjehAccess().getRefIMAMCrossReference_3_0());
-				}
-			)
-		)
-		{
-			if ($current==null) {
-				$current = createModelElement(grammarAccess.getMarjehRule());
-			}
-			newCompositeNode(grammarAccess.getMarjehAccess().getDouaaParserRuleCall_4());
-		}
-		this_Douaa_4=ruleDouaa[$current]
-		{
-			$current = $this_Douaa_4.current;
-			afterParserOrEnumRuleCall();
-		}
-		otherlv_5='\u062A\u0641\u0635\u064A\u0644\u0647'
-		{
-			newLeafNode(otherlv_5, grammarAccess.getMarjehAccess().getArabicLetterTehArabicLetterFehArabicLetterSadArabicLetterYehArabicLetterLamArabicLetterHehKeyword_5());
-		}
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getMarjehAccess().getRomozRamzParserRuleCall_6_0());
-				}
-				lv_romoz_6_0=ruleRamz
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getMarjehRule());
-					}
-					add(
-						$current,
-						"romoz",
-						lv_romoz_6_0,
-						"org.qwork.Qiraa.Ramz");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)*
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getMarjehAccess().getMakatehMaktahParserRuleCall_7_0());
-				}
-				lv_makateh_7_0=ruleMaktah
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getMarjehRule());
-					}
-					add(
-						$current,
-						"makateh",
-						lv_makateh_7_0,
-						"org.qwork.Qiraa.Maktah");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)+
-		otherlv_8='\u0627\u0646\u062A\u0647\u0649'
-		{
-			newLeafNode(otherlv_8, grammarAccess.getMarjehAccess().getArabicLetterAlefArabicLetterNoonArabicLetterTehArabicLetterHehArabicLetterAlefMaksuraKeyword_8());
-		}
-	)
-;
-
-// Entry rule entryRuleMaktah
-entryRuleMaktah returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getMaktahRule()); }
-	iv_ruleMaktah=ruleMaktah
-	{ $current=$iv_ruleMaktah.current; }
-	EOF;
-
-// Rule Maktah
-ruleMaktah returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
-	(
-		otherlv_0='\u0642\u0648\u0644\u0647'
-		{
-			newLeafNode(otherlv_0, grammarAccess.getMaktahAccess().getArabicLetterQafArabicLetterWawArabicLetterLamArabicLetterHehKeyword_0());
-		}
-		(
-			(
-				lv_nass_1_0=RULE_KALEMAH
-				{
-					newLeafNode(lv_nass_1_0, grammarAccess.getMaktahAccess().getNassKALEMAHTerminalRuleCall_1_0());
-				}
-				{
-					if ($current==null) {
-						$current = createModelElement(grammarAccess.getMaktahRule());
-					}
-					setWithLastConsumed(
-						$current,
-						"nass",
-						lv_nass_1_0,
-						"org.qwork.Arabic.KALEMAH");
-				}
-			)
-		)
-		otherlv_2='\u0645\u0639\u0646\u0627\u0647'
-		{
-			newLeafNode(otherlv_2, grammarAccess.getMaktahAccess().getArabicLetterMeemArabicLetterAinArabicLetterNoonArabicLetterAlefArabicLetterHehKeyword_2());
-		}
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getMaktahAccess().getKedahKaaedahParserRuleCall_3_0());
-				}
-				lv_kedah_3_0=ruleKaaedah
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getMaktahRule());
-					}
-					add(
-						$current,
-						"kedah",
-						lv_kedah_3_0,
-						"org.qwork.Qiraa.Kaaedah");
-					afterParserOrEnumRuleCall();
-				}
 			)
 		)
 	)
@@ -975,9 +1188,9 @@ ruleRamz returns [EObject current=null]
 		}
 		(
 			(
-				lv_name_1_0=RULE_AWORD
+				lv_name_1_0=RULE_KALEMAH
 				{
-					newLeafNode(lv_name_1_0, grammarAccess.getRamzAccess().getNameAWORDTerminalRuleCall_1_0());
+					newLeafNode(lv_name_1_0, grammarAccess.getRamzAccess().getNameKALEMAHTerminalRuleCall_1_0());
 				}
 				{
 					if ($current==null) {
@@ -987,7 +1200,7 @@ ruleRamz returns [EObject current=null]
 						$current,
 						"name",
 						lv_name_1_0,
-						"org.qwork.Arabic.AWORD");
+						"org.qwork.Arabic.KALEMAH");
 				}
 			)
 		)
@@ -1027,82 +1240,6 @@ ruleRamz returns [EObject current=null]
 				)
 			)
 		)*
-	)
-;
-
-// Entry rule entryRuleKaaedah
-entryRuleKaaedah returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getKaaedahRule()); }
-	iv_ruleKaaedah=ruleKaaedah
-	{ $current=$iv_ruleKaaedah.current; }
-	EOF;
-
-// Rule Kaaedah
-ruleKaaedah returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
-	(
-		otherlv_0='\u0642\u0631\u0623'
-		{
-			newLeafNode(otherlv_0, grammarAccess.getKaaedahAccess().getArabicLetterQafArabicLetterRehArabicLetterAlefWithHamzaAboveKeyword_0());
-		}
-		(
-			(
-				{
-					if ($current==null) {
-						$current = createModelElement(grammarAccess.getKaaedahRule());
-					}
-				}
-				otherlv_1=RULE_KALEMAH
-				{
-					newLeafNode(otherlv_1, grammarAccess.getKaaedahAccess().getRefsYokraaLahWaRamzCrossReference_1_0());
-				}
-			)
-		)
-		otherlv_2='\u0628'
-		{
-			newLeafNode(otherlv_2, grammarAccess.getKaaedahAccess().getArabicLetterBehKeyword_2());
-		}
-		(
-			(
-				{
-					if ($current==null) {
-						$current = createModelElement(grammarAccess.getKaaedahRule());
-					}
-				}
-				otherlv_3=RULE_KALEMAH
-				{
-					newLeafNode(otherlv_3, grammarAccess.getKaaedahAccess().getKaydKaydCrossReference_3_0());
-				}
-			)
-		)
-		otherlv_4='\u0641\u064A'
-		{
-			newLeafNode(otherlv_4, grammarAccess.getKaaedahAccess().getArabicLetterFehArabicLetterYehKeyword_4());
-		}
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getKaaedahAccess().getHarfHarfQuranParserRuleCall_5_0());
-				}
-				lv_harf_5_0=ruleHarfQuran
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getKaaedahRule());
-					}
-					set(
-						$current,
-						"harf",
-						lv_harf_5_0,
-						"org.qwork.Qiraa.HarfQuran");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
 	)
 ;
 
@@ -1184,7 +1321,7 @@ ruleHarfQuran returns [EObject current=null]
 							$current,
 							"mawdee",
 							lv_mawdee_6_0,
-							"org.qwork.Qiraa.Mawdee");
+							"org.qwork.OsolQiraa.Mawdee");
 						afterParserOrEnumRuleCall();
 					}
 				)
@@ -1281,9 +1418,9 @@ ruleHarf returns [EObject current=null]
 				}
 				(
 					(
-						lv_values_3_0=RULE_ALETTER
+						lv_values_3_0=RULE_AWORD
 						{
-							newLeafNode(lv_values_3_0, grammarAccess.getHarfAccess().getValuesALETTERTerminalRuleCall_2_0_1_0());
+							newLeafNode(lv_values_3_0, grammarAccess.getHarfAccess().getValuesAWORDTerminalRuleCall_2_0_1_0());
 						}
 						{
 							if ($current==null) {
@@ -1293,7 +1430,7 @@ ruleHarf returns [EObject current=null]
 								$current,
 								"values",
 								lv_values_3_0,
-								"org.qwork.Arabic.ALETTER");
+								"org.qwork.Arabic.AWORD");
 						}
 					)
 				)
@@ -1304,9 +1441,9 @@ ruleHarf returns [EObject current=null]
 					}
 					(
 						(
-							lv_values_5_0=RULE_ALETTER
+							lv_values_5_0=RULE_AWORD
 							{
-								newLeafNode(lv_values_5_0, grammarAccess.getHarfAccess().getValuesALETTERTerminalRuleCall_2_0_2_1_0());
+								newLeafNode(lv_values_5_0, grammarAccess.getHarfAccess().getValuesAWORDTerminalRuleCall_2_0_2_1_0());
 							}
 							{
 								if ($current==null) {
@@ -1316,7 +1453,7 @@ ruleHarf returns [EObject current=null]
 									$current,
 									"values",
 									lv_values_5_0,
-									"org.qwork.Arabic.ALETTER");
+									"org.qwork.Arabic.AWORD");
 							}
 						)
 					)
@@ -1390,9 +1527,9 @@ ruleHarakah returns [EObject current=null]
 		}
 		(
 			(
-				lv_value_3_0=RULE_AHARAKAH
+				lv_value_3_0=RULE_AWORD
 				{
-					newLeafNode(lv_value_3_0, grammarAccess.getHarakahAccess().getValueAHARAKAHTerminalRuleCall_3_0());
+					newLeafNode(lv_value_3_0, grammarAccess.getHarakahAccess().getValueAWORDTerminalRuleCall_3_0());
 				}
 				{
 					if ($current==null) {
@@ -1402,7 +1539,7 @@ ruleHarakah returns [EObject current=null]
 						$current,
 						"value",
 						lv_value_3_0,
-						"org.qwork.Arabic.AHARAKAH");
+						"org.qwork.Arabic.AWORD");
 				}
 			)
 		)
@@ -1508,9 +1645,27 @@ rulePhrase returns [EObject current=null]
 	(
 		(
 			(
-				lv_words_0_0=RULE_AWORD
+				lv_basmalah_0_0=RULE_BASMALAH
 				{
-					newLeafNode(lv_words_0_0, grammarAccess.getPhraseAccess().getWordsAWORDTerminalRuleCall_0_0());
+					newLeafNode(lv_basmalah_0_0, grammarAccess.getPhraseAccess().getBasmalahBASMALAHTerminalRuleCall_0_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getPhraseRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"basmalah",
+						lv_basmalah_0_0 != null,
+						"org.qwork.Arabic.BASMALAH");
+				}
+			)
+		)?
+		(
+			(
+				lv_words_1_0=RULE_AWORD
+				{
+					newLeafNode(lv_words_1_0, grammarAccess.getPhraseAccess().getWordsAWORDTerminalRuleCall_1_0());
 				}
 				{
 					if ($current==null) {
@@ -1519,51 +1674,35 @@ rulePhrase returns [EObject current=null]
 					addWithLastConsumed(
 						$current,
 						"words",
-						lv_words_0_0,
+						lv_words_1_0,
 						"org.qwork.Arabic.AWORD");
 				}
 			)
-		)
-		(
-			this_WS_1=RULE_WS
-			{
-				newLeafNode(this_WS_1, grammarAccess.getPhraseAccess().getWSTerminalRuleCall_1_0());
-			}
-			(
-				(
-					lv_words_2_0=RULE_AWORD
-					{
-						newLeafNode(lv_words_2_0, grammarAccess.getPhraseAccess().getWordsAWORDTerminalRuleCall_1_1_0());
-					}
-					{
-						if ($current==null) {
-							$current = createModelElement(grammarAccess.getPhraseRule());
-						}
-						addWithLastConsumed(
-							$current,
-							"words",
-							lv_words_2_0,
-							"org.qwork.Arabic.AWORD");
-					}
-				)
-			)
-		)*
+		)+
 	)
 ;
 
-RULE_ALETTER : '\u0621'..'\u064A';
+RULE_BASMALAH : '\u0628\u0650\u0633\u0652\u0645\u0650 \u0627\u0644\u0644\u0651\u064E\u0647\u0650 \u0627\u0644\u0631\u0651\u064E\u062D\u0652\u0645\u064E\u0646\u0650 \u0627\u0644\u0631\u0651\u064E\u062D\u0650\u064A\u0645\u0650';
 
-RULE_ADIGIT : '\u0660'..'\u0669';
+RULE_AWORD : (RULE_ALETTER|RULE_AHARAKAH|RULE_ATANWEEN|RULE_ASHADDAH)+;
 
-RULE_AHARAKAH : ('\u064E'..'\u0650'|'\u0652');
+fragment RULE_ALIGATURES : '\uFDF0'..'\uFDFD';
+
+fragment RULE_ALETTER : '\u0621'..'\u064A';
+
+fragment RULE_ADIGIT : '\u0660'..'\u0669';
+
+fragment RULE_ATANWEEN : '\u064B'..'\u064D';
+
+fragment RULE_AHARAKAH : ('\u064E'..'\u0650'|'\u0652');
 
 fragment RULE_ASHADDAH : '\u0651';
 
-RULE_ANONLETTER : ('\u0600'..'\u0620'|'\u064B'..'\u06FF');
-
-RULE_AWORD : (RULE_ALETTER|RULE_AHARAKAH|RULE_ASHADDAH)+;
+fragment RULE_ANONLETTER : ('\u0600'..'\u0620'|'\u064B'..'\u06FF');
 
 RULE_KALEMAH : '"' ( options {greedy=false;} : . )*'"';
+
+RULE_SL_COMMENT : 'deactivated';
 
 RULE_ID : '^'? ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
 
@@ -1572,8 +1711,6 @@ RULE_INT : ('0'..'9')+;
 RULE_STRING : ('"' ('\\' .|~(('\\'|'"')))* '"'|'\'' ('\\' .|~(('\\'|'\'')))* '\'');
 
 RULE_ML_COMMENT : '/*' ( options {greedy=false;} : . )*'*/';
-
-RULE_SL_COMMENT : '//' ~(('\n'|'\r'))* ('\r'? '\n')?;
 
 RULE_WS : (' '|'\t'|'\r'|'\n')+;
 

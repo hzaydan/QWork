@@ -59,7 +59,7 @@ public class ArabicSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 *     Phrase returns Phrase
 	 *
 	 * Constraint:
-	 *     (words+=AWORD words+=AWORD*)
+	 *     (basmalah?=BASMALAH? words+=AWORD+)
 	 */
 	protected void sequence_Phrase(ISerializationContext context, Phrase semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

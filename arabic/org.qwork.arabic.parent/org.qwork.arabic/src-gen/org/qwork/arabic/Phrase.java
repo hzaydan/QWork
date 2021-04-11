@@ -16,6 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
+ *   <li>{@link org.qwork.arabic.Phrase#isBasmalah <em>Basmalah</em>}</li>
  *   <li>{@link org.qwork.arabic.Phrase#getWords <em>Words</em>}</li>
  * </ul>
  *
@@ -25,6 +26,28 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface Phrase extends EObject
 {
+  /**
+   * Returns the value of the '<em><b>Basmalah</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Basmalah</em>' attribute.
+   * @see #setBasmalah(boolean)
+   * @see org.qwork.arabic.ArabicPackage#getPhrase_Basmalah()
+   * @model
+   * @generated
+   */
+  boolean isBasmalah();
+
+  /**
+   * Sets the value of the '{@link org.qwork.arabic.Phrase#isBasmalah <em>Basmalah</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Basmalah</em>' attribute.
+   * @see #isBasmalah()
+   * @generated
+   */
+  void setBasmalah(boolean value);
+
   /**
    * Returns the value of the '<em><b>Words</b></em>' attribute list.
    * The list contents are of type {@link java.lang.String}.

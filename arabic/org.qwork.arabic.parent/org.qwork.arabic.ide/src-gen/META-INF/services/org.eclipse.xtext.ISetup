@@ -1,4 +1,6 @@
 org.qwork.ide.ArabicIdeSetup
 org.qwork.ide.QAyahStartIdeSetup
 org.qwork.ide.AbjadIdeSetup
+org.qwork.ide.OsolQiraaIdeSetup
+org.qwork.ide.MatnIdeSetup
 org.qwork.ide.QiraaIdeSetup

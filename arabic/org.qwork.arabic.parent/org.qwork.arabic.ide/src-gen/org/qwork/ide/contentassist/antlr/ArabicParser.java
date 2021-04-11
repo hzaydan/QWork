@@ -32,10 +32,9 @@ public class ArabicParser extends AbstractContentAssistParser {
 		
 		private static void init(ImmutableMap.Builder<AbstractElement, String> builder, ArabicGrammarAccess grammarAccess) {
 			builder.put(grammarAccess.getPhraseAccess().getGroup(), "rule__Phrase__Group__0");
-			builder.put(grammarAccess.getPhraseAccess().getGroup_1(), "rule__Phrase__Group_1__0");
 			builder.put(grammarAccess.getModelAccess().getPhrasesAssignment(), "rule__Model__PhrasesAssignment");
-			builder.put(grammarAccess.getPhraseAccess().getWordsAssignment_0(), "rule__Phrase__WordsAssignment_0");
-			builder.put(grammarAccess.getPhraseAccess().getWordsAssignment_1_1(), "rule__Phrase__WordsAssignment_1_1");
+			builder.put(grammarAccess.getPhraseAccess().getBasmalahAssignment_0(), "rule__Phrase__BasmalahAssignment_0");
+			builder.put(grammarAccess.getPhraseAccess().getWordsAssignment_1(), "rule__Phrase__WordsAssignment_1");
 		}
 	}
 	

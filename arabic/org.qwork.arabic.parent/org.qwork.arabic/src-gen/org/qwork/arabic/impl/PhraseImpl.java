@@ -5,10 +5,13 @@ package org.qwork.arabic.impl;
 
 import java.util.Collection;
 
+import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EDataTypeEList;
@@ -24,6 +27,7 @@ import org.qwork.arabic.Phrase;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link org.qwork.arabic.impl.PhraseImpl#isBasmalah <em>Basmalah</em>}</li>
  *   <li>{@link org.qwork.arabic.impl.PhraseImpl#getWords <em>Words</em>}</li>
  * </ul>
  *
@@ -31,6 +35,26 @@ import org.qwork.arabic.Phrase;
  */
 public class PhraseImpl extends MinimalEObjectImpl.Container implements Phrase
 {
+  /**
+   * The default value of the '{@link #isBasmalah() <em>Basmalah</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #isBasmalah()
+   * @generated
+   * @ordered
+   */
+  protected static final boolean BASMALAH_EDEFAULT = false;
+
+  /**
+   * The cached value of the '{@link #isBasmalah() <em>Basmalah</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #isBasmalah()
+   * @generated
+   * @ordered
+   */
+  protected boolean basmalah = BASMALAH_EDEFAULT;
+
   /**
    * The cached value of the '{@link #getWords() <em>Words</em>}' attribute list.
    * <!-- begin-user-doc -->
@@ -68,6 +92,31 @@ public class PhraseImpl extends MinimalEObjectImpl.Container implements Phrase
    * @generated
    */
   @Override
+  public boolean isBasmalah()
+  {
+    return basmalah;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setBasmalah(boolean newBasmalah)
+  {
+    boolean oldBasmalah = basmalah;
+    basmalah = newBasmalah;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, ArabicPackage.PHRASE__BASMALAH, oldBasmalah, basmalah));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
   public EList<String> getWords()
   {
     if (words == null)
@@ -87,6 +136,8 @@ public class PhraseImpl extends MinimalEObjectImpl.Container implements Phrase
   {
     switch (featureID)
     {
+      case ArabicPackage.PHRASE__BASMALAH:
+        return isBasmalah();
       case ArabicPackage.PHRASE__WORDS:
         return getWords();
     }
@@ -104,6 +155,9 @@ public class PhraseImpl extends MinimalEObjectImpl.Container implements Phrase
   {
     switch (featureID)
     {
+      case ArabicPackage.PHRASE__BASMALAH:
+        setBasmalah((Boolean)newValue);
+        return;
       case ArabicPackage.PHRASE__WORDS:
         getWords().clear();
         getWords().addAll((Collection<? extends String>)newValue);
@@ -122,6 +176,9 @@ public class PhraseImpl extends MinimalEObjectImpl.Container implements Phrase
   {
     switch (featureID)
     {
+      case ArabicPackage.PHRASE__BASMALAH:
+        setBasmalah(BASMALAH_EDEFAULT);
+        return;
       case ArabicPackage.PHRASE__WORDS:
         getWords().clear();
         return;
@@ -139,6 +196,8 @@ public class PhraseImpl extends MinimalEObjectImpl.Container implements Phrase
   {
     switch (featureID)
     {
+      case ArabicPackage.PHRASE__BASMALAH:
+        return basmalah != BASMALAH_EDEFAULT;
       case ArabicPackage.PHRASE__WORDS:
         return words != null && !words.isEmpty();
     }
@@ -156,7 +215,9 @@ public class PhraseImpl extends MinimalEObjectImpl.Container implements Phrase
     if (eIsProxy()) return super.toString();
 
     StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (words: ");
+    result.append(" (basmalah: ");
+    result.append(basmalah);
+    result.append(", words: ");
     result.append(words);
     result.append(')');
     return result.toString();

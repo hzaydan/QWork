@@ -21,6 +21,18 @@
 	</extension>
 	<extension point="org.eclipse.emf.ecore.generated_package">
 		<package
+			uri = "http://www.qwork.org/OsolQiraa"
+			class = "org.qwork.osolqiraa.OsolqiraaPackage"
+			genModel = "model/generated/OsolQiraa.genmodel" />
+	</extension>
+	<extension point="org.eclipse.emf.ecore.generated_package">
+		<package
+			uri = "http://www.qwork.org/Matn"
+			class = "org.qwork.matn.MatnPackage"
+			genModel = "model/generated/Matn.genmodel" />
+	</extension>
+	<extension point="org.eclipse.emf.ecore.generated_package">
+		<package
 			uri = "http://www.qwork.org/Qiraa"
 			class = "org.qwork.qiraa.QiraaPackage"
 			genModel = "model/generated/Qiraa.genmodel" />

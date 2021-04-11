@@ -6,6 +6,7 @@
         eType="#//Phrase" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Phrase">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="basmalah" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="words" unique="false" upperBound="-1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>

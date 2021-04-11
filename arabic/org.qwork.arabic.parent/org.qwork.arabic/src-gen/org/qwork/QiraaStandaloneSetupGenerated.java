@@ -17,7 +17,7 @@ public class QiraaStandaloneSetupGenerated implements ISetup {
 
 	@Override
 	public Injector createInjectorAndDoEMFRegistration() {
-		AbjadStandaloneSetup.doSetup();
+		MatnStandaloneSetup.doSetup();
 
 		Injector injector = createInjector();
 		register(injector);

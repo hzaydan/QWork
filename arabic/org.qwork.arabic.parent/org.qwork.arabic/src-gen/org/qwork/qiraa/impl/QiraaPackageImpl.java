@@ -10,25 +10,18 @@ import org.eclipse.emf.ecore.EReference;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
+import org.qwork.matn.MatnPackage;
+
+import org.qwork.osolqiraa.OsolqiraaPackage;
+
 import org.qwork.qayahstart.QayahstartPackage;
 
-import org.qwork.qiraa.Douaa;
-import org.qwork.qiraa.HarfQuran;
-import org.qwork.qiraa.Istelah;
 import org.qwork.qiraa.Kaaedah;
-import org.qwork.qiraa.Kayd;
-import org.qwork.qiraa.Maktah;
 import org.qwork.qiraa.Marjeh;
-import org.qwork.qiraa.Person;
-import org.qwork.qiraa.Qaree;
 import org.qwork.qiraa.QiraaFactory;
 import org.qwork.qiraa.QiraaModel;
 import org.qwork.qiraa.QiraaPackage;
-import org.qwork.qiraa.Ramz;
-import org.qwork.qiraa.Rawee;
-import org.qwork.qiraa.Tareek;
-import org.qwork.qiraa.YokraaLah;
-import org.qwork.qiraa.YokraaLahWaRamz;
+import org.qwork.qiraa.Tafsil;
 
 /**
  * <!-- begin-user-doc -->
@@ -50,55 +43,6 @@ public class QiraaPackageImpl extends EPackageImpl implements QiraaPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass qareeEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass raweeEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass yokraaLahEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass personEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass douaaEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass tareekEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass imamEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   private EClass marjehEClass = null;
 
   /**
@@ -106,35 +50,7 @@ public class QiraaPackageImpl extends EPackageImpl implements QiraaPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass maktahEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass kaydEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass istelahEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass ramzEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass yokraaLahWaRamzEClass = null;
+  private EClass tafsilEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -142,13 +58,6 @@ public class QiraaPackageImpl extends EPackageImpl implements QiraaPackage
    * @generated
    */
   private EClass kaaedahEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass harfQuranEClass = null;
 
   /**
    * Creates an instance of the model <b>Package</b>, registered with
@@ -200,6 +109,8 @@ public class QiraaPackageImpl extends EPackageImpl implements QiraaPackage
     isInited = true;
 
     // Initialize simple dependencies
+    MatnPackage.eINSTANCE.eClass();
+    OsolqiraaPackage.eINSTANCE.eClass();
     QayahstartPackage.eINSTANCE.eClass();
 
     // Create package meta-data objects
@@ -233,273 +144,9 @@ public class QiraaPackageImpl extends EPackageImpl implements QiraaPackage
    * @generated
    */
   @Override
-  public EReference getQiraaModel_Qoraa()
-  {
-    return (EReference)qiraaModelEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EReference getQiraaModel_Torok()
-  {
-    return (EReference)qiraaModelEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EReference getQiraaModel_Rowat()
-  {
-    return (EReference)qiraaModelEClass.getEStructuralFeatures().get(2);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EReference getQiraaModel_Imams()
-  {
-    return (EReference)qiraaModelEClass.getEStructuralFeatures().get(3);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
   public EReference getQiraaModel_Marjee()
   {
-    return (EReference)qiraaModelEClass.getEStructuralFeatures().get(4);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EReference getQiraaModel_Istelahat()
-  {
-    return (EReference)qiraaModelEClass.getEStructuralFeatures().get(5);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EReference getQiraaModel_Koyod()
-  {
-    return (EReference)qiraaModelEClass.getEStructuralFeatures().get(6);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EClass getQaree()
-  {
-    return qareeEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EClass getRawee()
-  {
-    return raweeEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EReference getRawee_Qaree()
-  {
-    return (EReference)raweeEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EClass getYokraaLah()
-  {
-    return yokraaLahEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EClass getPerson()
-  {
-    return personEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EAttribute getPerson_Name()
-  {
-    return (EAttribute)personEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EAttribute getPerson_Esm()
-  {
-    return (EAttribute)personEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EAttribute getPerson_Lakab()
-  {
-    return (EAttribute)personEClass.getEStructuralFeatures().get(2);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EAttribute getPerson_Towofia()
-  {
-    return (EAttribute)personEClass.getEStructuralFeatures().get(3);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EClass getDouaa()
-  {
-    return douaaEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EAttribute getDouaa_D()
-  {
-    return (EAttribute)douaaEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EClass getTareek()
-  {
-    return tareekEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EAttribute getTareek_Name()
-  {
-    return (EAttribute)tareekEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EAttribute getTareek_Simple()
-  {
-    return (EAttribute)tareekEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EReference getTareek_Ref()
-  {
-    return (EReference)tareekEClass.getEStructuralFeatures().get(2);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EAttribute getTareek_Complex()
-  {
-    return (EAttribute)tareekEClass.getEStructuralFeatures().get(3);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EReference getTareek_Refs()
-  {
-    return (EReference)tareekEClass.getEStructuralFeatures().get(4);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EClass getIMAM()
-  {
-    return imamEClass;
+    return (EReference)qiraaModelEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -530,7 +177,7 @@ public class QiraaPackageImpl extends EPackageImpl implements QiraaPackage
    * @generated
    */
   @Override
-  public EReference getMarjeh_Ref()
+  public EReference getMarjeh_Matn()
   {
     return (EReference)marjehEClass.getEStructuralFeatures().get(1);
   }
@@ -552,7 +199,7 @@ public class QiraaPackageImpl extends EPackageImpl implements QiraaPackage
    * @generated
    */
   @Override
-  public EReference getMarjeh_Makateh()
+  public EReference getMarjeh_Tafsil()
   {
     return (EReference)marjehEClass.getEStructuralFeatures().get(3);
   }
@@ -563,9 +210,9 @@ public class QiraaPackageImpl extends EPackageImpl implements QiraaPackage
    * @generated
    */
   @Override
-  public EClass getMaktah()
+  public EClass getTafsil()
   {
-    return maktahEClass;
+    return tafsilEClass;
   }
 
   /**
@@ -574,9 +221,9 @@ public class QiraaPackageImpl extends EPackageImpl implements QiraaPackage
    * @generated
    */
   @Override
-  public EAttribute getMaktah_Nass()
+  public EAttribute getTafsil_Nass()
   {
-    return (EAttribute)maktahEClass.getEStructuralFeatures().get(0);
+    return (EAttribute)tafsilEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -585,108 +232,9 @@ public class QiraaPackageImpl extends EPackageImpl implements QiraaPackage
    * @generated
    */
   @Override
-  public EReference getMaktah_Kedah()
+  public EReference getTafsil_Kedah()
   {
-    return (EReference)maktahEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EClass getKayd()
-  {
-    return kaydEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EAttribute getKayd_Name()
-  {
-    return (EAttribute)kaydEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EClass getIstelah()
-  {
-    return istelahEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EAttribute getIstelah_Name()
-  {
-    return (EAttribute)istelahEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EReference getIstelah_Refs()
-  {
-    return (EReference)istelahEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EClass getRamz()
-  {
-    return ramzEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EAttribute getRamz_Name()
-  {
-    return (EAttribute)ramzEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EReference getRamz_Refs()
-  {
-    return (EReference)ramzEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EClass getYokraaLahWaRamz()
-  {
-    return yokraaLahWaRamzEClass;
+    return (EReference)tafsilEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -739,50 +287,6 @@ public class QiraaPackageImpl extends EPackageImpl implements QiraaPackage
    * @generated
    */
   @Override
-  public EClass getHarfQuran()
-  {
-    return harfQuranEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EAttribute getHarfQuran_Word()
-  {
-    return (EAttribute)harfQuranEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EReference getHarfQuran_Ayah()
-  {
-    return (EReference)harfQuranEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EAttribute getHarfQuran_Mawdee()
-  {
-    return (EAttribute)harfQuranEClass.getEStructuralFeatures().get(2);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
   public QiraaFactory getQiraaFactory()
   {
     return (QiraaFactory)getEFactoryInstance();
@@ -809,71 +313,22 @@ public class QiraaPackageImpl extends EPackageImpl implements QiraaPackage
 
     // Create classes and their features
     qiraaModelEClass = createEClass(QIRAA_MODEL);
-    createEReference(qiraaModelEClass, QIRAA_MODEL__QORAA);
-    createEReference(qiraaModelEClass, QIRAA_MODEL__TOROK);
-    createEReference(qiraaModelEClass, QIRAA_MODEL__ROWAT);
-    createEReference(qiraaModelEClass, QIRAA_MODEL__IMAMS);
     createEReference(qiraaModelEClass, QIRAA_MODEL__MARJEE);
-    createEReference(qiraaModelEClass, QIRAA_MODEL__ISTELAHAT);
-    createEReference(qiraaModelEClass, QIRAA_MODEL__KOYOD);
-
-    qareeEClass = createEClass(QAREE);
-
-    raweeEClass = createEClass(RAWEE);
-    createEReference(raweeEClass, RAWEE__QAREE);
-
-    yokraaLahEClass = createEClass(YOKRAA_LAH);
-
-    personEClass = createEClass(PERSON);
-    createEAttribute(personEClass, PERSON__NAME);
-    createEAttribute(personEClass, PERSON__ESM);
-    createEAttribute(personEClass, PERSON__LAKAB);
-    createEAttribute(personEClass, PERSON__TOWOFIA);
-
-    douaaEClass = createEClass(DOUAA);
-    createEAttribute(douaaEClass, DOUAA__D);
-
-    tareekEClass = createEClass(TAREEK);
-    createEAttribute(tareekEClass, TAREEK__NAME);
-    createEAttribute(tareekEClass, TAREEK__SIMPLE);
-    createEReference(tareekEClass, TAREEK__REF);
-    createEAttribute(tareekEClass, TAREEK__COMPLEX);
-    createEReference(tareekEClass, TAREEK__REFS);
-
-    imamEClass = createEClass(IMAM);
 
     marjehEClass = createEClass(MARJEH);
     createEAttribute(marjehEClass, MARJEH__NAME);
-    createEReference(marjehEClass, MARJEH__REF);
+    createEReference(marjehEClass, MARJEH__MATN);
     createEReference(marjehEClass, MARJEH__ROMOZ);
-    createEReference(marjehEClass, MARJEH__MAKATEH);
+    createEReference(marjehEClass, MARJEH__TAFSIL);
 
-    maktahEClass = createEClass(MAKTAH);
-    createEAttribute(maktahEClass, MAKTAH__NASS);
-    createEReference(maktahEClass, MAKTAH__KEDAH);
-
-    kaydEClass = createEClass(KAYD);
-    createEAttribute(kaydEClass, KAYD__NAME);
-
-    istelahEClass = createEClass(ISTELAH);
-    createEAttribute(istelahEClass, ISTELAH__NAME);
-    createEReference(istelahEClass, ISTELAH__REFS);
-
-    ramzEClass = createEClass(RAMZ);
-    createEAttribute(ramzEClass, RAMZ__NAME);
-    createEReference(ramzEClass, RAMZ__REFS);
-
-    yokraaLahWaRamzEClass = createEClass(YOKRAA_LAH_WA_RAMZ);
+    tafsilEClass = createEClass(TAFSIL);
+    createEAttribute(tafsilEClass, TAFSIL__NASS);
+    createEReference(tafsilEClass, TAFSIL__KEDAH);
 
     kaaedahEClass = createEClass(KAAEDAH);
     createEReference(kaaedahEClass, KAAEDAH__REFS);
     createEReference(kaaedahEClass, KAAEDAH__KAYD);
     createEReference(kaaedahEClass, KAAEDAH__HARF);
-
-    harfQuranEClass = createEClass(HARF_QURAN);
-    createEAttribute(harfQuranEClass, HARF_QURAN__WORD);
-    createEReference(harfQuranEClass, HARF_QURAN__AYAH);
-    createEAttribute(harfQuranEClass, HARF_QURAN__MAWDEE);
   }
 
   /**
@@ -901,91 +356,33 @@ public class QiraaPackageImpl extends EPackageImpl implements QiraaPackage
     setNsURI(eNS_URI);
 
     // Obtain other dependent packages
-    QayahstartPackage theQayahstartPackage = (QayahstartPackage)EPackage.Registry.INSTANCE.getEPackage(QayahstartPackage.eNS_URI);
+    MatnPackage theMatnPackage = (MatnPackage)EPackage.Registry.INSTANCE.getEPackage(MatnPackage.eNS_URI);
+    OsolqiraaPackage theOsolqiraaPackage = (OsolqiraaPackage)EPackage.Registry.INSTANCE.getEPackage(OsolqiraaPackage.eNS_URI);
 
     // Create type parameters
 
     // Set bounds for type parameters
 
     // Add supertypes to classes
-    qareeEClass.getESuperTypes().add(this.getPerson());
-    qareeEClass.getESuperTypes().add(this.getYokraaLah());
-    raweeEClass.getESuperTypes().add(this.getPerson());
-    raweeEClass.getESuperTypes().add(this.getYokraaLah());
-    yokraaLahEClass.getESuperTypes().add(this.getYokraaLahWaRamz());
-    imamEClass.getESuperTypes().add(this.getPerson());
-    imamEClass.getESuperTypes().add(this.getDouaa());
-    marjehEClass.getESuperTypes().add(this.getDouaa());
-    istelahEClass.getESuperTypes().add(this.getYokraaLah());
-    ramzEClass.getESuperTypes().add(this.getYokraaLahWaRamz());
 
     // Initialize classes and features; add operations and parameters
     initEClass(qiraaModelEClass, QiraaModel.class, "QiraaModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getQiraaModel_Qoraa(), this.getQaree(), null, "qoraa", null, 0, -1, QiraaModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getQiraaModel_Torok(), this.getTareek(), null, "torok", null, 0, -1, QiraaModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getQiraaModel_Rowat(), this.getRawee(), null, "rowat", null, 0, -1, QiraaModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getQiraaModel_Imams(), this.getIMAM(), null, "imams", null, 0, -1, QiraaModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getQiraaModel_Marjee(), this.getMarjeh(), null, "marjee", null, 0, -1, QiraaModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getQiraaModel_Istelahat(), this.getIstelah(), null, "istelahat", null, 0, -1, QiraaModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getQiraaModel_Koyod(), this.getKayd(), null, "koyod", null, 0, -1, QiraaModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(qareeEClass, Qaree.class, "Qaree", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-    initEClass(raweeEClass, Rawee.class, "Rawee", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getRawee_Qaree(), this.getQaree(), null, "qaree", null, 0, 1, Rawee.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(yokraaLahEClass, YokraaLah.class, "YokraaLah", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-    initEClass(personEClass, Person.class, "Person", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getPerson_Name(), ecorePackage.getEString(), "name", null, 0, 1, Person.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getPerson_Esm(), ecorePackage.getEString(), "esm", null, 0, 1, Person.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getPerson_Lakab(), ecorePackage.getEString(), "lakab", null, 0, 1, Person.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getPerson_Towofia(), ecorePackage.getEInt(), "towofia", null, 0, 1, Person.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(douaaEClass, Douaa.class, "Douaa", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getDouaa_D(), ecorePackage.getEString(), "d", null, 0, 1, Douaa.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(tareekEClass, Tareek.class, "Tareek", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getTareek_Name(), ecorePackage.getEString(), "name", null, 0, 1, Tareek.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getTareek_Simple(), ecorePackage.getEBoolean(), "simple", null, 0, 1, Tareek.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getTareek_Ref(), this.getYokraaLah(), null, "ref", null, 0, 1, Tareek.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getTareek_Complex(), ecorePackage.getEBoolean(), "complex", null, 0, 1, Tareek.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getTareek_Refs(), this.getTareek(), null, "refs", null, 0, -1, Tareek.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(imamEClass, org.qwork.qiraa.IMAM.class, "IMAM", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
     initEClass(marjehEClass, Marjeh.class, "Marjeh", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getMarjeh_Name(), ecorePackage.getEString(), "name", null, 0, 1, Marjeh.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getMarjeh_Ref(), this.getIMAM(), null, "ref", null, 0, 1, Marjeh.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getMarjeh_Romoz(), this.getRamz(), null, "romoz", null, 0, -1, Marjeh.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getMarjeh_Makateh(), this.getMaktah(), null, "makateh", null, 0, -1, Marjeh.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getMarjeh_Matn(), theMatnPackage.getMatn(), null, "matn", null, 0, 1, Marjeh.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getMarjeh_Romoz(), theOsolqiraaPackage.getRamz(), null, "romoz", null, 0, -1, Marjeh.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getMarjeh_Tafsil(), this.getTafsil(), null, "tafsil", null, 0, -1, Marjeh.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(maktahEClass, Maktah.class, "Maktah", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getMaktah_Nass(), ecorePackage.getEString(), "nass", null, 0, 1, Maktah.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getMaktah_Kedah(), this.getKaaedah(), null, "kedah", null, 0, -1, Maktah.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(kaydEClass, Kayd.class, "Kayd", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getKayd_Name(), ecorePackage.getEString(), "name", null, 0, 1, Kayd.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(istelahEClass, Istelah.class, "Istelah", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getIstelah_Name(), ecorePackage.getEString(), "name", null, 0, 1, Istelah.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getIstelah_Refs(), this.getYokraaLah(), null, "refs", null, 0, -1, Istelah.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(ramzEClass, Ramz.class, "Ramz", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getRamz_Name(), ecorePackage.getEString(), "name", null, 0, 1, Ramz.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getRamz_Refs(), this.getYokraaLah(), null, "refs", null, 0, -1, Ramz.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(yokraaLahWaRamzEClass, YokraaLahWaRamz.class, "YokraaLahWaRamz", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEClass(tafsilEClass, Tafsil.class, "Tafsil", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getTafsil_Nass(), ecorePackage.getEString(), "nass", null, 0, 1, Tafsil.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getTafsil_Kedah(), this.getKaaedah(), null, "kedah", null, 0, -1, Tafsil.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(kaaedahEClass, Kaaedah.class, "Kaaedah", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getKaaedah_Refs(), this.getYokraaLahWaRamz(), null, "refs", null, 0, -1, Kaaedah.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getKaaedah_Kayd(), this.getKayd(), null, "kayd", null, 0, 1, Kaaedah.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getKaaedah_Harf(), this.getHarfQuran(), null, "harf", null, 0, 1, Kaaedah.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(harfQuranEClass, HarfQuran.class, "HarfQuran", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getHarfQuran_Word(), ecorePackage.getEString(), "word", null, 0, 1, HarfQuran.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getHarfQuran_Ayah(), theQayahstartPackage.getAyahStart(), null, "ayah", null, 0, 1, HarfQuran.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getHarfQuran_Mawdee(), ecorePackage.getEString(), "mawdee", null, 0, 1, HarfQuran.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getKaaedah_Refs(), theOsolqiraaPackage.getYokraaLahWaRamz(), null, "refs", null, 0, -1, Kaaedah.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getKaaedah_Kayd(), theOsolqiraaPackage.getKayd(), null, "kayd", null, 0, 1, Kaaedah.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getKaaedah_Harf(), theOsolqiraaPackage.getHarfQuran(), null, "harf", null, 0, 1, Kaaedah.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     // Create resource
     createResource(eNS_URI);

@@ -22,30 +22,33 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalAbjadParser extends AbstractInternalContentAssistParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_WS", "RULE_AWORD", "RULE_ALETTER", "RULE_KALEMAH", "RULE_AHARAKAH", "RULE_INT", "RULE_ADIGIT", "RULE_ASHADDAH", "RULE_ANONLETTER", "RULE_ID", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_ANY_OTHER", "'\\u062D\\u0631\\u0641'", "'\\u0647\\u0648'", "'\\u0623\\u0648'", "'\\u0630\\u0627\\u062A\\u0647'", "'\\u062D\\u0631\\u0643\\u0629'", "'\\u0647\\u064A'", "'\\u0627\\u0644\\u0633\\u0648\\u0631\\u0629'", "'\\u0627\\u0644\\u0622\\u064A\\u0629'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_AWORD", "RULE_KALEMAH", "RULE_INT", "RULE_BASMALAH", "RULE_ALETTER", "RULE_AHARAKAH", "RULE_ATANWEEN", "RULE_ASHADDAH", "RULE_ALIGATURES", "RULE_ADIGIT", "RULE_ANONLETTER", "RULE_SL_COMMENT", "RULE_ID", "RULE_STRING", "RULE_ML_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'\\u062D\\u0631\\u0641'", "'\\u0647\\u0648'", "'\\u0623\\u0648'", "'\\u0630\\u0627\\u062A\\u0647'", "'\\u062D\\u0631\\u0643\\u0629'", "'\\u0647\\u064A'", "'\\u0627\\u0644\\u0633\\u0648\\u0631\\u0629'", "'\\u0627\\u0644\\u0622\\u064A\\u0629'"
     };
-    public static final int RULE_AHARAKAH=8;
-    public static final int RULE_STRING=14;
-    public static final int RULE_ANONLETTER=12;
-    public static final int RULE_SL_COMMENT=16;
-    public static final int T__19=19;
-    public static final int RULE_KALEMAH=7;
-    public static final int T__18=18;
+    public static final int RULE_BASMALAH=7;
+    public static final int RULE_AHARAKAH=9;
+    public static final int RULE_STRING=17;
+    public static final int RULE_ANONLETTER=14;
+    public static final int RULE_SL_COMMENT=15;
+    public static final int RULE_KALEMAH=5;
     public static final int RULE_ASHADDAH=11;
-    public static final int RULE_ALETTER=6;
+    public static final int RULE_ALETTER=8;
+    public static final int RULE_ATANWEEN=10;
     public static final int EOF=-1;
-    public static final int RULE_ID=13;
-    public static final int RULE_WS=4;
-    public static final int RULE_ANY_OTHER=17;
-    public static final int RULE_ADIGIT=10;
-    public static final int RULE_INT=9;
-    public static final int RULE_AWORD=5;
+    public static final int RULE_ALIGATURES=12;
+    public static final int RULE_ID=16;
+    public static final int RULE_WS=19;
+    public static final int RULE_ANY_OTHER=20;
+    public static final int RULE_ADIGIT=13;
+    public static final int T__26=26;
+    public static final int T__27=27;
+    public static final int T__28=28;
+    public static final int RULE_INT=6;
+    public static final int RULE_AWORD=4;
     public static final int T__22=22;
-    public static final int RULE_ML_COMMENT=15;
+    public static final int RULE_ML_COMMENT=18;
     public static final int T__23=23;
     public static final int T__24=24;
     public static final int T__25=25;
-    public static final int T__20=20;
     public static final int T__21=21;
 
     // delegates
@@ -133,7 +136,7 @@ public class InternalAbjadParser extends AbstractInternalContentAssistParser {
                 int alt1=2;
                 int LA1_0 = input.LA(1);
 
-                if ( (LA1_0==18||LA1_0==22) ) {
+                if ( (LA1_0==21||LA1_0==25) ) {
                     alt1=1;
                 }
 
@@ -497,10 +500,10 @@ public class InternalAbjadParser extends AbstractInternalContentAssistParser {
             int alt2=2;
             int LA2_0 = input.LA(1);
 
-            if ( (LA2_0==18) ) {
+            if ( (LA2_0==21) ) {
                 alt2=1;
             }
-            else if ( (LA2_0==22) ) {
+            else if ( (LA2_0==25) ) {
                 alt2=2;
             }
             else {
@@ -588,10 +591,10 @@ public class InternalAbjadParser extends AbstractInternalContentAssistParser {
             int alt3=2;
             int LA3_0 = input.LA(1);
 
-            if ( (LA3_0==19) ) {
+            if ( (LA3_0==22) ) {
                 alt3=1;
             }
-            else if ( (LA3_0==21) ) {
+            else if ( (LA3_0==24) ) {
                 alt3=2;
             }
             else {
@@ -720,7 +723,7 @@ public class InternalAbjadParser extends AbstractInternalContentAssistParser {
             // InternalAbjad.g:237:2: '\\u062D\\u0631\\u0641'
             {
              before(grammarAccess.getHarfAccess().getArabicLetterHahArabicLetterRehArabicLetterFehKeyword_0()); 
-            match(input,18,FOLLOW_2); 
+            match(input,21,FOLLOW_2); 
              after(grammarAccess.getHarfAccess().getArabicLetterHahArabicLetterRehArabicLetterFehKeyword_0()); 
 
             }
@@ -918,7 +921,7 @@ public class InternalAbjadParser extends AbstractInternalContentAssistParser {
             // InternalAbjad.g:304:1: ( rule__Harf__Group_2_0__0__Impl rule__Harf__Group_2_0__1 )
             // InternalAbjad.g:305:2: rule__Harf__Group_2_0__0__Impl rule__Harf__Group_2_0__1
             {
-            pushFollow(FOLLOW_6);
+            pushFollow(FOLLOW_4);
             rule__Harf__Group_2_0__0__Impl();
 
             state._fsp--;
@@ -960,7 +963,7 @@ public class InternalAbjadParser extends AbstractInternalContentAssistParser {
             // InternalAbjad.g:318:2: '\\u0647\\u0648'
             {
              before(grammarAccess.getHarfAccess().getArabicLetterHehArabicLetterWawKeyword_2_0_0()); 
-            match(input,19,FOLLOW_2); 
+            match(input,22,FOLLOW_2); 
              after(grammarAccess.getHarfAccess().getArabicLetterHehArabicLetterWawKeyword_2_0_0()); 
 
             }
@@ -993,7 +996,7 @@ public class InternalAbjadParser extends AbstractInternalContentAssistParser {
             // InternalAbjad.g:331:1: ( rule__Harf__Group_2_0__1__Impl rule__Harf__Group_2_0__2 )
             // InternalAbjad.g:332:2: rule__Harf__Group_2_0__1__Impl rule__Harf__Group_2_0__2
             {
-            pushFollow(FOLLOW_7);
+            pushFollow(FOLLOW_6);
             rule__Harf__Group_2_0__1__Impl();
 
             state._fsp--;
@@ -1121,7 +1124,7 @@ public class InternalAbjadParser extends AbstractInternalContentAssistParser {
                 int alt4=2;
                 int LA4_0 = input.LA(1);
 
-                if ( (LA4_0==20) ) {
+                if ( (LA4_0==23) ) {
                     alt4=1;
                 }
 
@@ -1130,7 +1133,7 @@ public class InternalAbjadParser extends AbstractInternalContentAssistParser {
             	case 1 :
             	    // InternalAbjad.g:372:3: rule__Harf__Group_2_0_2__0
             	    {
-            	    pushFollow(FOLLOW_8);
+            	    pushFollow(FOLLOW_7);
             	    rule__Harf__Group_2_0_2__0();
 
             	    state._fsp--;
@@ -1176,7 +1179,7 @@ public class InternalAbjadParser extends AbstractInternalContentAssistParser {
             // InternalAbjad.g:385:1: ( rule__Harf__Group_2_0_2__0__Impl rule__Harf__Group_2_0_2__1 )
             // InternalAbjad.g:386:2: rule__Harf__Group_2_0_2__0__Impl rule__Harf__Group_2_0_2__1
             {
-            pushFollow(FOLLOW_6);
+            pushFollow(FOLLOW_4);
             rule__Harf__Group_2_0_2__0__Impl();
 
             state._fsp--;
@@ -1218,7 +1221,7 @@ public class InternalAbjadParser extends AbstractInternalContentAssistParser {
             // InternalAbjad.g:399:2: '\\u0623\\u0648'
             {
              before(grammarAccess.getHarfAccess().getArabicLetterAlefWithHamzaAboveArabicLetterWawKeyword_2_0_2_0()); 
-            match(input,20,FOLLOW_2); 
+            match(input,23,FOLLOW_2); 
              after(grammarAccess.getHarfAccess().getArabicLetterAlefWithHamzaAboveArabicLetterWawKeyword_2_0_2_0()); 
 
             }
@@ -1373,7 +1376,7 @@ public class InternalAbjadParser extends AbstractInternalContentAssistParser {
             // InternalAbjad.g:453:2: '\\u0630\\u0627\\u062A\\u0647'
             {
              before(grammarAccess.getHarfAccess().getArabicLetterThalArabicLetterAlefArabicLetterTehArabicLetterHehKeyword_2_1_0()); 
-            match(input,21,FOLLOW_2); 
+            match(input,24,FOLLOW_2); 
              after(grammarAccess.getHarfAccess().getArabicLetterThalArabicLetterAlefArabicLetterTehArabicLetterHehKeyword_2_1_0()); 
 
             }
@@ -1486,7 +1489,7 @@ public class InternalAbjadParser extends AbstractInternalContentAssistParser {
             // InternalAbjad.g:493:1: ( rule__Harakah__Group__0__Impl rule__Harakah__Group__1 )
             // InternalAbjad.g:494:2: rule__Harakah__Group__0__Impl rule__Harakah__Group__1
             {
-            pushFollow(FOLLOW_9);
+            pushFollow(FOLLOW_8);
             rule__Harakah__Group__0__Impl();
 
             state._fsp--;
@@ -1528,7 +1531,7 @@ public class InternalAbjadParser extends AbstractInternalContentAssistParser {
             // InternalAbjad.g:507:2: '\\u062D\\u0631\\u0643\\u0629'
             {
              before(grammarAccess.getHarakahAccess().getArabicLetterHahArabicLetterRehArabicLetterKafArabicLetterTehMarbutaKeyword_0()); 
-            match(input,22,FOLLOW_2); 
+            match(input,25,FOLLOW_2); 
              after(grammarAccess.getHarakahAccess().getArabicLetterHahArabicLetterRehArabicLetterKafArabicLetterTehMarbutaKeyword_0()); 
 
             }
@@ -1561,7 +1564,7 @@ public class InternalAbjadParser extends AbstractInternalContentAssistParser {
             // InternalAbjad.g:520:1: ( rule__Harakah__Group__1__Impl rule__Harakah__Group__2 )
             // InternalAbjad.g:521:2: rule__Harakah__Group__1__Impl rule__Harakah__Group__2
             {
-            pushFollow(FOLLOW_10);
+            pushFollow(FOLLOW_9);
             rule__Harakah__Group__1__Impl();
 
             state._fsp--;
@@ -1646,7 +1649,7 @@ public class InternalAbjadParser extends AbstractInternalContentAssistParser {
             // InternalAbjad.g:547:1: ( rule__Harakah__Group__2__Impl rule__Harakah__Group__3 )
             // InternalAbjad.g:548:2: rule__Harakah__Group__2__Impl rule__Harakah__Group__3
             {
-            pushFollow(FOLLOW_11);
+            pushFollow(FOLLOW_4);
             rule__Harakah__Group__2__Impl();
 
             state._fsp--;
@@ -1688,7 +1691,7 @@ public class InternalAbjadParser extends AbstractInternalContentAssistParser {
             // InternalAbjad.g:561:2: '\\u0647\\u064A'
             {
              before(grammarAccess.getHarakahAccess().getArabicLetterHehArabicLetterYehKeyword_2()); 
-            match(input,23,FOLLOW_2); 
+            match(input,26,FOLLOW_2); 
              after(grammarAccess.getHarakahAccess().getArabicLetterHehArabicLetterYehKeyword_2()); 
 
             }
@@ -1801,7 +1804,7 @@ public class InternalAbjadParser extends AbstractInternalContentAssistParser {
             // InternalAbjad.g:601:1: ( rule__AyahStart__Group__0__Impl rule__AyahStart__Group__1 )
             // InternalAbjad.g:602:2: rule__AyahStart__Group__0__Impl rule__AyahStart__Group__1
             {
-            pushFollow(FOLLOW_12);
+            pushFollow(FOLLOW_10);
             rule__AyahStart__Group__0__Impl();
 
             state._fsp--;
@@ -1843,7 +1846,7 @@ public class InternalAbjadParser extends AbstractInternalContentAssistParser {
             // InternalAbjad.g:615:2: '\\u0627\\u0644\\u0633\\u0648\\u0631\\u0629'
             {
              before(grammarAccess.getAyahStartAccess().getArabicLetterAlefArabicLetterLamArabicLetterSeenArabicLetterWawArabicLetterRehArabicLetterTehMarbutaKeyword_0()); 
-            match(input,24,FOLLOW_2); 
+            match(input,27,FOLLOW_2); 
              after(grammarAccess.getAyahStartAccess().getArabicLetterAlefArabicLetterLamArabicLetterSeenArabicLetterWawArabicLetterRehArabicLetterTehMarbutaKeyword_0()); 
 
             }
@@ -1876,7 +1879,7 @@ public class InternalAbjadParser extends AbstractInternalContentAssistParser {
             // InternalAbjad.g:628:1: ( rule__AyahStart__Group__1__Impl rule__AyahStart__Group__2 )
             // InternalAbjad.g:629:2: rule__AyahStart__Group__1__Impl rule__AyahStart__Group__2
             {
-            pushFollow(FOLLOW_13);
+            pushFollow(FOLLOW_11);
             rule__AyahStart__Group__1__Impl();
 
             state._fsp--;
@@ -1961,7 +1964,7 @@ public class InternalAbjadParser extends AbstractInternalContentAssistParser {
             // InternalAbjad.g:655:1: ( rule__AyahStart__Group__2__Impl rule__AyahStart__Group__3 )
             // InternalAbjad.g:656:2: rule__AyahStart__Group__2__Impl rule__AyahStart__Group__3
             {
-            pushFollow(FOLLOW_12);
+            pushFollow(FOLLOW_10);
             rule__AyahStart__Group__2__Impl();
 
             state._fsp--;
@@ -2003,7 +2006,7 @@ public class InternalAbjadParser extends AbstractInternalContentAssistParser {
             // InternalAbjad.g:669:2: '\\u0627\\u0644\\u0622\\u064A\\u0629'
             {
              before(grammarAccess.getAyahStartAccess().getArabicLetterAlefArabicLetterLamArabicLetterAlefWithMaddaAboveArabicLetterYehArabicLetterTehMarbutaKeyword_2()); 
-            match(input,25,FOLLOW_2); 
+            match(input,28,FOLLOW_2); 
              after(grammarAccess.getAyahStartAccess().getArabicLetterAlefArabicLetterLamArabicLetterAlefWithMaddaAboveArabicLetterYehArabicLetterTehMarbutaKeyword_2()); 
 
             }
@@ -2036,7 +2039,7 @@ public class InternalAbjadParser extends AbstractInternalContentAssistParser {
             // InternalAbjad.g:682:1: ( rule__AyahStart__Group__3__Impl rule__AyahStart__Group__4 )
             // InternalAbjad.g:683:2: rule__AyahStart__Group__3__Impl rule__AyahStart__Group__4
             {
-            pushFollow(FOLLOW_9);
+            pushFollow(FOLLOW_8);
             rule__AyahStart__Group__3__Impl();
 
             state._fsp--;
@@ -2201,7 +2204,7 @@ public class InternalAbjadParser extends AbstractInternalContentAssistParser {
             // InternalAbjad.g:736:1: ( rule__Phrase__Group__0__Impl rule__Phrase__Group__1 )
             // InternalAbjad.g:737:2: rule__Phrase__Group__0__Impl rule__Phrase__Group__1
             {
-            pushFollow(FOLLOW_14);
+            pushFollow(FOLLOW_4);
             rule__Phrase__Group__0__Impl();
 
             state._fsp--;
@@ -2230,31 +2233,42 @@ public class InternalAbjadParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Phrase__Group__0__Impl"
-    // InternalAbjad.g:744:1: rule__Phrase__Group__0__Impl : ( ( rule__Phrase__WordsAssignment_0 ) ) ;
+    // InternalAbjad.g:744:1: rule__Phrase__Group__0__Impl : ( ( rule__Phrase__BasmalahAssignment_0 )? ) ;
     public final void rule__Phrase__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAbjad.g:748:1: ( ( ( rule__Phrase__WordsAssignment_0 ) ) )
-            // InternalAbjad.g:749:1: ( ( rule__Phrase__WordsAssignment_0 ) )
+            // InternalAbjad.g:748:1: ( ( ( rule__Phrase__BasmalahAssignment_0 )? ) )
+            // InternalAbjad.g:749:1: ( ( rule__Phrase__BasmalahAssignment_0 )? )
             {
-            // InternalAbjad.g:749:1: ( ( rule__Phrase__WordsAssignment_0 ) )
-            // InternalAbjad.g:750:2: ( rule__Phrase__WordsAssignment_0 )
+            // InternalAbjad.g:749:1: ( ( rule__Phrase__BasmalahAssignment_0 )? )
+            // InternalAbjad.g:750:2: ( rule__Phrase__BasmalahAssignment_0 )?
             {
-             before(grammarAccess.getPhraseAccess().getWordsAssignment_0()); 
-            // InternalAbjad.g:751:2: ( rule__Phrase__WordsAssignment_0 )
-            // InternalAbjad.g:751:3: rule__Phrase__WordsAssignment_0
-            {
-            pushFollow(FOLLOW_2);
-            rule__Phrase__WordsAssignment_0();
+             before(grammarAccess.getPhraseAccess().getBasmalahAssignment_0()); 
+            // InternalAbjad.g:751:2: ( rule__Phrase__BasmalahAssignment_0 )?
+            int alt5=2;
+            int LA5_0 = input.LA(1);
 
-            state._fsp--;
+            if ( (LA5_0==RULE_BASMALAH) ) {
+                alt5=1;
+            }
+            switch (alt5) {
+                case 1 :
+                    // InternalAbjad.g:751:3: rule__Phrase__BasmalahAssignment_0
+                    {
+                    pushFollow(FOLLOW_2);
+                    rule__Phrase__BasmalahAssignment_0();
 
+                    state._fsp--;
+
+
+                    }
+                    break;
 
             }
 
-             after(grammarAccess.getPhraseAccess().getWordsAssignment_0()); 
+             after(grammarAccess.getPhraseAccess().getBasmalahAssignment_0()); 
 
             }
 
@@ -2310,36 +2324,58 @@ public class InternalAbjadParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Phrase__Group__1__Impl"
-    // InternalAbjad.g:770:1: rule__Phrase__Group__1__Impl : ( ( rule__Phrase__Group_1__0 )* ) ;
+    // InternalAbjad.g:770:1: rule__Phrase__Group__1__Impl : ( ( ( rule__Phrase__WordsAssignment_1 ) ) ( ( rule__Phrase__WordsAssignment_1 )* ) ) ;
     public final void rule__Phrase__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAbjad.g:774:1: ( ( ( rule__Phrase__Group_1__0 )* ) )
-            // InternalAbjad.g:775:1: ( ( rule__Phrase__Group_1__0 )* )
+            // InternalAbjad.g:774:1: ( ( ( ( rule__Phrase__WordsAssignment_1 ) ) ( ( rule__Phrase__WordsAssignment_1 )* ) ) )
+            // InternalAbjad.g:775:1: ( ( ( rule__Phrase__WordsAssignment_1 ) ) ( ( rule__Phrase__WordsAssignment_1 )* ) )
             {
-            // InternalAbjad.g:775:1: ( ( rule__Phrase__Group_1__0 )* )
-            // InternalAbjad.g:776:2: ( rule__Phrase__Group_1__0 )*
+            // InternalAbjad.g:775:1: ( ( ( rule__Phrase__WordsAssignment_1 ) ) ( ( rule__Phrase__WordsAssignment_1 )* ) )
+            // InternalAbjad.g:776:2: ( ( rule__Phrase__WordsAssignment_1 ) ) ( ( rule__Phrase__WordsAssignment_1 )* )
             {
-             before(grammarAccess.getPhraseAccess().getGroup_1()); 
-            // InternalAbjad.g:777:2: ( rule__Phrase__Group_1__0 )*
-            loop5:
-            do {
-                int alt5=2;
-                int LA5_0 = input.LA(1);
+            // InternalAbjad.g:776:2: ( ( rule__Phrase__WordsAssignment_1 ) )
+            // InternalAbjad.g:777:3: ( rule__Phrase__WordsAssignment_1 )
+            {
+             before(grammarAccess.getPhraseAccess().getWordsAssignment_1()); 
+            // InternalAbjad.g:778:3: ( rule__Phrase__WordsAssignment_1 )
+            // InternalAbjad.g:778:4: rule__Phrase__WordsAssignment_1
+            {
+            pushFollow(FOLLOW_12);
+            rule__Phrase__WordsAssignment_1();
 
-                if ( (LA5_0==RULE_WS) ) {
-                    alt5=1;
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getPhraseAccess().getWordsAssignment_1()); 
+
+            }
+
+            // InternalAbjad.g:781:2: ( ( rule__Phrase__WordsAssignment_1 )* )
+            // InternalAbjad.g:782:3: ( rule__Phrase__WordsAssignment_1 )*
+            {
+             before(grammarAccess.getPhraseAccess().getWordsAssignment_1()); 
+            // InternalAbjad.g:783:3: ( rule__Phrase__WordsAssignment_1 )*
+            loop6:
+            do {
+                int alt6=2;
+                int LA6_0 = input.LA(1);
+
+                if ( (LA6_0==RULE_AWORD) ) {
+                    alt6=1;
                 }
 
 
-                switch (alt5) {
+                switch (alt6) {
             	case 1 :
-            	    // InternalAbjad.g:777:3: rule__Phrase__Group_1__0
+            	    // InternalAbjad.g:783:4: rule__Phrase__WordsAssignment_1
             	    {
-            	    pushFollow(FOLLOW_15);
-            	    rule__Phrase__Group_1__0();
+            	    pushFollow(FOLLOW_12);
+            	    rule__Phrase__WordsAssignment_1();
 
             	    state._fsp--;
 
@@ -2348,11 +2384,14 @@ public class InternalAbjadParser extends AbstractInternalContentAssistParser {
             	    break;
 
             	default :
-            	    break loop5;
+            	    break loop6;
                 }
             } while (true);
 
-             after(grammarAccess.getPhraseAccess().getGroup_1()); 
+             after(grammarAccess.getPhraseAccess().getWordsAssignment_1()); 
+
+            }
+
 
             }
 
@@ -2374,173 +2413,18 @@ public class InternalAbjadParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__Phrase__Group__1__Impl"
 
 
-    // $ANTLR start "rule__Phrase__Group_1__0"
-    // InternalAbjad.g:786:1: rule__Phrase__Group_1__0 : rule__Phrase__Group_1__0__Impl rule__Phrase__Group_1__1 ;
-    public final void rule__Phrase__Group_1__0() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalAbjad.g:790:1: ( rule__Phrase__Group_1__0__Impl rule__Phrase__Group_1__1 )
-            // InternalAbjad.g:791:2: rule__Phrase__Group_1__0__Impl rule__Phrase__Group_1__1
-            {
-            pushFollow(FOLLOW_4);
-            rule__Phrase__Group_1__0__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_2);
-            rule__Phrase__Group_1__1();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Phrase__Group_1__0"
-
-
-    // $ANTLR start "rule__Phrase__Group_1__0__Impl"
-    // InternalAbjad.g:798:1: rule__Phrase__Group_1__0__Impl : ( RULE_WS ) ;
-    public final void rule__Phrase__Group_1__0__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalAbjad.g:802:1: ( ( RULE_WS ) )
-            // InternalAbjad.g:803:1: ( RULE_WS )
-            {
-            // InternalAbjad.g:803:1: ( RULE_WS )
-            // InternalAbjad.g:804:2: RULE_WS
-            {
-             before(grammarAccess.getPhraseAccess().getWSTerminalRuleCall_1_0()); 
-            match(input,RULE_WS,FOLLOW_2); 
-             after(grammarAccess.getPhraseAccess().getWSTerminalRuleCall_1_0()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Phrase__Group_1__0__Impl"
-
-
-    // $ANTLR start "rule__Phrase__Group_1__1"
-    // InternalAbjad.g:813:1: rule__Phrase__Group_1__1 : rule__Phrase__Group_1__1__Impl ;
-    public final void rule__Phrase__Group_1__1() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalAbjad.g:817:1: ( rule__Phrase__Group_1__1__Impl )
-            // InternalAbjad.g:818:2: rule__Phrase__Group_1__1__Impl
-            {
-            pushFollow(FOLLOW_2);
-            rule__Phrase__Group_1__1__Impl();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Phrase__Group_1__1"
-
-
-    // $ANTLR start "rule__Phrase__Group_1__1__Impl"
-    // InternalAbjad.g:824:1: rule__Phrase__Group_1__1__Impl : ( ( rule__Phrase__WordsAssignment_1_1 ) ) ;
-    public final void rule__Phrase__Group_1__1__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalAbjad.g:828:1: ( ( ( rule__Phrase__WordsAssignment_1_1 ) ) )
-            // InternalAbjad.g:829:1: ( ( rule__Phrase__WordsAssignment_1_1 ) )
-            {
-            // InternalAbjad.g:829:1: ( ( rule__Phrase__WordsAssignment_1_1 ) )
-            // InternalAbjad.g:830:2: ( rule__Phrase__WordsAssignment_1_1 )
-            {
-             before(grammarAccess.getPhraseAccess().getWordsAssignment_1_1()); 
-            // InternalAbjad.g:831:2: ( rule__Phrase__WordsAssignment_1_1 )
-            // InternalAbjad.g:831:3: rule__Phrase__WordsAssignment_1_1
-            {
-            pushFollow(FOLLOW_2);
-            rule__Phrase__WordsAssignment_1_1();
-
-            state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getPhraseAccess().getWordsAssignment_1_1()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Phrase__Group_1__1__Impl"
-
-
     // $ANTLR start "rule__AbjadModel__HouroufAssignment_0"
-    // InternalAbjad.g:840:1: rule__AbjadModel__HouroufAssignment_0 : ( ruleHarf ) ;
+    // InternalAbjad.g:793:1: rule__AbjadModel__HouroufAssignment_0 : ( ruleHarf ) ;
     public final void rule__AbjadModel__HouroufAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAbjad.g:844:1: ( ( ruleHarf ) )
-            // InternalAbjad.g:845:2: ( ruleHarf )
+            // InternalAbjad.g:797:1: ( ( ruleHarf ) )
+            // InternalAbjad.g:798:2: ( ruleHarf )
             {
-            // InternalAbjad.g:845:2: ( ruleHarf )
-            // InternalAbjad.g:846:3: ruleHarf
+            // InternalAbjad.g:798:2: ( ruleHarf )
+            // InternalAbjad.g:799:3: ruleHarf
             {
              before(grammarAccess.getAbjadModelAccess().getHouroufHarfParserRuleCall_0_0()); 
             pushFollow(FOLLOW_2);
@@ -2571,17 +2455,17 @@ public class InternalAbjadParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__AbjadModel__HarakatAssignment_1"
-    // InternalAbjad.g:855:1: rule__AbjadModel__HarakatAssignment_1 : ( ruleHarakah ) ;
+    // InternalAbjad.g:808:1: rule__AbjadModel__HarakatAssignment_1 : ( ruleHarakah ) ;
     public final void rule__AbjadModel__HarakatAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAbjad.g:859:1: ( ( ruleHarakah ) )
-            // InternalAbjad.g:860:2: ( ruleHarakah )
+            // InternalAbjad.g:812:1: ( ( ruleHarakah ) )
+            // InternalAbjad.g:813:2: ( ruleHarakah )
             {
-            // InternalAbjad.g:860:2: ( ruleHarakah )
-            // InternalAbjad.g:861:3: ruleHarakah
+            // InternalAbjad.g:813:2: ( ruleHarakah )
+            // InternalAbjad.g:814:3: ruleHarakah
             {
              before(grammarAccess.getAbjadModelAccess().getHarakatHarakahParserRuleCall_1_0()); 
             pushFollow(FOLLOW_2);
@@ -2612,17 +2496,17 @@ public class InternalAbjadParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Harf__NameAssignment_1"
-    // InternalAbjad.g:870:1: rule__Harf__NameAssignment_1 : ( RULE_AWORD ) ;
+    // InternalAbjad.g:823:1: rule__Harf__NameAssignment_1 : ( RULE_AWORD ) ;
     public final void rule__Harf__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAbjad.g:874:1: ( ( RULE_AWORD ) )
-            // InternalAbjad.g:875:2: ( RULE_AWORD )
+            // InternalAbjad.g:827:1: ( ( RULE_AWORD ) )
+            // InternalAbjad.g:828:2: ( RULE_AWORD )
             {
-            // InternalAbjad.g:875:2: ( RULE_AWORD )
-            // InternalAbjad.g:876:3: RULE_AWORD
+            // InternalAbjad.g:828:2: ( RULE_AWORD )
+            // InternalAbjad.g:829:3: RULE_AWORD
             {
              before(grammarAccess.getHarfAccess().getNameAWORDTerminalRuleCall_1_0()); 
             match(input,RULE_AWORD,FOLLOW_2); 
@@ -2649,21 +2533,21 @@ public class InternalAbjadParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Harf__ValuesAssignment_2_0_1"
-    // InternalAbjad.g:885:1: rule__Harf__ValuesAssignment_2_0_1 : ( RULE_ALETTER ) ;
+    // InternalAbjad.g:838:1: rule__Harf__ValuesAssignment_2_0_1 : ( RULE_AWORD ) ;
     public final void rule__Harf__ValuesAssignment_2_0_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAbjad.g:889:1: ( ( RULE_ALETTER ) )
-            // InternalAbjad.g:890:2: ( RULE_ALETTER )
+            // InternalAbjad.g:842:1: ( ( RULE_AWORD ) )
+            // InternalAbjad.g:843:2: ( RULE_AWORD )
             {
-            // InternalAbjad.g:890:2: ( RULE_ALETTER )
-            // InternalAbjad.g:891:3: RULE_ALETTER
+            // InternalAbjad.g:843:2: ( RULE_AWORD )
+            // InternalAbjad.g:844:3: RULE_AWORD
             {
-             before(grammarAccess.getHarfAccess().getValuesALETTERTerminalRuleCall_2_0_1_0()); 
-            match(input,RULE_ALETTER,FOLLOW_2); 
-             after(grammarAccess.getHarfAccess().getValuesALETTERTerminalRuleCall_2_0_1_0()); 
+             before(grammarAccess.getHarfAccess().getValuesAWORDTerminalRuleCall_2_0_1_0()); 
+            match(input,RULE_AWORD,FOLLOW_2); 
+             after(grammarAccess.getHarfAccess().getValuesAWORDTerminalRuleCall_2_0_1_0()); 
 
             }
 
@@ -2686,21 +2570,21 @@ public class InternalAbjadParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Harf__ValuesAssignment_2_0_2_1"
-    // InternalAbjad.g:900:1: rule__Harf__ValuesAssignment_2_0_2_1 : ( RULE_ALETTER ) ;
+    // InternalAbjad.g:853:1: rule__Harf__ValuesAssignment_2_0_2_1 : ( RULE_AWORD ) ;
     public final void rule__Harf__ValuesAssignment_2_0_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAbjad.g:904:1: ( ( RULE_ALETTER ) )
-            // InternalAbjad.g:905:2: ( RULE_ALETTER )
+            // InternalAbjad.g:857:1: ( ( RULE_AWORD ) )
+            // InternalAbjad.g:858:2: ( RULE_AWORD )
             {
-            // InternalAbjad.g:905:2: ( RULE_ALETTER )
-            // InternalAbjad.g:906:3: RULE_ALETTER
+            // InternalAbjad.g:858:2: ( RULE_AWORD )
+            // InternalAbjad.g:859:3: RULE_AWORD
             {
-             before(grammarAccess.getHarfAccess().getValuesALETTERTerminalRuleCall_2_0_2_1_0()); 
-            match(input,RULE_ALETTER,FOLLOW_2); 
-             after(grammarAccess.getHarfAccess().getValuesALETTERTerminalRuleCall_2_0_2_1_0()); 
+             before(grammarAccess.getHarfAccess().getValuesAWORDTerminalRuleCall_2_0_2_1_0()); 
+            match(input,RULE_AWORD,FOLLOW_2); 
+             after(grammarAccess.getHarfAccess().getValuesAWORDTerminalRuleCall_2_0_2_1_0()); 
 
             }
 
@@ -2723,21 +2607,21 @@ public class InternalAbjadParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Harf__RefAssignment_2_1_1"
-    // InternalAbjad.g:915:1: rule__Harf__RefAssignment_2_1_1 : ( ( RULE_AWORD ) ) ;
+    // InternalAbjad.g:868:1: rule__Harf__RefAssignment_2_1_1 : ( ( RULE_AWORD ) ) ;
     public final void rule__Harf__RefAssignment_2_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAbjad.g:919:1: ( ( ( RULE_AWORD ) ) )
-            // InternalAbjad.g:920:2: ( ( RULE_AWORD ) )
+            // InternalAbjad.g:872:1: ( ( ( RULE_AWORD ) ) )
+            // InternalAbjad.g:873:2: ( ( RULE_AWORD ) )
             {
-            // InternalAbjad.g:920:2: ( ( RULE_AWORD ) )
-            // InternalAbjad.g:921:3: ( RULE_AWORD )
+            // InternalAbjad.g:873:2: ( ( RULE_AWORD ) )
+            // InternalAbjad.g:874:3: ( RULE_AWORD )
             {
              before(grammarAccess.getHarfAccess().getRefHarfCrossReference_2_1_1_0()); 
-            // InternalAbjad.g:922:3: ( RULE_AWORD )
-            // InternalAbjad.g:923:4: RULE_AWORD
+            // InternalAbjad.g:875:3: ( RULE_AWORD )
+            // InternalAbjad.g:876:4: RULE_AWORD
             {
              before(grammarAccess.getHarfAccess().getRefHarfAWORDTerminalRuleCall_2_1_1_0_1()); 
             match(input,RULE_AWORD,FOLLOW_2); 
@@ -2768,17 +2652,17 @@ public class InternalAbjadParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Harakah__NameAssignment_1"
-    // InternalAbjad.g:934:1: rule__Harakah__NameAssignment_1 : ( RULE_KALEMAH ) ;
+    // InternalAbjad.g:887:1: rule__Harakah__NameAssignment_1 : ( RULE_KALEMAH ) ;
     public final void rule__Harakah__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAbjad.g:938:1: ( ( RULE_KALEMAH ) )
-            // InternalAbjad.g:939:2: ( RULE_KALEMAH )
+            // InternalAbjad.g:891:1: ( ( RULE_KALEMAH ) )
+            // InternalAbjad.g:892:2: ( RULE_KALEMAH )
             {
-            // InternalAbjad.g:939:2: ( RULE_KALEMAH )
-            // InternalAbjad.g:940:3: RULE_KALEMAH
+            // InternalAbjad.g:892:2: ( RULE_KALEMAH )
+            // InternalAbjad.g:893:3: RULE_KALEMAH
             {
              before(grammarAccess.getHarakahAccess().getNameKALEMAHTerminalRuleCall_1_0()); 
             match(input,RULE_KALEMAH,FOLLOW_2); 
@@ -2805,21 +2689,21 @@ public class InternalAbjadParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Harakah__ValueAssignment_3"
-    // InternalAbjad.g:949:1: rule__Harakah__ValueAssignment_3 : ( RULE_AHARAKAH ) ;
+    // InternalAbjad.g:902:1: rule__Harakah__ValueAssignment_3 : ( RULE_AWORD ) ;
     public final void rule__Harakah__ValueAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAbjad.g:953:1: ( ( RULE_AHARAKAH ) )
-            // InternalAbjad.g:954:2: ( RULE_AHARAKAH )
+            // InternalAbjad.g:906:1: ( ( RULE_AWORD ) )
+            // InternalAbjad.g:907:2: ( RULE_AWORD )
             {
-            // InternalAbjad.g:954:2: ( RULE_AHARAKAH )
-            // InternalAbjad.g:955:3: RULE_AHARAKAH
+            // InternalAbjad.g:907:2: ( RULE_AWORD )
+            // InternalAbjad.g:908:3: RULE_AWORD
             {
-             before(grammarAccess.getHarakahAccess().getValueAHARAKAHTerminalRuleCall_3_0()); 
-            match(input,RULE_AHARAKAH,FOLLOW_2); 
-             after(grammarAccess.getHarakahAccess().getValueAHARAKAHTerminalRuleCall_3_0()); 
+             before(grammarAccess.getHarakahAccess().getValueAWORDTerminalRuleCall_3_0()); 
+            match(input,RULE_AWORD,FOLLOW_2); 
+             after(grammarAccess.getHarakahAccess().getValueAWORDTerminalRuleCall_3_0()); 
 
             }
 
@@ -2842,17 +2726,17 @@ public class InternalAbjadParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__AyahStart__SurahAssignment_1"
-    // InternalAbjad.g:964:1: rule__AyahStart__SurahAssignment_1 : ( RULE_INT ) ;
+    // InternalAbjad.g:917:1: rule__AyahStart__SurahAssignment_1 : ( RULE_INT ) ;
     public final void rule__AyahStart__SurahAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAbjad.g:968:1: ( ( RULE_INT ) )
-            // InternalAbjad.g:969:2: ( RULE_INT )
+            // InternalAbjad.g:921:1: ( ( RULE_INT ) )
+            // InternalAbjad.g:922:2: ( RULE_INT )
             {
-            // InternalAbjad.g:969:2: ( RULE_INT )
-            // InternalAbjad.g:970:3: RULE_INT
+            // InternalAbjad.g:922:2: ( RULE_INT )
+            // InternalAbjad.g:923:3: RULE_INT
             {
              before(grammarAccess.getAyahStartAccess().getSurahINTTerminalRuleCall_1_0()); 
             match(input,RULE_INT,FOLLOW_2); 
@@ -2879,17 +2763,17 @@ public class InternalAbjadParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__AyahStart__AyahAssignment_3"
-    // InternalAbjad.g:979:1: rule__AyahStart__AyahAssignment_3 : ( RULE_INT ) ;
+    // InternalAbjad.g:932:1: rule__AyahStart__AyahAssignment_3 : ( RULE_INT ) ;
     public final void rule__AyahStart__AyahAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAbjad.g:983:1: ( ( RULE_INT ) )
-            // InternalAbjad.g:984:2: ( RULE_INT )
+            // InternalAbjad.g:936:1: ( ( RULE_INT ) )
+            // InternalAbjad.g:937:2: ( RULE_INT )
             {
-            // InternalAbjad.g:984:2: ( RULE_INT )
-            // InternalAbjad.g:985:3: RULE_INT
+            // InternalAbjad.g:937:2: ( RULE_INT )
+            // InternalAbjad.g:938:3: RULE_INT
             {
              before(grammarAccess.getAyahStartAccess().getAyahINTTerminalRuleCall_3_0()); 
             match(input,RULE_INT,FOLLOW_2); 
@@ -2916,17 +2800,17 @@ public class InternalAbjadParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__AyahStart__NameAssignment_4"
-    // InternalAbjad.g:994:1: rule__AyahStart__NameAssignment_4 : ( RULE_KALEMAH ) ;
+    // InternalAbjad.g:947:1: rule__AyahStart__NameAssignment_4 : ( RULE_KALEMAH ) ;
     public final void rule__AyahStart__NameAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAbjad.g:998:1: ( ( RULE_KALEMAH ) )
-            // InternalAbjad.g:999:2: ( RULE_KALEMAH )
+            // InternalAbjad.g:951:1: ( ( RULE_KALEMAH ) )
+            // InternalAbjad.g:952:2: ( RULE_KALEMAH )
             {
-            // InternalAbjad.g:999:2: ( RULE_KALEMAH )
-            // InternalAbjad.g:1000:3: RULE_KALEMAH
+            // InternalAbjad.g:952:2: ( RULE_KALEMAH )
+            // InternalAbjad.g:953:3: RULE_KALEMAH
             {
              before(grammarAccess.getAyahStartAccess().getNameKALEMAHTerminalRuleCall_4_0()); 
             match(input,RULE_KALEMAH,FOLLOW_2); 
@@ -2952,22 +2836,22 @@ public class InternalAbjadParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__AyahStart__NameAssignment_4"
 
 
-    // $ANTLR start "rule__Phrase__WordsAssignment_0"
-    // InternalAbjad.g:1009:1: rule__Phrase__WordsAssignment_0 : ( RULE_AWORD ) ;
-    public final void rule__Phrase__WordsAssignment_0() throws RecognitionException {
+    // $ANTLR start "rule__Phrase__BasmalahAssignment_0"
+    // InternalAbjad.g:962:1: rule__Phrase__BasmalahAssignment_0 : ( RULE_BASMALAH ) ;
+    public final void rule__Phrase__BasmalahAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAbjad.g:1013:1: ( ( RULE_AWORD ) )
-            // InternalAbjad.g:1014:2: ( RULE_AWORD )
+            // InternalAbjad.g:966:1: ( ( RULE_BASMALAH ) )
+            // InternalAbjad.g:967:2: ( RULE_BASMALAH )
             {
-            // InternalAbjad.g:1014:2: ( RULE_AWORD )
-            // InternalAbjad.g:1015:3: RULE_AWORD
+            // InternalAbjad.g:967:2: ( RULE_BASMALAH )
+            // InternalAbjad.g:968:3: RULE_BASMALAH
             {
-             before(grammarAccess.getPhraseAccess().getWordsAWORDTerminalRuleCall_0_0()); 
-            match(input,RULE_AWORD,FOLLOW_2); 
-             after(grammarAccess.getPhraseAccess().getWordsAWORDTerminalRuleCall_0_0()); 
+             before(grammarAccess.getPhraseAccess().getBasmalahBASMALAHTerminalRuleCall_0_0()); 
+            match(input,RULE_BASMALAH,FOLLOW_2); 
+             after(grammarAccess.getPhraseAccess().getBasmalahBASMALAHTerminalRuleCall_0_0()); 
 
             }
 
@@ -2986,25 +2870,25 @@ public class InternalAbjadParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Phrase__WordsAssignment_0"
+    // $ANTLR end "rule__Phrase__BasmalahAssignment_0"
 
 
-    // $ANTLR start "rule__Phrase__WordsAssignment_1_1"
-    // InternalAbjad.g:1024:1: rule__Phrase__WordsAssignment_1_1 : ( RULE_AWORD ) ;
-    public final void rule__Phrase__WordsAssignment_1_1() throws RecognitionException {
+    // $ANTLR start "rule__Phrase__WordsAssignment_1"
+    // InternalAbjad.g:977:1: rule__Phrase__WordsAssignment_1 : ( RULE_AWORD ) ;
+    public final void rule__Phrase__WordsAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalAbjad.g:1028:1: ( ( RULE_AWORD ) )
-            // InternalAbjad.g:1029:2: ( RULE_AWORD )
+            // InternalAbjad.g:981:1: ( ( RULE_AWORD ) )
+            // InternalAbjad.g:982:2: ( RULE_AWORD )
             {
-            // InternalAbjad.g:1029:2: ( RULE_AWORD )
-            // InternalAbjad.g:1030:3: RULE_AWORD
+            // InternalAbjad.g:982:2: ( RULE_AWORD )
+            // InternalAbjad.g:983:3: RULE_AWORD
             {
-             before(grammarAccess.getPhraseAccess().getWordsAWORDTerminalRuleCall_1_1_0()); 
+             before(grammarAccess.getPhraseAccess().getWordsAWORDTerminalRuleCall_1_0()); 
             match(input,RULE_AWORD,FOLLOW_2); 
-             after(grammarAccess.getPhraseAccess().getWordsAWORDTerminalRuleCall_1_1_0()); 
+             after(grammarAccess.getPhraseAccess().getWordsAWORDTerminalRuleCall_1_0()); 
 
             }
 
@@ -3023,7 +2907,7 @@ public class InternalAbjadParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Phrase__WordsAssignment_1_1"
+    // $ANTLR end "rule__Phrase__WordsAssignment_1"
 
     // Delegated rules
 
@@ -3032,18 +2916,15 @@ public class InternalAbjadParser extends AbstractInternalContentAssistParser {
 
     public static final BitSet FOLLOW_1 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_2 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_3 = new BitSet(new long[]{0x0000000000440002L});
-    public static final BitSet FOLLOW_4 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_5 = new BitSet(new long[]{0x0000000000280000L});
-    public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x0000000000100000L});
-    public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x0000000000100002L});
-    public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x0000000000000080L});
-    public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x0000000000800000L});
-    public static final BitSet FOLLOW_11 = new BitSet(new long[]{0x0000000000000100L});
-    public static final BitSet FOLLOW_12 = new BitSet(new long[]{0x0000000000000200L});
-    public static final BitSet FOLLOW_13 = new BitSet(new long[]{0x0000000002000000L});
-    public static final BitSet FOLLOW_14 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_15 = new BitSet(new long[]{0x0000000000000012L});
+    public static final BitSet FOLLOW_3 = new BitSet(new long[]{0x0000000002200002L});
+    public static final BitSet FOLLOW_4 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_5 = new BitSet(new long[]{0x0000000001400000L});
+    public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x0000000000800000L});
+    public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x0000000000800002L});
+    public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x0000000004000000L});
+    public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_11 = new BitSet(new long[]{0x0000000010000000L});
+    public static final BitSet FOLLOW_12 = new BitSet(new long[]{0x0000000000000012L});
 
 }

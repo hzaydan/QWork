@@ -167,7 +167,7 @@ public class QAyahStartGrammarAccess extends AbstractElementFinder.AbstractGramm
 	}
 	
 	//Phrase:
-	//    words+=AWORD (WS words+=AWORD)*;
+	//    basmalah?=BASMALAH? words+=AWORD+;
 	public ArabicGrammarAccess.PhraseElements getPhraseAccess() {
 		return gaArabic.getPhraseAccess();
 	}
@@ -176,46 +176,67 @@ public class QAyahStartGrammarAccess extends AbstractElementFinder.AbstractGramm
 		return getPhraseAccess().getRule();
 	}
 	
-	//terminal ALETTER:
+	//terminal BASMALAH:
+	//    'بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ'
+	//;
+	public TerminalRule getBASMALAHRule() {
+		return gaArabic.getBASMALAHRule();
+	}
+	
+	//terminal AWORD:
+	//    (ALETTER|AHARAKAH|ATANWEEN|ASHADDAH)+
+	//;
+	public TerminalRule getAWORDRule() {
+		return gaArabic.getAWORDRule();
+	}
+	
+	//terminal fragment ALIGATURES:
+	//    '\uFDF0' ..'\uFDFD'
+	//;
+	public TerminalRule getALIGATURESRule() {
+		return gaArabic.getALIGATURESRule();
+	}
+	
+	//terminal fragment ALETTER:
 	//    '\u0621' ..'\u064a'
 	//;
 	public TerminalRule getALETTERRule() {
 		return gaArabic.getALETTERRule();
 	}
 	
-	//terminal ADIGIT:
+	//terminal fragment ADIGIT:
 	//    '\u0660' .. '\u0669'
 	//;
 	public TerminalRule getADIGITRule() {
 		return gaArabic.getADIGITRule();
 	}
 	
-	//terminal AHARAKAH:
+	//terminal fragment ATANWEEN:
+	//    '\u064b' .. '\u064d'
+	//;
+	public TerminalRule getATANWEENRule() {
+		return gaArabic.getATANWEENRule();
+	}
+	
+	//terminal fragment AHARAKAH:
 	//    '\u064e' .. '\u0650' | '\u0652'
 	//;
 	public TerminalRule getAHARAKAHRule() {
 		return gaArabic.getAHARAKAHRule();
 	}
 	
-	//terminal ASHADDAH:
+	//terminal fragment ASHADDAH:
 	//    '\u0651'
 	//;
 	public TerminalRule getASHADDAHRule() {
 		return gaArabic.getASHADDAHRule();
 	}
 	
-	//terminal ANONLETTER:
+	//terminal fragment ANONLETTER:
 	//    ('\u0600' .. '\u0620') | ('\u064b' .. '\u06ff')
 	//;
 	public TerminalRule getANONLETTERRule() {
 		return gaArabic.getANONLETTERRule();
-	}
-	
-	//terminal AWORD:
-	//    (ALETTER|AHARAKAH|ASHADDAH)+
-	//;
-	public TerminalRule getAWORDRule() {
-		return gaArabic.getAWORDRule();
 	}
 	
 	//terminal KALEMAH:
@@ -223,6 +244,13 @@ public class QAyahStartGrammarAccess extends AbstractElementFinder.AbstractGramm
 	//;
 	public TerminalRule getKALEMAHRule() {
 		return gaArabic.getKALEMAHRule();
+	}
+	
+	//@Override
+	//terminal SL_COMMENT:
+	//    'deactivated';
+	public TerminalRule getSL_COMMENTRule() {
+		return gaArabic.getSL_COMMENTRule();
 	}
 	
 	//terminal ID: '^'?('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
@@ -246,11 +274,6 @@ public class QAyahStartGrammarAccess extends AbstractElementFinder.AbstractGramm
 	//terminal ML_COMMENT : '/*' -> '*/';
 	public TerminalRule getML_COMMENTRule() {
 		return gaTerminals.getML_COMMENTRule();
-	}
-	
-	//terminal SL_COMMENT : '//' !('\n'|'\r')* ('\r'? '\n')?;
-	public TerminalRule getSL_COMMENTRule() {
-		return gaTerminals.getSL_COMMENTRule();
 	}
 	
 	//terminal WS         : (' '|'\t'|'\r'|'\n')+;

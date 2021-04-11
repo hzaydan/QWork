@@ -6,32 +6,49 @@ Model:
 	phrases+=Phrase+;
 	
 Phrase:
-	words+=AWORD (WS words+=AWORD)*;
+	basmalah?=BASMALAH? words+=AWORD+;
 
-terminal ALETTER:
-	'\u0621' ..'\u064a'
-;
-
-terminal ADIGIT:
-	'\u0660' .. '\u0669'
-;
-
-terminal AHARAKAH:
-	'\u064e' .. '\u0650' | '\u0652'
-;
-
-terminal ASHADDAH:
-	'\u0651'
-;
-
-terminal ANONLETTER:
-	('\u0600' .. '\u0620') | ('\u064b' .. '\u06ff')
+terminal BASMALAH:
+	'بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ'
 ;
 
 terminal AWORD:
-	(ALETTER|AHARAKAH|ASHADDAH)+
+	(ALETTER|AHARAKAH|ATANWEEN|ASHADDAH)+
 ;
+
+terminal fragment ALIGATURES:
+	'\uFDF0' ..'\uFDFD'
+;
+
+terminal fragment ALETTER:
+	'\u0621' ..'\u064a'
+;
+
+terminal fragment ADIGIT:
+	'\u0660' .. '\u0669'
+;
+
+terminal fragment ATANWEEN:
+	'\u064b' .. '\u064d'
+;
+
+terminal fragment AHARAKAH:
+	'\u064e' .. '\u0650' | '\u0652'
+;
+
+terminal fragment ASHADDAH:
+	'\u0651'
+;
+
+terminal fragment ANONLETTER:
+	('\u0600' .. '\u0620') | ('\u064b' .. '\u06ff')
+;
+
 
 terminal KALEMAH:
 	'"' -> '"'
 ;
+
+@Override 
+terminal SL_COMMENT:
+	'deactivated';

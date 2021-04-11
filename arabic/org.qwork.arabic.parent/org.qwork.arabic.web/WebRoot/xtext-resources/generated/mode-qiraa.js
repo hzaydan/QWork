@@ -6,7 +6,9 @@ define(["ace/lib/oop", "ace/mode/text", "ace/mode/text_highlight_rules"], functi
 				{token: "comment", regex: "\\/\\*", next : "comment"},
 				{token: "string", regex: '["](?:(?:\\\\.)|(?:[^"\\\\]))*?["]'},
 				{token: "string", regex: "['](?:(?:\\\\.)|(?:[^'\\\\]))*?[']"},
-				{token: "constant.numeric", regex: "[+-]?\\d+(?:(?:\\.\\d*)?(?:[eE][+-]?\\d+)?)?\\b"}
+				{token: "constant.numeric", regex: "[+-]?\\d+(?:(?:\\.\\d*)?(?:[eE][+-]?\\d+)?)?\\b"},
+				{token: "lparen", regex: "[(]"},
+				{token: "rparen", regex: "[)]"}
 			],
 			"comment": [
 				{token: "comment", regex: ".*?\\*\\/", next : "start"},

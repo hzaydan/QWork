@@ -10,6 +10,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Arabic.ecore#//Model/phrases"/>
     </genClasses>
     <genClasses ecoreClass="Arabic.ecore#//Phrase">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Arabic.ecore#//Phrase/basmalah"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Arabic.ecore#//Phrase/words"/>
     </genClasses>
   </genPackages>

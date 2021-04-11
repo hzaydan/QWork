@@ -4,5 +4,5 @@
 package org.qwork.scoping;
 
 
-public abstract class AbstractQiraaScopeProvider extends AbjadScopeProvider {
+public abstract class AbstractQiraaScopeProvider extends MatnScopeProvider {
 }

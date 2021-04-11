@@ -88,7 +88,7 @@ public class AbjadSemanticSequencer extends QAyahStartSemanticSequencer {
 	 *     Harakah returns Harakah
 	 *
 	 * Constraint:
-	 *     (name=KALEMAH value=AHARAKAH)
+	 *     (name=KALEMAH value=AWORD)
 	 */
 	protected void sequence_Harakah(ISerializationContext context, Harakah semanticObject) {
 		if (errorAcceptor != null) {
@@ -99,7 +99,7 @@ public class AbjadSemanticSequencer extends QAyahStartSemanticSequencer {
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getHarakahAccess().getNameKALEMAHTerminalRuleCall_1_0(), semanticObject.getName());
-		feeder.accept(grammarAccess.getHarakahAccess().getValueAHARAKAHTerminalRuleCall_3_0(), semanticObject.getValue());
+		feeder.accept(grammarAccess.getHarakahAccess().getValueAWORDTerminalRuleCall_3_0(), semanticObject.getValue());
 		feeder.finish();
 	}
 	
@@ -109,7 +109,7 @@ public class AbjadSemanticSequencer extends QAyahStartSemanticSequencer {
 	 *     Harf returns Harf
 	 *
 	 * Constraint:
-	 *     (name=AWORD ((values+=ALETTER values+=ALETTER*) | ref=[Harf|AWORD]))
+	 *     (name=AWORD ((values+=AWORD values+=AWORD*) | ref=[Harf|AWORD]))
 	 */
 	protected void sequence_Harf(ISerializationContext context, Harf semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

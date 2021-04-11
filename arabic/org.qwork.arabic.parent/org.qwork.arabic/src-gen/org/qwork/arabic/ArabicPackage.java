@@ -96,13 +96,22 @@ public interface ArabicPackage extends EPackage
   int PHRASE = 1;
 
   /**
+   * The feature id for the '<em><b>Basmalah</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PHRASE__BASMALAH = 0;
+
+  /**
    * The feature id for the '<em><b>Words</b></em>' attribute list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int PHRASE__WORDS = 0;
+  int PHRASE__WORDS = 1;
 
   /**
    * The number of structural features of the '<em>Phrase</em>' class.
@@ -111,7 +120,7 @@ public interface ArabicPackage extends EPackage
    * @generated
    * @ordered
    */
-  int PHRASE_FEATURE_COUNT = 1;
+  int PHRASE_FEATURE_COUNT = 2;
 
 
   /**
@@ -144,6 +153,17 @@ public interface ArabicPackage extends EPackage
    * @generated
    */
   EClass getPhrase();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.qwork.arabic.Phrase#isBasmalah <em>Basmalah</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Basmalah</em>'.
+   * @see org.qwork.arabic.Phrase#isBasmalah()
+   * @see #getPhrase()
+   * @generated
+   */
+  EAttribute getPhrase_Basmalah();
 
   /**
    * Returns the meta object for the attribute list '{@link org.qwork.arabic.Phrase#getWords <em>Words</em>}'.
@@ -206,6 +226,14 @@ public interface ArabicPackage extends EPackage
      * @generated
      */
     EClass PHRASE = eINSTANCE.getPhrase();
+
+    /**
+     * The meta object literal for the '<em><b>Basmalah</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute PHRASE__BASMALAH = eINSTANCE.getPhrase_Basmalah();
 
     /**
      * The meta object literal for the '<em><b>Words</b></em>' attribute list feature.
